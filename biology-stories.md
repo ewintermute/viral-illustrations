@@ -341,6 +341,46 @@ In 2018, He Jiankui used CRISPR to edit CCR5 in human embryos that became two gi
 
 ---
 
+### Category K: BIOMATERIALS & BIO-INSPIRED ENGINEERING — Nature as the R&D Lab
+
+**K1. Gecko Feet Work by Van der Waals Forces — and We've Finally Copied Them**
+A gecko can support its bodyweight hanging from a single toe on a glass ceiling. The mechanism: millions of nanoscale hair-like setae on each toe that make contact with surfaces at the molecular level, generating van der Waals adhesion forces. No glue, no suction — pure geometry at the nanoscale. Synthetic gecko adhesives (gecksin, Geckskin) can support hundreds of kilograms on smooth surfaces, are fully reversible, leave no residue, and work in vacuum. DARPA has funded gecko-adhesive climbing systems for soldiers. A lizard doing physics.
+
+**K2. Mussels Solved the Problem That Stumps Surgical Glue**
+Standard surgical adhesives fail in wet environments — which is every environment inside a body. Mussels adhere to wet rocks using a protein called mussel adhesive protein, which contains DOPA (dihydroxyphenylalanine), a modified amino acid that forms covalent bonds with almost any surface even when saturated with water. Synthetic mussel-inspired adhesives are now in clinical development for wound closure, fetal membrane repair, and hemostatic sealing during surgery. The mussel solved waterproof adhesion; we copied it for surgery.
+
+**K3. Sharkskin Texture Reduces Drag and Kills Bacteria**
+Sharkskin is covered in microscopic tooth-like scales (denticles) arranged in a specific pattern that reduces hydrodynamic drag by disrupting the boundary layer of water — and Speedo's LZR Racer swimsuit (banned from competition after 2009) used exactly this principle. The same surface geometry also prevents bacterial biofilm formation — bacteria literally cannot adhere to the denticle pattern. Sharkskin-inspired surfaces are now being developed for hospital surfaces, ship hulls, and medical implants as passive antibacterial coatings that don't use any chemicals.
+
+**K4. The Lotus Leaf Cleans Itself — and Inspired Billions in Surface Technology**
+The lotus leaf repels water and dirt through a two-tiered surface structure: microscale wax crystals on top of nanoscale bumps, creating a superhydrophobic surface where water droplets roll off carrying particles with them. Contact angle >150°. The mechanism — discovered in the 1970s, understood structurally in the 1990s — has spawned an entire industry: self-cleaning glass, anti-icing surfaces, stain-resistant clothing, anti-fog coatings. The lotus effect is in hundreds of commercial products. A flower's surface chemistry became a $10B+ materials industry.
+
+**K5. Nacre (Mother-of-Pearl) Is 3,000 Times Tougher Than the Calcium Carbonate It's Made From**
+Nacre — the iridescent inner layer of mollusk shells — is composed of the same calcium carbonate as chalk, but arranged in overlapping crystalline platelets held together by a thin organic layer. The architecture deflects cracks sideways rather than letting them propagate, creating a material 3,000x tougher than its components alone. Engineers have been trying to replicate this layered crack-deflection architecture in ceramics and composites for decades. Biology built a toughening mechanism from cheap materials that materials science is still trying to match.
+
+**K6. Abalone Shell Inspired Bulletproof Glass**
+Related to nacre but taken further: abalone shell survives impacts that shatter engineered ceramics of equivalent thickness. Researchers at UC Berkeley mapped the atomic-scale crack propagation in abalone shell and found that nanoscale surface features on the platelets cause cracks to spiral and dissipate rather than propagate — a mechanistic trick invisible at any scale above the nanometer. This blueprint has now been directly implemented in new ceramic armor and impact-resistant glass designs. An animal shell as a blueprint for stopping bullets.
+
+**K7. Bone Is a Composite Material with a Trick No Engineer Had Thought Of**
+Bone achieves extraordinary toughness-to-weight ratio through a hierarchical composite: hydroxyapatite nanocrystals embedded in collagen fibers, arranged in concentric rings (osteons), which themselves are arranged in twisted plywood patterns at a larger scale. The staggered nanocrystal arrangement allows energy to dissipate through "sacrificial bonds" that break and reform — stretching the load across billions of nanoscale events rather than concentrating it in one crack. Human bone can absorb impacts that would shatter steel of equivalent weight. Re-engineering bone's architecture into synthetic materials is an active area of materials science.
+
+**K8. The Mantis Shrimp's Club Withstands Cavitation Explosions — and May Redesign Airplane Panels**
+The mantis shrimp strikes with a club that accelerates at 10,000g and generates cavitation bubbles as a secondary weapon. The club itself absorbs repeated high-speed impacts without shattering thanks to a helicoidal fiber architecture — stacked layers rotating ~1° per layer — that causes cracks to spiral out and dissipate. This architecture has been directly implemented in experimental carbon fiber panels for aircraft and vehicle armor that outperform conventional layup methods by large margins. Engineers reverse-engineered a crustacean's knuckle joint.
+
+**K9. Silk Worm Silk Is Already a Billion-Dollar Industry — and We're Just Getting Started**
+Silkworm silk (*Bombyx mori*) has been commercially produced for 5,000 years and remains a multi-billion dollar industry — but it's now being engineered for biomedical applications its original purpose never contemplated. Silk fibroin dissolves in water at body temperature on a programmable timescale, making it ideal for biodegradable surgical implants, drug delivery scaffolds, and resorbable electronics. FDA-cleared silk-based medical devices are already on the market. An ancient agricultural product is becoming precision biomedical infrastructure.
+
+**K10. Abalone-Inspired 3D Printing Is Making Ceramics That Don't Shatter**
+New ceramic 3D printing methods that implement nacre-like layered architectures — printing with microscale platelets oriented to deflect cracks — produce objects that are orders of magnitude tougher than conventional ceramics. You can drop a printed nacre-architecture ceramic tile from a height that would shatter ordinary ceramic and watch it survive. This is not a lab curiosity: tough ceramics are needed for turbine blades, heat shields, and orthopedic implants. The biological blueprint is now a manufacturing technique.
+
+**K11. Termites Built Air Conditioning 50 Million Years Before We Did**
+Termite mounds in hot climates maintain a near-constant internal temperature despite ambient swings of 40°C+. They do it through a passive ventilation system: a network of tunnels and pores that creates convection-driven airflow controlled by opening and closing surface vents in response to environmental conditions. The Eastgate Centre in Zimbabwe was designed explicitly on termite mound principles, using passive ventilation to eliminate conventional air conditioning in a 9-story office building in Harare. A Zimbabwean architect studied termite mounds and designed a city building that uses 90% less energy for cooling.
+
+**K12. Humpback Whale Fins Led to More Efficient Wind Turbines**
+Humpback whale flippers have large irregular bumps (tubercles) along the leading edge — which seems aerodynamically wrong. A biologist noticed whales could execute tight turns that should be impossible given their size and flipper shape. The tubercles create vortices that keep airflow attached at high angles of attack, preventing stall at much steeper angles than a smooth edge allows. WhalePower Corporation has applied this directly to wind turbine blade design; tubercled blades generate more power at lower wind speeds and are quieter. A whale's swimming adaptation is now on wind turbines.
+
+---
+
 ### Category G: ORIGINS & IDENTITY — What We Are, Where We Came From
 
 **G1. All Complex Life May Have Come From a Single Event**
@@ -360,8 +400,8 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 108 stories across 10 categories
-## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Human Genetics/Evolution, Origins/Identity
+## Story Count: 120 stories across 11 categories
+## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Human Genetics/Evolution, Biomaterials/Bio-inspired Engineering, Origins/Identity
 
 ---
 
