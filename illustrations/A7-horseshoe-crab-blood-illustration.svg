@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="blood-pool" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#8BA0D6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: dark ocean shelf -->
+  <g id="bg" data-label="Dark ocean shelf environment, navy-midnight tones">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <!-- water depth gradient hint - dark bands -->
+    <rect x="0" y="0" width="800" height="200" fill="#2D3E6B" opacity="0.4"/>
+    <rect x="0" y="480" width="800" height="120" fill="#1A5C1E" opacity="0.15"/>
+  </g>
+
+  <!-- Context: sandy bottom and horizon -->
+  <g id="context" data-label="Sandy ocean bottom texture and horizon line">
+    <!-- sandy bottom undulation -->
+    <path d="M 0 500 Q 100 490 200 502 Q 320 515 440 498 Q 560 482 680 497 Q 740 504 800 495 L 800 600 L 0 600 Z" fill="#6B4423" opacity="0.5"/>
+    <path d="M 0 510 Q 150 500 300 512 Q 450 524 600 508 Q 700 498 800 506 L 800 600 L 0 600 Z" fill="#A0785A" opacity="0.25"/>
+    <!-- horizon line -->
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#2D3E6B" stroke-width="1" opacity="0.4"/>
+    <!-- water column suggestion -->
+    <ellipse cx="200" cy="150" rx="30" ry="8" fill="#5B6FA8" opacity="0.12"/>
+    <ellipse cx="560" cy="120" rx="22" ry="6" fill="#5B6FA8" opacity="0.1"/>
+  </g>
+
+  <!-- Subject: horseshoe crab from above, carapace detail -->
+  <g id="subject" data-label="Horseshoe crab viewed from above, carapace and tail detail">
+    <!-- carapace outline - prosoma (front shield) -->
+    <path d="M 400 180 Q 500 175 550 220 Q 570 260 555 310 Q 540 350 500 370 Q 460 385 420 382 Q 380 380 340 368 Q 295 350 275 308 Q 258 268 270 228 Q 288 188 340 177 Q 365 173 400 180 Z" fill="#A0785A" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- carapace surface texture lines -->
+    <path d="M 340 190 Q 400 186 455 198" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 310 230 Q 400 222 490 238" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 290 275 Q 400 265 508 278" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 295 318 Q 400 308 504 320" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <!-- opisthosomal (rear section) -->
+    <path d="M 340 368 Q 400 375 460 368 Q 500 370 510 390 Q 515 420 505 440 Q 490 455 460 460 Q 420 462 380 460 Q 345 458 328 442 Q 316 422 320 398 Q 326 378 340 368 Z" fill="#8B6045" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- spine / tail (telson) -->
+    <path d="M 400 460 Q 402 490 404 530 Q 405 560 406 580" stroke="#6B4423" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- compound eyes -->
+    <circle cx="355" cy="215" r="8" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="445" cy="215" r="8" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <!-- simple median eye -->
+    <circle cx="400" cy="205" r="4" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <!-- legs suggestion (partial visibility) -->
+    <line x1="290" y1="280" x2="245" y2="268" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="280" y1="310" x2="235" y2="308" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="285" y1="340" x2="242" y2="345" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="510" y1="280" x2="555" y2="268" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="520" y1="310" x2="565" y2="308" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="515" y1="340" x2="558" y2="345" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Detail: blue blood pooling -->
+  <g id="detail-blood" data-label="Blue hemocyanin blood pooling from gill sampling site">
+    <circle cx="400" cy="385" r="55" fill="url(#blood-pool)"/>
+    <!-- blood flow paths from book gills area -->
+    <path d="M 360 372 Q 345 390 335 415 Q 330 430 340 445" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <path d="M 440 372 Q 455 392 462 418 Q 466 435 458 448" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <path d="M 400 376 Q 398 400 394 425 Q 390 445 395 460" stroke="#8BA0D6" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <!-- blood pool -->
+    <ellipse cx="400" cy="460" rx="35" ry="14" fill="#8BA0D6" opacity="0.45"/>
+    <ellipse cx="340" cy="450" rx="18" ry="7" fill="#8BA0D6" opacity="0.35"/>
+  </g>
+
+  <!-- Detail: amebocyte cell inset -->
+  <g id="detail-cell" data-label="Enlarged amebocyte cell inset showing clotting reaction">
+    <!-- inset box background -->
+    <rect x="565" y="120" width="200" height="160" rx="6" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="2"/>
+    <!-- cell body -->
+    <ellipse cx="665" cy="200" rx="52" ry="42" fill="#5B6FA8" opacity="0.7" stroke="#8BA0D6" stroke-width="1.5"/>
+    <!-- cell nucleus -->
+    <ellipse cx="655" cy="198" rx="20" ry="16" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="1.5"/>
+    <!-- granules (clotting factors) -->
+    <circle cx="680" cy="190" r="5" fill="#E6B800" opacity="0.9"/>
+    <circle cx="690" cy="205" r="4" fill="#E6B800" opacity="0.8"/>
+    <circle cx="672" cy="215" r="5" fill="#E6B800" opacity="0.9"/>
+    <circle cx="645" cy="218" r="4" fill="#E6B800" opacity="0.8"/>
+    <circle cx="635" cy="195" r="3.5" fill="#E6B800" opacity="0.7"/>
+    <!-- clotting gel burst (radial lines) -->
+    <line x1="665" y1="200" x2="700" y2="175" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
+    <line x1="665" y1="200" x2="705" y2="210" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
+    <line x1="665" y1="200" x2="630" y2="170" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
+    <!-- endotoxin dot (bacteria fragment) -->
+    <polygon points="665,148 672,160 658,160" fill="#CA1E08" opacity="0.9"/>
+    <!-- label inside inset -->
+    <text x="630" y="140" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#D1DCFF">amebocyte</text>
+  </g>
+
+  <!-- Label -->
+  <g id="label" data-label="Value label and connection annotation">
+    <text x="80" y="85" font-family="Barlow, system-ui, sans-serif" font-size="22" font-weight="900" fill="#FFFF77">$60,000 / gal</text>
+    <text x="80" y="108" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#D1DCFF" opacity="0.75">Limulus Amebocyte Lysate</text>
+  </g>
+
+  <!-- Overlay: inset border connection line -->
+  <g id="overlay" data-label="Connection line from crab to amebocyte inset, emphasis marks">
+    <!-- connection line from crab gill area to inset -->
+    <line x1="510" y1="340" x2="565" y2="220" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" stroke-linecap="round"/>
+    <circle cx="510" cy="340" r="4" fill="none" stroke="#8BA0D6" stroke-width="1.5" opacity="0.6"/>
+  </g>
+</svg>

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+
+  <!-- Background: parchment/vintage botanical -->
+  <g id="bg" data-label="Vintage parchment background for botanical scientific illustration">
+    <rect width="800" height="600" fill="#FBFFF6"/>
+    <rect width="800" height="600" fill="#E5D4D1" opacity="0.2"/>
+    <!-- subtle aged paper texture bands -->
+    <rect x="0" y="0" width="800" height="600" fill="#FFFFBB" opacity="0.08"/>
+  </g>
+
+  <!-- Context: Artemisia annua plant - stem and leaves -->
+  <g id="context" data-label="Artemisia annua sweet wormwood plant with stem and feathery leaves">
+    <!-- main stem -->
+    <path d="M 280 560 Q 278 480 282 400 Q 286 320 278 240 Q 274 180 280 120" stroke="#248A28" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- secondary stems branching -->
+    <path d="M 280 380 Q 320 360 352 340 Q 380 320 392 298" stroke="#248A28" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 280 300 Q 240 278 218 255 Q 202 236 196 215" stroke="#248A28" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 280 440 Q 240 430 218 420 Q 200 412 192 400" stroke="#248A28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 280 200 Q 310 185 330 170 Q 348 158 355 145" stroke="#248A28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- feathery leaves (Artemisia characteristic pinnately lobed) -->
+    <!-- leaves on main stem left -->
+    <path d="M 260 280 Q 238 265 225 255 Q 215 245 216 232 Q 225 228 236 238 Q 248 250 260 265" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M 260 280 Q 240 270 230 258 Q 218 244 222 232" stroke="#1A5C1E" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- leaf sublobes -->
+    <path d="M 248 252 Q 236 244 230 250" stroke="#248A28" stroke-width="1" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 242 264 Q 228 258 225 265" stroke="#248A28" stroke-width="1" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+    <!-- leaves on main stem right -->
+    <path d="M 292 320 Q 320 305 338 298 Q 352 292 355 280 Q 348 272 335 278 Q 320 288 305 300 Q 296 308 292 318" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M 310 296 Q 322 286 330 292" stroke="#248A28" stroke-width="1" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 318 305 Q 332 297 338 304" stroke="#248A28" stroke-width="1" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+    <!-- large lower leaves -->
+    <path d="M 270 460 Q 245 450 228 440 Q 210 430 208 418 Q 215 410 228 416 Q 245 425 262 440 Q 268 450 272 460" fill="#1A5C1E" stroke="#248A28" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+    <path d="M 270 480 Q 250 475 235 468 Q 220 460 218 448 Q 225 442 238 448 Q 252 458 266 470" fill="#248A28" stroke="#1A5C1E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+
+    <!-- small flower heads (yellow-green, characteristic) -->
+    <circle cx="392" cy="295" r="6" fill="#E6B800"/>
+    <circle cx="385" cy="288" r="5" fill="#E6B800"/>
+    <circle cx="398" cy="288" r="5" fill="#E6B800"/>
+    <circle cx="355" cy="142" r="5" fill="#E6B800"/>
+    <circle cx="362" cy="148" r="5" fill="#E6B800"/>
+    <circle cx="348" cy="148" r="4" fill="#E6B800"/>
+  </g>
+
+  <!-- Subject: artemisinin chemical structure -->
+  <g id="subject" data-label="Artemisinin molecular structure highlighting endoperoxide bridge">
+    <!-- ring system structural skeleton (sesquiterpene lactone with endoperoxide) -->
+    <!-- central lactone ring -->
+    <polygon points="520,280 550,260 580,270 588,305 568,328 535,325 515,305" fill="none" stroke="#1C1E35" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- second ring (cyclohexane) -->
+    <polygon points="515,305 488,295 478,268 498,248 520,248 538,260 520,280" fill="none" stroke="#1C1E35" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- third ring (cyclohexanone/lactone) -->
+    <polygon points="535,325 510,340 490,330 490,308 515,305 535,325" fill="none" stroke="#1C1E35" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- endoperoxide bridge (KEY FEATURE - O-O bond) -->
+    <line x1="568" y1="328" x2="588" y2="348" stroke="#CA1E08" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="588" y1="348" x2="572" y2="368" stroke="#CA1E08" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="572" y1="368" x2="550" y2="358" stroke="#1C1E35" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="550" y1="358" x2="535" y2="325" stroke="#1C1E35" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- O atoms at endoperoxide -->
+    <circle cx="580" cy="340" r="10" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
+    <text x="575" y="345" font-family="Barlow, system-ui, sans-serif" font-size="11" font-weight="700" fill="#FBFFF6">O</text>
+    <circle cx="578" cy="362" r="10" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
+    <text x="573" y="367" font-family="Barlow, system-ui, sans-serif" font-size="11" font-weight="700" fill="#FBFFF6">O</text>
+    <!-- O-O bond annotation line -->
+    <line x1="590" y1="338" x2="610" y2="330" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 2" opacity="0.7"/>
+    <!-- methyl and other substituents -->
+    <line x1="580" y1="270" x2="595" y2="252" stroke="#1C1E35" stroke-width="2" stroke-linecap="round"/>
+    <text x="597" y="250" font-family="Barlow, system-ui, sans-serif" font-size="12" fill="#1C1E35">CH₃</text>
+    <line x1="478" y1="268" x2="462" y2="252" stroke="#1C1E35" stroke-width="2" stroke-linecap="round"/>
+    <text x="445" y="250" font-family="Barlow, system-ui, sans-serif" font-size="12" fill="#1C1E35">CH₃</text>
+    <!-- lactone oxygen -->
+    <circle cx="490" cy="330" r="8" fill="#Coral" fill="#5B6FA8" stroke="#2D3E6B" stroke-width="1.5"/>
+    <text x="485" y="335" font-family="Barlow, system-ui, sans-serif" font-size="10" font-weight="700" fill="#FBFFF6">O</text>
+    <!-- lactone C=O -->
+    <line x1="490" y1="308" x2="470" y2="295" stroke="#1C1E35" stroke-width="2" stroke-linecap="round"/>
+    <text x="453" y="294" font-family="Barlow, system-ui, sans-serif" font-size="12" fill="#1C1E35">O</text>
+  </g>
+
+  <!-- Detail: malaria parasite being destroyed (free radical burst) -->
+  <g id="detail-parasite" data-label="Plasmodium parasite in food vacuole being destroyed by artemisinin free radicals">
+    <!-- food vacuole circle -->
+    <circle cx="680" cy="420" r="50" fill="none" stroke="#CA1E08" stroke-width="2" stroke-dasharray="5 3" opacity="0.7"/>
+    <!-- heme crystal inside (the target) -->
+    <polygon points="680,400 693,415 693,430 680,445 667,430 667,415" fill="#8B1506" stroke="#CA1E08" stroke-width="1.5"/>
+    <!-- Fe iron atom -->
+    <circle cx="680" cy="422" r="8" fill="#E6B800"/>
+    <text x="676" y="427" font-family="Barlow, system-ui, sans-serif" font-size="10" font-weight="700" fill="#1C1E35">Fe</text>
+    <!-- free radical burst lines (explosive) -->
+    <line x1="680" y1="370" x2="680" y2="350" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="700" y1="378" x2="714" y2="364" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="710" y1="400" x2="730" y2="398" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="700" y1="438" x2="714" y2="454" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="660" y1="378" x2="646" y2="364" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="650" y1="400" x2="630" y2="398" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="660" y1="438" x2="646" y2="454" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="680" y1="472" x2="680" y2="490" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Label -->
+  <g id="label" data-label="Plant name and ancient text reference">
+    <text x="52" y="120" font-family="Barlow, system-ui, sans-serif" font-size="16" font-weight="700" fill="#1A5C1E">Artemisia annua</text>
+    <text x="612" y="320" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#CA1E08" font-weight="700">endoperoxide</text>
+  </g>
+
+  <!-- Overlay: annotation arrows and dating text -->
+  <g id="overlay" data-label="Arrow from molecule to parasite and historical date annotation">
+    <!-- arrow from endoperoxide to parasite site -->
+    <path d="M 615 355 Q 648 380 662 400" stroke="#CA1E08" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round" fill="none" opacity="0.7"/>
+    <polyline points="657,398 662,405 668,400" fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <!-- 340 AD historical callout -->
+    <rect x="52" y="535" width="140" height="44" rx="4" fill="#E5D4D1" stroke="#A0785A" stroke-width="1.5" opacity="0.85"/>
+    <text x="65" y="553" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#1C1E35">Ge Hong, 340 AD</text>
+    <text x="65" y="570" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#6B4423">don't boil it</text>
+  </g>
+</svg>

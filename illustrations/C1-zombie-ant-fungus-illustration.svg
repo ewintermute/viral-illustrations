@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="spore-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E6B800" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E6B800" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: dark forest floor -->
+  <g id="bg" data-label="Dark forest floor environment, deep green-midnight">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <!-- forest floor shadow bands -->
+    <rect x="0" y="440" width="800" height="160" fill="#1A5C1E" opacity="0.3"/>
+    <rect x="0" y="500" width="800" height="100" fill="#1A5C1E" opacity="0.4"/>
+  </g>
+
+  <!-- Context: leaf silhouettes and background ant trail -->
+  <g id="context" data-label="Leaf silhouettes and diffuse ant colony trail in background">
+    <!-- background leaves -->
+    <ellipse cx="80" cy="520" rx="90" ry="30" fill="#248A28" opacity="0.5" transform="rotate(-20 80 520)"/>
+    <ellipse cx="700" cy="540" rx="110" ry="28" fill="#248A28" opacity="0.4" transform="rotate(15 700 540)"/>
+    <ellipse cx="380" cy="560" rx="130" ry="25" fill="#1A5C1E" opacity="0.6"/>
+    <!-- leaf veins on large left leaf -->
+    <line x1="80" y1="520" x2="30" y2="505" stroke="#2FBF39" stroke-width="1" opacity="0.4"/>
+    <line x1="80" y1="520" x2="130" y2="508" stroke="#2FBF39" stroke-width="1" opacity="0.4"/>
+    <!-- ant trail suggestion - small dots -->
+    <circle cx="160" cy="558" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="190" cy="562" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="220" cy="560" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="250" cy="564" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="280" cy="559" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="310" cy="563" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="340" cy="558" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="370" cy="562" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="400" cy="557" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="430" cy="561" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="460" cy="558" r="2.5" fill="#6B4423" opacity="0.5"/>
+    <!-- mummified victim nearby -->
+    <ellipse cx="620" cy="545" rx="12" ry="5" fill="#6B4423" opacity="0.6" transform="rotate(10 620 545)"/>
+    <line x1="612" y1="542" x2="605" y2="535" stroke="#6B4423" stroke-width="1.5" opacity="0.5"/>
+    <line x1="628" y1="542" x2="634" y2="534" stroke="#6B4423" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Subject: zombie ant biting leaf vein, side view -->
+  <g id="subject" data-label="Single zombie ant, mandibles locked onto leaf vein, side view">
+    <!-- leaf vein / twig the ant bites -->
+    <line x1="200" y1="310" x2="620" y2="295" stroke="#248A28" stroke-width="8" stroke-linecap="round"/>
+    <line x1="200" y1="310" x2="620" y2="295" stroke="#2FBF39" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- ant body segments - positioned at center biting the leaf -->
+    <!-- head -->
+    <ellipse cx="390" cy="308" rx="28" ry="22" fill="#3D3D52" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- mandibles clamping on leaf -->
+    <path d="M 368 318 Q 355 328 360 335 Q 372 330 382 320" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 368 298 Q 355 288 360 281 Q 372 286 382 296" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- thorax -->
+    <ellipse cx="425" cy="306" rx="26" ry="19" fill="#3D3D52" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- abdomen -->
+    <ellipse cx="468" cy="312" rx="35" ry="24" fill="#3D3D52" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- legs -->
+    <line x1="415" y1="320" x2="395" y2="345" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <line x1="425" y1="322" x2="420" y2="350" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <line x1="435" y1="320" x2="448" y2="348" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <line x1="415" y1="292" x2="395" y2="268" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <line x1="425" y1="290" x2="420" y2="262" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <line x1="435" y1="292" x2="448" y2="266" stroke="#6B6B7C" stroke-width="2" stroke-linecap="round"/>
+    <!-- antennae -->
+    <path d="M 385 290 Q 365 270 350 255" stroke="#A8A8B5" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M 390 288 Q 374 266 362 248" stroke="#A8A8B5" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Detail: fungal hyphae network through ant body -->
+  <g id="detail-hyphae" data-label="Fungal hyphal network spreading through ant body tissue">
+    <!-- fine pale lines through thorax and abdomen -->
+    <path d="M 420 295 Q 435 285 455 290 Q 470 295 480 305" stroke="#6FD877" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+    <path d="M 430 318 Q 448 325 462 320 Q 475 315 485 322" stroke="#6FD877" stroke-width="1.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+    <path d="M 440 300 Q 452 290 465 298 Q 472 304 468 316" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 455 288 Q 468 280 478 290" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 460 330 Q 472 338 482 330" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- hyphae in head/mandible region -->
+    <path d="M 393 302 Q 385 295 378 300" stroke="#6FD877" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 396 312 Q 388 318 380 314" stroke="#6FD877" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Detail: fungal stalk erupting from head -->
+  <g id="detail-stalk" data-label="Ophiocordyceps fruiting body erupting from back of ant head">
+    <!-- stalk -->
+    <path d="M 395 285 Q 392 260 388 230 Q 385 200 390 170 Q 394 145 398 120" stroke="#CA1E08" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M 398 120 Q 402 110 408 105 Q 415 100 420 108 Q 416 118 410 122 Q 405 125 398 120" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- spore cloud at tip -->
+    <circle cx="408" cy="102" r="18" fill="url(#spore-glow)"/>
+  </g>
+
+  <!-- Detail: spore rain -->
+  <g id="detail-spores" data-label="Spore rain falling toward ant trail below">
+    <circle cx="370" cy="180" r="3" fill="#E6B800" opacity="0.8"/>
+    <circle cx="385" cy="210" r="2.5" fill="#E6B800" opacity="0.7"/>
+    <circle cx="360" cy="230" r="2" fill="#E6B800" opacity="0.6"/>
+    <circle cx="400" cy="195" r="3" fill="#E6B800" opacity="0.8"/>
+    <circle cx="420" cy="220" r="2" fill="#E6B800" opacity="0.6"/>
+    <circle cx="355" cy="260" r="2.5" fill="#E6B800" opacity="0.5"/>
+    <circle cx="408" cy="250" r="2" fill="#E6B800" opacity="0.5"/>
+    <circle cx="378" cy="275" r="3" fill="#E6B800" opacity="0.6"/>
+    <circle cx="430" cy="260" r="2" fill="#E6B800" opacity="0.4"/>
+    <circle cx="345" cy="300" r="2" fill="#E6B800" opacity="0.4"/>
+    <circle cx="415" cy="290" r="2.5" fill="#E6B800" opacity="0.5"/>
+    <!-- dashed drop lines -->
+    <line x1="398" y1="128" x2="380" y2="558" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 8" opacity="0.2"/>
+  </g>
+
+  <!-- Label group -->
+  <g id="label" data-label="Species name label">
+    <text x="580" y="490" font-family="Barlow, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FBFFF6" opacity="0.85">O. unilateralis</text>
+    <text x="126" y="380" font-family="Barlow, system-ui, sans-serif" font-size="14" font-weight="500" fill="#FBFFF6" opacity="0.7">25 cm</text>
+  </g>
+
+  <!-- Overlay: height indicator line and emphasis marks -->
+  <g id="overlay" data-label="Height arrow indicator and emphasis marks">
+    <!-- height line from leaf to trail -->
+    <line x1="120" y1="300" x2="120" y2="558" stroke="#FBFFF6" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5" stroke-linecap="round"/>
+    <!-- arrowheads -->
+    <polyline points="115,310 120,296 125,310" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    <polyline points="115,548 120,562 125,548" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    <!-- emphasis circle around stalk tip -->
+    <circle cx="408" cy="108" r="24" fill="none" stroke="#CA1E08" stroke-width="2" stroke-dasharray="4 3" opacity="0.7"/>
+  </g>
+</svg>

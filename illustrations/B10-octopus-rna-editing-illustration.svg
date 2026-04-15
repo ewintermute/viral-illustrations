@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="biolum-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2FBF39" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2FBF39" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background: cold deep water -->
+  <g id="bg" data-label="Cold deep ocean water environment, dark navy midnight">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <!-- cold water depth bands -->
+    <rect x="0" y="0" width="800" height="300" fill="#2D3E6B" opacity="0.25"/>
+    <rect x="0" y="0" width="800" height="120" fill="#2D3E6B" opacity="0.2"/>
+  </g>
+
+  <!-- Context: rock substrate and cold temperature indicator -->
+  <g id="context" data-label="Rocky ocean substrate and temperature context">
+    <!-- rocky bottom -->
+    <path d="M 0 520 Q 80 505 160 520 Q 220 532 300 515 Q 380 500 460 518 Q 540 534 620 515 Q 700 500 800 518 L 800 600 L 0 600 Z" fill="#3D3D52" opacity="0.8"/>
+    <!-- rock texture -->
+    <ellipse cx="120" cy="535" rx="55" ry="22" fill="#3D3D52"/>
+    <ellipse cx="350" cy="528" rx="45" ry="18" fill="#3D3D52"/>
+    <ellipse cx="620" cy="532" rx="60" ry="20" fill="#3D3D52"/>
+    <!-- cold temperature ripples -->
+    <path d="M 680 80 Q 700 70 720 80 Q 740 90 760 80" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 678 100 Q 700 90 725 100 Q 748 110 762 100" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
+    <text x="680" y="65" font-family="Barlow, system-ui, sans-serif" font-size="20" font-weight="700" fill="#8BA0D6" opacity="0.8">13°C</text>
+  </g>
+
+  <!-- Subject: octopus with arms spread, viewed from front-above -->
+  <g id="subject" data-label="Octopus bimaculoides with arms spread, showing neural anatomy">
+    <!-- mantle (body) -->
+    <path d="M 400 230 Q 440 210 465 235 Q 480 258 472 290 Q 460 318 435 328 Q 412 334 390 328 Q 365 318 352 290 Q 342 258 358 235 Q 375 210 400 230 Z" fill="#A0785A" stroke="#8B6045" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- mantle texture spots (chromatophores - cold = more muted) -->
+    <circle cx="400" cy="258" r="6" fill="#6B4423" opacity="0.6"/>
+    <circle cx="420" cy="272" r="5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="382" cy="274" r="5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="408" cy="292" r="4" fill="#6B4423" opacity="0.4"/>
+    <!-- eyes -->
+    <ellipse cx="378" cy="248" rx="12" ry="10" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="378" cy="248" r="5" fill="#1C1E35"/>
+    <circle cx="376" cy="246" r="2" fill="#FBFFF6" opacity="0.6"/>
+    <ellipse cx="422" cy="248" rx="12" ry="10" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="422" cy="248" r="5" fill="#1C1E35"/>
+    <circle cx="420" cy="246" r="2" fill="#FBFFF6" opacity="0.6"/>
+    <!-- octopus arms (8 arms spread) -->
+    <!-- arm 1 - upper left -->
+    <path d="M 368 290 Q 330 310 295 350 Q 270 380 255 420 Q 248 448 258 468" stroke="#A0785A" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 2 - mid upper left -->
+    <path d="M 356 308 Q 310 340 275 380 Q 248 415 238 455 Q 232 478 240 498" stroke="#A0785A" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 3 - lower left -->
+    <path d="M 355 326 Q 310 360 282 405 Q 262 440 258 478 Q 255 500 264 518" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 4 - bottom left -->
+    <path d="M 365 332 Q 330 372 318 418 Q 308 452 316 488 Q 322 508 334 522" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 5 - bottom right -->
+    <path d="M 435 332 Q 470 372 482 418 Q 492 452 484 488 Q 478 508 466 522" stroke="#8B6045" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 6 - lower right -->
+    <path d="M 445 326 Q 490 360 518 405 Q 538 440 542 478 Q 545 500 536 518" stroke="#8B6045" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 7 - mid upper right -->
+    <path d="M 444 308 Q 490 340 525 380 Q 552 415 562 455 Q 568 478 560 498" stroke="#8B6045" stroke-width="7.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arm 8 - upper right -->
+    <path d="M 432 290 Q 470 310 505 350 Q 530 380 545 420 Q 552 448 542 468" stroke="#8B6045" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- suckers on arms (sample) -->
+    <circle cx="310" cy="345" r="4" fill="#D4A574" stroke="#8B6045" stroke-width="1"/>
+    <circle cx="288" cy="378" r="3.5" fill="#D4A574" stroke="#8B6045" stroke-width="1"/>
+    <circle cx="490" cy="345" r="4" fill="#D4A574" stroke="#8B6045" stroke-width="1"/>
+    <circle cx="512" cy="378" r="3.5" fill="#D4A574" stroke="#8B6045" stroke-width="1"/>
+  </g>
+
+  <!-- Detail: RNA editing visualization - A to I conversion diagram (inset upper left) -->
+  <g id="detail-rna-editing" data-label="A-to-I RNA editing mechanism showing adenosine to inosine conversion">
+    <!-- inset box -->
+    <rect x="30" y="60" width="220" height="130" rx="6" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="1.5"/>
+    <!-- mRNA strand -->
+    <path d="M 50 130 Q 100 115 150 130 Q 200 145 240 130" stroke="#E6B800" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- nucleotide A (original) -->
+    <circle cx="100" cy="118" r="14" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
+    <text x="94" y="123" font-family="Barlow, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FBFFF6">A</text>
+    <!-- arrow -->
+    <path d="M 118 118 L 142 118" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="136,113 142,118 136,123" fill="none" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- nucleotide I (result) -->
+    <circle cx="160" cy="118" r="14" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5"/>
+    <text x="154" y="123" font-family="Barlow, system-ui, sans-serif" font-size="14" font-weight="700" fill="#FBFFF6">I</text>
+    <!-- ADAR enzyme label -->
+    <text x="105" y="100" font-family="Barlow, system-ui, sans-serif" font-size="11" fill="#D1DCFF">ADAR</text>
+    <line x1="123" y1="103" x2="130" y2="110" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+    <!-- count label -->
+    <text x="40" y="82" font-family="Barlow, system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFF77">13,000+ edits</text>
+    <!-- temperature hint -->
+    <text x="40" y="172" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8BA0D6">cold → neural retune</text>
+  </g>
+
+  <!-- Detail: stellate ganglion glow (neural editing site) -->
+  <g id="detail-stellate" data-label="Stellate ganglion in octopus arm highlighted as editing hotspot">
+    <circle cx="310" cy="345" r="22" fill="url(#biolum-glow)"/>
+    <circle cx="310" cy="345" r="10" fill="#2FBF39" opacity="0.3"/>
+    <circle cx="490" cy="345" r="22" fill="url(#biolum-glow)"/>
+    <circle cx="490" cy="345" r="10" fill="#2FBF39" opacity="0.3"/>
+  </g>
+
+  <!-- Label -->
+  <g id="label" data-label="Species label">
+    <text x="525" y="118" font-family="Barlow, system-ui, sans-serif" font-size="15" font-weight="700" fill="#FBFFF6" opacity="0.85">O. bimaculoides</text>
+  </g>
+
+  <!-- Overlay: annotation lines from inset to arm glow sites -->
+  <g id="overlay" data-label="Connection lines from RNA editing diagram to neural sites on arms">
+    <line x1="245" y1="130" x2="288" y2="342" stroke="#2FBF39" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5" stroke-linecap="round"/>
+    <!-- arrow at endpoint -->
+    <circle cx="292" cy="344" r="4" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.6"/>
+    <!-- temperature change arrows on arms -->
+    <path d="M 285 290 Q 295 280 305 290" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 495 290 Q 505 280 515 290" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+  </g>
+</svg>

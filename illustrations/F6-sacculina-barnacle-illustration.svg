@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+
+  <!-- Background: ocean water, cool navy -->
+  <g id="bg" data-label="Ocean water background, navy-midnight tones">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <!-- subtle water ripple bands -->
+    <path d="M 0 80 Q 200 70 400 82 Q 600 94 800 78" stroke="#2D3E6B" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 0 130 Q 250 120 500 134 Q 680 144 800 126" stroke="#2D3E6B" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <!-- sandy floor -->
+    <path d="M 0 530 Q 120 520 260 534 Q 420 548 580 528 Q 700 514 800 524 L 800 600 L 0 600 Z" fill="#6B4423" opacity="0.45"/>
+  </g>
+
+  <!-- Context: sea floor debris, scale -->
+  <g id="context" data-label="Sea floor context with stones and algae">
+    <ellipse cx="100" cy="555" rx="45" ry="18" fill="#A0785A" opacity="0.4"/>
+    <ellipse cx="680" cy="548" rx="55" ry="20" fill="#A0785A" opacity="0.3"/>
+    <!-- algae fronds -->
+    <path d="M 720 545 Q 715 510 720 480 Q 725 460 718 445" stroke="#248A28" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 730 545 Q 735 515 730 490 Q 726 472 732 455" stroke="#248A28" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- small stones -->
+    <ellipse cx="155" cy="550" rx="12" ry="7" fill="#6B4423" opacity="0.5"/>
+    <ellipse cx="200" cy="555" rx="8" ry="5" fill="#A0785A" opacity="0.4"/>
+  </g>
+
+  <!-- Subject: crab viewed from side/front showing external Sacculina sac -->
+  <g id="subject" data-label="Crab host with Sacculina externa sac visible on underside">
+    <!-- crab carapace (broad, slightly feminized shape) -->
+    <path d="M 400 280 Q 500 268 545 298 Q 568 320 565 358 Q 562 388 535 405 Q 500 418 460 420 Q 420 422 385 418 Q 348 412 322 396 Q 298 378 295 348 Q 292 316 318 298 Q 348 278 400 280 Z" fill="#A0785A" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- carapace groove -->
+    <path d="M 380 290 Q 400 286 420 290" stroke="#6B4423" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- eyes on stalks -->
+    <line x1="368" y1="290" x2="352" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="350" cy="270" r="6" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <line x1="432" y1="290" x2="448" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="450" cy="270" r="6" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <!-- chelae (claws - smaller, feminized) -->
+    <path d="M 295 348 Q 260 340 238 350 Q 228 360 230 372 Q 238 378 252 374 Q 262 368 270 360 Q 282 355 295 352" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 565 348 Q 600 340 622 350 Q 632 360 630 372 Q 622 378 608 374 Q 598 368 590 360 Q 578 355 565 352" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- walking legs -->
+    <line x1="330" y1="400" x2="310" y2="440" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="355" y1="412" x2="340" y2="455" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="385" y1="420" x2="378" y2="462" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="530" y1="400" x2="550" y2="440" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="505" y1="412" x2="520" y2="455" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <line x1="475" y1="420" x2="482" y2="462" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+    <!-- abdomen (broad, feminized) -->
+    <path d="M 348 418 Q 400 428 452 418 Q 470 422 472 440 Q 468 462 452 470 Q 420 478 380 476 Q 352 472 338 460 Q 328 448 332 434 Q 336 422 348 418 Z" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Detail: Sacculina externa sac erupting from abdomen -->
+  <g id="detail-externa" data-label="Sacculina externa reproductive sac protruding from crab abdomen">
+    <!-- sac body - bulbous, protrudes below abdomen -->
+    <ellipse cx="400" cy="492" rx="40" ry="28" fill="#CA1E08" stroke="#8B1506" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- sac surface texture -->
+    <path d="M 365 488 Q 400 482 435 488" stroke="#8B1506" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M 362 498 Q 400 493 438 498" stroke="#8B1506" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- larvae releasing from sac -->
+    <circle cx="388" cy="518" r="3" fill="#E85542" opacity="0.9"/>
+    <circle cx="400" cy="522" r="2.5" fill="#E85542" opacity="0.85"/>
+    <circle cx="412" cy="520" r="3" fill="#E85542" opacity="0.9"/>
+    <circle cx="380" cy="525" r="2" fill="#E85542" opacity="0.7"/>
+    <circle cx="420" cy="524" r="2" fill="#E85542" opacity="0.7"/>
+    <circle cx="394" cy="530" r="2" fill="#E85542" opacity="0.6"/>
+    <circle cx="406" cy="532" r="2.5" fill="#E85542" opacity="0.65"/>
+    <!-- cloud of larvae dispersing upward -->
+    <circle cx="375" cy="510" r="1.5" fill="#E85542" opacity="0.5"/>
+    <circle cx="425" cy="512" r="1.5" fill="#E85542" opacity="0.5"/>
+    <circle cx="360" cy="504" r="1.5" fill="#E85542" opacity="0.4"/>
+    <circle cx="440" cy="506" r="1.5" fill="#E85542" opacity="0.4"/>
+  </g>
+
+  <!-- Detail: interna root system (partially visible) -->
+  <g id="detail-interna" data-label="Sacculina interna root tendrils invading crab body">
+    <!-- root network visible through semi-transparent crab body -->
+    <path d="M 400 492 Q 395 470 388 455 Q 382 440 374 430 Q 365 418 355 412" stroke="#E85542" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" stroke-dasharray="5 3"/>
+    <path d="M 400 492 Q 405 468 414 452 Q 422 438 430 428 Q 440 418 450 412" stroke="#E85542" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round" stroke-dasharray="5 3"/>
+    <path d="M 398 488 Q 390 460 382 440 Q 376 425 368 406 Q 360 390 356 375" stroke="#E85542" stroke-width="1" fill="none" opacity="0.35" stroke-linecap="round" stroke-dasharray="4 4"/>
+    <path d="M 402 488 Q 412 462 418 442 Q 424 428 432 410 Q 440 394 444 378" stroke="#E85542" stroke-width="1" fill="none" opacity="0.35" stroke-linecap="round" stroke-dasharray="4 4"/>
+    <path d="M 400 490 Q 400 460 400 435 Q 400 410 395 390" stroke="#E85542" stroke-width="1.5" fill="none" opacity="0.45" stroke-linecap="round" stroke-dasharray="5 3"/>
+  </g>
+
+  <!-- Label -->
+  <g id="label" data-label="Species identification label">
+    <text x="58" y="120" font-family="Barlow, system-ui, sans-serif" font-size="16" font-weight="700" fill="#FBFFF6" opacity="0.85">Sacculina</text>
+    <text x="58" y="142" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#8BA0D6" opacity="0.75">parasitic barnacle</text>
+  </g>
+
+  <!-- Overlay: annotation lines and emphasis -->
+  <g id="overlay" data-label="Annotation arrows pointing to externa sac and interna roots">
+    <!-- arrow to externa sac -->
+    <line x1="155" y1="490" x2="356" y2="492" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round" opacity="0.7"/>
+    <polyline points="362,488 356,492 362,496" fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <text x="58" y="494" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#CA1E08" opacity="0.85">externa</text>
+    <!-- emphasis ring on sac -->
+    <ellipse cx="400" cy="492" rx="46" ry="34" fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.5"/>
+    <!-- crab fanning motion arcs (behavioral manipulation) -->
+    <path d="M 378 476 Q 368 498 370 518" stroke="#E6B800" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="4 3" stroke-linecap="round"/>
+    <path d="M 422 476 Q 432 498 430 518" stroke="#E6B800" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="4 3" stroke-linecap="round"/>
+  </g>
+</svg>
