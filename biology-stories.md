@@ -137,6 +137,39 @@ Scientists took *E. coli* and rewrote its genetic code — replacing specific co
 **E11. Extinct Animal DNA Is Being Put Back to Work**
 Ancient DNA from woolly mammoths, cave lions, and other extinct species is being sequenced and analyzed not just as history but as engineering feedstock. Mammoth cold-tolerance genes are being introduced into Asian elephant cells to help elephants survive a warming Arctic. Passenger pigeon disease-resistance genes may be the key to restoring American chestnut forests. Paleogenomics is becoming a tool for building resilience in living ecosystems.
 
+**E12. The Most Expensive Liquid on Earth Is Scorpion Venom**
+Deathstalker scorpion venom costs approximately $39 million per liter — making it roughly 3x more expensive than gold by volume. Each scorpion produces only 2mg of venom at a time, milked by hand. The venom contains chlorotoxin, a peptide that binds specifically to glioblastoma cells — one of the most lethal brain cancers — and has been developed into "tumor paint," a fluorescent surgical guide that lights up cancer tissue intraoperatively. The most expensive liquid on Earth is becoming a cancer surgery tool.
+
+**E13. A Norwegian Soil Fungus Enabled All of Modern Organ Transplantation**
+In 1969, Sandoz scientists found a soil sample collected in Norway containing an unknown fungus. The compound it produced — cyclosporin — turned out to be a potent immunosuppressant that prevents organ rejection without destroying the immune system completely. Before cyclosporin, organ transplants failed within months. After it, they worked. Every kidney, liver, heart, and lung transplant performed since the 1980s depends on a compound from a fungus found in Norwegian soil. A mountain holiday soil sample is now a multi-billion dollar pharmaceutical.
+
+**E14. A Fungus From a Compost Heap Became the World's Most Prescribed Drug**
+Lovastatin was isolated from *Aspergillus terreus*, a mold. Developed into statins, the resulting drug class became the most prescribed pharmaceutical in history — taken by ~200 million people worldwide to lower cholesterol. The entire statin market is worth $15+ billion annually. The mechanism was discovered by Akira Endo, who was motivated by his childhood watching fungi kill insects. A childhood observation about mold killing bugs led to the most profitable drug class ever made.
+
+**E15. Pacific Yew Trees Were Almost Logged to Extinction Before We Knew They Cured Cancer**
+Taxol (paclitaxel) was isolated from the bark of the Pacific yew in 1967. It works by freezing the mitotic spindle of dividing cells — one of the most effective mechanisms in cancer chemotherapy, especially for ovarian and breast cancer. The problem: producing enough taxol required stripping bark from old-growth trees, killing them. Conservationists and oncologists went to war over the same trees. The conflict forced the development of semi-synthetic production routes and eventually biosynthesis in engineered microbes. A tree that was nearly cleared before anyone knew what it contained.
+
+**E16. Artemisinin Came From a 1,600-Year-Old Chinese Recipe — and Won a Nobel Prize**
+*Artemisia annua* (sweet wormwood) had been used in Chinese traditional medicine for fever since 340 AD. When malaria became resistant to chloroquine, Tu Youyou searched ancient texts for alternatives and identified the plant. Extracting the active compound — artemisinin — required abandoning standard extraction methods (it degrades with heat) after the instruction came from a 4th-century text specifying cold-soaking. Artemisinin now saves millions of lives annually. Tu Youyou won the Nobel Prize in 2015 — from a recipe written in 340 AD.
+
+**E17. Heparin Comes Entirely from Pig Intestines and China Controls 80% of the Supply**
+Heparin is the world's most widely used anticoagulant — administered in virtually every surgery, dialysis session, and hospital blood draw globally. It is extracted exclusively from the mucosa of pig intestines. China produces ~80% of the global supply. A 2008 contamination scandal — deliberate adulteration with oversulfated chondroitin sulfate — killed at least 81 people and triggered a global shortage. The entire global surgical system depends on an unbroken supply chain of pig gut from one country. There is no synthetic substitute.
+
+**E18. Spider Silk Is Stronger Than Steel and We Still Can't Make It at Scale**
+Spider silk has a tensile strength greater than high-grade steel by weight, combined with extraordinary elasticity — it can stretch 40% before breaking. The problem: spiders are territorial and cannibalistic, making farming impossible. Companies have now produced spider silk proteins in bacteria, yeast, goat milk, and silkworm cocoons. The first commercial applications (surgical sutures, bulletproof materials, extreme-performance textiles) are reaching market. The bottleneck has never been the biology — we've had the gene for decades. It's been the manufacturing. A material better than anything we can engineer, and we still struggle to copy it.
+
+**E19. The Blue That Built Empires Is Now Made by Bacteria**
+Indigo was among the most economically significant commodities of the colonial era — the blue dye in denim and military uniforms, so valuable it was called "blue gold," and it drove plantation economies across India and the American South. It was entirely plant-derived (*Indigofera tinctoria*) until synthetic chemistry replaced it in the 1890s. Now engineered *E. coli* expressing a plant enzyme can produce indigo biosynthetically, with a fraction of the chemical waste of synthetic production. A commodity that shaped global history is being reclaimed by biology.
+
+**E20. Rapamycin Was Found in Easter Island Soil and Is Now the Leading Candidate for an Anti-Aging Drug**
+In 1972, researchers collected soil samples from Easter Island (*Rapa Nui*) and found a novel bacterium, *Streptomyces hygroscopicus*, producing a potent antifungal compound. Named rapamycin after the island, it was shelved as an antifungal but later found to be a powerful immunosuppressant — now a billion-dollar transplant drug (sirolimus). More recently, it was found to extend lifespan in mice by 25% even when started in old age — the most robust anti-aging intervention ever found in mammals. It's now in human longevity trials. A soil sample from a remote Pacific island is the world's leading anti-aging drug candidate.
+
+**E21. The Green Revolution Fed a Billion People — and One Man Did Most of It**
+Norman Borlaug developed semi-dwarf, high-yield wheat varieties by crossing thousands of plant lines. The shorter stalks meant the plant could support heavy grain heads without falling over; combined with fertilizers, yields tripled or quadrupled in a decade. Deployed across Mexico, India, Pakistan, and beyond, the Green Revolution is credited with preventing famines that would have killed hundreds of millions and possibly destabilized governments. Borlaug won the Nobel Peace Prize in 1970. A plant breeding program — no genetic engineering, no CRISPR, just hybridization — may have been the single largest intervention in human mortality in history.
+
+**E22. Bt Toxin Is in 400 Million Acres of Crops — and It Started as a Soil Bacterium**
+*Bacillus thuringiensis* produces crystal proteins that puncture insect gut linings and kill specific orders of insects while being harmless to vertebrates. Used as a spray bioinsecticide since the 1960s, the relevant gene was then inserted into corn, cotton, and soy in the 1990s — creating Bt crops that produce the toxin themselves. Now grown on ~400 million acres worldwide, Bt crops have reduced insecticide use by billions of pounds and increased yield in developing countries. A soil bacterium's defense mechanism is now one of the most commercially significant proteins in agriculture.
+
 **E1. A Single Gene Worth $1B**
 The gene encoding GLP-1 receptor agonists (the mechanism behind Ozempic/Wegovy) is the basis for drugs generating $30+ billion in annual revenue and reshaping the global pharmaceutical industry. One receptor, discovered by accident in Gila monster venom research, is now the most commercially successful drug mechanism in history.
 
@@ -284,12 +317,23 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 84 stories across 9 categories
+## Story Count: 95 stories across 9 categories
 ## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Origins/Identity
 
 ---
 
 ## Notes for Prioritization
+
+**New economic stories with highest viral potential:**
+- E12 (scorpion venom $39M/liter → cancer surgery) — price superlative + medical application
+- E13 (cyclosporin → all organ transplants) — one soil sample changed medicine forever
+- E14 (statins from mold → most prescribed drug) — discovery story + scale
+- E15 (Pacific yew / taxol) — conservationists vs oncologists fighting over the same tree
+- E16 (artemisinin from 340 AD recipe) — Nobel Prize from medieval text
+- E17 (heparin / pig intestines / China supply chain) — danger + geopolitics + no substitute
+- E20 (rapamycin / Easter Island / anti-aging) — adventure + discovery + longevity
+- E21 (Borlaug / Green Revolution) — one person + billions of lives
+- E22 (Bt toxin) — soil bacterium → 400 million acres
 
 **New additions with highest viral potential:**
 - F6 (Sacculina barnacle) — body horror + control + sex manipulation
