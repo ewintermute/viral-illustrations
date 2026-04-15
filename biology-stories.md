@@ -8,7 +8,7 @@
 ### Category A: SUPERLATIVES — Fastest, Largest, Oldest, Most Extreme
 
 **A1. The Immortal Jellyfish**
-*Turritopsis dohrnii* can revert from adulthood back to polyp form and start its life cycle over again — indefinitely. It is, in principle, biologically immortal. One animal. Repeatedly young. The catch: it still gets eaten.
+*Turritopsis dohrnii* can revert from adulthood back to polyp form and start its life cycle over again — indefinitely. It does this by converting mature, differentiated cells back into an earlier state through transdifferentiation: your skin cells becoming muscle cells, your muscle cells becoming nerve cells. It is the most radical known example of cellular plasticity in any animal. Biologically immortal. The catch: it still gets eaten.
 
 **A2. The Oldest Living Individual**
 A Great Basin bristlecone pine called Methuselah is ~5,000 years old — older than the pyramids. It was alive when writing was invented. Its exact location is kept secret to protect it. A single tree as a living witness to all of recorded history.
@@ -49,6 +49,12 @@ There are ~10^31 viruses on Earth — more than all other life forms combined by
 
 **B5. You Can't Actually Kill a Tardigrade**
 Tardigrades (water bears) survive boiling, freezing, radiation doses that would kill any other animal, vacuum of space, and pressures 6x greater than the deepest ocean trench. They do it by essentially turning off — entering cryptobiosis. They've survived all five mass extinctions. They will survive whatever kills us.
+
+**B5b. The Tardigrade's Secret Weapon Is a Protein We Could Steal**
+Tardigrades survive doses of radiation that would shred the DNA of any other animal — and researchers have identified the mechanism: a protein called Dsup (damage suppressor) that physically wraps around DNA like a shield, reducing radiation-induced breaks by ~40%. When Dsup was introduced into human cell cultures, those cells became significantly more radiation-resistant too. A microscopic animal handed us a radiation shield, and we're figuring out how to use it.
+
+**B11. The Cancer-Proof Rodent**
+Naked mole rats almost never get cancer. They live 10x longer than mice of equivalent size and tumors are vanishingly rare. Part of the mechanism: they produce an unusually high-molecular-mass form of hyaluronan — a compound that strengthens contact inhibition, the cellular braking system that stops cells from piling up. When mole rat cells get crowded, they stop dividing. Ours don't always get the memo. The naked mole rat found the off switch for cancer.
 
 **B6. Sleeping Is Riskier Than We Think, Evolutionarily**
 Sleep renders an animal unconscious, immobile, and unable to detect predators for 6–8 hours a night. That's a massive fitness cost. The fact that every animal with a brain sleeps — despite this — suggests sleep does something irreplaceable that we still don't fully understand.
@@ -106,12 +112,30 @@ The tiny male deep-sea anglerfish bites into the female, fuses its circulatory s
 **D5. Sexual Reproduction Is Evolutionarily Paradoxical**
 Asexual reproduction is twice as efficient — every individual produces offspring. Sexual reproduction halves reproductive efficiency (half the population produces no offspring). Yet sexual reproduction dominates complex life. The leading theory: sex exists to generate variation fast enough to outrun parasites, which evolve faster. Sex is an arms race tax.
 
+**D7. The Animal That Regrows Its Own Brain**
+Axolotls can regenerate entire limbs, their hearts, their spinal cords — and parts of their brains — as adults. They do it by reactivating developmental positional programs that other vertebrates shut down after embryogenesis. The remarkable part: mammals still carry the genetic machinery for this. The genes are there. They're just silenced. We don't regrow limbs not because we lack the blueprint, but because evolution turned the program off. Axolotl research is about finding the switch.
+
 **D6. Your Mitochondria Are Ancient Bacteria**
 ~1.5 billion years ago, a bacterium was engulfed by another cell and instead of being digested, it survived and became a permanent resident. That bacterium is your mitochondria. Every eukaryotic cell — every cell in your body except red blood cells — contains what is functionally a domesticated bacterium. You are a symbiosis.
 
 ---
 
 ### Category E: MONEY, POWER & ECONOMIC IMPACT — Human Consequence
+
+**E7. Venom Is a Billion-Year Drug Discovery Program**
+Animal venoms are highly evolved cocktails of compounds that have been optimized by natural selection to interfere with specific molecular targets — ion channels, receptors, enzymes — with extraordinary precision. Cone snail venom gave us ziconotide, a painkiller 1,000x more potent than morphine. Gila monster saliva gave us exenatide, a diabetes drug. Viper venom gave us ACE inhibitors for blood pressure. Researchers are now mining the ~20 million known venom compounds systematically as a drug discovery library. Evolution already ran the clinical trials.
+
+**E8. Scientists Built a Living Cell from Scratch**
+In 2016, researchers at the J. Craig Venter Institute synthesized a minimal bacterial genome — 473 genes, the smallest set needed for a self-replicating cell — and booted it up in an empty cell membrane. JCVI-syn3.0 is the most stripped-down living organism ever made. 149 of those 473 genes have unknown functions. We built life and we still don't know what a third of it does.
+
+**E9. AI Now Designs Proteins That Have Never Existed**
+For most of biology's history, protein engineering meant tweaking what already existed in nature. AI tools like AlphaFold and RFdiffusion can now design proteins with arbitrary structures and functions — proteins that have never appeared in any organism, ever. The first AI-designed enzyme to work in a living cell was reported in 2024. The design space of possible proteins is effectively infinite. We now have a tool that can search it.
+
+**E10. A Recoded Organism Immune to All Viruses**
+Scientists took *E. coli* and rewrote its genetic code — replacing specific codons with synonymous alternatives throughout the entire genome — making those codons available for non-standard amino acids and, crucially, making the bacterium unable to be infected by any known virus. Viruses depend on hijacking the host's translation machinery; change the code, break the hijack. A cell that speaks a different biological language. The implications for secure biomanufacturing — running fermentations that can't be contaminated by phage — are enormous.
+
+**E11. Extinct Animal DNA Is Being Put Back to Work**
+Ancient DNA from woolly mammoths, cave lions, and other extinct species is being sequenced and analyzed not just as history but as engineering feedstock. Mammoth cold-tolerance genes are being introduced into Asian elephant cells to help elephants survive a warming Arctic. Passenger pigeon disease-resistance genes may be the key to restoring American chestnut forests. Paleogenomics is becoming a tool for building resilience in living ecosystems.
 
 **E1. A Single Gene Worth $1B**
 The gene encoding GLP-1 receptor agonists (the mechanism behind Ozempic/Wegovy) is the basis for drugs generating $30+ billion in annual revenue and reshaping the global pharmaceutical industry. One receptor, discovered by accident in Gila monster venom research, is now the most commercially successful drug mechanism in history.
@@ -171,7 +195,7 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 47 stories across 7 categories
+## Story Count: 56 stories across 7 categories
 ## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Origins/Identity
 
 ---
