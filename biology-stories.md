@@ -171,6 +171,55 @@ Horizontal gene transfer via viruses (transduction) means genes can jump between
 **F4. Zombie Ants Aren't the Only Ones**
 *Ophiocordyceps* gets the press, but behavioral manipulation by parasites is widespread: jewel wasps lay eggs inside cockroaches after precisely stinging the escape reflex center of the cockroach's brain (not killing it — just removing the will to escape). The cockroach remains alive as a living incubator. Hairworms compel crickets to drown themselves so the worm can complete its aquatic life stage. This is not rare biology. It is common.
 
+**F6. The Barnacle That Dissolves a Crab and Wears It Like a Suit**
+*Sacculina* is a barnacle that infects crabs by injecting a tiny mass of cells through a joint in the crab's shell. Those cells spread through the crab's entire body as root-like tendrils, consuming its tissues and hijacking its nervous and hormonal systems. The barnacle then erupts from the crab's abdomen as an egg sac — and the crab dutifully grooms and protects it as if it were its own eggs. Male crabs infected by *Sacculina* are feminized hormonally and begin behaving like females. The crab is alive. It has no idea it's been replaced.
+
+**F7. Parasitic Castration Is a Strategy, Not an Accident**
+Multiple parasites — *Sacculina* in crabs, *Ribeiroia* in frogs, *Spiroplasma* in insects — castrate their hosts as a deliberate reproductive strategy. By redirecting the host's energy from reproduction to parasite growth, and in some cases redirecting parental behavior toward caring for the parasite instead of offspring, the parasite captures the host's entire biological investment. Castration is not collateral damage. It is the point.
+
+**F8. A Wasp That Turns Spiders Into Zombie Architects**
+*Glyptapanteles* wasps lay eggs inside caterpillars, but *Reclinervellus nielseni* wasps inject eggs into *Cyclosa* orb-weaver spiders. When the larvae are ready to pupate, they don't just leave — they chemically reprogram the spider to build a completely different web structure: a dense, reinforced platform that serves as the cocoon's anchor and protection. The spider, still alive, guards the cocoon against predators before dying. The wasp repurposes the spider's professional skills.
+
+**F9. The Lancet Liver Fluke Gets Ants to Climb Grass Blades Every Morning**
+*Dicrocoelium dendriticum* needs to pass through an ant and then a grazing mammal. To get from ant to mammal, it hijacks one ant in the colony — installing itself in the ant's brain — and forces that ant to climb to the tip of a grass blade every morning, where it clings until a cow eats it. At night, when it's too hot and the cows aren't grazing, the ant climbs back down and resumes normal ant life. A parasite running the ant on a daily schedule.
+
+**F10. Your Cat May Be Subtly Changing Your Personality**
+Human *Toxoplasma* infections are asymptomatic in healthy people — but they're not neutral. Meta-analyses across multiple countries find that *Toxoplasma*-positive men score higher on risk-taking, rule-breaking, and suspicion; positive women show increased warmth and conscientiousness. Infected individuals of both sexes show slower reaction times and modestly elevated rates of traffic accidents. ~2 billion people are infected. If the effect is real — and it remains contested — the parasite has had a population-level effect on human behavior and culture.
+
+**F11. Cordyceps Has Hundreds of Species, Each Targeting One Specific Insect**
+The *Ophiocordyceps* zombie-ant fungus gets all the attention, but the genus has evolved over 400 species, each specialized to a single host — one species per ant, per beetle, per moth. The behavioral manipulation is equally specific: each species drives its host to a precise microclimate (temperature, humidity, light level) optimal for fungal spore dispersal. This level of host-species specificity means the fungus has co-evolved mind-control strategies with each target independently. Not one manipulation — hundreds.
+
+**F12. The Worm That Makes Women More Attractive and Men More Fearless**
+In a series of controversial studies, *Toxoplasma*-positive women were rated more attractive by independent observers, and *Toxoplasma*-positive men were rated as more dominant-looking. The mechanism proposed: the parasite manipulates testosterone and estrogen pathways, since its effect in rodents is strongly sex-differentiated. A single-celled parasite may be influencing human mate selection at a population scale. The evolutionary logic: make infected hosts more sexually successful to increase transmission via vertical mother-to-child infection.
+
+---
+
+### Category H: MICROBIOME — The Ecosystem Inside You
+
+**H1. Antibiotics in Infancy May Permanently Alter Your Immune System**
+Children given antibiotics in the first year of life show altered microbiome composition that can persist for years. Multiple large-cohort studies link early antibiotic use to elevated rates of asthma, allergies, obesity, and type 1 diabetes in later childhood. The antibiotic doesn't just kill the infection — it may reset the microbiome at a critical developmental window, with lasting immunological consequences. We've been giving antibiotics to children without knowing this.
+
+**H2. Fecal Transplants Cure a "Incurable" Infection at 90% Success Rate**
+*C. difficile* colitis kills ~30,000 Americans per year and resists antibiotics. Fecal microbiota transplantation — transferring stool from a healthy donor into the patient's gut — cures it in ~90% of cases. The treatment is: other people's bacteria. It works better than the best antibiotics. The FDA approved it in 2023. The fact that "other person's poop" is now a licensed medical treatment is either disgusting or the most important advance in infectious disease treatment in decades. Both, actually.
+
+**H3. The Microbiome Predicts Cancer Before Symptoms Appear**
+Specific microbiome signatures — bacterial species present or absent in the gut — can predict colorectal cancer with diagnostic accuracy comparable to early screening tests. The bacteria arrive before the symptoms do. The mechanism is partly inflammatory signaling and partly direct mucosal interaction with colonic cells. Your gut bacteria may know you have cancer before your doctor does.
+
+**H4. Gut Bacteria Produce Neurotransmitters That Cross the Blood-Brain Barrier**
+This goes beyond serotonin (F1). Specific bacterial species produce GABA, dopamine precursors, and short-chain fatty acids that directly influence neural activity. Germ-free mice lacking a microbiome show structural differences in brain regions governing stress response and social behavior. Transplanting the microbiome of anxious mice into calm mice makes the calm mice anxious — and vice versa. Anxiety is, in part, a transmissible microbial phenotype.
+
+**H5. The Microbiome Determines Whether Immunotherapy Works**
+Checkpoint inhibitor immunotherapies (the cancer treatments that won the Nobel Prize in 2018) work dramatically better in patients with certain gut microbiome compositions. Two patients with identical tumors, identical drug regimens — one responds completely, one doesn't — and the key variable is bacteria in their gut. Oncologists are now giving fecal transplants before cancer immunotherapy to improve response rates. The microbiome is a drug.
+
+**H6. Caesarean Birth May Permanently Alter Immune Development**
+Babies born via C-section miss the inoculation of maternal vaginal and gut microbiota that occurs during vaginal birth. C-section babies show significantly different microbiome compositions for months to years and have elevated rates of asthma, allergies, obesity, and type 1 diabetes. Some hospitals now swab C-section newborns with maternal vaginal fluid immediately after birth. The birth canal is a microbiome delivery device. Skipping it has consequences we're still measuring.
+
+**H7. Helicobacter pylori Causes Ulcers — And Losing It May Have Made Obesity Worse**
+*H. pylori* infects ~50% of the global population and was long classified as purely harmful (it causes ulcers and gastric cancer). But it also produces ghrelin, the hunger hormone — and *H. pylori*-infected people have lower ghrelin levels after eating, meaning they feel full sooner. Since antibiotic eradication of *H. pylori* became routine in the 1990s, rates of obesity and GERD have risen. We eradicated a pathogen and may have inadvertently disrupted appetite regulation at a population scale.
+
+**H8. The Microbiome Has a Circadian Rhythm — and Jet Lag Disrupts It**
+Gut bacterial populations fluctuate in composition across the 24-hour cycle, feeding on different substrates and producing different metabolites at different times of day. Jet lag disrupts this rhythm — and in mouse studies, jet-lagged microbiomes transplanted into germ-free mice cause weight gain and metabolic dysfunction. Disrupted sleep doesn't just make you tired. It dysregulates the ecosystem inside you.
+
 **F5. Horizontal Gene Transfer Is Happening Right Now in Hospitals**
 Antibiotic resistance genes spread not just through reproduction but through direct gene transfer between bacteria — even between different species. A harmless gut bacterium can pick up a resistance gene from a pathogen in the same patient and become resistant without ever being exposed to an antibiotic. Evolution at the speed of a hospital stay.
 
@@ -195,12 +244,21 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 56 stories across 7 categories
-## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Origins/Identity
+## Story Count: 72 stories across 8 categories
+## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Origins/Identity
 
 ---
 
 ## Notes for Prioritization
+
+**New additions with highest viral potential:**
+- F6 (Sacculina barnacle) — body horror + control + sex manipulation
+- F7 (parasitic castration) — counterintuitive + primal stakes + universal pattern
+- F9 (lancet liver fluke scheduling ants) — control + specificity + absurdity
+- F10/F12 (Toxoplasma in humans) — personal stakes + contested science + scale
+- H2 (fecal transplant) — disgust + miracle cure + FDA approval
+- H4 (anxiety is transmissible) — personal stakes + counterintuitive + direct human health
+- H5 (microbiome determines chemo response) — money + cancer + counterintuitive
 
 **Highest viral potential (multiple hooks stacked):**
 - A6 (mosquito/deadliest) — superlative + human death toll
