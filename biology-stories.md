@@ -225,6 +225,46 @@ Antibiotic resistance genes spread not just through reproduction but through dir
 
 ---
 
+### Category I: EXTRAORDINARY SENSES — Perceptual Worlds We Cannot Access
+
+**I1. The Electric Fish That Navigates by a Sense We Don't Have**
+Electric eels and weakly electric fish generate electric fields and detect distortions in them caused by nearby objects — a sense called active electroreception. They essentially see by electricity, constructing a three-dimensional map of their environment from field distortions invisible to us. Sharks and rays have passive electroreception (the ampullae of Lorenzini) sensitive enough to detect the bioelectric fields of buried prey — the heartbeat of a flounder hidden under sand. A sense built around physics we can only measure with instruments.
+
+**I2. Birds Navigate by Quantum Mechanics**
+Migratory birds detect Earth's magnetic field with extraordinary precision — and the leading mechanism is genuinely quantum. Cryptochrome proteins in the eye form radical pairs when struck by light; the quantum spin state of those electrons is influenced by the ambient magnetic field, changing the protein's chemistry. The bird's magnetic compass may be running on quantum entanglement in its retina. Birds see the magnetic field overlaid on their visual field — probably as a brightness or color gradient — and use it to navigate thousands of miles.
+
+**I3. The Pit Viper Sees Heat in the Dark**
+Pit vipers, pythons, and boa constrictors have pit organs — membrane-lined cavities near the face — that detect infrared radiation with a sensitivity of 0.003°C. They construct a thermal image of their environment entirely separate from their visual image, processed in a different brain region, and these maps are then merged. A snake hunting at night sees a warm mouse in complete darkness as clearly as we see a lit room. The pit organ is, in effect, a biological thermal camera with resolution competitive with man-made devices.
+
+**I4. Dogs Smell Time**
+A dog's olfactory surface is ~40x larger than a human's, with ~300 million smell receptors vs. our 6 million. But the more counterintuitive finding: dogs may be able to smell the direction of time. Because the ground warms throughout the day, scent molecules volatilize at different rates at different times. A scent trail laid an hour ago smells older than one laid five minutes ago. Dogs can follow a trail in the direction it was laid — not just that someone walked here, but which way they were going and when. They navigate the past.
+
+**I5. The Star-Nosed Mole Has the Most Sensitive Touch Organ Known**
+The star-nosed mole's nose is ringed by 22 fleshy appendages containing ~25,000 Eimer's organs — mechanoreceptors so dense this is the highest receptor density of any mammalian tactile organ. The mole can identify and eat food in 120 milliseconds — faster than the human eye can follow. The star occupies more brain real estate, proportionally, than any other sensory surface we know. It touches the world at a resolution we cannot achieve with our fingertips.
+
+**I6. Mantis Shrimp Have the Most Complex Eyes Known — But May Process Color Worse Than Us**
+D1 covered the 16 receptor types. The twist: behavioral studies suggest mantis shrimp may not combine those channels to discriminate fine color differences the way humans do. Instead, they appear to use each receptor as a threshold detector — yes/no, not analog comparison. The result is ultra-fast color recognition (no computation required) rather than fine discrimination. 16 color channels, and they may use them like 16 on/off switches. The most complex eye in the animal kingdom may have traded color richness for processing speed.
+
+**I7. Elephants Hear Sounds Through Their Feet**
+Elephants communicate with infrasounds below 20 Hz — below the threshold of human hearing — that travel through the ground as seismic waves. Other elephants detect these vibrations through their feet via bone conduction to the inner ear. They "hear" seismic signals over distances of several kilometers through the soles of their feet. Elephants also use infrasound for long-distance coordination during mating, danger signaling, and group cohesion — an acoustic channel we are constitutionally deaf to.
+
+**I8. Bats Don't Just Hear the Echo — They Compute 3D Space in Real Time**
+Echolocating bats emit ultrasonic pulses and interpret the returning echoes to construct a three-dimensional model of their environment at millisecond resolution. They can distinguish wire diameters of 0.1mm in complete darkness, detect the wing-beat pattern of a specific insect species at 10 meters, and track multiple moving targets simultaneously. The processing speed of bat auditory cortex exceeds the fastest known mammalian neural computation. A bat hunting in a cluttered cave is running perceptual algorithms we can't yet replicate in hardware.
+
+**I9. The Platypus Hunts with Electroreception and Closes Its Eyes, Ears, and Nose to Do It**
+The duck-billed platypus has electroreceptors in its bill sensitive enough to detect the weak electric fields generated by the muscle contractions of freshwater shrimp. When diving, it closes its eyes, seals its ears, and plugs its nostrils — hunting entirely by electricity from 10cm range. It reconstructs the location of prey from a sense that mammals were not supposed to have. The platypus is an electroreceptive mammal, which should not exist.
+
+**I10. Some Humans Can Learn Echolocation**
+Blind humans who use clicking echolocation — as some have developed spontaneously and others are now trained — show activity in the visual cortex when processing echoes. The brain repurposes visual processing architecture for acoustic spatial reconstruction. fMRI studies show the visual cortex of expert echolocators responds to reflected sound the same way it responds to light in sighted people. Echolocation is not a hardware problem. The brain can run it on existing equipment.
+
+**I11. Pigeons May See Magnetic Fields as a Color**
+Beyond the quantum cryptochrome mechanism in the eye, pigeons have iron-containing cells in their inner ear and beak that appear to function as magnetic sensors. Behavioral studies suggest pigeons perceive magnetic field direction as something like a tinted overlay on their visual field — not a separate sense but an addition to what they see. Disrupting this system with magnetic pulses causes pigeons to navigate incorrectly. They navigate by the color of the sky in a dimension we cannot see.
+
+**I12. The Weakly Electric Fish Can "See" Using Social Signals**
+Weakly electric fish don't just sense the environment — they also use their electric organ discharge to communicate with conspecifics, each individual producing a unique electric signature. When two fish with similar frequencies meet, each adjusts its own frequency to avoid interference (the jamming avoidance response) — a real-time computation that happens faster than conscious control and was one of the first examples of a natural neural computation identified and mathematically described. The fish simultaneously navigates, hunts, and communicates — all through the same electric organ.
+
+---
+
 ### Category G: ORIGINS & IDENTITY — What We Are, Where We Came From
 
 **G1. All Complex Life May Have Come From a Single Event**
@@ -244,8 +284,8 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 72 stories across 8 categories
-## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Origins/Identity
+## Story Count: 84 stories across 9 categories
+## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Origins/Identity
 
 ---
 
