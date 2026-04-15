@@ -298,6 +298,49 @@ Weakly electric fish don't just sense the environment — they also use their el
 
 ---
 
+### Category J: HUMAN GENETICS & EVOLUTION — Who We Are and How We Got Here
+
+**J1. Some People Are Immune to Pain**
+Several families have been identified carrying loss-of-function mutations in the SCN9A gene — encoding the Nav1.7 sodium channel essential for pain signal transmission. Carriers feel no pain at all from birth. One subject could walk on broken glass without noticing. They're not numb: they feel pressure, temperature, and pleasure normally. The finding led directly to Nav1.7 as a major drug target for chronic pain, and compounds targeting it are now in clinical trials. People who feel no pain showed us how to turn it off.
+
+**J2. You Are Part Neanderthal — and It Matters**
+Non-African humans carry 1-4% Neanderthal DNA from interbreeding ~50,000 years ago. That DNA is not random: it's disproportionately found in genes related to immune function, skin keratin, and adaptation to non-African environments. Neanderthal alleles in modern humans include variants that confer resistance to specific pathogens and alter UV-light response. Some of the DNA that makes you adapted to your environment came from a species we helped drive extinct.
+
+**J3. Denisovans Gave Tibetans the Ability to Live at High Altitude**
+A single gene variant — *EPAS1*, a hemoglobin regulation gene — allows Tibetans to thrive at altitudes that cause severe altitude sickness in other humans. That variant was traced to introgression from Denisovans, an archaic human species known only from a few finger bones and teeth from a Siberian cave. A population we've never seen a complete skeleton of left a gene that now enables millions of people to live where others can't breathe.
+
+**J4. A Woman's Genetics Made Her Smell Her Husband's Parkinson's Before Diagnosis**
+Joy Milne noticed her husband developed a distinctive musky smell years before he was diagnosed with Parkinson's disease. She later correctly identified Parkinson's patients by scent in a blinded trial — including one she identified who hadn't yet been diagnosed and was confirmed 8 months later. Researchers isolated specific volatile compounds on the skin of Parkinson's patients via mass spectrometry. A genetic hyperosmic (unusually strong smeller) inadvertently discovered a diagnostic biomarker. Human variation in sensory ability led directly to a clinical test.
+
+**J5. There Are People Who Barely Need Sleep**
+Families carrying mutations in the DEC2/ADRB1 genes function normally on 4-6 hours of sleep per night without apparent cognitive impairment. Not insomnia — they genuinely need less sleep. Studies in mice carrying equivalent mutations show the same phenotype with no apparent ill effects. The existence of natural short sleepers suggests sleep duration is not fixed biology but a tunable parameter — with major implications for what "necessary" sleep actually means.
+
+**J6. A Mutation That Causes Disease in One Context Is Protective in Another**
+Sickle cell trait (one copy of the HbS allele) causes painful crises and organ damage in homozygotes — but heterozygotes are significantly protected against severe malaria, the leading infectious killer in sub-Saharan Africa. This balanced polymorphism is a textbook example of evolution maintaining a "harmful" variant because its heterozygous benefit outweighs its homozygous cost. The distribution of sickle cell trait maps almost perfectly onto historical malaria prevalence. Disease variants exist in the population because they were survival tools.
+
+**J7. CCR5-Δ32: The Mutation That Blocks HIV — And Came From the Black Death**
+The CCR5-Δ32 deletion, found in ~10% of people of European descent, prevents HIV from entering cells — homozygous carriers are nearly completely resistant to HIV infection. The mutation's unusually high frequency in Europeans (versus near-zero in Africans and Asians) suggests it was under strong positive selection in Europe. The leading theory: it conferred resistance to the bubonic plague or smallpox. A medieval epidemic may have inadvertently created a population of people resistant to HIV 500 years before HIV existed.
+
+**J8. The Gene That Makes Lactose Tolerance a Recent Invention**
+Most adult humans cannot digest milk — the ancestral state is for lactase, the enzyme that breaks down lactose, to switch off in adulthood. Lactase persistence (the adult ability to digest milk) is a mutation estimated at only ~7,500 years old, spread by positive selection in Northern European and East African pastoralist populations. It spread so quickly that it's one of the most visible recent selection signals in the human genome. We count it as "normal" because it's common in some populations. Globally, most humans are lactose intolerant, and that is the original condition.
+
+**J9. Ancient Romans Had a Completely Different Genetic Profile from Modern Italians**
+Ancient DNA from Roman-era burials in and around Rome shows the population was genetically diverse — with genetic signals from throughout the Mediterranean and Near East, dramatically different from modern Italian populations. The genetic composition of "Romans" shifted dramatically after the fall of the Western Empire as populations contracted, migrated, and were replaced. Modern Italians are not genetically continuous with the Romans who built the Colosseum. Genetic ancestry and cultural identity can be entirely decoupled.
+
+**J10. Some People Have Two Complete Sets of DNA**
+Chimerism — having two genetically distinct cell populations — occurs when twin embryos partially fuse in early development. Chimeric individuals can have two blood types simultaneously, organs with different DNA from their skin, and in at least one famous case, a woman was found to have children who were genetically her "niece" — her children carried DNA from her chimeric twin self rather than from the self whose blood was tested. She nearly lost custody because the DNA test said she wasn't their mother. She is. Her uterus just has different DNA than her blood.
+
+**J11. Your Appendix Is Not the Only Vestigial Organ That Isn't**
+The palmaris longus muscle — absent in ~14% of people — was thought to be a vestigial remnant of species that use the forearm for grasping. But surgeons now harvest it as a graft tendon for reconstructive hand surgery because it can be removed with no functional deficit. The plantaris tendon is similarly used. Evolution's cast-offs are being repurposed as surgical spare parts because they're readily available and expendable. Vestigial structures have a second career in the operating room.
+
+**J12. A Single Genetic Change May Have Made Us Human**
+ARHGAP11B is a gene that exists only in humans — not in chimps, not in other great apes. It arose ~3.5 million years ago from gene duplication and a single subsequent change that altered its function. When ARHGAP11B is expressed in mice or ferrets, their cortex expands dramatically, folding into the kind of convoluted gyrification previously only seen in humans and closely related great apes. A single duplication event may be the proximate cause of the expanded human neocortex — and everything that followed.
+
+**J13. CRISPR Babies Created Children Who May Have Increased HIV Resistance — and Shortened Lifespans**
+In 2018, He Jiankui used CRISPR to edit CCR5 in human embryos that became two girls, Lulu and Nana — the first gene-edited humans. The stated goal was HIV resistance (knocking out CCR5). What He didn't say publicly: the specific CCR5 variant he created may also increase susceptibility to West Nile virus — and a 2019 study found CCR5-null individuals had ~21% higher all-cause mortality. He is in prison. The girls, now ~7 years old, carry edits whose long-term consequences are unknown. The first CRISPR humans exist and nobody knows if they're okay.
+
+---
+
 ### Category G: ORIGINS & IDENTITY — What We Are, Where We Came From
 
 **G1. All Complex Life May Have Come From a Single Event**
@@ -317,8 +360,8 @@ The biodiversity we see today is a tiny remnant of what has existed. Five mass e
 
 ---
 
-## Story Count: 95 stories across 9 categories
-## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Origins/Identity
+## Story Count: 108 stories across 10 categories
+## Categories: Superlatives, Counterintuitive Twists, Danger/Death/Survival, Sex/Reproduction/Evolution, Money/Power/Economic Impact, Manipulation/Control, Microbiome, Extraordinary Senses, Human Genetics/Evolution, Origins/Identity
 
 ---
 
