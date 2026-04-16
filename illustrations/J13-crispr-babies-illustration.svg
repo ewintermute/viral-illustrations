@@ -215,7 +215,7 @@
     <path d="M 374 372 Q 366 370 350 372" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
     <!-- gap label -->
     <line x1="338" y1="315" x2="362" y2="315" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.7"/>
-    <text x="350" y="332" font-family="Inter, sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle" opacity="0.85">Δ32 bp</text>
+    <text x="350" y="332" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle" opacity="0.85">Δ32 bp</text>
   </g>
 
   <!-- Label -->

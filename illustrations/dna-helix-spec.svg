@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <rect width="800" height="600" fill="#1C1E35"/>
-  <text x="400" y="24" font-family="Barlow,sans-serif" font-size="12" font-weight="700"
+  <text x="400" y="24" font-family="Barlow, system-ui, sans-serif" font-size="12" font-weight="700"
         fill="#6B6B7C" text-anchor="middle" letter-spacing="0.14em">AWW DNA HELIX SPEC v4 — rungs aligned to strand positions</text>
-  <text x="140" y="44" font-family="Barlow,sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Standard</text>
-  <text x="380" y="44" font-family="Barlow,sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Highlighted region</text>
-  <text x="620" y="44" font-family="Barlow,sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">CRISPR cut site</text>
+  <text x="140" y="44" font-family="Barlow, system-ui, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Standard</text>
+  <text x="380" y="44" font-family="Barlow, system-ui, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Highlighted region</text>
+  <text x="620" y="44" font-family="Barlow, system-ui, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">CRISPR cut site</text>
   <line x1="260" y1="40" x2="260" y2="580" stroke="#3D3D52" stroke-width="1"/>
   <line x1="500" y1="40" x2="500" y2="580" stroke="#3D3D52" stroke-width="1"/>
 
@@ -83,21 +83,21 @@
   <path d="M 131.97,550.0 L 127.47,553.0 L 123.43,556.0 L 119.97,559.0 L 117.22,562.0 L 115.27,565.0 L 115.27,565.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
   <path d="M 131.97,550.0 L 136.74,553.0 L 141.63,556.0 L 146.47,559.0 L 151.07,562.0 L 155.28,565.0 L 155.28,565.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
   <!-- groove labels -->
-  <text x="193" y="195" font-family="Inter,sans-serif" font-size="9" fill="#6B6B7C">major</text>
-  <text x="193" y="205" font-family="Inter,sans-serif" font-size="9" fill="#6B6B7C">groove</text>
+  <text x="193" y="195" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B6B7C">major</text>
+  <text x="193" y="205" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B6B7C">groove</text>
   <line x1="190" y1="155" x2="190" y2="255" stroke="#6B6B7C" stroke-width="1"/>
   <line x1="186" y1="155" x2="190" y2="155" stroke="#6B6B7C" stroke-width="1"/>
   <line x1="186" y1="255" x2="190" y2="255" stroke="#6B6B7C" stroke-width="1"/>
-  <text x="193" y="282" font-family="Inter,sans-serif" font-size="9" fill="#6B6B7C">minor</text>
-  <text x="193" y="292" font-family="Inter,sans-serif" font-size="9" fill="#6B6B7C">groove</text>
+  <text x="193" y="282" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B6B7C">minor</text>
+  <text x="193" y="292" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B6B7C">groove</text>
   <line x1="190" y1="257" x2="190" y2="307" stroke="#6B6B7C" stroke-width="1"/>
   <line x1="186" y1="257" x2="190" y2="257" stroke="#6B6B7C" stroke-width="1"/>
   <line x1="186" y1="307" x2="190" y2="307" stroke="#6B6B7C" stroke-width="1"/>
   <line x1="88" y1="55" x2="88" y2="155" stroke="#A8A8B5" stroke-width="1" stroke-dasharray="3 2"/>
   <line x1="84" y1="55" x2="92" y2="55" stroke="#A8A8B5" stroke-width="1"/>
   <line x1="84" y1="155" x2="92" y2="155" stroke="#A8A8B5" stroke-width="1"/>
-  <text x="54" y="103" font-family="Inter,sans-serif" font-size="9" fill="#A8A8B5" text-anchor="middle">10 bp</text>
-  <text x="54" y="114" font-family="Inter,sans-serif" font-size="9" fill="#A8A8B5" text-anchor="middle">= 1 turn</text>
+  <text x="54" y="103" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#A8A8B5" text-anchor="middle">10 bp</text>
+  <text x="54" y="114" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#A8A8B5" text-anchor="middle">= 1 turn</text>
 
     <line x1="364.7" y1="55.0" x2="380.0" y2="55.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
   <line x1="355.3" y1="65.0" x2="395.3" y2="65.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
@@ -174,8 +174,8 @@
   <path d="M 371.97,550.0 L 367.47,553.0 L 363.43,556.0 L 359.97,559.0 L 357.22,562.0 L 355.27,565.0 L 355.27,565.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
   <path d="M 371.97,550.0 L 376.74,553.0 L 381.63,556.0 L 386.47,559.0 L 391.07,562.0 L 395.28,565.0 L 395.28,565.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" opacity="1.0"/>
   <rect x="347" y="258" width="66" height="144" rx="4" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.75"/>
-  <text x="422" y="295" font-family="Barlow,sans-serif" font-size="11" font-weight="700" fill="#E6B800">CCR5</text>
-  <text x="422" y="310" font-family="Inter,sans-serif" font-size="9" fill="#E6B800">target</text>
+  <text x="422" y="295" font-family="Barlow, system-ui, sans-serif" font-size="11" font-weight="700" fill="#E6B800">CCR5</text>
+  <text x="422" y="310" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#E6B800">target</text>
 
     <line x1="604.7" y1="55.0" x2="620.0" y2="55.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
   <line x1="595.3" y1="65.0" x2="635.3" y2="65.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
@@ -244,12 +244,12 @@
   <path d="M 599 378 Q 606 372 620 375" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
   <path d="M 641 378 Q 634 372 620 375" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
   <line x1="608" y1="328" x2="632" y2="328" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
-  <text x="620" y="344" font-family="Inter,sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle">Δ32 bp</text>
+  <text x="620" y="344" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle">Δ32 bp</text>
 
   <line x1="536" y1="556" x2="550" y2="556" stroke="#2D3E6B" stroke-width="3.5" stroke-linecap="round"/>
-  <text x="555" y="560" font-family="Inter,sans-serif" font-size="10" fill="#A8A8B5">Strand A — Navy Vintage</text>
+  <text x="555" y="560" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A8A8B5">Strand A — Navy Vintage</text>
   <line x1="536" y1="572" x2="550" y2="572" stroke="#5B6FA8" stroke-width="3.5" stroke-linecap="round"/>
-  <text x="555" y="576" font-family="Inter,sans-serif" font-size="10" fill="#A8A8B5">Strand B — Slate Blue</text>
+  <text x="555" y="576" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A8A8B5">Strand B — Slate Blue</text>
   <line x1="536" y1="588" x2="550" y2="588" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-  <text x="555" y="592" font-family="Inter,sans-serif" font-size="10" fill="#A8A8B5">Base pairs — Periwinkle, variable opacity</text>
+  <text x="555" y="592" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#A8A8B5">Base pairs — Periwinkle, variable opacity</text>
 </svg>
