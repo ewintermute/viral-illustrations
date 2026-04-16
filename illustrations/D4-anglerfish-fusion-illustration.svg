@@ -47,7 +47,7 @@
     <line x1="285" y1="375" x2="292" y2="358" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
     <line x1="300" y1="378" x2="308" y2="360" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
     <!-- female eye (large, adapted) -->
-    <circle cx="322" cy="272" r="22" fill="#1C1E35" stroke="#8BA0D6" stroke-width="2.5"/>
+    <circle cx="322" cy="272" r="22" fill="#E8EEFF" stroke="#8BA0D6" stroke-width="2.5"/>
     <circle cx="322" cy="272" r="12" fill="#2D3E6B"/>
     <circle cx="318" cy="268" r="4" fill="#FBFFF6" opacity="0.5"/>
     <!-- pectoral fins -->

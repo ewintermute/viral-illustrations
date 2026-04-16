@@ -56,7 +56,7 @@
     <!-- beak -->
     <path d="M 336 285 L 318 282" stroke="#6B4423" stroke-width="3" stroke-linecap="round"/>
     <!-- eye (special: glowing cyan hint for cryptochrome) -->
-    <circle cx="348" cy="280" r="6" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="348" cy="280" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
     <circle cx="348" cy="280" r="3" fill="#8BA0D6" opacity="0.9"/>
     <circle cx="347" cy="279" r="1.5" fill="#D1DCFF"/>
     <!-- tail -->
