@@ -66,6 +66,14 @@ This structure allows an animator to:
 - No titles, headers, or story names in the SVG
 - Labels describe what something IS, not what it means (e.g., "spore" not "spores rain down onto ant trail")
 
+### Standard Eye Construction
+All critter eyes use the same three-layer anatomy regardless of organism:
+1. **Sclera:** `<ellipse>` with rx:ry ratio ~1.25:1 (horizontal), `fill="#E8EEFF"`, `stroke="#D4A574" stroke-width="1.5"`
+2. **Pupil:** `<circle>` at ~40-45% of sclera rx, `fill="#0D0D16"`
+3. **Specular:** `<circle>` offset up-left, ~20-25% of sclera rx, `fill="#FBFFF6" opacity="0.85"`
+
+Scale the whole assembly to the creature — small animals get rx=7-9, large animals rx=20+. Do not use plain `<circle>` for the sclera. Do not deviate from this structure for consistency across the illustration set.
+
 ### Shapes and Paths
 - Prefer organic paths (`<path>`) over rigid rectangles for biological subjects
 - Cell membranes, organism outlines, and leaves: use smooth bezier curves
