@@ -30,11 +30,11 @@
     <path d="M 380 290 Q 400 286 420 290" stroke="#6B4423" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
     <!-- eyes on stalks -->
     <line x1="368" y1="290" x2="352" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="350" cy="270" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <ellipse cx="350" cy="270" rx="8" ry="6.5" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
     <circle cx="350" cy="270" r="2.5" fill="#0D0D16"/>
     <circle cx="349" cy="269" r="1" fill="#FBFFF6" opacity="0.85"/>
     <line x1="432" y1="290" x2="448" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="450" cy="270" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <ellipse cx="450" cy="270" rx="8" ry="6.5" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
     <circle cx="450" cy="270" r="2.5" fill="#0D0D16"/>
     <circle cx="449" cy="269" r="1" fill="#FBFFF6" opacity="0.85"/>
     <!-- chelae (claws - smaller, feminized) -->
