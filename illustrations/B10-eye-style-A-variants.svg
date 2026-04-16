@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+
+  <!-- Background -->
+  <rect width="800" height="440" fill="#1C1E35"/>
+  <rect x="0" y="0" width="800" height="220" fill="#2D3E6B" opacity="0.2"/>
+
+  <!-- Header -->
+  <text x="400" y="32" font-family="Barlow, system-ui, sans-serif" font-size="14"
+        font-weight="700" fill="#A8A8B5" text-anchor="middle" letter-spacing="0.15em">STYLE A VARIANTS — SCLERA BRIGHTNESS</text>
+
+  <!-- Shared octopus body macro -->
+  <!-- Each panel centred at x = 100, 267, 434, 600, 766... let's do 4 at 100, 300, 500, 700 -->
+
+  <!-- ── A1: original — dark sclera (#1C1E35) ── -->
+  <g id="A1" data-label="A1: original dark sclera">
+    <path d="M 100 155 Q 124 138 146 155 Q 158 172 154 200 Q 146 220 127 228 Q 110 232 93 226 Q 74 218 68 200 Q 62 172 77 155 Q 90 138 100 155 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100" cy="182" r="3.5" fill="#6B4423" opacity="0.6"/>
+    <circle cx="114" cy="196" r="3" fill="#6B4423" opacity="0.5"/>
+    <circle cx="88"  cy="196" r="3" fill="#6B4423" opacity="0.5"/>
+    <path d="M 74 218 Q 50 244 40 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 126 218 Q 150 244 160 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Eye A1: dark sclera original -->
+    <ellipse cx="86"  cy="174" rx="11" ry="9" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="86"  cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="84"  cy="172" r="1.8" fill="#FBFFF6" opacity="0.7"/>
+    <ellipse cx="115" cy="174" rx="11" ry="9" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="115" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="113" cy="172" r="1.8" fill="#FBFFF6" opacity="0.7"/>
+    <!-- label -->
+    <text x="100" y="310" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#FBFFF6" text-anchor="middle">A1</text>
+    <text x="100" y="326" font-family="Inter, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Original</text>
+    <text x="100" y="340" font-family="Inter, sans-serif" font-size="10" fill="#6B6B7C" text-anchor="middle">#1C1E35 sclera</text>
+  </g>
+
+  <!-- ── A2: medium gray sclera (#6B6B7C Slate Gray) ── -->
+  <g id="A2" data-label="A2: slate gray sclera">
+    <path d="M 300 155 Q 324 138 346 155 Q 358 172 354 200 Q 346 220 327 228 Q 310 232 293 226 Q 274 218 268 200 Q 262 172 277 155 Q 290 138 300 155 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="300" cy="182" r="3.5" fill="#6B4423" opacity="0.6"/>
+    <circle cx="314" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <circle cx="288" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <path d="M 274 218 Q 250 244 240 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 326 218 Q 350 244 360 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Eye A2: slate gray sclera -->
+    <ellipse cx="286" cy="174" rx="11" ry="9" fill="#6B6B7C" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="286" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="284" cy="172" r="1.8" fill="#FBFFF6" opacity="0.8"/>
+    <ellipse cx="315" cy="174" rx="11" ry="9" fill="#6B6B7C" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="315" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="313" cy="172" r="1.8" fill="#FBFFF6" opacity="0.8"/>
+    <text x="300" y="310" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#FBFFF6" text-anchor="middle">A2</text>
+    <text x="300" y="326" font-family="Inter, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Slate gray</text>
+    <text x="300" y="340" font-family="Inter, sans-serif" font-size="10" fill="#6B6B7C" text-anchor="middle">#6B6B7C sclera</text>
+  </g>
+
+  <!-- ── A3: powder blue sclera (#E8EEFF) — cool ocean feel ── -->
+  <g id="A3" data-label="A3: powder blue sclera">
+    <path d="M 500 155 Q 524 138 546 155 Q 558 172 554 200 Q 546 220 527 228 Q 510 232 493 226 Q 474 218 468 200 Q 462 172 477 155 Q 490 138 500 155 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="500" cy="182" r="3.5" fill="#6B4423" opacity="0.6"/>
+    <circle cx="514" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <circle cx="488" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <path d="M 474 218 Q 450 244 440 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 526 218 Q 550 244 560 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Eye A3: powder blue sclera -->
+    <ellipse cx="486" cy="174" rx="11" ry="9" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="486" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="484" cy="172" r="1.8" fill="#FBFFF6" opacity="0.9"/>
+    <ellipse cx="515" cy="174" rx="11" ry="9" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="515" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="513" cy="172" r="1.8" fill="#FBFFF6" opacity="0.9"/>
+    <text x="500" y="310" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#FBFFF6" text-anchor="middle">A3</text>
+    <text x="500" y="326" font-family="Inter, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Powder blue</text>
+    <text x="500" y="340" font-family="Inter, sans-serif" font-size="10" fill="#6B6B7C" text-anchor="middle">#E8EEFF sclera</text>
+  </g>
+
+  <!-- ── A4: core white sclera (#FBFFF6) ── -->
+  <g id="A4" data-label="A4: core white sclera">
+    <path d="M 700 155 Q 724 138 746 155 Q 758 172 754 200 Q 746 220 727 228 Q 710 232 693 226 Q 674 218 668 200 Q 662 172 677 155 Q 690 138 700 155 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="700" cy="182" r="3.5" fill="#6B4423" opacity="0.6"/>
+    <circle cx="714" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <circle cx="688" cy="196" r="3"   fill="#6B4423" opacity="0.5"/>
+    <path d="M 674 218 Q 650 244 640 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 726 218 Q 750 244 760 278" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Eye A4: core white sclera -->
+    <ellipse cx="686" cy="174" rx="11" ry="9" fill="#FBFFF6" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="686" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="684" cy="172" r="1.8" fill="#FBFFF6" opacity="1"/>
+    <ellipse cx="715" cy="174" rx="11" ry="9" fill="#FBFFF6" stroke="#D4A574" stroke-width="1.5"/>
+    <circle  cx="715" cy="174" r="4.5" fill="#0D0D16"/>
+    <circle  cx="713" cy="172" r="1.8" fill="#FBFFF6" opacity="1"/>
+    <text x="700" y="310" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#FBFFF6" text-anchor="middle">A4</text>
+    <text x="700" y="326" font-family="Inter, sans-serif" font-size="11" fill="#A8A8B5" text-anchor="middle">Core white</text>
+    <text x="700" y="340" font-family="Inter, sans-serif" font-size="10" fill="#6B6B7C" text-anchor="middle">#FBFFF6 sclera</text>
+  </g>
+
+  <!-- ── ENLARGED DETAIL STRIP ── -->
+  <rect x="0" y="360" width="800" height="80" fill="#0D0D16" opacity="0.5"/>
+  <text x="400" y="378" font-family="Inter, sans-serif" font-size="10" fill="#6B6B7C" text-anchor="middle" letter-spacing="0.15em">ENLARGED DETAIL</text>
+  <!-- A1 enlarged -->
+  <ellipse cx="100" cy="415" rx="24" ry="20" fill="#1C1E35" stroke="#D4A574" stroke-width="2.5"/>
+  <circle  cx="100" cy="415" r="10"  fill="#0D0D16"/>
+  <circle  cx="95"  cy="410" r="4"   fill="#FBFFF6" opacity="0.7"/>
+  <!-- A2 enlarged -->
+  <ellipse cx="300" cy="415" rx="24" ry="20" fill="#6B6B7C" stroke="#D4A574" stroke-width="2.5"/>
+  <circle  cx="300" cy="415" r="10"  fill="#0D0D16"/>
+  <circle  cx="295" cy="410" r="4"   fill="#FBFFF6" opacity="0.8"/>
+  <!-- A3 enlarged -->
+  <ellipse cx="500" cy="415" rx="24" ry="20" fill="#E8EEFF" stroke="#D4A574" stroke-width="2.5"/>
+  <circle  cx="500" cy="415" r="10"  fill="#0D0D16"/>
+  <circle  cx="495" cy="410" r="4"   fill="#FBFFF6" opacity="0.9"/>
+  <!-- A4 enlarged -->
+  <ellipse cx="700" cy="415" rx="24" ry="20" fill="#FBFFF6" stroke="#D4A574" stroke-width="2.5"/>
+  <circle  cx="700" cy="415" r="10"  fill="#0D0D16"/>
+  <circle  cx="695" cy="410" r="4"   fill="#FBFFF6" opacity="1"/>
+
+</svg>
