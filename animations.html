@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWW Viral Illustrations — Animations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #1C1E35;
+      color: #FBFFF6;
+      font-family: 'Inter', system-ui, sans-serif;
+      padding: 0 0 80px;
+    }
+    header {
+      padding: 40px 48px 28px;
+      border-bottom: 1px solid #3D3D52;
+      display: flex; align-items: baseline; gap: 24px;
+    }
+    header h1 { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: clamp(24px,3.5vw,40px); }
+    header a  { font-size: 13px; color: #8BA0D6; text-decoration: none; }
+    header a:hover { color: #D1DCFF; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 1px;
+      background: #3D3D52;
+      margin-top: 1px;
+    }
+    .card { background: #1C1E35; display: flex; flex-direction: column; }
+    .anim-stage {
+      background: #0D0D16;
+      aspect-ratio: 4/3;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .anim-stage svg { width: 100%; height: 100%; display: block; }
+    .anim-stage .play-btn {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(13,13,22,0.55);
+      transition: opacity 0.2s;
+    }
+    .anim-stage.playing .play-btn { opacity: 0; pointer-events: none; }
+    .play-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; padding-left: 4px;
+    }
+    .card-meta {
+      padding: 14px 20px 18px;
+      border-top: 1px solid #3D3D52;
+    }
+    .card-id { font-family:'Barlow',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#2FBF39; margin-bottom:4px; }
+    .card-title { font-family:'Barlow',sans-serif; font-weight:700; font-size:15px; color:#FBFFF6; margin-bottom:4px; }
+    .card-desc { font-size:12px; color:#A8A8B5; line-height:1.6; }
+    .duration-badge {
+      display:inline-block; font-size:10px; font-family:'Space Mono',monospace,'Inter',sans-serif;
+      background:#3D3D52; color:#A8A8B5; padding:2px 7px; margin-top:8px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Animations</h1>
+  <a href="index.html">← Back to illustrations</a>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────
+// Animation engine: applies CSS keyframe animations to SVG layer groups
+// Each animation is defined as a sequence of "beats" with timing.
+// Groups start hidden (opacity:0) unless specified.
+// ─────────────────────────────────────────────────────────────────────
+
+// UTILITY
+function css(id, rules) {
+  const el = document.getElementById('anim-styles') || (() => {
+    const s = document.createElement('style'); s.id='anim-styles'; document.head.appendChild(s); return s;
+  })();
+  el.textContent += `#${id} { ${rules} }\n`;
+}
+
+function injectAnimation(svgEl, name, keyframes, opts) {
+  const styleEl = svgEl.querySelector('style') || (() => {
+    const s = document.createElement('style'); svgEl.prepend(s); return s;
+  })();
+  styleEl.textContent += `@keyframes ${name} { ${keyframes} }\n`;
+  const el = svgEl.querySelector(`#${opts.target}`);
+  if (el) {
+    el.style.animation = `${name} ${opts.duration}s ${opts.timing||'ease'} ${opts.delay||0}s ${opts.fill||'both'} ${opts.iteration||1} ${opts.dir||'normal'}`;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// ANIMATION DEFINITIONS
+// Total = 10-20s. Start and end with 1s freeze.
+// Between beats: 0.5s freeze.
+// ─────────────────────────────────────────────────────────────────────
+
+const animations = {
+
+  // ── C1: Zombie Ant Fungus (14s) ──────────────────────────────────────
+  // Beat 1 (0-4s):   Scene fades in — bg, context, subject (ant locked)
+  // Beat 2 (4.5-8s): Hyphae appear through body
+  // Beat 3 (8.5-13s): Stalk erupts, spores rain down
+  // Freeze end 13-14s
+  'C1': {
+    title: 'Zombie Ant Fungus',
+    id: 'C1',
+    file: 'illustrations/C1-zombie-ant-fungus-illustration.svg',
+    hook: 'Ophiocordyceps locks the ant\'s jaw, erupts from its head, and rains spores below.',
+    duration: 14,
+    setup(svg) {
+      const hide = ['context','subject','detail-hyphae','detail-stalk','detail-spores','label','overlay'];
+      hide.forEach(id => { const g = svg.querySelector(`#${id}`); if(g) g.style.opacity = '0'; });
+    },
+    play(svg) {
+      // Beat 1: environment fades in
+      anim(svg, 'context',  {delay:1,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',  {delay:2,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',    {delay:2.5, dur:1,   from:'opacity:0', to:'opacity:1'});
+      // Beat 2: hyphae
+      anim(svg, 'detail-hyphae', {delay:4.5, dur:2, from:'opacity:0', to:'opacity:1'});
+      // Beat 3: stalk + spores
+      anim(svg, 'detail-stalk',  {delay:8.5, dur:1.5, from:'opacity:0;transform:scaleY(0);transform-origin:bottom', to:'opacity:1;transform:scaleY(1)'});
+      anim(svg, 'detail-spores', {delay:10,  dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',       {delay:10,  dur:1,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── A7: Horseshoe Crab Blood (12s) ──────────────────────────────────
+  // Beat 1 (0-4s):  Crab appears from ocean floor
+  // Beat 2 (4.5-9s): Blue blood pools (amebocyte inset)
+  // Beat 3 (9.5-11s): Label and price
+  'A7': {
+    title: 'Horseshoe Crab Blood',
+    id: 'A7',
+    file: 'illustrations/A7-horseshoe-crab-blood-illustration.svg',
+    hook: '$60,000/gallon. Every injectable drug you\'ve taken was tested with this.',
+    duration: 12,
+    setup(svg) {
+      ['context','subject','detail-blood','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context', {delay:1,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject', {delay:2,   dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-blood', {delay:4.5, dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',      {delay:6,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',        {delay:9.5, dur:1,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── F6: Sacculina Barnacle (15s) ──────────────────────────────────
+  // Beat 1 (0-4s): Crab appears healthy
+  // Beat 2 (4.5-9s): Internal roots spread through body
+  // Beat 3 (9.5-14s): Externa sac erupts, crab grooms it
+  'F6': {
+    title: 'Sacculina Barnacle',
+    id: 'F6',
+    file: 'illustrations/F6-sacculina-barnacle-illustration.svg',
+    hook: 'A barnacle dissolves a crab from inside, and the crab grooms the parasite\'s eggs.',
+    duration: 15,
+    setup(svg) {
+      ['context','subject','detail-externa','detail-interna','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',         {delay:1,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',         {delay:2,   dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-interna',  {delay:4.5, dur:3,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-externa',  {delay:9.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',           {delay:9.5, dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',         {delay:11,  dur:1,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── J13: CRISPR Babies (16s) ──────────────────────────────────────
+  // Beat 1 (0-5s): DNA helix appears, CCR5 highlighted
+  // Beat 2 (5.5-10s): Cas9 moves to cut site
+  // Beat 3 (10.5-15s): Cut + mosaic result
+  'J13': {
+    title: 'CRISPR Babies',
+    id: 'J13',
+    file: 'illustrations/J13-crispr-babies-illustration.svg',
+    hook: 'The first gene-edited humans carry an edit that may have shortened their lives.',
+    duration: 16,
+    setup(svg) {
+      ['context','subject','detail-rungs-top','detail-rungs-bot','detail-cut','detail-cas9','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',          {delay:1,    dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-rungs-top', {delay:2,    dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-rungs-bot', {delay:2.5,  dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',            {delay:3,    dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',          {delay:5.5,  dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-cas9',      {delay:7,    dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-cut',       {delay:10.5, dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',          {delay:12,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── H2: Fecal Transplant (12s) ──────────────────────────────────────
+  // Beat 1 (0-4s): C. diff gut — diseased state
+  // Beat 2 (4.5-9s): Capsule / transplant arrives
+  // Beat 3 (9.5-11s): Healthy bacteria displace — label
+  'H2': {
+    title: 'Fecal Microbiota Transplant',
+    id: 'H2',
+    file: 'illustrations/H2-fecal-transplant-illustration.svg',
+    hook: '90% cure rate. Other people\'s bacteria is now an FDA-approved medicine.',
+    duration: 12,
+    setup(svg) {
+      ['context','subject','detail-cdiff','detail-capsule','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',       {delay:1,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',       {delay:2,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-cdiff',  {delay:2.5, dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-capsule',{delay:4.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',       {delay:6,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',         {delay:9.5, dur:1,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── B10: Octopus RNA Editing (13s) ──────────────────────────────────
+  // Beat 1 (0-5s): Octopus scene — cold water
+  // Beat 2 (5.5-12s): Ganglion glow + RNA inset appears
+  'B10': {
+    title: 'Octopus RNA Editing',
+    id: 'B10',
+    file: 'illustrations/B10-octopus-rna-editing-illustration.svg',
+    hook: '13,000+ RNA edits. The octopus rewrites itself to survive cold water.',
+    duration: 13,
+    setup(svg) {
+      // B10 may use different group IDs — find what's there
+      const allG = [...svg.querySelectorAll('g[id]')].map(g=>g.id);
+      const hide = allG.filter(id => !['bg'].includes(id));
+      hide.forEach(id => { const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0'; });
+      this._groups = allG;
+    },
+    play(svg) {
+      const groups = [...svg.querySelectorAll('g[id]')].map(g=>g.id).filter(id=>id!=='bg');
+      // Stagger all non-bg groups in
+      groups.forEach((id, i) => {
+        anim(svg, id, {delay: 1 + i*1.2, dur:1.5, from:'opacity:0', to:'opacity:1'});
+      });
+    }
+  },
+
+  // ── I2: Bird Quantum Navigation (14s) ──────────────────────────────
+  // Beat 1 (0-4s): Robin + night sky
+  // Beat 2 (4.5-8s): Eye glow + cryptochrome detail
+  // Beat 3 (8.5-13s): Magnetic field lines appear
+  'I2': {
+    title: 'Bird Quantum Navigation',
+    id: 'I2',
+    file: 'illustrations/I2-bird-quantum-navigation-illustration.svg',
+    hook: 'A robin navigates by quantum entanglement in a protein in its eye.',
+    duration: 14,
+    setup(svg) {
+      ['context','subject','detail-eye','detail-cryptochrome','detail-field-lines','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',              {delay:1,   dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',              {delay:2,   dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',                {delay:3,   dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-eye',           {delay:4.5, dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-cryptochrome',  {delay:5.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-field-lines',   {delay:8.5, dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',              {delay:10,  dur:1,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── E16: Artemisinin (13s) ──────────────────────────────────────────
+  // Beat 1 (0-4s): Plant silhouette
+  // Beat 2 (4.5-9s): Molecular structure appears with highlighted bridge
+  // Beat 3 (9.5-12s): Reaction arrow to Fe target
+  'E16': {
+    title: 'Artemisinin',
+    id: 'E16',
+    file: 'illustrations/E16-artemisinin-illustration.svg',
+    hook: 'A Nobel Prize from a fever recipe written in 340 AD.',
+    duration: 13,
+    setup(svg) {
+      ['context','subject','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context', {delay:1,   dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject', {delay:4.5, dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',   {delay:5,   dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay', {delay:9.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── K11: Termite AC (14s) ──────────────────────────────────────────
+  // Beat 1 (0-4s): Mound exterior, hot savanna
+  // Beat 2 (4.5-9s): Interior channels revealed, airflow arrows
+  // Beat 3 (9.5-13s): Eastgate building comparison
+  'K11': {
+    title: 'Termite Air Conditioning',
+    id: 'K11',
+    file: 'illustrations/K11-termite-ac-illustration.svg',
+    hook: 'Termites built passive air conditioning 50 million years ago. One architect copied it.',
+    duration: 14,
+    setup(svg) {
+      ['context','subject','detail-channels','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',         {delay:1,   dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',         {delay:2.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-channels', {delay:4.5, dur:3,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',           {delay:6,   dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',         {delay:9.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+
+  // ── D4: Anglerfish Fusion (15s) ──────────────────────────────────────
+  // Beat 1 (0-5s): Female anglerfish, glowing lure
+  // Beat 2 (5.5-10s): Fused male appears
+  // Beat 3 (10.5-14s): Fusion detail, immunity loss label
+  'D4': {
+    title: 'Anglerfish Sexual Fusion',
+    id: 'D4',
+    file: 'illustrations/D4-anglerfish-fusion-illustration.svg',
+    hook: 'The male anglerfish fuses to the female and becomes just testicles.',
+    duration: 15,
+    setup(svg) {
+      ['context','subject','detail-eye','detail-lure','detail-fused-male','label','overlay'].forEach(id => {
+        const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
+      });
+    },
+    play(svg) {
+      anim(svg, 'context',           {delay:1,    dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',           {delay:2,    dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-eye',        {delay:2.5,  dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-lure',       {delay:3,    dur:1.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-fused-male', {delay:5.5,  dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',             {delay:7,    dur:1,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',           {delay:10.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+    }
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────
+// Core animation helper: creates a CSS animation for a group
+// ─────────────────────────────────────────────────────────────────────
+function anim(svgEl, groupId, opts) {
+  const el = svgEl.querySelector(`#${groupId}`);
+  if (!el) return;
+  const name = `anim_${groupId}_${Math.random().toString(36).slice(2,7)}`;
+  const styleEl = svgEl.querySelector('style') || (() => {
+    const s = document.createElementNS('http://www.w3.org/2000/svg','style');
+    svgEl.prepend(s); return s;
+  })();
+  styleEl.textContent += `
+    @keyframes ${name} {
+      0%   { ${opts.from} }
+      100% { ${opts.to}   }
+    }
+  `;
+  const dur    = opts.dur   || 1;
+  const delay  = opts.delay || 0;
+  const timing = opts.timing || 'ease';
+  el.style.animation = `${name} ${dur}s ${timing} ${delay}s both 1 normal`;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Build the page
+// ─────────────────────────────────────────────────────────────────────
+const grid = document.getElementById('grid');
+
+Object.values(animations).forEach(def => {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  card.innerHTML = `
+    <div class="anim-stage" id="stage-${def.id}">
+      <div class="play-btn" id="playbtn-${def.id}">
+        <div class="play-icon">▶</div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <div class="card-id">${def.id}</div>
+      <div class="card-title">${def.title}</div>
+      <div class="card-desc">${def.hook}</div>
+      <div class="duration-badge">${def.duration}s</div>
+    </div>`;
+
+  grid.appendChild(card);
+
+  // Load SVG inline
+  fetch(def.file)
+    .then(r => r.text())
+    .then(svgText => {
+      const stage = document.getElementById(`stage-${def.id}`);
+      const playBtn = document.getElementById(`playbtn-${def.id}`);
+
+      // Parse and inject SVG
+      const parser = new DOMParser();
+      const doc    = parser.parseFromString(svgText, 'image/svg+xml');
+      const svgEl  = doc.documentElement;
+      svgEl.setAttribute('width',  '100%');
+      svgEl.setAttribute('height', '100%');
+      svgEl.style.position = 'absolute';
+      svgEl.style.inset = '0';
+
+      stage.insertBefore(svgEl, playBtn);
+
+      // Set up initial hidden state
+      def.setup(svgEl);
+
+      // Play on click
+      let hasPlayed = false;
+      playBtn.addEventListener('click', () => {
+        if (hasPlayed) {
+          // Reset: reload SVG
+          stage.removeChild(svgEl);
+          fetch(def.file).then(r=>r.text()).then(t => {
+            const d2 = parser.parseFromString(t,'image/svg+xml');
+            const svg2 = d2.documentElement;
+            svg2.setAttribute('width','100%'); svg2.setAttribute('height','100%');
+            svg2.style.position='absolute'; svg2.style.inset='0';
+            stage.insertBefore(svg2, playBtn);
+            def.setup(svg2);
+            setTimeout(() => {
+              stage.classList.add('playing');
+              def.play(svg2);
+              setTimeout(() => { stage.classList.remove('playing'); hasPlayed = true; }, def.duration * 1000);
+            }, 50);
+          });
+          return;
+        }
+        stage.classList.add('playing');
+        def.play(svgEl);
+        setTimeout(() => { stage.classList.remove('playing'); hasPlayed = true; }, def.duration * 1000);
+      });
+    });
+});
+</script>
+</body>
+</html>
