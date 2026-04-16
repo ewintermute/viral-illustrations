@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="biolum-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2FBF39" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2FBF39" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Eye style D: iris gradient -->
+    <radialGradient id="iris-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#8BA0D6"/>
+      <stop offset="100%" stop-color="#2D3E6B"/>
+    </radialGradient>
+    <!-- Eye style E: slit pupil gradient -->
+    <radialGradient id="slit-iris-grad" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#6B4423"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <g id="bg" data-label="Background panel for eye style mockup">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="0" width="800" height="300" fill="#2D3E6B" opacity="0.2"/>
+  </g>
+
+  <!-- ── HEADER LABEL ── -->
+  <g id="label" data-label="Page title">
+    <text x="400" y="36" font-family="Barlow, system-ui, sans-serif" font-size="15"
+          font-weight="700" fill="#A8A8B5" text-anchor="middle" letter-spacing="0.15em"
+          text-transform="uppercase">B10 · EYE STYLES</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════
+       FIVE OCTOPUS HEAD PANELS — left to right
+       Each panel: octopus mantle + arms stub + eye style
+       Panel centres at x = 80, 240, 400, 560, 720
+       Panel y baseline at y = 300
+  ══════════════════════════════════════════════ -->
+
+  <!-- ──────────────────────────────────────────────
+       STYLE A — current default
+       Ellipse sclera + large iris fill + small white dot
+  ────────────────────────────────────────────── -->
+  <g id="octopus-A" data-label="Octopus head with eye style A">
+    <!-- mantle -->
+    <path d="M 80 200 Q 106 182 128 200 Q 140 218 136 248 Q 128 270 108 278 Q 90 282 72 276 Q 52 268 46 248 Q 40 218 54 200 Q 68 182 80 200 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- chromatophore spots -->
+    <circle cx="80" cy="228" r="4" fill="#6B4423" opacity="0.6"/>
+    <circle cx="96" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="66" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <!-- arm stubs -->
+    <path d="M 54 268 Q 30 295 20 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 48 278 Q 22 310 12 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 106 268 Q 130 295 140 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 112 278 Q 138 310 148 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- EYE STYLE A: flat ellipse sclera, black iris, white highlight dot -->
+    <ellipse cx="65" cy="220" rx="11" ry="9" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="65" cy="220" r="4.5" fill="#0D0D16"/>
+    <circle cx="63" cy="218" r="1.8" fill="#FBFFF6" opacity="0.7"/>
+    <ellipse cx="96" cy="220" rx="11" ry="9" fill="#1C1E35" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="96" cy="220" r="4.5" fill="#0D0D16"/>
+    <circle cx="94" cy="218" r="1.8" fill="#FBFFF6" opacity="0.7"/>
+    <!-- style label -->
+    <text x="80" y="380" font-family="Barlow, system-ui, sans-serif" font-size="13"
+          font-weight="700" fill="#FBFFF6" text-anchor="middle">A</text>
+    <text x="80" y="396" font-family="Inter, system-ui, sans-serif" font-size="11"
+          fill="#A8A8B5" text-anchor="middle">Flat ellipse</text>
+    <text x="80" y="410" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle">current default</text>
+  </g>
+
+  <!-- ──────────────────────────────────────────────
+       STYLE B — cartoon disc
+       Large white sclera circle, colored iris disc, black pupil dot, white specular
+  ────────────────────────────────────────────── -->
+  <g id="octopus-B" data-label="Octopus head with eye style B">
+    <path d="M 240 200 Q 266 182 288 200 Q 300 218 296 248 Q 288 270 268 278 Q 250 282 232 276 Q 212 268 206 248 Q 200 218 214 200 Q 228 182 240 200 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="240" cy="228" r="4" fill="#6B4423" opacity="0.6"/>
+    <circle cx="256" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="226" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <path d="M 214 268 Q 190 295 180 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 208 278 Q 182 310 172 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 266 268 Q 290 295 300 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 272 278 Q 298 310 308 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- EYE STYLE B: large white sclera circle, amber iris disc, small black pupil, white specular -->
+    <circle cx="225" cy="220" r="11" fill="#FBFFF6"/>
+    <circle cx="225" cy="220" r="7" fill="#E6B800"/>
+    <circle cx="225" cy="220" r="3.5" fill="#0D0D16"/>
+    <circle cx="223" cy="217" r="2.2" fill="#FBFFF6" opacity="0.9"/>
+    <circle cx="256" cy="220" r="11" fill="#FBFFF6"/>
+    <circle cx="256" cy="220" r="7" fill="#E6B800"/>
+    <circle cx="256" cy="220" r="3.5" fill="#0D0D16"/>
+    <circle cx="254" cy="217" r="2.2" fill="#FBFFF6" opacity="0.9"/>
+    <text x="240" y="380" font-family="Barlow, system-ui, sans-serif" font-size="13"
+          font-weight="700" fill="#FBFFF6" text-anchor="middle">B</text>
+    <text x="240" y="396" font-family="Inter, system-ui, sans-serif" font-size="11"
+          fill="#A8A8B5" text-anchor="middle">Cartoon disc</text>
+    <text x="240" y="410" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle">white sclera + amber iris</text>
+  </g>
+
+  <!-- ──────────────────────────────────────────────
+       STYLE C — scientific cutout
+       Clean white ring outline only, no fill — negative space pupil
+  ────────────────────────────────────────────── -->
+  <g id="octopus-C" data-label="Octopus head with eye style C">
+    <path d="M 400 200 Q 426 182 448 200 Q 460 218 456 248 Q 448 270 428 278 Q 410 282 392 276 Q 372 268 366 248 Q 360 218 374 200 Q 388 182 400 200 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="400" cy="228" r="4" fill="#6B4423" opacity="0.6"/>
+    <circle cx="416" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="386" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <path d="M 374 268 Q 350 295 340 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 368 278 Q 342 310 332 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 426 268 Q 450 295 460 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 432 278 Q 458 310 468 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- EYE STYLE C: ring outline only — minimal scientific -->
+    <circle cx="385" cy="220" r="11" fill="none" stroke="#FBFFF6" stroke-width="2"/>
+    <circle cx="385" cy="220" r="5.5" fill="#1C1E35"/>
+    <circle cx="416" cy="220" r="11" fill="none" stroke="#FBFFF6" stroke-width="2"/>
+    <circle cx="416" cy="220" r="5.5" fill="#1C1E35"/>
+    <text x="400" y="380" font-family="Barlow, system-ui, sans-serif" font-size="13"
+          font-weight="700" fill="#FBFFF6" text-anchor="middle">C</text>
+    <text x="400" y="396" font-family="Inter, system-ui, sans-serif" font-size="11"
+          fill="#A8A8B5" text-anchor="middle">Scientific ring</text>
+    <text x="400" y="410" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle">outline only, no fill</text>
+  </g>
+
+  <!-- ──────────────────────────────────────────────
+       STYLE D — periwinkle iris with gradient depth
+       Visible sclera arc, gradient iris, dark pupil slit, bright specular
+  ────────────────────────────────────────────── -->
+  <g id="octopus-D" data-label="Octopus head with eye style D">
+    <path d="M 560 200 Q 586 182 608 200 Q 620 218 616 248 Q 608 270 588 278 Q 570 282 552 276 Q 532 268 526 248 Q 520 218 534 200 Q 548 182 560 200 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="560" cy="228" r="4" fill="#6B4423" opacity="0.6"/>
+    <circle cx="576" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="546" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <path d="M 534 268 Q 510 295 500 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 528 278 Q 502 310 492 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 586 268 Q 610 295 620 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 592 278 Q 618 310 628 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- EYE STYLE D: gradient periwinkle iris, visible white sclera arc, large specular -->
+    <ellipse cx="545" cy="220" rx="12" ry="10" fill="#FBFFF6" stroke="none"/>
+    <ellipse cx="545" cy="220" rx="9" ry="8" fill="url(#iris-grad)"/>
+    <ellipse cx="545" cy="221" rx="3.5" ry="4.5" fill="#0D0D16"/>
+    <ellipse cx="543" cy="217" rx="2.5" ry="2" fill="#FBFFF6" opacity="0.85"/>
+    <ellipse cx="576" cy="220" rx="12" ry="10" fill="#FBFFF6" stroke="none"/>
+    <ellipse cx="576" cy="220" rx="9" ry="8" fill="url(#iris-grad)"/>
+    <ellipse cx="576" cy="221" rx="3.5" ry="4.5" fill="#0D0D16"/>
+    <ellipse cx="574" cy="217" rx="2.5" ry="2" fill="#FBFFF6" opacity="0.85"/>
+    <text x="560" y="380" font-family="Barlow, system-ui, sans-serif" font-size="13"
+          font-weight="700" fill="#FBFFF6" text-anchor="middle">D</text>
+    <text x="560" y="396" font-family="Inter, system-ui, sans-serif" font-size="11"
+          fill="#A8A8B5" text-anchor="middle">Gradient iris</text>
+    <text x="560" y="410" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle">periwinkle depth + slit pupil</text>
+  </g>
+
+  <!-- ──────────────────────────────────────────────
+       STYLE E — bold graphic
+       Thick dark outline ring, flat warm amber fill, rectangular/horizontal pupil bar
+       (inspired by octopus's real w-shaped pupil)
+  ────────────────────────────────────────────── -->
+  <g id="octopus-E" data-label="Octopus head with eye style E">
+    <path d="M 720 200 Q 746 182 768 200 Q 780 218 776 248 Q 768 270 748 278 Q 730 282 712 276 Q 692 268 686 248 Q 680 218 694 200 Q 708 182 720 200 Z"
+          fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="720" cy="228" r="4" fill="#6B4423" opacity="0.6"/>
+    <circle cx="736" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <circle cx="706" cy="244" r="3.5" fill="#6B4423" opacity="0.5"/>
+    <path d="M 694 268 Q 670 295 660 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 688 278 Q 662 310 652 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 746 268 Q 770 295 780 330" stroke="#A0785A" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M 752 278 Q 778 310 788 350" stroke="#8B6045" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- EYE STYLE E: bold graphic — thick outline, warm amber flat fill, horizontal bar pupil (real octopus anatomy) -->
+    <circle cx="705" cy="220" r="12" fill="url(#slit-iris-grad)" stroke="#0D0D16" stroke-width="2.5"/>
+    <rect x="698" y="218" width="14" height="4" rx="2" fill="#0D0D16"/>
+    <circle cx="703" cy="216" r="1.8" fill="#FBFFF6" opacity="0.8"/>
+    <circle cx="736" cy="220" r="12" fill="url(#slit-iris-grad)" stroke="#0D0D16" stroke-width="2.5"/>
+    <rect x="729" y="218" width="14" height="4" rx="2" fill="#0D0D16"/>
+    <circle cx="734" cy="216" r="1.8" fill="#FBFFF6" opacity="0.8"/>
+    <text x="720" y="380" font-family="Barlow, system-ui, sans-serif" font-size="13"
+          font-weight="700" fill="#FBFFF6" text-anchor="middle">E</text>
+    <text x="720" y="396" font-family="Inter, system-ui, sans-serif" font-size="11"
+          fill="#A8A8B5" text-anchor="middle">Bold graphic</text>
+    <text x="720" y="410" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle">horizontal bar pupil (anatomic)</text>
+  </g>
+
+  <!-- ── ENLARGED EYE DETAIL STRIP — show each eye at 4× for clarity ── -->
+  <g id="eye-detail-strip" data-label="Enlarged 4x reference for each eye style">
+    <!-- strip background -->
+    <rect x="0" y="430" width="800" height="160" fill="#0D0D16" opacity="0.5"/>
+    <text x="400" y="452" font-family="Inter, system-ui, sans-serif" font-size="10"
+          fill="#6B6B7C" text-anchor="middle" letter-spacing="0.15em">ENLARGED DETAIL</text>
+
+    <!-- A enlarged -->
+    <ellipse cx="80" cy="500" rx="26" ry="22" fill="#1C1E35" stroke="#D4A574" stroke-width="2.5"/>
+    <circle cx="80" cy="500" r="11" fill="#0D0D16"/>
+    <circle cx="75" cy="495" r="4.5" fill="#FBFFF6" opacity="0.7"/>
+
+    <!-- B enlarged -->
+    <circle cx="240" cy="500" r="26" fill="#FBFFF6"/>
+    <circle cx="240" cy="500" r="17" fill="#E6B800"/>
+    <circle cx="240" cy="500" r="8.5" fill="#0D0D16"/>
+    <circle cx="235" cy="494" r="5.5" fill="#FBFFF6" opacity="0.9"/>
+
+    <!-- C enlarged -->
+    <circle cx="400" cy="500" r="26" fill="none" stroke="#FBFFF6" stroke-width="3"/>
+    <circle cx="400" cy="500" r="13" fill="#1C1E35"/>
+
+    <!-- D enlarged -->
+    <ellipse cx="560" cy="500" rx="28" ry="24" fill="#FBFFF6"/>
+    <ellipse cx="560" cy="500" rx="22" ry="19" fill="url(#iris-grad)"/>
+    <ellipse cx="560" cy="502" rx="8" ry="11" fill="#0D0D16"/>
+    <ellipse cx="555" cy="493" rx="6" ry="4.5" fill="#FBFFF6" opacity="0.85"/>
+
+    <!-- E enlarged -->
+    <circle cx="720" cy="500" r="26" fill="url(#slit-iris-grad)" stroke="#0D0D16" stroke-width="4"/>
+    <rect x="706" y="496" width="28" height="8" rx="4" fill="#0D0D16"/>
+    <circle cx="714" cy="491" r="4" fill="#FBFFF6" opacity="0.8"/>
+  </g>
+</svg>
