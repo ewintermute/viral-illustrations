@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+
+  <!-- Background: ocean with scientific materials context -->
+  <g id="bg" data-label="Shallow ocean background blending into scientific diagram context, teal-navy tones">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="0" width="800" height="400" fill="#2D3E6B" opacity="0.4"/>
+    <!-- Sandy bottom -->
+    <rect x="0" y="400" width="800" height="200" fill="#6B4423" opacity="0.35"/>
+    <!-- Scientific grid for materials context -->
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#5B6FA8" stroke-width="0.5" opacity="0.12"/>
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#5B6FA8" stroke-width="0.5" opacity="0.12"/>
+  </g>
+
+  <!-- Context: mantis shrimp strike in slow motion with 10,000g label and cavitation bubble -->
+  <g id="context" data-label="Mantis shrimp strike sequence in slow motion — dactyl club making impact, cavitation bubble collapsing near prey shell, 10,000g label">
+    <!-- Prey shell target -->
+    <path d="M 560 318 Q 575 295 600 292 Q 625 290 638 308 Q 645 325 638 342 Q 624 358 600 360 Q 575 358 562 342 Z" fill="#A0785A" stroke="#6B4423" stroke-width="2"/>
+    <!-- Shell spiral lines -->
+    <path d="M 600 326 Q 608 318 614 325 Q 618 333 612 340 Q 604 345 598 340 Q 592 333 596 326 Q 600 320 606 322" stroke="#6B4423" stroke-width="1" fill="none" opacity="0.6"/>
+    <!-- Crack from impact -->
+    <path d="M 565 315 L 578 326 L 572 338 L 583 345" stroke="#CA1E08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 578 326 L 590 320" stroke="#CA1E08" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Cavitation bubble (translucent ring) -->
+    <circle cx="520" cy="325" r="32" fill="none" stroke="#8BA0D6" stroke-width="2" opacity="0.6"/>
+    <circle cx="520" cy="325" r="22" fill="none" stroke="#8BA0D6" stroke-width="1" opacity="0.4"/>
+    <!-- Bubble collapse pressure wave lines -->
+    <path d="M 490 305 Q 480 295 475 290" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 488 320 Q 476 318 470 315" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 490 340 Q 480 348 476 355" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 508 352 Q 506 362 504 370" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+    <!-- 10,000g label -->
+    <text x="490" y="260" font-family="Barlow, sans-serif" font-size="22" fill="#FBFFF6" font-weight="700">10,000 g</text>
+  </g>
+
+  <!-- Subject: mantis shrimp body, side view, dactyl club prominent -->
+  <g id="subject" data-label="Odontodactylus scyllarus mantis shrimp full body side view, colorful, dactyl club raised and prominent">
+    <!-- Main body/carapace -->
+    <path d="M 120 295 C 140 270 180 262 230 265 C 270 268 305 278 335 295 C 360 310 375 330 370 355 C 365 378 340 390 305 390 C 265 390 235 382 208 370 C 175 355 155 340 140 320 C 128 305 118 308 120 295 Z" fill="#2FBF39" stroke="#1A5C1E" stroke-width="2.5"/>
+    <!-- Body color bands (mantis shrimp are colorful) -->
+    <path d="M 180 270 Q 182 340 178 385" stroke="#8BA0D6" stroke-width="6" fill="none" opacity="0.4"/>
+    <path d="M 225 267 Q 227 350 222 388" stroke="#E6B800" stroke-width="5" fill="none" opacity="0.35"/>
+    <path d="M 272 274 Q 274 360 268 388" stroke="#CA1E08" stroke-width="4" fill="none" opacity="0.3"/>
+    <!-- Telson (tail fan) -->
+    <path d="M 120 320 Q 90 310 65 295 Q 80 315 92 330 Q 100 340 120 342 Z" fill="#1A5C1E" stroke="#2FBF39" stroke-width="1.5"/>
+    <path d="M 118 340 Q 88 340 62 348 Q 78 354 95 352 Q 108 350 120 345 Z" fill="#248A28" stroke="#2FBF39" stroke-width="1.5"/>
+    <path d="M 120 344 Q 90 355 65 368 Q 82 368 100 360 Q 114 355 122 348 Z" fill="#1A5C1E" stroke="#2FBF39" stroke-width="1.5"/>
+    <!-- Uropods -->
+    <path d="M 122 323 Q 80 305 55 302" stroke="#2FBF39" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 120 350 Q 78 352 50 355" stroke="#2FBF39" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Pleopods -->
+    <path d="M 180 390 Q 175 410 170 425" stroke="#248A28" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 215 392 Q 212 412 210 428" stroke="#248A28" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 252 390 Q 252 410 250 426" stroke="#248A28" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <!-- Head -->
+    <path d="M 335 295 C 355 278 385 270 415 272 C 445 275 460 292 458 315 C 456 338 437 355 412 358 C 385 360 358 348 345 332 C 335 320 332 308 335 295 Z" fill="#8B5A8A" stroke="#6B4423" stroke-width="2"/>
+    <!-- Eye (compound, stalked) — standard construction but on stalk -->
+    <line x1="425" y1="282" x2="435" y2="265" stroke="#6B4423" stroke-width="2.5"/>
+    <ellipse cx="437" cy="258" rx="12" ry="10" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="437" cy="258" r="6" fill="#0D0D16"/>
+    <circle cx="434" cy="255" r="2.5" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Dactyl club (raised strike appendage) -->
+    <path d="M 430 310 Q 450 288 470 270 Q 485 256 500 245 Q 510 238 518 240" stroke="#E6B800" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Club tip (impact region) -->
+    <ellipse cx="524" cy="242" rx="18" ry="10" fill="#CA1E08" stroke="#8B1506" stroke-width="2" transform="rotate(-30,524,242)"/>
+    <!-- Club surface herringbone hint -->
+    <path d="M 514 236 Q 522 232 530 238" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 512 242 Q 520 238 528 244" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Detail: club cross-section showing impact region herringbone and helicoidal periodic layers -->
+  <g id="detail-club-cross-section" data-label="Dactyl club cross-section: impact surface with herringbone mineral pattern at top; periodic helicoidal Bouligand fiber layers below — each ply rotated by small angle">
+    <!-- Cross-section box -->
+    <rect x="20" y="40" width="240" height="280" rx="6" fill="#0D0D16" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- Cross-section label -->
+    <text x="140" y="62" font-family="Barlow, sans-serif" font-size="13" fill="#8BA0D6" text-anchor="middle">club cross-section</text>
+    <!-- Impact region (top, herringbone) -->
+    <rect x="30" y="68" width="220" height="55" rx="3" fill="#CA1E08" opacity="0.75"/>
+    <!-- Herringbone pattern lines in impact region -->
+    <path d="M 50 72 L 60 90 L 70 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 70 72 L 80 90 L 90 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 90 72 L 100 90 L 110 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 110 72 L 120 90 L 130 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 130 72 L 140 90 L 150 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 150 72 L 160 90 L 170 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 170 72 L 180 90 L 190 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 190 72 L 200 90 L 210 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <path d="M 210 72 L 220 90 L 230 72" stroke="#8B1506" stroke-width="1.5" fill="none"/>
+    <!-- Region label -->
+    <text x="140" y="116" font-family="Barlow, sans-serif" font-size="11" fill="#FBFFF6" text-anchor="middle" opacity="0.8">impact region (herringbone)</text>
+
+    <!-- Periodic region: helicoidal Bouligand layers -->
+    <rect x="30" y="127" width="220" height="178" rx="3" fill="#2D3E6B" opacity="0.8"/>
+    <!-- Individual helicoidal plies (each rotated slightly) -->
+    <!-- Ply 1: 0° -->
+    <path d="M 40 142 L 230 142" stroke="#8BA0D6" stroke-width="3" fill="none" opacity="0.9"/>
+    <!-- Ply 2: ~18° -->
+    <path d="M 40 157 Q 90 154 140 157 Q 185 160 230 157" stroke="#8BA0D6" stroke-width="3" fill="none" opacity="0.85"/>
+    <!-- Ply 3: ~36° -->
+    <path d="M 40 172 Q 80 165 130 170 Q 180 175 230 172" stroke="#8BA0D6" stroke-width="3" fill="none" opacity="0.8"/>
+    <!-- Ply 4: ~54° -->
+    <path d="M 40 187 Q 75 177 130 184 Q 182 190 230 186" stroke="#8BA0D6" stroke-width="3" fill="none" opacity="0.75"/>
+    <!-- Ply 5: ~72° -->
+    <path d="M 40 202 Q 72 190 130 198 Q 183 205 230 200" stroke="#8BA0D6" stroke-width="3" fill="none" opacity="0.7"/>
+    <!-- Ply 6: ~90° -->
+    <path d="M 40 217 Q 75 210 130 215 Q 182 220 230 215" stroke="#8BA0D6" stroke-width="2.5" fill="none" opacity="0.65"/>
+    <!-- Ply 7: ~108° -->
+    <path d="M 40 232 Q 78 228 130 230 Q 182 232 230 228" stroke="#8BA0D6" stroke-width="2.5" fill="none" opacity="0.6"/>
+    <!-- Ply 8: ~126° -->
+    <path d="M 40 247 Q 80 244 130 245 Q 182 246 230 243" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.55"/>
+    <!-- Ply 9: ~144° (approaching perpendicular) -->
+    <path d="M 40 262 Q 82 260 130 260 Q 180 260 230 258" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.5"/>
+    <!-- Ply 10: ~162° -->
+    <path d="M 40 277 Q 84 276 130 275 Q 178 274 230 273" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.45"/>
+    <!-- Region label -->
+    <text x="140" y="300" font-family="Barlow, sans-serif" font-size="11" fill="#8BA0D6" text-anchor="middle" opacity="0.8">periodic region (Bouligand)</text>
+  </g>
+
+  <!-- Detail: crack propagation in Bouligand structure — forced to spiral instead of going straight -->
+  <g id="detail-crack-propagation" data-label="Crack propagation animation: straight crack entering helicoidal Bouligand structure and forced to spiral/deflect — energy disperses instead of concentrating">
+    <!-- Crack propagation diagram box -->
+    <rect x="280" y="430" width="260" height="155" rx="6" fill="#0D0D16" stroke="#5B6FA8" stroke-width="1.5"/>
+    <text x="410" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8BA0D6" text-anchor="middle">crack deflection</text>
+    <!-- Conventional material: straight crack -->
+    <rect x="290" y="460" width="100" height="50" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <!-- Straight crack through conventional -->
+    <path d="M 340 460 L 340 510" stroke="#CA1E08" stroke-width="2.5" fill="none"/>
+    <text x="340" y="525" font-family="Barlow, sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle">straight</text>
+
+    <!-- Bouligand material: crack deflects/spirals -->
+    <rect x="420" y="460" width="100" height="50" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <!-- Helicoidal ply lines in box -->
+    <path d="M 422 470 Q 460 467 518 470" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 422 480 Q 455 477 518 480" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.55"/>
+    <path d="M 422 490 Q 458 488 518 490" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 422 500 Q 460 499 518 500" stroke="#8BA0D6" stroke-width="1.5" fill="none" opacity="0.45"/>
+    <!-- Spiraling deflected crack -->
+    <path d="M 470 460 Q 476 468 470 475 Q 464 482 470 489 Q 476 496 470 503 Q 464 510 470 515" stroke="#CA1E08" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="470" y="527" font-family="Barlow, sans-serif" font-size="11" fill="#6FD877" text-anchor="middle">deflected</text>
+  </g>
+
+  <!-- Detail: helicoidal carbon fiber composite panel with Army Research Lab 20% improvement -->
+  <g id="detail-helicoidal-composite-panel" data-label="Carbon fiber helicoidal composite panel inspired by mantis shrimp; Army Research Lab test result: 20% better impact energy absorption than conventional layup">
+    <!-- Panel box -->
+    <rect x="560" y="420" width="220" height="165" rx="6" fill="#0D0D16" stroke="#E6B800" stroke-width="1.5"/>
+    <!-- Panel surface (helicoidal fiber texture) -->
+    <rect x="572" y="432" width="196" height="80" rx="3" fill="#2D3E6B" opacity="0.8"/>
+    <!-- Fiber layers in panel (helicoidal) -->
+    <path d="M 576 442 Q 630 438 766 442" stroke="#E6B800" stroke-width="2" fill="none" opacity="0.7"/>
+    <path d="M 576 452 Q 625 448 766 452" stroke="#E6B800" stroke-width="2" fill="none" opacity="0.65" transform="rotate(3,670,452)"/>
+    <path d="M 576 462 Q 628 458 766 462" stroke="#E6B800" stroke-width="2" fill="none" opacity="0.6" transform="rotate(6,670,462)"/>
+    <path d="M 576 472 Q 626 468 766 472" stroke="#E6B800" stroke-width="2" fill="none" opacity="0.55" transform="rotate(9,670,472)"/>
+    <path d="M 576 482 Q 630 478 766 482" stroke="#E6B800" stroke-width="2" fill="none" opacity="0.5" transform="rotate(12,670,482)"/>
+    <!-- 20% improvement label -->
+    <text x="670" y="535" font-family="Barlow, sans-serif" font-size="22" fill="#2FBF39" font-weight="700" text-anchor="middle">+20%</text>
+    <text x="670" y="556" font-family="Barlow, sans-serif" font-size="12" fill="#6B6B7C" text-anchor="middle">Army Research Lab</text>
+    <text x="670" y="572" font-family="Barlow, sans-serif" font-size="12" fill="#6B6B7C" text-anchor="middle">vs. conventional layup</text>
+  </g>
+
+  <!-- Label: species name -->
+  <g id="label" data-label="Species label: O. scyllarus in italic Barlow">
+    <text x="30" y="462" font-family="Barlow, sans-serif" font-size="20" font-style="italic" fill="#8BA0D6" font-weight="500">O. scyllarus</text>
+  </g>
+
+  <!-- Overlay: connection arrow from club to cross-section; 400mya label -->
+  <g id="overlay" data-label="Connection arrow from dactyl club to cross-section diagram; 400 million years annotation; 1,500 N impact force label">
+    <!-- Connection from club to cross-section -->
+    <path d="M 500 248 Q 380 200 260 148" stroke="#E6B800" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.5"/>
+    <circle cx="260" cy="148" r="3" fill="#E6B800" opacity="0.6"/>
+    <!-- 400mya label -->
+    <text x="560" y="420" font-family="Barlow, sans-serif" font-size="18" fill="#6B6B7C" font-weight="400">400 Mya</text>
+    <!-- 1,500 N label near club/impact -->
+    <text x="560" y="300" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" font-weight="600">1,500 N</text>
+  </g>
+</svg>

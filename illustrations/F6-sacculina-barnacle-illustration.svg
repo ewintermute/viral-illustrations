@@ -1,111 +1,133 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
 
-  <!-- bg: dark teal underwater scene -->
-  <g id="bg" data-label="dark underwater environment background">
-    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
-    <!-- water depth gradient bands -->
-    <rect x="0" y="420" width="800" height="180" fill="#2D3E6B"/>
-    <!-- caustic light hints from above -->
-    <path d="M 0 0 Q 200 80 0 160" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.07"/>
-    <path d="M 400 0 Q 500 90 350 180" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.06"/>
-    <path d="M 800 0 Q 640 100 800 200" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.07"/>
+  <!-- Background: underwater ocean environment -->
+  <g id="bg" data-label="Dark underwater ocean background, navy and midnight blues">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="0" width="800" height="500" fill="#2D3E6B" opacity="0.45"/>
+    <!-- Sandy bottom -->
+    <rect x="0" y="490" width="800" height="110" fill="#6B4423" opacity="0.5"/>
+    <!-- Ambient light ray from above -->
+    <polygon points="250,0 350,0 420,500 180,500" fill="#5B6FA8" opacity="0.04"/>
+    <polygon points="480,0 540,0 580,500 440,500" fill="#5B6FA8" opacity="0.03"/>
   </g>
 
-  <!-- context: sea floor substrate and bubbles -->
-  <g id="context" data-label="sea floor and small water bubbles for depth">
-    <!-- pebbles -->
-    <ellipse cx="80" cy="468" rx="18" ry="9" fill="#3D3E5B"/>
-    <ellipse cx="160" cy="475" rx="12" ry="6" fill="#2D3E6B"/>
-    <ellipse cx="650" cy="462" rx="20" ry="10" fill="#3D3E5B"/>
-    <ellipse cx="740" cy="470" rx="14" ry="7" fill="#2D3E6B"/>
-    <!-- small bubbles -->
-    <circle cx="140" cy="360" r="4" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.3"/>
-    <circle cx="148" cy="340" r="3" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.25"/>
-    <circle cx="660" cy="370" r="4" fill="none" stroke="#D1DCFF" stroke-width="1" opacity="0.3"/>
+  <!-- Context: ocean floor elements and Sacculina larva drifting -->
+  <g id="context" data-label="Ocean floor context — pebbles and Sacculina cypris larva drifting toward crab">
+    <!-- Seabed stones -->
+    <ellipse cx="80" cy="530" rx="28" ry="12" fill="#A0785A" opacity="0.5"/>
+    <ellipse cx="180" cy="545" rx="20" ry="9" fill="#6B4423" opacity="0.45"/>
+    <ellipse cx="620" cy="535" rx="25" ry="11" fill="#A0785A" opacity="0.45"/>
+    <ellipse cx="720" cy="525" rx="22" ry="10" fill="#6B4423" opacity="0.5"/>
+    <!-- Small Sacculina larva (cypris) drifting toward crab seam area — top right -->
+    <ellipse cx="640" cy="120" rx="8" ry="5" fill="#E85542" opacity="0.9"/>
+    <circle cx="638" cy="118" r="2" fill="#E8EEFF" stroke="#D4A574" stroke-width="1"/>
+    <circle cx="638" cy="118" r="0.9" fill="#0D0D16"/>
+    <!-- Larva movement trace -->
+    <path d="M 700 80 Q 670 100 640 120" stroke="#E85542" stroke-width="1" stroke-dasharray="4 5" fill="none" opacity="0.5"/>
   </g>
 
-  <!-- subject: green crab host from side -->
-  <g id="subject" data-label="Carcinus maenas green crab with feminized broad abdomen, side view">
-    <!-- carapace / shell body -->
-    <path d="M 260 260 Q 240 220 270 195 Q 320 175 400 172 Q 480 172 530 190 Q 560 210 555 255 Q 548 300 520 320 Q 480 335 400 338 Q 320 335 280 318 Q 255 300 260 260 Z"
-          fill="#248A28" stroke="#1A5C1E" stroke-width="3"/>
-    <!-- carapace texture lines -->
-    <path d="M 300 192 Q 305 258 308 330" fill="none" stroke="#1A5C1E" stroke-width="1.5" opacity="0.5"/>
-    <path d="M 500 192 Q 495 258 492 330" fill="none" stroke="#1A5C1E" stroke-width="1.5" opacity="0.5"/>
-    <!-- lateral spines on carapace -->
-    <path d="M 262 242 L 235 235" stroke="#1A5C1E" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 260 268 L 232 268" stroke="#1A5C1E" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 556 242 L 583 233" stroke="#1A5C1E" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <path d="M 556 268 L 584 268" stroke="#1A5C1E" stroke-width="3" stroke-linecap="round" fill="none"/>
-    <!-- eyes: standard eye construction -->
-    <ellipse cx="320" cy="198" rx="12" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="320" cy="198" r="5" fill="#0D0D16"/>
-    <circle cx="317" cy="195" r="2" fill="#FBFFF6" opacity="0.85"/>
-    <ellipse cx="480" cy="198" rx="12" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="480" cy="198" r="5" fill="#0D0D16"/>
-    <circle cx="477" cy="195" r="2" fill="#FBFFF6" opacity="0.85"/>
-    <!-- chelipeds (claws) — reduced size due to feminization -->
-    <path d="M 262 255 Q 225 245 200 230 Q 188 222 185 215" fill="none" stroke="#248A28" stroke-width="8" stroke-linecap="round"/>
-    <path d="M 185 215 Q 174 208 176 200 Q 178 194 188 196" fill="#1A5C1E" stroke="#1A5C1E" stroke-width="2"/>
-    <path d="M 186 196 Q 194 188 202 192 Q 210 196 210 206" fill="none" stroke="#1A5C1E" stroke-width="2"/>
-    <path d="M 556 255 Q 593 248 616 234 Q 628 224 630 217" fill="none" stroke="#248A28" stroke-width="8" stroke-linecap="round"/>
-    <path d="M 630 217 Q 641 210 638 202 Q 636 196 626 198" fill="#1A5C1E" stroke="#1A5C1E" stroke-width="2"/>
-    <path d="M 626 198 Q 618 190 610 194 Q 604 200 605 210" fill="none" stroke="#1A5C1E" stroke-width="2"/>
-    <!-- walking legs -->
-    <g stroke="#1A5C1E" stroke-width="4" stroke-linecap="round" fill="none">
-      <path d="M 290 328 L 268 358 L 250 382"/>
-      <path d="M 320 334 L 302 366 L 286 392"/>
-      <path d="M 480 334 L 498 366 L 514 392"/>
-      <path d="M 510 328 L 532 358 L 550 382"/>
-    </g>
-    <!-- feminized broad abdomen (flap unfolded wider) -->
-    <path d="M 310 338 Q 295 358 290 390 Q 294 420 330 432 Q 365 440 400 440 Q 435 440 470 432 Q 506 420 510 390 Q 506 358 490 338 Z"
-          fill="#2FBF39" stroke="#1A5C1E" stroke-width="2.5"/>
-    <!-- abdomen segment lines -->
-    <path d="M 295 365 Q 400 360 505 365" fill="none" stroke="#1A5C1E" stroke-width="1.5" opacity="0.5"/>
-    <path d="M 292 385 Q 400 380 508 385" fill="none" stroke="#1A5C1E" stroke-width="1.5" opacity="0.5"/>
-    <path d="M 294 405 Q 400 400 506 405" fill="none" stroke="#1A5C1E" stroke-width="1.5" opacity="0.5"/>
+  <!-- Subject: crab body from above/side showing overall anatomy -->
+  <g id="subject" data-label="Host crab body — carapace with legs visible, showing infected state (broader abdomen shape)">
+    <!-- Carapace -->
+    <path d="M 360 240 C 290 240 245 270 235 310 C 225 350 245 390 290 410 C 330 428 370 432 400 432 C 430 432 470 428 510 410 C 555 390 575 350 565 310 C 555 270 510 240 440 240 Z" fill="#A0785A" stroke="#6B4423" stroke-width="2.5"/>
+    <!-- Carapace surface lines -->
+    <path d="M 400 244 Q 400 340 400 428" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 310 258 Q 300 340 315 412" stroke="#6B4423" stroke-width="1" fill="none" opacity="0.35"/>
+    <path d="M 490 258 Q 500 340 485 412" stroke="#6B4423" stroke-width="1" fill="none" opacity="0.35"/>
+    <!-- Crab eyes — standard construction -->
+    <ellipse cx="355" cy="258" rx="9" ry="7" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="355" cy="258" r="4" fill="#0D0D16"/>
+    <circle cx="352.5" cy="255.5" r="1.8" fill="#FBFFF6" opacity="0.85"/>
+    <ellipse cx="445" cy="258" rx="9" ry="7" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="445" cy="258" r="4" fill="#0D0D16"/>
+    <circle cx="442.5" cy="255.5" r="1.8" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Walking legs (left side) -->
+    <path d="M 270 290 Q 230 285 195 278" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 258 315 Q 215 318 178 320" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 258 345 Q 215 352 178 360" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 270 375 Q 230 385 200 395" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Walking legs (right side) -->
+    <path d="M 530 290 Q 570 285 605 278" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 542 315 Q 585 318 622 320" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 542 345 Q 585 352 622 360" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 530 375 Q 570 385 600 395" stroke="#6B4423" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Claws (smaller — feminized) -->
+    <path d="M 272 270 Q 232 250 200 242 Q 190 240 186 248 Q 182 256 190 262 Q 200 268 212 264" stroke="#6B4423" stroke-width="2.5" fill="#A0785A"/>
+    <path d="M 528 270 Q 568 250 600 242 Q 610 240 614 248 Q 618 256 610 262 Q 600 268 588 264" stroke="#6B4423" stroke-width="2.5" fill="#A0785A"/>
+    <!-- Broader abdomen (feminized) -->
+    <path d="M 305 420 Q 340 450 400 460 Q 460 450 495 420" fill="#8B5A8A" stroke="#6B4423" stroke-width="1.5" opacity="0.75"/>
   </g>
 
-  <!-- detail-externa: Sacculina externa bulging from abdomen -->
-  <g id="detail-externa" data-label="Sacculina externa reproductive sac protruding from crab abdomen">
-    <!-- externa body -->
-    <ellipse cx="400" cy="405" rx="52" ry="38" fill="#E85542" stroke="#CA1E08" stroke-width="2.5"/>
-    <!-- externa surface texture -->
-    <ellipse cx="400" cy="400" rx="42" ry="28" fill="none" stroke="#CA1E08" stroke-width="1" opacity="0.4"/>
-    <!-- externa larvae cells -->
-    <circle cx="385" cy="400" r="5" fill="#CA1E08" opacity="0.5"/>
-    <circle cx="400" cy="395" r="5" fill="#CA1E08" opacity="0.5"/>
-    <circle cx="415" cy="402" r="5" fill="#CA1E08" opacity="0.5"/>
-    <circle cx="393" cy="412" r="4" fill="#CA1E08" opacity="0.4"/>
-    <circle cx="408" cy="415" r="4" fill="#CA1E08" opacity="0.4"/>
-    <!-- crab fanning legs caring for externa -->
-    <path d="M 348 408 Q 330 430 320 450" stroke="#2FBF39" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-    <path d="M 452 408 Q 470 432 480 452" stroke="#2FBF39" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <!-- Detail: internal root system (interna) spreading through crab body -->
+  <g id="detail-interna" data-label="Sacculina interna root-like threads spreading through crab's interior organs like ivy, pale branching network">
+    <!-- Root network through body interior -->
+    <path d="M 400 370 Q 360 350 320 340 Q 290 335 270 340" stroke="#E85542" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M 400 370 Q 440 350 480 340 Q 510 335 530 340" stroke="#E85542" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M 400 360 Q 380 330 360 310 Q 345 295 340 280" stroke="#E85542" stroke-width="1" fill="none" opacity="0.65"/>
+    <path d="M 400 360 Q 420 330 440 310 Q 455 295 460 280" stroke="#E85542" stroke-width="1" fill="none" opacity="0.65"/>
+    <path d="M 375 340 Q 355 320 345 300 Q 338 285 342 270" stroke="#E85542" stroke-width="1" fill="none" opacity="0.55"/>
+    <path d="M 425 340 Q 445 320 455 300 Q 462 285 458 270" stroke="#E85542" stroke-width="1" fill="none" opacity="0.55"/>
+    <!-- Root branching -->
+    <path d="M 340 300 Q 320 295 305 290" stroke="#E85542" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M 340 300 Q 330 285 335 275" stroke="#E85542" stroke-width="1" fill="none" opacity="0.45"/>
+    <path d="M 460 300 Q 480 295 495 290" stroke="#E85542" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M 460 300 Q 470 285 465 275" stroke="#E85542" stroke-width="1" fill="none" opacity="0.45"/>
+    <!-- Hepatopancreas (nutrient-tapping organ) -->
+    <ellipse cx="400" cy="310" rx="38" ry="25" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" opacity="0.65"/>
+    <path d="M 380 310 Q 400 302 420 310" stroke="#1A5C1E" stroke-width="1" fill="none" opacity="0.5"/>
   </g>
 
-  <!-- detail-interna: root network inside crab body -->
-  <g id="detail-interna" data-label="Sacculina interna root tendrils spreading through host organs">
-    <!-- root tendrils radiating from attachment point into body -->
-    <path d="M 400 390 Q 380 360 355 345 Q 330 335 310 330" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-    <path d="M 400 390 Q 400 355 400 330 Q 400 305 398 282" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
-    <path d="M 400 390 Q 420 360 445 345 Q 470 333 490 328" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-    <path d="M 380 372 Q 360 358 340 348 Q 318 342 300 348" fill="none" stroke="#E6B800" stroke-width="1" opacity="0.4"/>
-    <path d="M 420 372 Q 440 360 460 350 Q 482 344 500 350" fill="none" stroke="#E6B800" stroke-width="1" opacity="0.4"/>
-    <!-- nervous system wrap around eyestalk -->
-    <path d="M 398 280 Q 360 240 325 205" fill="none" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+  <!-- Detail: externa sac bulging through crab's abdomen -->
+  <g id="detail-externa" data-label="Sacculina externa reproductive sac bulging through underside of crab abdomen — visible egg mass">
+    <!-- Externa sac -->
+    <ellipse cx="400" cy="462" rx="42" ry="26" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Eggs within sac -->
+    <circle cx="380" cy="460" r="4" fill="#F19B8F" opacity="0.85"/>
+    <circle cx="395" cy="455" r="3.5" fill="#F19B8F" opacity="0.8"/>
+    <circle cx="410" cy="462" r="4" fill="#F19B8F" opacity="0.85"/>
+    <circle cx="420" cy="456" r="3" fill="#F19B8F" opacity="0.75"/>
+    <circle cx="385" cy="468" r="3.5" fill="#F19B8F" opacity="0.8"/>
+    <circle cx="405" cy="470" r="3" fill="#F19B8F" opacity="0.75"/>
+    <!-- Attachment point at abdomen edge -->
+    <path d="M 365 447 Q 370 440 380 438" stroke="#CA1E08" stroke-width="1.5" fill="none"/>
+    <path d="M 435 447 Q 430 440 420 438" stroke="#CA1E08" stroke-width="1.5" fill="none"/>
   </g>
 
-  <!-- label: parasite species name -->
-  <g id="label" data-label="Sacculina species label">
-    <text x="56" y="130" font-family="Barlow, sans-serif" font-size="22" font-weight="700"
-          font-style="italic" fill="#FBFFF6">Sacculina</text>
+  <!-- Detail: male crab feminized anatomy comparison indicator -->
+  <g id="detail-feminized-anatomy" data-label="Feminized male crab anatomy indicator — broader abdomen, smaller claws annotations via dashed lines">
+    <!-- Dashed indicator arrow to abdomen -->
+    <path d="M 160 490 Q 200 490 300 465" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="5 4" fill="none" opacity="0.7"/>
+    <circle cx="160" cy="490" r="3" fill="#8BA0D6" opacity="0.7"/>
+    <!-- Small text note via overlay, kept in this group as annotation path -->
+    <path d="M 148 440 Q 148 465 160 490" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity="0.5"/>
   </g>
 
-  <!-- overlay: arrow pointing to externa -->
-  <g id="overlay" data-label="annotation arrow pointing to parasite externa">
-    <!-- arrow from label area to externa -->
-    <line x1="145" y1="130" x2="340" y2="390" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 4"/>
-    <circle cx="340" cy="390" r="4" fill="#8BA0D6"/>
+  <!-- Detail: crab performing maternal fanning behavior over egg mass -->
+  <g id="detail-fanning-behavior" data-label="Infected crab fanning water over parasite egg mass with rhythmic pleopod movements — shown as water flow lines">
+    <!-- Water fanning current lines near abdomen -->
+    <path d="M 330 510 Q 340 540 360 555 Q 380 565 400 560" stroke="#8BA0D6" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.6"/>
+    <path d="M 340 505 Q 355 535 375 548 Q 395 558 415 553" stroke="#8BA0D6" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.55"/>
+    <path d="M 355 500 Q 368 530 390 545 Q 408 555 430 548" stroke="#8BA0D6" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+    <path d="M 370 498 Q 383 526 405 540 Q 425 550 448 543" stroke="#8BA0D6" stroke-width="1.5" fill="none" stroke-dasharray="4 3" opacity="0.45"/>
+    <!-- Larval release dots -->
+    <circle cx="320" cy="518" r="2" fill="#E6B800" opacity="0.7"/>
+    <circle cx="305" cy="535" r="2" fill="#E6B800" opacity="0.6"/>
+    <circle cx="310" cy="552" r="2" fill="#E6B800" opacity="0.55"/>
+    <circle cx="290" cy="545" r="2" fill="#E6B800" opacity="0.5"/>
+  </g>
+
+  <!-- Label: species name -->
+  <g id="label" data-label="Species label: Sacculina sp. in italic Barlow">
+    <text x="550" y="555" font-family="Barlow, sans-serif" font-size="20" font-style="italic" fill="#8BA0D6" font-weight="500">Sacculina sp.</text>
+  </g>
+
+  <!-- Overlay: injection point annotation at exoskeletal seam -->
+  <g id="overlay" data-label="Injection point annotation at soft joint seam of carapace; connection line from larva to injection site">
+    <!-- Injection point circle at seam -->
+    <circle cx="490" cy="258" r="8" fill="none" stroke="#E85542" stroke-width="2" opacity="0.9"/>
+    <!-- Arrow from larva to injection point -->
+    <path d="M 636 126 Q 580 180 500 260" stroke="#E85542" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.75"/>
+    <!-- Arrowhead -->
+    <polygon points="500,260 493,252 508,252" fill="#E85542" opacity="0.75"/>
   </g>
 </svg>

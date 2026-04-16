@@ -1,131 +1,168 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <defs>
-    <!-- bioluminescent glow for temperature cold side -->
-    <radialGradient id="cold-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#8BA0D6" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
 
-  <!-- bg: dark deep ocean -->
-  <g id="bg" data-label="dark deep ocean background">
-    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
-    <!-- cold tinted area hint -->
-    <rect x="0" y="0" width="400" height="600" fill="#2D3E6B" opacity="0.25"/>
+  <!-- Background: dark ocean with scientific diagram feel -->
+  <g id="bg" data-label="Dark ocean background with deep blue tones, scientific diagram aesthetic">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="0" width="800" height="600" fill="#2D3E6B" opacity="0.3"/>
+    <!-- Subtle grid lines for scientific feel -->
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#5B6FA8" stroke-width="0.5" opacity="0.15"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#5B6FA8" stroke-width="0.5" opacity="0.15"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="#5B6FA8" stroke-width="0.5" opacity="0.15"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#5B6FA8" stroke-width="0.5" opacity="0.1"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#5B6FA8" stroke-width="0.5" opacity="0.1"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#5B6FA8" stroke-width="0.5" opacity="0.1"/>
   </g>
 
-  <!-- context: ocean depth environment -->
-  <g id="context" data-label="ocean floor with rock silhouette and ambient water">
-    <!-- rocky substrate -->
-    <path d="M 0 540 Q 80 520 150 535 Q 220 550 300 530 Q 380 510 400 540 Q 420 510 500 530 Q 580 548 650 530 Q 720 512 800 540 L 800 600 L 0 600 Z"
-          fill="#2D3E6B"/>
-    <!-- cold temperature visual (left side) -->
-    <ellipse cx="200" cy="300" rx="150" ry="200" fill="url(#cold-glow)"/>
-    <!-- cold water particles -->
-    <circle cx="120" cy="150" r="2" fill="#D1DCFF" opacity="0.3"/>
-    <circle cx="180" cy="220" r="1.5" fill="#D1DCFF" opacity="0.25"/>
-    <circle cx="90" cy="300" r="2" fill="#D1DCFF" opacity="0.3"/>
-    <circle cx="250" cy="180" r="1.5" fill="#D1DCFF" opacity="0.2"/>
+  <!-- Context: central dogma arrow diagram -->
+  <g id="context" data-label="DNA to RNA to Protein central dogma arrow diagram — the rule that cephalopods break">
+    <!-- DNA box -->
+    <rect x="30" y="28" width="90" height="36" rx="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <text x="75" y="51" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" text-anchor="middle" font-weight="600">DNA</text>
+    <!-- Arrow -->
+    <path d="M 124 46 L 160 46" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <polygon points="160,46 153,41 153,51" fill="#8BA0D6"/>
+    <!-- RNA box -->
+    <rect x="164" y="28" width="90" height="36" rx="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <text x="209" y="51" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" text-anchor="middle" font-weight="600">RNA</text>
+    <!-- Arrow -->
+    <path d="M 258 46 L 294 46" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <polygon points="294,46 287,41 287,51" fill="#8BA0D6"/>
+    <!-- Protein box -->
+    <rect x="298" y="28" width="105" height="36" rx="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <text x="350" y="51" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" text-anchor="middle" font-weight="600">Protein</text>
   </g>
 
-  <!-- subject: octopus in cold water, arms curled -->
-  <g id="subject" data-label="Octopus bimaculoides body and arms in cold temperature environment">
-    <!-- mantle (body) -->
-    <ellipse cx="400" cy="240" rx="80" ry="100" fill="#E85542" stroke="#CA1E08" stroke-width="2.5"/>
-    <!-- mantle texture spots (chromatophores) -->
-    <circle cx="380" cy="210" r="6" fill="#CA1E08" opacity="0.6"/>
-    <circle cx="415" cy="200" r="5" fill="#CA1E08" opacity="0.5"/>
-    <circle cx="430" cy="225" r="7" fill="#B8860B" opacity="0.5"/>
-    <circle cx="370" cy="250" r="5" fill="#CA1E08" opacity="0.6"/>
-    <circle cx="420" cy="260" r="6" fill="#B8860B" opacity="0.45"/>
-    <circle cx="385" cy="270" r="4" fill="#CA1E08" opacity="0.5"/>
-    <!-- eye: standard construction -->
-    <ellipse cx="368" cy="222" rx="18" ry="14" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="368" cy="222" r="8" fill="#0D0D16"/>
-    <circle cx="363" cy="217" r="3.5" fill="#FBFFF6" opacity="0.85"/>
-    <!-- arms (8 tentacles) -->
-    <g stroke="#E85542" stroke-width="6" fill="none" stroke-linecap="round">
-      <!-- arm 1 -->
-      <path d="M 360 330 Q 330 380 295 420 Q 268 450 240 470"/>
-      <!-- arm 2 -->
-      <path d="M 380 335 Q 360 390 345 440 Q 332 475 318 500"/>
-      <!-- arm 3 -->
-      <path d="M 400 338 Q 390 395 388 450 Q 385 490 383 520"/>
-      <!-- arm 4 -->
-      <path d="M 420 335 Q 420 390 430 445 Q 438 480 448 510"/>
-      <!-- arm 5 -->
-      <path d="M 438 330 Q 455 380 475 425 Q 492 460 510 480"/>
-      <!-- arm 6 -->
-      <path d="M 455 320 Q 482 365 505 400 Q 524 430 545 450"/>
-      <!-- arm 7 right side -->
-      <path d="M 340 318 Q 308 358 282 390 Q 260 415 240 435"/>
-      <!-- arm 8 -->
-      <path d="M 316 305 Q 278 335 250 360 Q 225 382 200 395"/>
-    </g>
-    <!-- sucker hints on arms -->
-    <g fill="#CA1E08" opacity="0.5">
-      <circle cx="332" cy="370" r="3.5"/>
-      <circle cx="318" cy="390" r="3.5"/>
-      <circle cx="304" cy="410" r="3.5"/>
-      <circle cx="456" cy="360" r="3.5"/>
-      <circle cx="470" cy="378" r="3.5"/>
-      <circle cx="482" cy="396" r="3.5"/>
-    </g>
+  <!-- Subject: octopus body center-composition -->
+  <g id="subject" data-label="Octopus bimaculoides body with characteristic blue eye rings, eight arms radiating outward">
+    <!-- Mantle -->
+    <path d="M 400 220 C 355 200 320 215 310 250 C 300 285 310 320 340 340 C 360 352 380 358 400 358 C 420 358 440 352 460 340 C 490 320 500 285 490 250 C 480 215 445 200 400 220 Z" fill="#E85542" stroke="#CA1E08" stroke-width="2.5"/>
+    <!-- Mantle texture -->
+    <circle cx="390" cy="265" r="5" fill="#CA1E08" opacity="0.5"/>
+    <circle cx="410" cy="275" r="4" fill="#CA1E08" opacity="0.45"/>
+    <circle cx="375" cy="280" r="4" fill="#CA1E08" opacity="0.4"/>
+    <circle cx="425" cy="260" r="5" fill="#CA1E08" opacity="0.5"/>
+    <circle cx="400" cy="285" r="3" fill="#CA1E08" opacity="0.45"/>
+    <!-- Head -->
+    <circle cx="400" cy="340" r="42" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Octopus eye (left) — standard construction -->
+    <ellipse cx="372" cy="335" rx="14" ry="11" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="372" cy="335" r="6" fill="#0D0D16"/>
+    <circle cx="368.5" cy="331.5" r="2.8" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Blue ring (characteristic) -->
+    <circle cx="372" cy="335" r="14" fill="none" stroke="#8BA0D6" stroke-width="2.5"/>
+    <!-- Octopus eye (right) -->
+    <ellipse cx="428" cy="335" rx="14" ry="11" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="428" cy="335" r="6" fill="#0D0D16"/>
+    <circle cx="424.5" cy="331.5" r="2.8" fill="#FBFFF6" opacity="0.85"/>
+    <circle cx="428" cy="335" r="14" fill="none" stroke="#8BA0D6" stroke-width="2.5"/>
+    <!-- Arms radiating -->
+    <path d="M 360 372 Q 330 415 295 440 Q 270 458 255 465" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 375 378 Q 355 425 340 470 Q 328 500 320 515" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 395 382 Q 390 430 385 475 Q 380 510 378 528" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 415 382 Q 420 430 430 475 Q 438 510 442 528" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 435 374 Q 455 420 472 460 Q 484 490 490 508" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 450 365 Q 485 405 515 432 Q 535 450 548 460" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 458 350 Q 505 370 540 372 Q 565 374 582 378" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 348 360 Q 300 368 265 365 Q 242 362 226 360" stroke="#E85542" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Suckers on two visible arms -->
+    <circle cx="290" cy="445" r="5" fill="#CA1E08" stroke="#E85542" stroke-width="1"/>
+    <circle cx="276" cy="460" r="4.5" fill="#CA1E08" stroke="#E85542" stroke-width="1"/>
+    <circle cx="258" cy="462" r="4" fill="#CA1E08" stroke="#E85542" stroke-width="1"/>
   </g>
 
-  <!-- detail-rna-edit: RNA strand with A-to-I edit highlighted -->
-  <g id="detail-rna-edit" data-label="mRNA strand showing A-to-I editing — adenosine converted to inosine">
-    <!-- RNA backbone (single strand, wavy) -->
-    <path d="M 560 120 Q 580 130 600 120 Q 620 110 640 120 Q 660 130 680 120 Q 700 110 720 120 Q 740 130 760 120"
-          fill="none" stroke="#5B6FA8" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- nucleotide bases hanging off -->
-    <!-- A (adenosine) -->
-    <line x1="580" y1="130" x2="580" y2="155" stroke="#5B6FA8" stroke-width="2"/>
-    <circle cx="580" cy="162" r="10" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
-    <text x="575" y="167" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#1C1E35">A</text>
-    <!-- U -->
-    <line x1="610" y1="120" x2="610" y2="145" stroke="#5B6FA8" stroke-width="2"/>
-    <circle cx="610" cy="152" r="10" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
-    <text x="605" y="157" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#8BA0D6">U</text>
-    <!-- A → I (edit site, highlighted) -->
-    <line x1="640" y1="130" x2="640" y2="155" stroke="#E6B800" stroke-width="2.5"/>
-    <circle cx="640" cy="162" r="13" fill="#E6B800" stroke="#B8860B" stroke-width="2"/>
-    <text x="633" y="167" font-family="Barlow, sans-serif" font-size="13" font-weight="900" fill="#1C1E35">I</text>
-    <!-- edit arrow above -->
-    <path d="M 628 148 Q 620 135 628 125" fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
-    <polygon points="624,127 632,127 628,118" fill="#CA1E08"/>
-    <!-- G -->
-    <line x1="670" y1="120" x2="670" y2="145" stroke="#5B6FA8" stroke-width="2"/>
-    <circle cx="670" cy="152" r="10" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
-    <text x="664" y="157" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#8BA0D6">G</text>
-    <!-- C -->
-    <line x1="700" y1="130" x2="700" y2="155" stroke="#5B6FA8" stroke-width="2"/>
-    <circle cx="700" cy="162" r="10" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
-    <text x="694" y="167" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#8BA0D6">C</text>
-    <!-- ADAR enzyme blob -->
-    <ellipse cx="640" cy="80" rx="45" ry="28" fill="#Slate" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2"/>
-    <ellipse cx="640" cy="80" rx="35" ry="18" fill="#2D3E6B" opacity="0.7"/>
-    <text x="618" y="86" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#8BA0D6">ADAR</text>
-    <!-- ADAR binding arm -->
-    <path d="M 640 108 L 640 148" stroke="#E6B800" stroke-width="2" stroke-dasharray="4 3"/>
+  <!-- Detail: ADAR enzyme on RNA strand with A-to-I conversion highlighted -->
+  <g id="detail-adar-editing" data-label="ADAR enzyme sitting on RNA strand converting adenosine A to inosine I — the RNA editing mechanism">
+    <!-- RNA strand -->
+    <path d="M 530 120 Q 565 110 600 120 Q 635 130 670 120 Q 710 110 745 120" stroke="#8BA0D6" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Base pairs on RNA -->
+    <rect x="545" y="112" width="10" height="16" rx="2" fill="#5B6FA8" opacity="0.8"/>
+    <rect x="560" y="112" width="10" height="16" rx="2" fill="#5B6FA8" opacity="0.8"/>
+    <!-- Target A base (highlighted, being converted) -->
+    <rect x="595" y="109" width="14" height="22" rx="2" fill="#E6B800" opacity="0.95"/>
+    <text x="602" y="123" font-family="Barlow, sans-serif" font-size="12" fill="#0D0D16" text-anchor="middle" font-weight="700">A</text>
+    <!-- ADAR enzyme blob sitting on target A -->
+    <ellipse cx="616" cy="100" rx="22" ry="15" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5"/>
+    <text x="616" y="104" font-family="Barlow, sans-serif" font-size="11" fill="#FBFFF6" text-anchor="middle" font-weight="600">ADAR</text>
+    <!-- Arrow showing conversion A→I -->
+    <path d="M 615 116 L 635 125" stroke="#FBFFF6" stroke-width="1.5" fill="none"/>
+    <polygon points="635,125 626,122 628,133" fill="#FBFFF6"/>
+    <!-- I (inosine) result -->
+    <rect x="640" y="112" width="14" height="22" rx="2" fill="#CA1E08" opacity="0.9"/>
+    <text x="647" y="126" font-family="Barlow, sans-serif" font-size="12" fill="#FBFFF6" text-anchor="middle" font-weight="700">I</text>
+    <rect x="658" y="112" width="10" height="16" rx="2" fill="#5B6FA8" opacity="0.8"/>
+    <rect x="672" y="112" width="10" height="16" rx="2" fill="#5B6FA8" opacity="0.8"/>
   </g>
 
-  <!-- label: edit count label -->
-  <g id="label" data-label="RNA edit count in cold adaptation">
-    <text x="58" y="80" font-family="Barlow, sans-serif" font-size="24" font-weight="900"
-          fill="#FBFFF6">13,000+ RNA edits</text>
+  <!-- Detail: split screen temperature comparison 13°C vs 22°C edit counts -->
+  <g id="detail-temperature-comparison" data-label="Split screen: cold 13°C octopus with 13,000 edit markers vs warm 22°C with 550 edits">
+    <!-- Dividing line between panels -->
+    <line x1="400" y1="520" x2="400" y2="600" stroke="#5B6FA8" stroke-width="1.5" opacity="0.4"/>
+    <!-- Cold panel (left) -->
+    <rect x="20" y="528" width="160" height="62" rx="4" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="1.5" opacity="0.8"/>
+    <text x="100" y="548" font-family="Barlow, sans-serif" font-size="18" fill="#8BA0D6" text-anchor="middle" font-weight="600">13°C</text>
+    <text x="100" y="574" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" text-anchor="middle" font-weight="700">13,000 edits</text>
+    <!-- Cold indicator bars (many) -->
+    <rect x="22" y="532" width="4" height="20" rx="1" fill="#8BA0D6" opacity="0.7"/>
+    <rect x="28" y="532" width="4" height="18" rx="1" fill="#8BA0D6" opacity="0.65"/>
+    <rect x="34" y="532" width="4" height="22" rx="1" fill="#8BA0D6" opacity="0.7"/>
+    <rect x="40" y="532" width="4" height="16" rx="1" fill="#8BA0D6" opacity="0.6"/>
+    <!-- Warm panel (right) -->
+    <rect x="620" y="528" width="160" height="62" rx="4" fill="#6B4423" stroke="#E6B800" stroke-width="1.5" opacity="0.8"/>
+    <text x="700" y="548" font-family="Barlow, sans-serif" font-size="18" fill="#E6B800" text-anchor="middle" font-weight="600">22°C</text>
+    <text x="700" y="574" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" text-anchor="middle" font-weight="700">550 edits</text>
+    <!-- Warm indicator bars (few) -->
+    <rect x="622" y="532" width="4" height="10" rx="1" fill="#E6B800" opacity="0.7"/>
+    <rect x="628" y="532" width="4" height="8" rx="1" fill="#E6B800" opacity="0.65"/>
   </g>
 
-  <!-- overlay: temperature scale indicator -->
-  <g id="overlay" data-label="temperature indicator showing cold adaptation context">
-    <!-- temperature label -->
-    <text x="60" y="485" font-family="Barlow, sans-serif" font-size="20" font-weight="700"
-          fill="#8BA0D6">13°C</text>
-    <!-- thermometer line -->
-    <line x1="105" y1="460" x2="105" y2="500" stroke="#8BA0D6" stroke-width="2"/>
-    <!-- bulb -->
-    <circle cx="105" cy="503" r="5" fill="#8BA0D6"/>
-    <!-- mercury fill cold -->
-    <rect x="102" y="476" width="6" height="24" rx="3" fill="#8BA0D6" opacity="0.7"/>
+  <!-- Detail: neural protein diagrams — kinesin motor and synaptotagmin with edit sites -->
+  <g id="detail-neural-proteins" data-label="Neural protein edit sites: kinesin-1 motor protein K282R edit and synaptotagmin calcium sensor edit highlighted">
+    <!-- Kinesin motor protein (simplified) -->
+    <rect x="530" y="200" width="70" height="30" rx="4" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <rect x="530" y="200" width="70" height="30" rx="4" fill="none" stroke="#8BA0D6" stroke-width="0.5"/>
+    <!-- Kinesin legs/stalks -->
+    <line x1="555" y1="230" x2="545" y2="252" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <line x1="575" y1="230" x2="565" y2="252" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="545" cy="254" r="5" fill="#8BA0D6"/>
+    <circle cx="565" cy="254" r="5" fill="#8BA0D6"/>
+    <!-- Microtubule track -->
+    <rect x="530" y="258" width="75" height="10" rx="3" fill="#5B6FA8" opacity="0.5"/>
+    <!-- K282R edit site -->
+    <circle cx="595" cy="212" r="6" fill="#CA1E08" opacity="0.9"/>
+    <text x="595" y="216" font-family="Barlow, sans-serif" font-size="9" fill="#FBFFF6" text-anchor="middle" font-weight="700">K</text>
+
+    <!-- Synaptotagmin sensor (simplified) -->
+    <ellipse cx="720" cy="225" rx="28" ry="22" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- Calcium binding domains -->
+    <ellipse cx="708" cy="218" rx="10" ry="8" fill="#1A5C1E" stroke="#6FD877" stroke-width="1"/>
+    <ellipse cx="732" cy="228" rx="10" ry="8" fill="#1A5C1E" stroke="#6FD877" stroke-width="1"/>
+    <!-- Ca2+ ions -->
+    <circle cx="709" cy="218" r="3" fill="#E6B800" opacity="0.9"/>
+    <circle cx="733" cy="228" r="3" fill="#E6B800" opacity="0.9"/>
+    <!-- Edit site on synaptotagmin -->
+    <circle cx="748" cy="210" r="6" fill="#CA1E08" opacity="0.9"/>
+    <text x="748" y="214" font-family="Barlow, sans-serif" font-size="9" fill="#FBFFF6" text-anchor="middle" font-weight="700">I</text>
+  </g>
+
+  <!-- Label: species label -->
+  <g id="label" data-label="Species label: O. bimaculoides in italic Barlow">
+    <text x="230" y="180" font-family="Barlow, sans-serif" font-size="20" font-style="italic" fill="#8BA0D6" font-weight="500">O. bimaculoides</text>
+  </g>
+
+  <!-- Overlay: edit markers on octopus neural tissue; cold water temperature indicator -->
+  <g id="overlay" data-label="Edit-site markers scattered on octopus stellate ganglion area; cold blue water temperature tint on left, warm amber on right">
+    <!-- Stellate ganglion indicator -->
+    <circle cx="380" cy="355" r="12" fill="none" stroke="#E6B800" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- Edit site dots on ganglion -->
+    <circle cx="376" cy="349" r="2.5" fill="#CA1E08" opacity="0.85"/>
+    <circle cx="383" cy="356" r="2" fill="#CA1E08" opacity="0.8"/>
+    <circle cx="378" cy="362" r="2.5" fill="#CA1E08" opacity="0.8"/>
+    <circle cx="385" cy="350" r="2" fill="#CA1E08" opacity="0.75"/>
+    <!-- Cold water ambient (left half tint) -->
+    <rect x="0" y="0" width="400" height="600" fill="#8BA0D6" opacity="0.04"/>
+    <!-- Warm water ambient (right half tint) -->
+    <rect x="400" y="0" width="400" height="600" fill="#E6B800" opacity="0.03"/>
+    <!-- Connection arrow from ADAR group to octopus -->
+    <path d="M 590 140 Q 540 200 470 280" stroke="#2FBF39" stroke-width="1.5" stroke-dasharray="6 4" fill="none" opacity="0.5"/>
   </g>
 </svg>

@@ -1,140 +1,150 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <!-- spore glow filter -->
-    <filter id="spore-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <radialGradient id="spore-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2FBF39" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1C1E35" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <!-- bg: dark forest floor -->
-  <g id="bg" data-label="dark forest floor background">
-    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
-    <!-- ground plane -->
-    <rect x="0" y="480" width="800" height="120" fill="#1A5C1E"/>
-    <!-- mid-ground forest depth -->
-    <rect x="0" y="350" width="800" height="130" fill="#151B2E"/>
+  <!-- Background: dark forest floor -->
+  <g id="bg" data-label="Dark forest floor environment, deep green and midnight tones">
+    <rect width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="420" width="800" height="180" fill="#1A5C1E" opacity="0.6"/>
+    <rect x="0" y="480" width="800" height="120" fill="#0D0D16" opacity="0.7"/>
+    <!-- Ambient forest light shafts -->
+    <polygon points="120,0 180,0 220,420 80,420" fill="#248A28" opacity="0.06"/>
+    <polygon points="380,0 440,0 480,420 340,420" fill="#248A28" opacity="0.05"/>
+    <polygon points="600,0 660,0 700,420 560,420" fill="#248A28" opacity="0.04"/>
   </g>
 
-  <!-- context: leaf silhouettes and ant trail -->
-  <g id="context" data-label="leaf silhouettes and ant colony trail below">
-    <!-- large background leaf left -->
-    <path d="M 20 500 Q 80 350 160 340 Q 120 430 80 500 Z" fill="#248A28" opacity="0.5"/>
-    <!-- large background leaf right -->
-    <path d="M 640 510 Q 720 360 780 350 Q 760 440 720 510 Z" fill="#1A5C1E" opacity="0.5"/>
-    <!-- twig extending from right -->
-    <line x1="0" y1="220" x2="800" y2="250" stroke="#6B4423" stroke-width="6" stroke-linecap="round"/>
-    <!-- leaf vein detail on twig -->
-    <path d="M 0 220 Q 400 240 800 250" fill="none" stroke="#A0785A" stroke-width="2" opacity="0.4"/>
-    <!-- ant trail dots on ground -->
-    <g opacity="0.4">
-      <ellipse cx="100" cy="520" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="160" cy="530" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="230" cy="525" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="300" cy="518" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="380" cy="528" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="450" cy="522" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="520" cy="530" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="600" cy="520" rx="3" ry="2" fill="#8BA0D6"/>
-      <ellipse cx="680" cy="527" rx="3" ry="2" fill="#8BA0D6"/>
-    </g>
-    <!-- mummified ant remains near trail -->
-    <ellipse cx="200" cy="526" rx="5" ry="3" fill="#3D3D52" opacity="0.6"/>
-    <ellipse cx="480" cy="534" rx="5" ry="3" fill="#3D3D52" opacity="0.6"/>
+  <!-- Context: leaf silhouettes and ant trail -->
+  <g id="context" data-label="Leaf silhouettes, diffuse background ant colony trail on forest floor">
+    <!-- Background leaves -->
+    <ellipse cx="100" cy="200" rx="70" ry="28" fill="#248A28" opacity="0.4" transform="rotate(-25,100,200)"/>
+    <ellipse cx="680" cy="160" rx="80" ry="30" fill="#1A5C1E" opacity="0.5" transform="rotate(20,680,160)"/>
+    <ellipse cx="750" cy="350" rx="60" ry="22" fill="#248A28" opacity="0.3" transform="rotate(-10,750,350)"/>
+    <!-- Forest floor leaf litter -->
+    <ellipse cx="80" cy="510" rx="45" ry="16" fill="#1A5C1E" opacity="0.5" transform="rotate(15,80,510)"/>
+    <ellipse cx="250" cy="540" rx="55" ry="18" fill="#248A28" opacity="0.4" transform="rotate(-8,250,540)"/>
+    <ellipse cx="500" cy="525" rx="50" ry="17" fill="#1A5C1E" opacity="0.45" transform="rotate(12,500,525)"/>
+    <ellipse cx="700" cy="545" rx="48" ry="15" fill="#248A28" opacity="0.4" transform="rotate(-20,700,545)"/>
+    <!-- Ant trail (dashed line) -->
+    <path d="M 50 490 Q 200 470 350 480 Q 500 490 700 475" stroke="#6FD877" stroke-width="1.5" stroke-dasharray="4 6" fill="none" opacity="0.4"/>
+    <!-- Trail ants (tiny silhouettes) -->
+    <ellipse cx="130" cy="482" rx="5" ry="2.5" fill="#2D3E6B" opacity="0.7"/>
+    <ellipse cx="200" cy="477" rx="5" ry="2.5" fill="#2D3E6B" opacity="0.7"/>
+    <ellipse cx="310" cy="479" rx="5" ry="2.5" fill="#2D3E6B" opacity="0.7"/>
+    <ellipse cx="420" cy="483" rx="5" ry="2.5" fill="#2D3E6B" opacity="0.7"/>
+    <ellipse cx="560" cy="478" rx="5" ry="2.5" fill="#2D3E6B" opacity="0.7"/>
   </g>
 
-  <!-- subject: zombie ant clamped onto twig -->
-  <g id="subject" data-label="zombie carpenter ant mandibles locked onto leaf vein, side view">
-    <!-- ant body - thorax -->
-    <ellipse cx="380" cy="245" rx="28" ry="16" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- ant abdomen (petiole + gaster) -->
-    <circle cx="340" cy="248" r="8" fill="#3D3D52" stroke="#5B6FA8" stroke-width="1.5"/>
-    <ellipse cx="310" cy="252" rx="22" ry="17" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- ant head -->
-    <ellipse cx="415" cy="243" rx="22" ry="18" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- mandibles locked into twig -->
-    <path d="M 430 248 Q 445 238 452 228" fill="none" stroke="#3D3D52" stroke-width="5" stroke-linecap="round"/>
-    <path d="M 430 250 Q 447 260 452 228" fill="none" stroke="#3D3D52" stroke-width="5" stroke-linecap="round"/>
-    <!-- mandible tips gripping twig -->
-    <circle cx="452" cy="228" r="4" fill="#2D3E6B"/>
-    <!-- ant legs -->
-    <g stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round" fill="none">
-      <!-- front legs -->
-      <path d="M 400 255 L 390 275 L 370 290"/>
-      <path d="M 400 237 L 392 218 L 375 208"/>
-      <!-- mid legs -->
-      <path d="M 375 258 L 358 278 L 342 295"/>
-      <path d="M 376 238 L 360 220 L 348 208"/>
-      <!-- rear legs -->
-      <path d="M 352 255 L 338 272 L 318 280"/>
-      <path d="M 353 240 L 338 224 L 322 215"/>
-    </g>
-    <!-- ant antennae (drooped/infected) -->
-    <path d="M 432 230 Q 445 212 430 198" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 428 228 Q 438 208 450 200" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Subject: main ant on leaf at 25cm elevation, mandibles locked, viewed from side -->
+  <g id="subject" data-label="Single carpenter ant biting into leaf at 25cm elevation, side view, solar noon implied by bright tone">
+    <!-- Leaf the ant is biting (primary leaf) -->
+    <ellipse cx="400" cy="280" rx="160" ry="55" fill="#248A28" transform="rotate(-8,400,280)"/>
+    <path d="M 248 272 Q 400 245 560 272" stroke="#1A5C1E" stroke-width="1.5" fill="none"/>
+    <!-- Leaf vein midrib -->
+    <path d="M 248 280 Q 400 268 556 280" stroke="#1A5C1E" stroke-width="1" fill="none" opacity="0.8"/>
+
+    <!-- Ant body — abdomen -->
+    <ellipse cx="340" cy="290" rx="32" ry="18" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- Ant thorax -->
+    <ellipse cx="385" cy="287" rx="20" ry="14" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- Ant head -->
+    <ellipse cx="414" cy="284" rx="15" ry="13" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- Ant eye (standard construction) -->
+    <ellipse cx="420" cy="280" rx="5.5" ry="4.4" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="420" cy="280" r="2.2" fill="#0D0D16"/>
+    <circle cx="418.5" cy="278.5" r="1.1" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Mandibles locked into leaf -->
+    <path d="M 424 290 Q 432 298 436 305 Q 440 310 438 315" stroke="#8BA0D6" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M 426 289 Q 435 296 440 304 Q 444 309 441 316" stroke="#8BA0D6" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Ant legs -->
+    <path d="M 375 296 Q 368 308 358 318" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 380 297 Q 372 311 365 322" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 390 298 Q 390 313 388 325" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 375 286 Q 368 274 360 266" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 380 285 Q 375 272 368 264" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M 390 285 Q 388 271 384 262" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <!-- Antenna -->
+    <path d="M 415 274 Q 418 264 426 258" stroke="#5B6FA8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <circle cx="426" cy="258" r="2" fill="#5B6FA8"/>
   </g>
 
-  <!-- detail-hyphae: fungal network in body -->
-  <g id="detail-hyphae" data-label="fungal hyphae network spread through ant muscle tissue">
-    <!-- hyphae threads through thorax -->
-    <path d="M 370 240 Q 380 248 390 240" fill="none" stroke="#2FBF39" stroke-width="1" opacity="0.7"/>
-    <path d="M 365 250 Q 378 244 392 252" fill="none" stroke="#6FD877" stroke-width="1" opacity="0.6"/>
-    <path d="M 368 257 Q 380 252 393 258" fill="none" stroke="#2FBF39" stroke-width="1" opacity="0.5"/>
-    <!-- hyphae in head -->
-    <path d="M 408 238 Q 418 242 426 238" fill="none" stroke="#6FD877" stroke-width="1" opacity="0.6"/>
-    <path d="M 410 248 Q 420 244 428 250" fill="none" stroke="#2FBF39" stroke-width="1" opacity="0.5"/>
-    <!-- hyphae in abdomen -->
-    <path d="M 298 248 Q 310 252 322 248" fill="none" stroke="#2FBF39" stroke-width="1" opacity="0.6"/>
-    <path d="M 294 255 Q 310 258 325 254" fill="none" stroke="#6FD877" stroke-width="1" opacity="0.5"/>
+  <!-- Detail: fungal hyphae threading through ant muscle tissue -->
+  <g id="detail-hyphae" data-label="Fungal hyphae network spreading through ant body muscle tissue — visible as pale branching threads">
+    <!-- Hyphae in abdomen region -->
+    <path d="M 318 288 Q 325 284 330 290 Q 336 296 342 290 Q 348 284 355 288" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.75"/>
+    <path d="M 322 295 Q 329 291 335 296 Q 340 300 347 295" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.7"/>
+    <path d="M 326 282 Q 334 278 339 283 Q 344 288 350 282" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.65"/>
+    <!-- Hyphae branching through thorax -->
+    <path d="M 372 283 Q 377 279 382 283 Q 386 287 390 283" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.7"/>
+    <path d="M 375 290 Q 380 286 385 290 Q 389 294 393 290" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.65"/>
+    <!-- Hyphae tendrils in head -->
+    <path d="M 404 283 Q 408 279 412 283 Q 415 287 410 290" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.6"/>
+    <!-- Brain outline (intact, not invaded) -->
+    <ellipse cx="409" cy="282" rx="6" ry="5" fill="none" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
   </g>
 
-  <!-- detail-stalk: fruiting body erupting from head -->
-  <g id="detail-stalk" data-label="Ophiocordyceps fruiting stalk erupting from dorsal head">
-    <!-- main stalk -->
-    <path d="M 420 228 Q 418 190 415 155 Q 412 120 418 85" fill="none" stroke="#CA1E08" stroke-width="3.5" stroke-linecap="round"/>
-    <!-- stalk bulge at base -->
-    <ellipse cx="420" cy="226" rx="5" ry="4" fill="#CA1E08"/>
-    <!-- ascoma at tip -->
-    <ellipse cx="418" cy="82" rx="9" ry="14" fill="#E85542"/>
-    <ellipse cx="418" cy="76" rx="7" ry="6" fill="#CA1E08"/>
+  <!-- Detail: fruiting stalk erupting from back of ant's head -->
+  <g id="detail-stalk" data-label="Ophiocordyceps fruiting body stalk erupting from base of ant head, orange-red with spore-releasing tip">
+    <!-- Stalk -->
+    <path d="M 400 278 Q 397 260 396 240 Q 395 220 397 200 Q 398 185 400 175" stroke="#CA1E08" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Stalk tip / ascoma -->
+    <ellipse cx="400" cy="170" rx="8" ry="5" fill="#E85542"/>
+    <ellipse cx="400" cy="167" rx="6" ry="3" fill="#CA1E08"/>
+    <!-- Bioluminescent glow around stalk tip -->
+    <circle cx="400" cy="170" r="22" fill="url(#spore-glow)"/>
   </g>
 
-  <!-- detail-spores: spore cloud raining down -->
-  <g id="detail-spores" data-label="ascospores dispersing downward toward ant trail" filter="url(#spore-glow)">
-    <!-- spore particles falling -->
-    <circle cx="408" cy="110" r="2.5" fill="#6FD877" opacity="0.9"/>
-    <circle cx="425" cy="125" r="2" fill="#6FD877" opacity="0.8"/>
-    <circle cx="435" cy="140" r="2.5" fill="#2FBF39" opacity="0.9"/>
-    <circle cx="400" cy="145" r="2" fill="#6FD877" opacity="0.7"/>
-    <circle cx="445" cy="160" r="2" fill="#6FD877" opacity="0.8"/>
-    <circle cx="415" cy="170" r="2.5" fill="#2FBF39" opacity="0.9"/>
-    <circle cx="430" cy="185" r="2" fill="#6FD877" opacity="0.6"/>
-    <circle cx="390" cy="165" r="2" fill="#6FD877" opacity="0.7"/>
-    <circle cx="460" cy="175" r="2" fill="#2FBF39" opacity="0.6"/>
-    <!-- spores reaching ground level -->
-    <circle cx="420" cy="480" r="2" fill="#6FD877" opacity="0.5"/>
-    <circle cx="435" cy="495" r="1.5" fill="#2FBF39" opacity="0.4"/>
-    <circle cx="448" cy="510" r="2" fill="#6FD877" opacity="0.3"/>
-    <!-- dashed fall path -->
-    <line x1="418" y1="96" x2="420" y2="475" stroke="#248A28" stroke-width="1" stroke-dasharray="5 8" opacity="0.3"/>
+  <!-- Detail: spores falling from stalk onto ant trail below -->
+  <g id="detail-spores" data-label="Ascospores raining from fruiting body stalk onto ant foraging trail below">
+    <circle cx="392" cy="195" r="2.5" fill="#E6B800" opacity="0.9"/>
+    <circle cx="406" cy="210" r="2" fill="#E6B800" opacity="0.85"/>
+    <circle cx="385" cy="225" r="2.5" fill="#E6B800" opacity="0.8"/>
+    <circle cx="412" cy="235" r="2" fill="#E6B800" opacity="0.75"/>
+    <circle cx="395" cy="248" r="2" fill="#E6B800" opacity="0.7"/>
+    <circle cx="380" cy="260" r="2.5" fill="#E6B800" opacity="0.65"/>
+    <circle cx="418" cy="255" r="2" fill="#E6B800" opacity="0.6"/>
+    <circle cx="370" cy="280" r="2" fill="#E6B800" opacity="0.55"/>
+    <circle cx="430" cy="275" r="2" fill="#E6B800" opacity="0.5"/>
+    <!-- Spores reaching trail level -->
+    <circle cx="362" cy="430" r="2" fill="#E6B800" opacity="0.45"/>
+    <circle cx="405" cy="440" r="2" fill="#E6B800" opacity="0.4"/>
+    <circle cx="448" cy="435" r="2" fill="#E6B800" opacity="0.35"/>
   </g>
 
-  <!-- label: species name only -->
-  <g id="label" data-label="species name label">
-    <text x="80" y="130" font-family="Barlow, sans-serif" font-size="22" font-weight="700"
-          font-style="italic" fill="#FBFFF6">O. unilateralis</text>
+  <!-- Detail: second hyperparasitic fungus attacking the Ophiocordyceps stalk -->
+  <g id="detail-hyperparasite" data-label="Second hyperparasitic fungus attacking Ophiocordyceps stalk — the counter-countermeasure, shown as small pale blobs on the stalk">
+    <ellipse cx="397" cy="220" rx="5" ry="3.5" fill="#B8EDB9" opacity="0.8" transform="rotate(-15,397,220)"/>
+    <ellipse cx="401" cy="232" rx="4" ry="3" fill="#B8EDB9" opacity="0.75" transform="rotate(10,401,232)"/>
+    <ellipse cx="394" cy="243" rx="4.5" ry="3" fill="#B8EDB9" opacity="0.7" transform="rotate(-20,394,243)"/>
+    <!-- Hyperparasite hyphae on stalk -->
+    <path d="M 393 218 Q 390 223 392 228" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.65"/>
+    <path d="M 403 228 Q 406 233 404 238" stroke="#6FD877" stroke-width="1" fill="none" opacity="0.6"/>
   </g>
 
-  <!-- overlay: height indicator -->
-  <g id="overlay" data-label="25cm height indicator arrow from twig to ground">
-    <!-- vertical dashed line -->
-    <line x1="560" y1="232" x2="560" y2="480" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 4"/>
-    <!-- top tick -->
-    <line x1="554" y1="232" x2="566" y2="232" stroke="#8BA0D6" stroke-width="2"/>
-    <!-- bottom tick -->
-    <line x1="554" y1="480" x2="566" y2="480" stroke="#8BA0D6" stroke-width="2"/>
-    <!-- distance label -->
-    <text x="572" y="362" font-family="Barlow, sans-serif" font-size="18" font-weight="600"
-          fill="#8BA0D6">~25 cm</text>
+  <!-- Label: species name -->
+  <g id="label" data-label="Species label: O. unilateralis in italic Barlow">
+    <text x="580" y="200" font-family="Barlow, sans-serif" font-size="20" font-style="italic" fill="#8BA0D6" font-weight="500">O. unilateralis</text>
+  </g>
+
+  <!-- Overlay: height indicator and solar noon indicator -->
+  <g id="overlay" data-label="25cm elevation marker arrow and solar noon indicator line">
+    <!-- 25cm height indicator line -->
+    <line x1="560" y1="280" x2="560" y2="490" stroke="#FBFFF6" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+    <line x1="552" y1="280" x2="568" y2="280" stroke="#FBFFF6" stroke-width="1.5" opacity="0.5"/>
+    <line x1="552" y1="490" x2="568" y2="490" stroke="#FBFFF6" stroke-width="1.5" opacity="0.5"/>
+    <text x="572" y="388" font-family="Barlow, sans-serif" font-size="18" fill="#FBFFF6" font-weight="500">25 cm</text>
+    <!-- Solar noon indicator (sun glyph top of frame) -->
+    <circle cx="680" cy="55" r="14" fill="none" stroke="#E6B800" stroke-width="2"/>
+    <line x1="680" y1="32" x2="680" y2="24" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="703" y1="55" x2="711" y2="55" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="680" y1="78" x2="680" y2="86" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="657" y1="55" x2="649" y2="55" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="696" y1="39" x2="702" y2="33" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="696" y1="71" x2="702" y2="77" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="664" y1="39" x2="658" y2="33" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+    <line x1="664" y1="71" x2="658" y2="77" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
   </g>
 </svg>
