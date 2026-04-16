@@ -1,232 +1,299 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
 <!--
-  AWW DNA DOUBLE HELIX SPECIFICATION
-  ====================================
-  This file documents the canonical helix construction for all AWW illustrations.
+  AWW DNA DOUBLE HELIX SPEC v2
+  ==============================
+  BIOLOGICALLY ACCURATE B-DNA CONSTRUCTION
 
-  CONSTRUCTION METHOD:
-  - Helix runs vertically, centre axis at x=cx
-  - One full turn = pitch P pixels (default P=80)
-  - Half-width of helix = hw pixels (default hw=30)
-  - Strand A (navy): sinusoid  x = cx + hw * sin(t)
-  - Strand B (blue): sinusoid  x = cx + hw * sin(t + π)  [180° out of phase]
-  - Base pair rungs connect strands at every half-period (each P/2 pixels)
-  - DEPTH RULE: at each crossing, the strand whose x is POSITIVE (further right
-    than centre) draws OVER the strand whose x is negative. This creates the
-    correct 3D wrap-around illusion.
-  - Rungs are drawn BEHIND both strands (rendered first).
-  - Each strand is drawn in SEGMENTS between crossings, alternating which is on top.
+  Parameters:
+    hw = 26px (half-width of helix)
+    P  = 100px per full turn
+    bp = 10 base pairs per turn (10px per bp)
+    Strand B offset = 216° (major groove = 6bp = 216°, minor groove = 4bp = 144°)
 
-  PARAMETERS USED IN THIS SPEC:
-  cx=170, hw=28, P=80, y_start=40, n_turns=6.5
+  MAJOR GROOVE: 6 base pairs wide (60px) — strands approach from the same side
+  MINOR GROOVE: 4 base pairs wide (40px) — narrower gap between strand crossings
+
+  RUNG RULE: each rung connects the ACTUAL sinusoidal x-positions of both strands
+  at that base pair. Rungs fade to ~12% opacity on the back face (groove face).
+  Rungs never extend outside the strand positions.
+
+  DEPTH RULE: each half-turn segment — the strand with higher x (rightward) at
+  the midpoint is drawn on top.
+
+  Colours: Strand A = Navy Vintage #2D3E6B (back strand by convention)
+           Strand B = Slate Blue  #5B6FA8 (front strand)
+           Rungs    = Periwinkle Mid #8BA0D6 at variable opacity
+           Highlight = Mustard #E6B800 + Goldenrod Dark #B8860B
 -->
 
-  <!-- ── BACKGROUND ── -->
   <rect width="800" height="600" fill="#1C1E35"/>
-  <text x="400" y="30" font-family="Barlow, sans-serif" font-size="13" font-weight="700"
-        fill="#6B6B7C" text-anchor="middle" letter-spacing="0.15em">AWW DNA HELIX SPEC</text>
+  <text x="400" y="28" font-family="Barlow, sans-serif" font-size="13" font-weight="700"
+        fill="#6B6B7C" text-anchor="middle" letter-spacing="0.15em">AWW DNA HELIX SPEC v2 — B-DNA, 10 bp/turn, major+minor groove</text>
 
-  <!-- ════════════════════════════════════════════════
-       EXAMPLE 1 — Standard helix (navy / periwinkle)
-       cx=170, hw=28, P=80
-  ════════════════════════════════════════════════ -->
-  <text x="170" y="58" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">Standard</text>
+  <!-- ═══ PANEL LABELS ═══ -->
+  <text x="140" y="50" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">Standard</text>
+  <text x="370" y="50" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">Highlighted region</text>
+  <text x="600" y="50" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">CRISPR cut</text>
 
-  <!-- Base pair rungs — drawn FIRST (behind strands) -->
-  <!-- Rung positions: y = 40 + n*(P/2) = 40, 80, 120, 160, ... for n=0..12 -->
-  <!-- At each rung, strand A x = cx + hw*sin(n*π), strand B = cx - that -->
-  <!-- n=0: A=170+0=170, B=170-0=170 → both at centre (crossing) — skip -->
-  <!-- n=1(y=80): A=170+28*sin(π)=170+0=170, B=170 — at cross, skip -->
-  <!-- Actually rungs go at the widest points: y = 40+P/4, 40+3P/4, 40+5P/4... -->
-  <!-- i.e. y = 60, 100, 140, 180, 220, 260, 300, 340, 380, 420, 460, 500, 540 -->
-  <!-- At y=60 (t=π/2): A at cx+hw=198, B at cx-hw=142 -->
-  <!-- At y=100 (t=3π/2): A at cx-hw=142, B at cx+hw=198 -->
-  <!-- Alternating wide points -->
-  <g id="rungs-1" data-label="Base pair rungs for standard helix" opacity="0.6">
-    <line x1="142" y1="60"  x2="198" y2="60"  stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="100" x2="198" y2="100" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="140" x2="198" y2="140" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="180" x2="198" y2="180" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="220" x2="198" y2="220" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="260" x2="198" y2="260" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="300" x2="198" y2="300" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="340" x2="198" y2="340" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="380" x2="198" y2="380" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="420" x2="198" y2="420" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="460" x2="198" y2="460" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="500" x2="198" y2="500" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="142" y1="540" x2="198" y2="540" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-  </g>
+  <!-- ═══ PANEL 1 — Standard ═══ -->
+  <line x1="124.7" y1="60.0" x2="140.0" y2="60.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="70.0" x2="155.3" y2="70.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="115.3" y1="80.0" x2="164.7" y2="80.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="90.0" x2="164.7" y2="90.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="100.0" x2="155.3" y2="100.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="110.0" x2="155.3" y2="110.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="124.7" y1="120.0" x2="164.7" y2="120.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="130.0" x2="164.7" y2="130.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="140.0" x2="155.3" y2="140.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="150.0" x2="140.0" y2="150.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="124.7" y1="160.0" x2="140.0" y2="160.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="170.0" x2="155.3" y2="170.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="115.3" y1="180.0" x2="164.7" y2="180.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="190.0" x2="164.7" y2="190.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="200.0" x2="155.3" y2="200.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="210.0" x2="155.3" y2="210.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="124.7" y1="220.0" x2="164.7" y2="220.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="230.0" x2="164.7" y2="230.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="240.0" x2="155.3" y2="240.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="250.0" x2="140.0" y2="250.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="124.7" y1="260.0" x2="140.0" y2="260.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="270.0" x2="155.3" y2="270.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="115.3" y1="280.0" x2="164.7" y2="280.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="290.0" x2="164.7" y2="290.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="300.0" x2="155.3" y2="300.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="310.0" x2="155.3" y2="310.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="124.7" y1="320.0" x2="164.7" y2="320.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="330.0" x2="164.7" y2="330.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="340.0" x2="155.3" y2="340.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="350.0" x2="140.0" y2="350.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="124.7" y1="360.0" x2="140.0" y2="360.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="370.0" x2="155.3" y2="370.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="115.3" y1="380.0" x2="164.7" y2="380.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="390.0" x2="164.7" y2="390.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="400.0" x2="155.3" y2="400.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="410.0" x2="155.3" y2="410.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="124.7" y1="420.0" x2="164.7" y2="420.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="430.0" x2="164.7" y2="430.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="440.0" x2="155.3" y2="440.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="450.0" x2="140.0" y2="450.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="124.7" y1="460.0" x2="140.0" y2="460.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="470.0" x2="155.3" y2="470.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="115.3" y1="480.0" x2="164.7" y2="480.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="490.0" x2="164.7" y2="490.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="500.0" x2="155.3" y2="500.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="140.0" y1="510.0" x2="155.3" y2="510.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="124.7" y1="520.0" x2="164.7" y2="520.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="530.0" x2="164.7" y2="530.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="115.3" y1="540.0" x2="155.3" y2="540.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="124.7" y1="550.0" x2="140.0" y2="550.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="124.7" y1="560.0" x2="140.0" y2="560.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="115.3" y1="570.0" x2="155.3" y2="570.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <path d="M 124.7 60.0 Q 119.0 85.0 155.3 110.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 60.0 Q 166.0 85.0 140.0 110.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 110.0 Q 114.0 135.0 140.0 160.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 155.3 110.0 Q 161.0 135.0 124.7 160.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 124.7 160.0 Q 119.0 185.0 155.3 210.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 160.0 Q 166.0 185.0 140.0 210.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 210.0 Q 114.0 235.0 140.0 260.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 155.3 210.0 Q 161.0 235.0 124.7 260.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 124.7 260.0 Q 119.0 285.0 155.3 310.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 260.0 Q 166.0 285.0 140.0 310.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 310.0 Q 114.0 335.0 140.0 360.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 155.3 310.0 Q 161.0 335.0 124.7 360.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 124.7 360.0 Q 119.0 385.0 155.3 410.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 360.0 Q 166.0 385.0 140.0 410.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 410.0 Q 114.0 435.0 140.0 460.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 155.3 410.0 Q 161.0 435.0 124.7 460.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 124.7 460.0 Q 119.0 485.0 155.3 510.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 460.0 Q 166.0 485.0 140.0 510.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 510.0 Q 114.0 535.0 140.0 560.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 155.3 510.0 Q 161.0 535.0 124.7 560.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 124.7 560.0 Q 119.0 566.0 155.3 572.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 140.0 560.0 Q 166.0 566.0 140.0 572.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
 
-  <!--
-    STRAND SEGMENTS with depth layering.
-    Crossings occur at y = 40, 120, 200, 280, 360, 440, 520 (every P=80).
-    Between crossings, one strand is "in front".
-    Segment rule: from y=40..120, strand A (right-going first) is in front.
-                  from y=120..200, strand B is in front. Alternates.
+  <!-- ═══ GROOVE LABELS (panel 1) ═══ -->
+  <!-- major groove ~y=165..235, minor groove ~y=235..285 approx -->
+  <text x="185" y="200" font-family="Inter, sans-serif" font-size="9" fill="#6B6B7C">major</text>
+  <text x="185" y="210" font-family="Inter, sans-serif" font-size="9" fill="#6B6B7C">groove</text>
+  <text x="185" y="265" font-family="Inter, sans-serif" font-size="9" fill="#6B6B7C">minor</text>
+  <text x="185" y="275" font-family="Inter, sans-serif" font-size="9" fill="#6B6B7C">groove</text>
+  <!-- major bracket -->
+  <line x1="182" y1="165" x2="182" y2="235" stroke="#6B6B7C" stroke-width="1"/>
+  <line x1="178" y1="165" x2="182" y2="165" stroke="#6B6B7C" stroke-width="1"/>
+  <line x1="178" y1="235" x2="182" y2="235" stroke="#6B6B7C" stroke-width="1"/>
+  <!-- minor bracket -->
+  <line x1="182" y1="237" x2="182" y2="287" stroke="#6B6B7C" stroke-width="1"/>
+  <line x1="178" y1="237" x2="182" y2="237" stroke="#6B6B7C" stroke-width="1"/>
+  <line x1="178" y1="287" x2="182" y2="287" stroke="#6B6B7C" stroke-width="1"/>
+  <!-- pitch marker -->
+  <line x1="92" y1="60"  x2="92" y2="160" stroke="#A8A8B5" stroke-width="1" stroke-dasharray="3 2"/>
+  <line x1="88" y1="60"  x2="96" y2="60"  stroke="#A8A8B5" stroke-width="1"/>
+  <line x1="88" y1="160" x2="96" y2="160" stroke="#A8A8B5" stroke-width="1"/>
+  <text x="58" y="108" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5" text-anchor="middle">10 bp</text>
+  <text x="58" y="120" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5" text-anchor="middle">= 1 turn</text>
 
-    Strand A full path: M 170 40 Q 198 60 170 80 Q 142 100 170 120 Q 198 140 170 160 ...
-    Strand B full path: M 170 40 Q 142 60 170 80 Q 198 100 170 120 Q 142 140 170 160 ...
+  <!-- ═══ PANEL 2 — Highlighted ═══ -->
+  <line x1="354.7" y1="60.0" x2="370.0" y2="60.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="70.0" x2="385.3" y2="70.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="345.3" y1="80.0" x2="394.7" y2="80.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="90.0" x2="394.7" y2="90.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="100.0" x2="385.3" y2="100.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="110.0" x2="385.3" y2="110.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="354.7" y1="120.0" x2="394.7" y2="120.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="130.0" x2="394.7" y2="130.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="140.0" x2="385.3" y2="140.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="150.0" x2="370.0" y2="150.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="354.7" y1="160.0" x2="370.0" y2="160.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="170.0" x2="385.3" y2="170.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="345.3" y1="180.0" x2="394.7" y2="180.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="190.0" x2="394.7" y2="190.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="200.0" x2="385.3" y2="200.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="210.0" x2="385.3" y2="210.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="354.7" y1="220.0" x2="394.7" y2="220.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="230.0" x2="394.7" y2="230.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="240.0" x2="385.3" y2="240.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="250.0" x2="370.0" y2="250.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="354.7" y1="260.0" x2="370.0" y2="260.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="270.0" x2="385.3" y2="270.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.81"/>
+  <line x1="345.3" y1="280.0" x2="394.7" y2="280.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="290.0" x2="394.7" y2="290.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="300.0" x2="385.3" y2="300.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="310.0" x2="385.3" y2="310.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="354.7" y1="320.0" x2="394.7" y2="320.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="330.0" x2="394.7" y2="330.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="340.0" x2="385.3" y2="340.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="350.0" x2="370.0" y2="350.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.81"/>
+  <line x1="354.7" y1="360.0" x2="370.0" y2="360.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="370.0" x2="385.3" y2="370.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.81"/>
+  <line x1="345.3" y1="380.0" x2="394.7" y2="380.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="390.0" x2="394.7" y2="390.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="400.0" x2="385.3" y2="400.0" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="410.0" x2="385.3" y2="410.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="354.7" y1="420.0" x2="394.7" y2="420.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="430.0" x2="394.7" y2="430.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="440.0" x2="385.3" y2="440.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="450.0" x2="370.0" y2="450.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="354.7" y1="460.0" x2="370.0" y2="460.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="470.0" x2="385.3" y2="470.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="345.3" y1="480.0" x2="394.7" y2="480.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="490.0" x2="394.7" y2="490.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="500.0" x2="385.3" y2="500.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="370.0" y1="510.0" x2="385.3" y2="510.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="354.7" y1="520.0" x2="394.7" y2="520.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="530.0" x2="394.7" y2="530.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="345.3" y1="540.0" x2="385.3" y2="540.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="354.7" y1="550.0" x2="370.0" y2="550.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="354.7" y1="560.0" x2="370.0" y2="560.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="345.3" y1="570.0" x2="385.3" y2="570.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <path d="M 354.7 60.0 Q 349.0 85.0 385.3 110.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 60.0 Q 396.0 85.0 370.0 110.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 110.0 Q 344.0 135.0 370.0 160.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 385.3 110.0 Q 391.0 135.0 354.7 160.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 354.7 160.0 Q 349.0 185.0 385.3 210.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 160.0 Q 396.0 185.0 370.0 210.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 210.0 Q 344.0 235.0 370.0 260.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 385.3 210.0 Q 391.0 235.0 354.7 260.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 354.7 260.0 Q 349.0 285.0 385.3 310.0"  fill="none" stroke="#B8860B" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 370.0 260.0 Q 396.0 285.0 370.0 310.0" fill="none" stroke="#E6B800" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 370.0 310.0 Q 344.0 335.0 370.0 360.0"  fill="none" stroke="#B8860B" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 385.3 310.0 Q 391.0 335.0 354.7 360.0" fill="none" stroke="#E6B800" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 354.7 360.0 Q 349.0 385.0 385.3 410.0"  fill="none" stroke="#B8860B" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 370.0 360.0 Q 396.0 385.0 370.0 410.0" fill="none" stroke="#E6B800" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M 370.0 410.0 Q 344.0 435.0 370.0 460.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 385.3 410.0 Q 391.0 435.0 354.7 460.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 354.7 460.0 Q 349.0 485.0 385.3 510.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 460.0 Q 396.0 485.0 370.0 510.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 510.0 Q 344.0 535.0 370.0 560.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 385.3 510.0 Q 391.0 535.0 354.7 560.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 354.7 560.0 Q 349.0 566.0 385.3 572.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 370.0 560.0 Q 396.0 566.0 370.0 572.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <!-- CCR5 bracket -->
+  <rect x="336" y="268" width="68" height="134" rx="4" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.7"/>
+  <text x="410" y="278" font-family="Barlow, sans-serif" font-size="11" font-weight="700" fill="#E6B800">CCR5</text>
+  <text x="410" y="292" font-family="Inter, sans-serif" font-size="10" fill="#E6B800">target</text>
+  <text x="410" y="306" font-family="Inter, sans-serif" font-size="10" fill="#E6B800">region</text>
 
-    For depth: draw back strand first, then front strand on top for each segment.
-  -->
+  <!-- ═══ PANEL 3 — CRISPR cut ═══ -->
+  <line x1="584.7" y1="60.0" x2="600.0" y2="60.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="575.3" y1="70.0" x2="615.3" y2="70.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="575.3" y1="80.0" x2="624.7" y2="80.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="90.0" x2="624.7" y2="90.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="100.0" x2="615.3" y2="100.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="110.0" x2="615.3" y2="110.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="584.7" y1="120.0" x2="624.7" y2="120.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="130.0" x2="624.7" y2="130.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="140.0" x2="615.3" y2="140.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="150.0" x2="600.0" y2="150.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="584.7" y1="160.0" x2="600.0" y2="160.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="575.3" y1="170.0" x2="615.3" y2="170.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="575.3" y1="180.0" x2="624.7" y2="180.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="190.0" x2="624.7" y2="190.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="200.0" x2="615.3" y2="200.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="210.0" x2="615.3" y2="210.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="584.7" y1="220.0" x2="624.7" y2="220.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="230.0" x2="624.7" y2="230.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="240.0" x2="615.3" y2="240.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="250.0" x2="600.0" y2="250.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="584.7" y1="260.0" x2="600.0" y2="260.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="575.3" y1="270.0" x2="615.3" y2="270.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="575.3" y1="280.0" x2="624.7" y2="280.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="575.3" y1="380.0" x2="624.7" y2="380.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="390.0" x2="624.7" y2="390.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="400.0" x2="615.3" y2="400.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="410.0" x2="615.3" y2="410.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="584.7" y1="420.0" x2="624.7" y2="420.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="430.0" x2="624.7" y2="430.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="440.0" x2="615.3" y2="440.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="450.0" x2="600.0" y2="450.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="584.7" y1="460.0" x2="600.0" y2="460.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="575.3" y1="470.0" x2="615.3" y2="470.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="575.3" y1="480.0" x2="624.7" y2="480.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="490.0" x2="624.7" y2="490.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="500.0" x2="615.3" y2="500.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="600.0" y1="510.0" x2="615.3" y2="510.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="584.7" y1="520.0" x2="624.7" y2="520.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="530.0" x2="624.7" y2="530.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.12"/>
+  <line x1="575.3" y1="540.0" x2="615.3" y2="540.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.31"/>
+  <line x1="584.7" y1="550.0" x2="600.0" y2="550.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <line x1="584.7" y1="560.0" x2="600.0" y2="560.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="1.00"/>
+  <line x1="575.3" y1="570.0" x2="615.3" y2="570.0" stroke="#8BA0D6" stroke-width="1.8" stroke-linecap="round" opacity="0.81"/>
+  <path d="M 584.7 60.0 Q 579.0 85.0 615.3 110.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 60.0 Q 626.0 85.0 600.0 110.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 110.0 Q 574.0 135.0 600.0 160.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 615.3 110.0 Q 621.0 135.0 584.7 160.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 584.7 160.0 Q 579.0 185.0 615.3 210.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 160.0 Q 626.0 185.0 600.0 210.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 210.0 Q 574.0 235.0 600.0 260.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 615.3 210.0 Q 621.0 235.0 584.7 260.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 584.7 260.0 Q 579.0 272.5 615.3 285.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 260.0 Q 626.0 272.5 600.0 285.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 375.0 Q 574.0 367.5 600.0 360.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 615.3 375.0 Q 621.0 367.5 584.7 360.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 584.7 375.0 Q 579.0 392.5 615.3 410.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 375.0 Q 626.0 392.5 600.0 410.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 410.0 Q 574.0 435.0 600.0 460.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 615.3 410.0 Q 621.0 435.0 584.7 460.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 584.7 460.0 Q 579.0 485.0 615.3 510.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 460.0 Q 626.0 485.0 600.0 510.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 510.0 Q 574.0 535.0 600.0 560.0"  fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 615.3 510.0 Q 621.0 535.0 584.7 560.0" fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 584.7 560.0 Q 579.0 566.0 615.3 572.0"  fill="none" stroke="#5B6FA8" stroke-width="3.0" stroke-linecap="round"/>
+  <path d="M 600.0 560.0 Q 626.0 566.0 600.0 572.0" fill="none" stroke="#2D3E6B" stroke-width="3.0" stroke-linecap="round"/>
+  <!-- cut splay ends (y≈285 and y≈375) -->
+  <path d="M 600 285 Q 585 290 578 286" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 600 285 Q 615 290 622 286" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 578 376 Q 585 372 600 375" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 622 376 Q 615 372 600 375" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- gap marker -->
+  <line x1="588" y1="328" x2="612" y2="328" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
+  <text x="600" y="344" font-family="Inter, sans-serif" font-size="11" fill="#CA1E08" text-anchor="middle" opacity="0.9">Δ32 bp</text>
 
-  <!-- Segment 1: y=40→120. A is front (goes right first). Draw B behind, A on top. -->
-  <path d="M 170 40 Q 142 60 170 80 Q 198 100 170 120"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 40 Q 198 60 170 80 Q 142 100 170 120"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 2: y=120→200. B is front. Draw A behind, B on top. -->
-  <path d="M 170 120 Q 198 140 170 160 Q 142 180 170 200"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 120 Q 142 140 170 160 Q 198 180 170 200"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 3: y=200→280. A front. -->
-  <path d="M 170 200 Q 142 220 170 240 Q 198 260 170 280"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 200 Q 198 220 170 240 Q 142 260 170 280"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 4: y=280→360. B front. -->
-  <path d="M 170 280 Q 198 300 170 320 Q 142 340 170 360"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 280 Q 142 300 170 320 Q 198 340 170 360"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 5: y=360→440. A front. -->
-  <path d="M 170 360 Q 142 380 170 400 Q 198 420 170 440"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 360 Q 198 380 170 400 Q 142 420 170 440"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 6: y=440→520. B front. -->
-  <path d="M 170 440 Q 198 460 170 480 Q 142 500 170 520"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 440 Q 142 460 170 480 Q 198 500 170 520"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Segment 7 tail: y=520→560 -->
-  <path d="M 170 520 Q 142 540 170 560"
-        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 170 520 Q 198 540 170 560"
-        fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- ════════════════════════════════════════════════
-       EXAMPLE 2 — Highlighted region (CCR5 style)
-       cx=370, hw=28, P=80 — mustard highlight on 2 rungs + strands
-  ════════════════════════════════════════════════ -->
-  <text x="370" y="58" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">With highlight region</text>
-
-  <!-- Rungs -->
-  <g opacity="0.55">
-    <line x1="342" y1="60"  x2="398" y2="60"  stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="100" x2="398" y2="100" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="140" x2="398" y2="140" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="180" x2="398" y2="180" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-  </g>
-  <!-- Highlighted rungs (CCR5 region y=200..360) -->
-  <line x1="342" y1="220" x2="398" y2="220" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <line x1="342" y1="260" x2="398" y2="260" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <line x1="342" y1="300" x2="398" y2="300" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <line x1="342" y1="340" x2="398" y2="340" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <g opacity="0.55">
-    <line x1="342" y1="380" x2="398" y2="380" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="420" x2="398" y2="420" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="460" x2="398" y2="460" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="500" x2="398" y2="500" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="342" y1="540" x2="398" y2="540" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-  </g>
-  <!-- Highlight bracket -->
-  <rect x="330" y="208" width="80" height="144" rx="4" fill="none" stroke="#E6B800" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.8"/>
-
-  <!-- Helix segments (cx=370) — same depth logic -->
-  <path d="M 370 40 Q 342 60 370 80 Q 398 100 370 120"   fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 40 Q 398 60 370 80 Q 342 100 370 120"   fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 120 Q 398 140 370 160 Q 342 180 370 200" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 120 Q 342 140 370 160 Q 398 180 370 200" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <!-- Highlighted segments -->
-  <path d="M 370 200 Q 342 220 370 240 Q 398 260 370 280" fill="none" stroke="#B8860B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 200 Q 398 220 370 240 Q 342 260 370 280" fill="none" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 280 Q 398 300 370 320 Q 342 340 370 360" fill="none" stroke="#E6B800" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 280 Q 342 300 370 320 Q 398 340 370 360" fill="none" stroke="#B8860B" stroke-width="3" stroke-linecap="round"/>
-  <!-- Resume normal -->
-  <path d="M 370 360 Q 342 380 370 400 Q 398 420 370 440" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 360 Q 398 380 370 400 Q 342 420 370 440" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 440 Q 398 460 370 480 Q 342 500 370 520" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 440 Q 342 460 370 480 Q 398 500 370 520" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 520 Q 342 540 370 560" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 370 520 Q 398 540 370 560" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- ════════════════════════════════════════════════
-       EXAMPLE 3 — Cut/broken helix (Cas9 edit)
-       cx=570, hw=28, P=80 — cut at y=290..360
-  ════════════════════════════════════════════════ -->
-  <text x="570" y="58" font-family="Barlow, sans-serif" font-size="12" fill="#A8A8B5" text-anchor="middle">Cut helix (CRISPR)</text>
-
-  <!-- Rungs above cut -->
-  <g opacity="0.6">
-    <line x1="542" y1="60"  x2="598" y2="60"  stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="100" x2="598" y2="100" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="140" x2="598" y2="140" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="180" x2="598" y2="180" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="220" x2="598" y2="220" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="260" x2="598" y2="260" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-  </g>
-  <!-- Rungs below cut -->
-  <g opacity="0.6">
-    <line x1="542" y1="380" x2="598" y2="380" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="420" x2="598" y2="420" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="460" x2="598" y2="460" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="500" x2="598" y2="500" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-    <line x1="542" y1="540" x2="598" y2="540" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
-  </g>
-
-  <!-- Helix above cut -->
-  <path d="M 570 40 Q 542 60 570 80 Q 598 100 570 120"   fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 40 Q 598 60 570 80 Q 542 100 570 120"   fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 120 Q 598 140 570 160 Q 542 180 570 200" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 120 Q 542 140 570 160 Q 598 180 570 200" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 200 Q 542 220 570 240 Q 598 260 570 280" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 200 Q 598 220 570 240 Q 542 260 570 280" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <!-- Blunt ends at cut (y≈290) — ragged ends diverge slightly -->
-  <path d="M 570 280 Q 548 288 542 294" fill="none" stroke="#CA1E08" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 280 Q 592 288 598 294" fill="none" stroke="#CA1E08" stroke-width="3" stroke-linecap="round"/>
-  <!-- Gap indicator -->
-  <line x1="555" y1="310" x2="585" y2="310" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.7"/>
-  <text x="570" y="328" font-family="Inter, sans-serif" font-size="10" fill="#CA1E08" text-anchor="middle" opacity="0.8">Δ32 bp</text>
-  <!-- Blunt ends resuming below gap (y≈360) -->
-  <path d="M 542 366 Q 548 360 570 360" fill="none" stroke="#CA1E08" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 598 366 Q 592 360 570 360" fill="none" stroke="#CA1E08" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Helix below cut -->
-  <path d="M 570 360 Q 542 380 570 400 Q 598 420 570 440" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 360 Q 598 380 570 400 Q 542 420 570 440" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 440 Q 598 460 570 480 Q 542 500 570 520" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 440 Q 542 460 570 480 Q 598 500 570 520" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 520 Q 542 540 570 560" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
-  <path d="M 570 520 Q 598 540 570 560" fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- ── SPEC ANNOTATIONS ── -->
-  <g id="annotations" data-label="Spec annotations">
-    <!-- pitch marker on helix 1 -->
-    <line x1="205" y1="40" x2="205" y2="120" stroke="#6B6B7C" stroke-width="1" stroke-dasharray="3 2"/>
-    <line x1="200" y1="40"  x2="210" y2="40"  stroke="#6B6B7C" stroke-width="1"/>
-    <line x1="200" y1="120" x2="210" y2="120" stroke="#6B6B7C" stroke-width="1"/>
-    <text x="218" y="84" font-family="Inter, sans-serif" font-size="11" fill="#6B6B7C">P=80px</text>
-    <!-- half-width marker -->
-    <line x1="170" y1="570" x2="198" y2="570" stroke="#6B6B7C" stroke-width="1"/>
-    <line x1="170" y1="565" x2="170" y2="575" stroke="#6B6B7C" stroke-width="1"/>
-    <line x1="198" y1="565" x2="198" y2="575" stroke="#6B6B7C" stroke-width="1"/>
-    <text x="184" y="586" font-family="Inter, sans-serif" font-size="11" fill="#6B6B7C" text-anchor="middle">hw=28px</text>
-    <!-- colour legend -->
-    <rect x="620" y="540" width="14" height="4" rx="2" fill="#2D3E6B"/>
-    <text x="638" y="546" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Strand A (Navy)</text>
-    <rect x="620" y="554" width="14" height="4" rx="2" fill="#5B6FA8"/>
-    <text x="638" y="560" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Strand B (Slate)</text>
-    <rect x="620" y="568" width="14" height="4" rx="2" fill="#8BA0D6" opacity="0.6"/>
-    <text x="638" y="574" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Base pair rungs</text>
-  </g>
+  <!-- ═══ COLOUR LEGEND ═══ -->
+  <rect x="640" y="540" width="14" height="4" rx="2" fill="#2D3E6B"/>
+  <text x="658" y="546" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Strand A — Navy Vintage</text>
+  <rect x="640" y="554" width="14" height="4" rx="2" fill="#5B6FA8"/>
+  <text x="658" y="560" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Strand B — Slate Blue</text>
+  <rect x="640" y="568" width="14" height="3" rx="2" fill="#8BA0D6" opacity="0.7"/>
+  <text x="658" y="574" font-family="Inter, sans-serif" font-size="10" fill="#A8A8B5">Rungs — Periwinkle, variable opacity</text>
 
 </svg>
