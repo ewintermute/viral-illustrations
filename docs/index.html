@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWW Viral Illustrations — Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1C1E35;
+      color: #FBFFF6;
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      padding: 0 0 80px;
+    }
+
+    header {
+      padding: 40px 48px 32px;
+      border-bottom: 1px solid #3D3D52;
+    }
+    header h1 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 900;
+      font-size: clamp(28px, 4vw, 48px);
+      letter-spacing: -0.01em;
+      color: #FBFFF6;
+    }
+    header p {
+      font-size: 14px;
+      color: #A8A8B5;
+      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1px;
+      background: #3D3D52;
+      margin-top: 1px;
+    }
+
+    .card {
+      background: #1C1E35;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-illustration {
+      background: #0D0D16;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+      transition: background 0.15s;
+    }
+    .card-illustration:hover { background: #12121e; }
+    .card-illustration img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .card-illustration .expand-hint {
+      position: absolute;
+      bottom: 8px;
+      right: 10px;
+      font-size: 10px;
+      font-family: 'Barlow', sans-serif;
+      color: #6B6B7C;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .card-meta {
+      padding: 16px 20px 20px;
+      border-top: 1px solid #3D3D52;
+    }
+    .card-id {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #2FBF39;
+      margin-bottom: 4px;
+    }
+    .card-title {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #FBFFF6;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .card-hook {
+      font-size: 13px;
+      color: #A8A8B5;
+      line-height: 1.6;
+    }
+    .card-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .card-links a {
+      font-size: 11px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8BA0D6;
+      text-decoration: none;
+    }
+    .card-links a:hover { color: #D1DCFF; }
+
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(13,13,22,0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      box-shadow: 0 0 80px rgba(0,0,0,0.8);
+    }
+    #lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #A8A8B5;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    #lightbox-close:hover { color: #FBFFF6; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AWW Viral Illustrations</h1>
+  <p>First batch — 10 illustrations for review. Click any image to expand.</p>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<div id="lightbox">
+  <button id="lightbox-close">✕ Close</button>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<script>
+const stories = [
+  {
+    id: "A7",
+    file: "A7-horseshoe-crab-blood-illustration.svg",
+    title: "The Blue Blood That Guards Every Drug on Earth",
+    hook: "Horseshoe crab blood costs $60,000/gallon and tests every injectable drug ever made.",
+    category: "Superlatives"
+  },
+  {
+    id: "B10",
+    file: "B10-octopus-rna-editing-illustration.svg",
+    title: "The Octopus That Rewrites Itself",
+    hook: "Octopuses edit their own RNA in real time — 13,000+ edits — to adapt to cold water.",
+    category: "Counterintuitive Twists"
+  },
+  {
+    id: "C1",
+    file: "C1-zombie-ant-fungus-illustration.svg",
+    title: "The Fungus That Drives Ants to Their Deaths",
+    hook: "Ophiocordyceps hijacks ant muscles — not the brain — and forces death at a precise height.",
+    category: "Danger & Survival"
+  },
+  {
+    id: "D4",
+    file: "D4-anglerfish-fusion-illustration.svg",
+    title: "The Male Anglerfish That Disappears Into His Mate",
+    hook: "The male ceratioid anglerfish fuses to the female and becomes little more than testicles.",
+    category: "Sex & Reproduction"
+  },
+  {
+    id: "E16",
+    file: "E16-artemisinin-illustration.svg",
+    title: "The Malaria Cure Hidden in a 340 AD Recipe",
+    hook: "Tu Youyou won the Nobel Prize by following a cold-soaking instruction written 1,600 years ago.",
+    category: "Economic Impact"
+  },
+  {
+    id: "F6",
+    file: "F6-sacculina-barnacle-illustration.svg",
+    title: "The Barnacle That Wears a Crab Like a Suit",
+    hook: "Sacculina dissolves a crab from the inside and the crab grooms the parasite's eggs like its own.",
+    category: "Manipulation & Control"
+  },
+  {
+    id: "H2",
+    file: "H2-fecal-transplant-illustration.svg",
+    title: "The Treatment That Is Other People's Bacteria",
+    hook: "Fecal transplants cure C. diff at 90% — better than any antibiotic. FDA approved it in 2023.",
+    category: "Microbiome"
+  },
+  {
+    id: "I2",
+    file: "I2-bird-quantum-navigation-illustration.svg",
+    title: "Birds Navigate Using Quantum Mechanics",
+    hook: "A robin's magnetic compass may run on quantum entanglement in cryptochrome proteins in its eye.",
+    category: "Extraordinary Senses"
+  },
+  {
+    id: "J13",
+    file: "J13-crispr-babies-illustration.svg",
+    title: "The First Gene-Edited Humans — And What Went Wrong",
+    hook: "He Jiankui edited two babies' CCR5 genes for HIV resistance. They may have shortened lifespans.",
+    category: "Human Genetics"
+  },
+  {
+    id: "K11",
+    file: "K11-termite-ac-illustration.svg",
+    title: "Termites Built Air Conditioning 50 Million Years Before We Did",
+    hook: "A Zimbabwean architect copied termite mound ventilation to build a 9-story building using 90% less cooling energy.",
+    category: "Biomaterials"
+  },
+];
+
+const grid = document.getElementById('grid');
+
+stories.forEach(s => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-illustration" onclick="openLightbox('illustrations/${s.file}')">
+      <img src="illustrations/${s.file}" alt="${s.title}" loading="lazy"/>
+      <span class="expand-hint">Click to expand</span>
+    </div>
+    <div class="card-meta">
+      <div class="card-id">${s.id} · ${s.category}</div>
+      <div class="card-title">${s.title}</div>
+      <div class="card-hook">${s.hook}</div>
+      <div class="card-links">
+        <a href="illustrations/${s.file}" target="_blank">Open SVG</a>
+        <a href="stories/${s.file.replace('-illustration.svg', '.md').replace('illustrations/', '')}" target="_blank">Story</a>
+      </div>
+    </div>`;
+  grid.appendChild(card);
+});
+
+// Lightbox
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+
+function openLightbox(src) {
+  lbImg.src = src;
+  lb.classList.add('open');
+}
+lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) lb.classList.remove('open'); });
+document.getElementById('lightbox-close').addEventListener('click', () => lb.classList.remove('open'));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+</script>
+</body>
+</html>
