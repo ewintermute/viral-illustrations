@@ -66,6 +66,54 @@ This structure allows an animator to:
 - No titles, headers, or story names in the SVG
 - Labels describe what something IS, not what it means (e.g., "spore" not "spores rain down onto ant trail")
 
+### Standard DNA Double Helix Construction
+
+Reference file: `illustrations/dna-helix-spec.svg` — three canonical variants (standard, highlighted region, CRISPR cut).
+
+**Biological parameters (B-DNA):**
+- **10 base pairs per turn**
+- **Strand B phase offset = 216°** — this creates the major groove (6 bp wide) and minor groove (4 bp wide). Do NOT use 180° (that produces a symmetric ladder, not a helix with grooves).
+- Pitch `P` = choose based on illustration size. Default: `P = 100px` per turn → 10px per base pair.
+- Half-width `hw` = choose based on illustration size. Default: `hw = 26px`.
+
+**Construction algorithm (Python reference — must be followed exactly):**
+
+```python
+import math
+
+def strand_path(cx, ya, yb, hw, P, helix_y0, phase_rad, step=3):
+    """Polyline tracing a sinusoidal strand. t is ALWAYS relative to helix_y0."""
+    pts = []
+    y = ya
+    while y <= yb + step:
+        y_c = min(y, yb)
+        t = 2 * math.pi * (y_c - helix_y0) / P + phase_rad  # helix_y0, not ya
+        x = cx + hw * math.sin(t)
+        pts.append(f"{x:.2f},{y_c:.1f}")
+        y += step
+    return "M " + " L ".join(pts)
+```
+
+**Key rules:**
+1. **Strands are polylines** (step ≤ 4px), not bezier curves. This guarantees smooth sinusoids.
+2. **Phase reference is always `helix_y0`** — the top of the helix, not the segment start. Using the segment start `ya` causes rung misalignment (this was v3's bug).
+3. **Rungs connect exact strand x-positions**: at each base pair y, compute `xA = cx + hw*sin(t)` and `xB = cx + hw*sin(t + phase_b)` using the same `t = 2π*(y - helix_y0)/P`. The rung runs from `min(xA,xB)` to `max(xA,xB)`. Never fixed left/right edges.
+4. **Rung opacity** = `max(0.13, cos(t))` when `cos(t) > 0`, else `0.13`. Rungs fade on the back face (inside the groove).
+5. **Depth layering**: find strand crossings analytically at `t_cross = (π - phase_b)/2 + k*π`. Between crossings, the strand with higher x at the segment midpoint is drawn on top.
+6. **Skip rungs** where both strands are within 1.5px of each other (at crossings) — they'd be invisible dots.
+
+**Colours:**
+- Strand A: Navy Vintage `#2D3E6B`
+- Strand B: Slate Blue `#5B6FA8`
+- Rungs: Periwinkle Mid `#8BA0D6` at variable opacity
+- Highlighted region: Mustard `#E6B800` (front strand) + Goldenrod Dark `#B8860B` (back strand)
+- Cut ends: Core Red `#CA1E08`, splay outward from helix axis
+
+**Variants:**
+- **Standard**: plain helix as above
+- **Highlighted region**: apply `hi_col`/`hi_col2` to rungs and strands in the target range; add a dashed bracket rectangle around the region
+- **CRISPR cut**: omit rungs and strands in the gap range; add splayed blunt-end paths in Core Red diverging outward at the cut, converging inward at the resumption; add `Δ32 bp` or appropriate label
+
 ### Standard Eye Construction
 All critter eyes use the same three-layer anatomy regardless of organism:
 1. **Sclera:** `<ellipse>` with rx:ry ratio ~1.25:1 (horizontal), `fill="#E8EEFF"`, `stroke="#D4A574" stroke-width="1.5"`
