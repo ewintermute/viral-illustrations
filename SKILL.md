@@ -59,12 +59,15 @@ This structure allows an animator to:
 - No hairlines (`stroke-width` below 1)
 
 ### Typography
-- Font: Barlow for labels; Inter for data/values
-- Font sizes: 14px minimum for any text (SVG `font-size`)
-- Max 3 text elements per illustration
-- Text must be part of the `label` group
-- No titles, headers, or story names in the SVG
-- Labels describe what something IS, not what it means (e.g., "spore" not "spores rain down onto ant trail")
+- **Font:** Barlow for labels and identifiers; Inter for numerical values
+- **Size:** minimum `font-size="18"` — text must be legible in a video frame at reduced resolution. Prefer 20–24px for primary labels.
+- **Maximum 2 text elements per illustration.** If you think you need 3, cut one.
+- **No eyebrow text, subtitles, or clarifying secondary text.** One label per concept — not a label plus a descriptor underneath it. If the label needs explaining, it's the wrong label.
+- **Colours:** normal labels = Periwinkle Mid `#8BA0D6`; emphasis/primary labels = Core White `#FBFFF6`. Do not use dimmed colors (`opacity < 1` on text), yellow, green, or red for text — these are hard to read against variable backgrounds in video.
+- **Species names** must be in SVG italic: `font-style="italic"` (Barlow or Inter both support this)
+- **No titles, headers, or story names** in the SVG
+- Labels describe what something IS: `"O. unilateralis"` not `"zombie-ant fungus parasitizes carpenter ants"`
+- Text must be in the `label` group
 
 ### Standard DNA Double Helix Construction
 
