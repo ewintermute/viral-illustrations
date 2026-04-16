@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWW Viral Illustrations — Critter Animations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background:#1C1E35; color:#FBFFF6; font-family:'Inter',system-ui,sans-serif; padding-bottom:80px; }
+
+    header {
+      padding:40px 48px 28px; border-bottom:1px solid #3D3D52;
+      display:flex; align-items:baseline; gap:24px; flex-wrap:wrap;
+    }
+    header h1 { font-family:'Barlow',sans-serif; font-weight:900; font-size:clamp(22px,3.5vw,38px); }
+    header nav { display:flex; gap:20px; }
+    header nav a { font-size:13px; color:#8BA0D6; text-decoration:none; }
+    header nav a:hover { color:#D1DCFF; }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(400px,1fr));
+      gap:1px; background:#3D3D52; margin-top:1px;
+    }
+    .card { background:#1C1E35; display:flex; flex-direction:column; }
+
+    .stage {
+      background:#0D0D16; aspect-ratio:4/3;
+      position:relative; overflow:hidden; cursor:pointer;
+    }
+    .stage svg { width:100%; height:100%; display:block; position:absolute; inset:0; }
+
+    /* Script caption overlay */
+    .caption-bar {
+      position:absolute; bottom:0; left:0; right:0;
+      background:rgba(13,13,22,0.82);
+      padding:10px 16px;
+      font-family:'Inter',sans-serif; font-size:13px; line-height:1.55;
+      color:#FBFFF6; min-height:52px;
+      display:flex; align-items:center;
+      opacity:0; transition:opacity 0.3s;
+      pointer-events:none;
+    }
+    .stage.playing .caption-bar { opacity:1; }
+
+    /* Play overlay */
+    .play-cover {
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      background:rgba(13,13,22,0.5); transition:opacity 0.2s;
+    }
+    .stage.playing .play-cover { opacity:0; pointer-events:none; }
+    .play-ring {
+      width:60px; height:60px; border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      border:2px solid rgba(255,255,255,0.25);
+      display:flex; align-items:center; justify-content:center;
+      font-size:22px; padding-left:4px; color:#FBFFF6;
+    }
+
+    /* Progress bar */
+    .progress-bar {
+      position:absolute; bottom:0; left:0; right:0; height:2px;
+      background:#3D3D52; display:none;
+    }
+    .stage.playing .progress-bar { display:block; }
+    .progress-fill { height:100%; background:#8BA0D6; width:0%; transition:width 0.25s linear; }
+
+    /* Replay button */
+    .replay-btn {
+      display:none; position:absolute; top:10px; right:12px;
+      font-family:'Barlow',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:0.1em; text-transform:uppercase;
+      color:#8BA0D6; cursor:pointer; background:none; border:none;
+      padding:4px 8px;
+    }
+    .stage.done .replay-btn { display:block; }
+
+    .card-meta { padding:14px 20px 18px; border-top:1px solid #3D3D52; }
+    .card-id    { font-family:'Barlow',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#2FBF39; margin-bottom:4px; }
+    .card-title { font-family:'Barlow',sans-serif; font-weight:700; font-size:15px; color:#FBFFF6; margin-bottom:6px; }
+    .card-hook  { font-size:12px; color:#A8A8B5; line-height:1.6; }
+    .duration   { display:inline-block; font-size:10px; background:#3D3D52; color:#A8A8B5; padding:2px 7px; margin-top:8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Critter Animations</h1>
+  <nav>
+    <a href="index.html">← Illustrations</a>
+    <a href="animations.html">All animations</a>
+  </nav>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<script>
+// ─── Script-synchronized animation definitions ────────────────────────────
+// Each "beat" has:
+//   t:       seconds from start when caption changes and layers reveal
+//   caption: the script line being spoken at that moment
+//   show:    array of SVG group IDs to fade in at this beat
+//   freeze:  optional pause duration in seconds (beat-to-beat gap)
+
+const stories = [
+
+  // ── C1: Zombie Ant Fungus (50s total) ─────────────────────────────────
+  {
+    id:'C1', file:'illustrations/C1-zombie-ant-fungus-illustration.svg',
+    title:'The Fungus That Drives Ants',
+    hook:'Ophiocordyceps doesn\'t kill. It drives.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'There\'s a fungus that doesn\'t kill ants. It drives them.',
+               show:['context'] },
+      { t:6,  caption:'The ant stops following its colony\'s trails. It moves toward light.',
+               show:['subject'] },
+      { t:12, caption:'Around solar noon, it clamps its mandibles into a leaf at exactly 25 centimeters above the forest floor. Every time.',
+               show:['overlay'] },
+      { t:20, caption:'The fungus doesn\'t touch the brain. It grows hyphae directly through the mandibular muscles.',
+               show:['detail-hyphae'], freeze:1 },
+      { t:30, caption:'A week later, an orange stalk erupts from the back of its head and rains spores onto the ant trail below.',
+               show:['detail-stalk','detail-spores'] },
+      { t:38, caption:'There\'s even a second fungus that parasitizes Ophiocordyceps itself, suppressing outbreaks.',
+               show:['detail-hyperparasite'] },
+      { t:44, caption:'Evolution already ran the countermeasures. It always does.',
+               show:['label'] },
+    ]
+  },
+
+  // ── A7: Horseshoe Crab Blood (45s) ────────────────────────────────────
+  {
+    id:'A7', file:'illustrations/A7-horseshoe-crab-blood-illustration.svg',
+    title:'Blue Blood That Guards Every Drug',
+    hook:'Every vaccine you\'ve had was tested using this animal\'s blood.',
+    duration:45,
+    beats:[
+      { t:1,  caption:'Every vaccine you\'ve gotten. Every IV drip. Every injectable drug in the US. All tested using the blood of an animal unchanged for 450 million years.',
+               show:['context'] },
+      { t:8,  caption:'The horseshoe crab. Not actually a crab. Its blood is blue, because it runs on copper.',
+               show:['subject'] },
+      { t:14, caption:'Inside that blood are amebocytes. Crack them open — they detect bacterial endotoxins at picogram-per-milliliter concentrations.',
+               show:['detail-blood','detail-cell'] },
+      { t:22, caption:'The FDA approved the test in 1977. It replaced injecting IV drips into rabbits and watching for a fever.',
+               show:['overlay'], freeze:0.5 },
+      { t:30, caption:'That extract sells for $60,000 a gallon. 500,000 crabs bled per year.',
+               show:['label'] },
+      { t:40, caption:'A synthetic alternative exists and works. Regulatory inertia is a real thing.',
+               show:[] },
+    ]
+  },
+
+  // ── F6: Sacculina Barnacle (50s) ──────────────────────────────────────
+  {
+    id:'F6', file:'illustrations/F6-sacculina-barnacle-illustration.svg',
+    title:'The Barnacle That Wears a Crab',
+    hook:'A barnacle dissolves a crab from the inside and the crab never notices.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'Sacculina is a barnacle. But it doesn\'t look like one.',
+               show:['context'] },
+      { t:6,  caption:'It finds a crab, injects a tiny mass of cells through a joint in its shell, and spreads root-like tendrils through the entire body.',
+               show:['subject','overlay'] },
+      { t:14, caption:'Those tendrils — the interna — consume the crab\'s tissues and hijack its hormonal system.',
+               show:['detail-interna'], freeze:1 },
+      { t:22, caption:'Then the externa erupts from the abdomen: an egg sac. The crab grooms it, fans water over it, protects it.',
+               show:['detail-externa'] },
+      { t:30, caption:'If the crab was male, it\'s been hormonally feminized. It now behaves like a female caring for eggs.',
+               show:['detail-feminized-anatomy'] },
+      { t:38, caption:'The crab is alive. Its brain is intact. It has no idea.',
+               show:['detail-fanning-behavior','label'] },
+    ]
+  },
+
+  // ── B10: Octopus RNA Editing (48s) ────────────────────────────────────
+  {
+    id:'B10', file:'illustrations/B10-octopus-rna-editing-illustration.svg',
+    title:'The Octopus That Rewrites Itself',
+    hook:'13,000 RNA edits. The octopus changes its own proteins in real time.',
+    duration:48,
+    beats:[
+      { t:1,  caption:'DNA makes RNA. RNA makes protein. That\'s the central dogma of molecular biology. Most organisms follow it.',
+               show:['context'] },
+      { t:8,  caption:'Octopuses edit the RNA after it\'s made. An enzyme called ADAR converts adenosine to inosine — changing which amino acid gets incorporated.',
+               show:['subject','detail-adar-editing'] },
+      { t:16, caption:'At 13°C, Octopus bimaculoides makes over 13,000 RNA edits in its nervous system. At 22°C: 550.',
+               show:['detail-temperature-comparison'], freeze:1 },
+      { t:28, caption:'One of those edits changes kinesin-1, the protein that moves cargo along neurons. The edited version moves faster in cold.',
+               show:['detail-neural-proteins'] },
+      { t:38, caption:'The octopus isn\'t waiting for evolution. It\'s rewriting itself in real time to match the temperature of the water.',
+               show:['label','overlay'] },
+    ]
+  },
+
+  // ── I2: Bird Quantum Navigation (46s) ────────────────────────────────
+  {
+    id:'I2', file:'illustrations/I2-bird-quantum-navigation-illustration.svg',
+    title:'The Bird That Navigates by Quantum Physics',
+    hook:'A robin uses quantum entanglement in its eye to navigate thousands of miles.',
+    duration:46,
+    beats:[
+      { t:1,  caption:'A European robin weighs 17 grams. It migrates thousands of miles across Europe twice a year.',
+               show:['context','subject'] },
+      { t:8,  caption:'It navigates using the Earth\'s magnetic field. The mechanism is genuinely quantum.',
+               show:['detail-magnetic-field-orientation'] },
+      { t:16, caption:'A protein called cryptochrome in the retina forms radical pairs when struck by blue light. The quantum spin states of those electrons are influenced by the ambient magnetic field.',
+               show:['detail-cryptochrome-radical-pair'], freeze:1 },
+      { t:28, caption:'The bird probably sees the magnetic field as a brightness or pattern overlaid on its visual field.',
+               show:['detail-visual-overlay'] },
+      { t:36, caption:'Expose the bird to weak radiofrequency fields that disrupt quantum coherence — it loses its compass. It circles.',
+               show:['detail-rf-disruption','label'] },
+    ]
+  },
+
+  // ── D4: Anglerfish Fusion (50s) ───────────────────────────────────────
+  {
+    id:'D4', file:'illustrations/D4-anglerfish-fusion-illustration.svg',
+    title:'The Most Extreme Marriage in Nature',
+    hook:'The male anglerfish fuses to the female and becomes just testicles.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'In the deep ocean, finding a mate might happen once in a lifetime. Maybe never.',
+               show:['bg','context'] },
+      { t:7,  caption:'Male ceratioid anglerfish have no digestive system worth mentioning. They don\'t eat. Their entire existence is a search.',
+               show:['subject'] },
+      { t:14, caption:'When a male finds a female, he bites down. Enzymes dissolve the skin. Their circulatory systems merge.',
+               show:['detail-bite-fusion'], freeze:1 },
+      { t:24, caption:'His eyes degenerate. His fins atrophy. His brain reduces to a stub. He loses independent existence, retaining only his testes.',
+               show:['detail-male-regression'] },
+      { t:34, caption:'A female can carry up to eight fused males simultaneously.',
+               show:['detail-eight-fused-males'], freeze:0.5 },
+      { t:42, caption:'Permanently-fusing anglerfish have lost the genes for adaptive immunity. MHC class II, antibodies, killer T cells. Gone. They traded their immune system for guaranteed reproductive success.',
+               show:['detail-immune-gene-deletion','label'] },
+    ]
+  },
+
+  // ── B8: Contagious Cancer (50s) ───────────────────────────────────────
+  {
+    id:'B8', file:'illustrations/B8-contagious-cancer-illustration.svg',
+    title:'Cancer That Catches',
+    hook:'Cancer is a disease of one individual. Tasmanian devils broke the rule.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'Cancer is a disease of one individual. One body, one set of mutations, contained. That\'s the rule.',
+               show:['context'] },
+      { t:7,  caption:'Tasmanian devils bite each other constantly. In the 1980s, one devil\'s cancer acquired the ability to survive being transferred via bite wound.',
+               show:['subject'], freeze:0.5 },
+      { t:14, caption:'That cell line — DFT1 — has caused an 80% population collapse across Tasmania.',
+               show:['detail-cancer-transfer'] },
+      { t:22, caption:'The tumor survives by downregulating MHC class I — the surface proteins that flag cells as self or other. It makes itself invisible.',
+               show:['detail-mhc-immune-evasion'], freeze:1 },
+      { t:32, caption:'In 2015, a second independently arising transmissible cancer appeared in devils. DFT2. A completely different cell of origin.',
+               show:['detail-population-decline'] },
+      { t:42, caption:'Canine transmissible venereal tumor is 4,000 to 11,000 years old. The original dog is long gone. Its cancer is still out there, spreading.',
+               show:['detail-ctvt-timeline','label'] },
+    ]
+  },
+
+  // ── F2: Toxoplasma Mice (50s) ─────────────────────────────────────────
+  {
+    id:'F2', file:'illustrations/F2-toxoplasma-mice-illustration.svg',
+    title:'The Parasite That Makes You Love Cats',
+    hook:'One third of all humans carry a parasite that may be altering their behavior.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'About one third of all humans are currently infected with Toxoplasma gondii. Most have no idea.',
+               show:['context'] },
+      { t:8,  caption:'The standard story: you catch it from cat feces, it forms cysts in your brain, it does nothing.',
+               show:['subject'] },
+      { t:14, caption:'Here\'s what it does to rats. Infected rats lose their fear of cat urine. In some experiments, they\'re actively attracted to it.',
+               show:['detail-rat-behavior-comparison'], freeze:1 },
+      { t:26, caption:'The mechanism: instead of activating fear circuits in the hypothalamus, infected rats activate the amygdala region that normally responds to sex pheromones. The smell of cat becomes attractive.',
+               show:['detail-brain-circuit-fear-vs-arousal'] },
+      { t:38, caption:'In humans: associations with increased risk-taking, traffic accidents, impulsivity. 1.9 times the rate of Toxoplasma antibodies in schizophrenia patients.',
+               show:['detail-human-associations','label'] },
+      { t:46, caption:'Correlation is not causation. But a parasite silently living in a third of human brains for decades — that is not nothing.',
+               show:['overlay'] },
+    ]
+  },
+
+  // ── A6: Mosquito Deadliest (50s) ──────────────────────────────────────
+  {
+    id:'A6', file:'illustrations/A6-mosquito-deadliest-animal-illustration.svg',
+    title:'The Deadliest Animal That Ever Lived',
+    hook:'Sharks kill 10 people a year. Mosquitoes kill 725,000. Every year. Right now.',
+    duration:50,
+    beats:[
+      { t:1,  caption:'Sharks kill about 10 people a year. Crocodiles, a few hundred. Lions, maybe 200.',
+               show:['context'] },
+      { t:7,  caption:'The mosquito kills 725,000 to a million people annually. Every year. Right now.',
+               show:['subject','label'] },
+      { t:14, caption:'Stretch across human history: 108 billion humans have ever lived. Mosquito-borne diseases may have killed 50 to 52 billion of them. Half of everyone who has ever existed.',
+               show:['detail-historical-death-toll'], freeze:1 },
+      { t:28, caption:'During the Spanish-American War, mosquito diseases killed 4,700 US soldiers. Combat deaths: 379.',
+               show:['detail-cartagena-1741'] },
+      { t:38, caption:'In 1943, Nazi forces deliberately released Anopheles mosquitoes in the Tiber Valley. Regional malaria cases went from 1,217 to 54,929 in one year.',
+               show:['detail-italy-bioweapon'] },
+      { t:46, caption:'Malaria killed 597,000 people in 2023. Mostly children under five. One child every 90 seconds.',
+               show:['overlay'] },
+    ]
+  },
+
+  // ── K8: Mantis Shrimp Club (46s) ──────────────────────────────────────
+  {
+    id:'K8', file:'illustrations/K8-mantis-shrimp-club-illustration.svg',
+    title:'The Hammer That Never Breaks',
+    hook:'The mantis shrimp strikes at 10,000 g. The club never breaks. Here\'s why.',
+    duration:46,
+    beats:[
+      { t:1,  caption:'The mantis shrimp\'s dactyl club strikes at accelerations exceeding 10,000 g — the same as a .22 caliber bullet leaving the barrel. It also cavitates water, delivering a second pressure wave.',
+               show:['context','subject'] },
+      { t:10, caption:'The club does this thousands of times over the animal\'s lifetime. It does not break.',
+               show:['detail-club-cross-section'], freeze:1 },
+      { t:20, caption:'The impact surface is hydroxyapatite in a herringbone pattern. Behind that: helicoidally arranged layers of mineralized chitin — each ply rotated slightly, spiraling through the thickness.',
+               show:['overlay'] },
+      { t:30, caption:'When a crack propagates through this Bouligand architecture and reaches a perpendicular ply, it deflects. It spirals. It can\'t go straight through.',
+               show:['detail-crack-propagation'] },
+      { t:38, caption:'Researchers built carbon fiber composites with helicoidal layup. Army Research Lab testing: 20% better impact energy absorption, same weight. The mantis shrimp solved this 400 million years ago.',
+               show:['detail-helicoidal-composite-panel','label'] },
+    ]
+  },
+
+];
+
+// ─── Animation engine ─────────────────────────────────────────────────────
+function fadeIn(el, delay, dur) {
+  el.style.opacity = '0';
+  el.style.transition = `opacity ${dur}s ease ${delay}s`;
+  requestAnimationFrame(() => requestAnimationFrame(() => { el.style.opacity = '1'; }));
+}
+
+function buildCard(def) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="stage" id="stage-${def.id}">
+      <div class="caption-bar" id="cap-${def.id}"></div>
+      <div class="progress-bar"><div class="progress-fill" id="prog-${def.id}"></div></div>
+      <div class="play-cover" id="cover-${def.id}"><div class="play-ring">▶</div></div>
+      <button class="replay-btn" id="replay-${def.id}">↺ Replay</button>
+    </div>
+    <div class="card-meta">
+      <div class="card-id">${def.id}</div>
+      <div class="card-title">${def.title}</div>
+      <div class="card-hook">${def.hook}</div>
+      <div class="duration">${def.duration}s</div>
+    </div>`;
+  document.getElementById('grid').appendChild(card);
+
+  const stage   = document.getElementById(`stage-${def.id}`);
+  const cap     = document.getElementById(`cap-${def.id}`);
+  const prog    = document.getElementById(`prog-${def.id}`);
+  const cover   = document.getElementById(`cover-${def.id}`);
+  const replay  = document.getElementById(`replay-${def.id}`);
+
+  let svgEl = null;
+  let timers = [];
+
+  function loadSVG(cb) {
+    fetch(def.file).then(r => r.text()).then(txt => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(txt, 'image/svg+xml');
+      const svg = doc.documentElement;
+      svg.setAttribute('width', '100%');
+      svg.setAttribute('height', '100%');
+      // Hide all non-bg groups
+      svg.querySelectorAll('g[id]').forEach(g => {
+        if (g.id !== 'bg') { g.style.opacity = '0'; g.style.transition = 'opacity 0.8s ease'; }
+      });
+      // Insert before caption
+      stage.insertBefore(svg, cap);
+      svgEl = svg;
+      if (cb) cb();
+    });
+  }
+
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+  function playAnimation() {
+    stage.classList.remove('done');
+    stage.classList.add('playing');
+    cap.textContent = '';
+
+    // Progress bar
+    prog.style.transition = `width ${def.duration}s linear`;
+    prog.style.width = '0%';
+    requestAnimationFrame(() => requestAnimationFrame(() => { prog.style.width = '100%'; }));
+
+    // Schedule beats
+    def.beats.forEach((beat, i) => {
+      const t = timers.push(setTimeout(() => {
+        // Update caption
+        cap.textContent = beat.caption;
+        // Reveal groups
+        if (beat.show && svgEl) {
+          beat.show.forEach(id => {
+            const g = svgEl.querySelector(`#${id}`);
+            if (g) { g.style.opacity = '1'; }
+          });
+        }
+      }, beat.t * 1000));
+    });
+
+    // End
+    timers.push(setTimeout(() => {
+      stage.classList.remove('playing');
+      stage.classList.add('done');
+      cap.textContent = '';
+    }, def.duration * 1000));
+  }
+
+  function reset() {
+    clearTimers();
+    stage.classList.remove('playing', 'done');
+    prog.style.transition = 'none'; prog.style.width = '0%';
+    cap.textContent = '';
+    if (svgEl) { stage.removeChild(svgEl); svgEl = null; }
+    loadSVG(() => {});
+  }
+
+  // Load on page ready
+  loadSVG(() => {});
+
+  // Play on click
+  cover.addEventListener('click', () => {
+    if (!svgEl) return;
+    playAnimation();
+  });
+
+  replay.addEventListener('click', () => { reset(); setTimeout(playAnimation, 100); });
+}
+
+stories.forEach(buildCard);
+</script>
+</body>
+</html>
