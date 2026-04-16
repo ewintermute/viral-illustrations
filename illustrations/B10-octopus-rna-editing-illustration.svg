@@ -39,11 +39,11 @@
     <circle cx="408" cy="292" r="4" fill="#6B4423" opacity="0.4"/>
     <!-- eyes -->
     <ellipse cx="378" cy="248" rx="12" ry="10" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="378" cy="248" r="5" fill="#1C1E35"/>
-    <circle cx="376" cy="246" r="2" fill="#FBFFF6" opacity="0.6"/>
+    <circle cx="378" cy="248" r="5" fill="#0D0D16"/>
+    <circle cx="376" cy="246" r="2" fill="#FBFFF6" opacity="0.85"/>
     <ellipse cx="422" cy="248" rx="12" ry="10" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="422" cy="248" r="5" fill="#1C1E35"/>
-    <circle cx="420" cy="246" r="2" fill="#FBFFF6" opacity="0.6"/>
+    <circle cx="422" cy="248" r="5" fill="#0D0D16"/>
+    <circle cx="420" cy="246" r="2" fill="#FBFFF6" opacity="0.85"/>
     <!-- octopus arms (8 arms spread) -->
     <!-- arm 1 - upper left -->
     <path d="M 368 290 Q 330 310 295 350 Q 270 380 255 420 Q 248 448 258 468" stroke="#A0785A" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

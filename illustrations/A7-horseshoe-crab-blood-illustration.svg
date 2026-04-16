@@ -41,9 +41,15 @@
     <path d="M 400 460 Q 402 490 404 530 Q 405 560 406 580" stroke="#6B4423" stroke-width="5" stroke-linecap="round" fill="none"/>
     <!-- compound eyes -->
     <circle cx="355" cy="215" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="355" cy="215" r="3.5" fill="#0D0D16"/>
+    <circle cx="353" cy="213" r="1.4" fill="#FBFFF6" opacity="0.85"/>
     <circle cx="445" cy="215" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="445" cy="215" r="3.5" fill="#0D0D16"/>
+    <circle cx="443" cy="213" r="1.4" fill="#FBFFF6" opacity="0.85"/>
     <!-- simple median eye -->
     <circle cx="400" cy="205" r="4" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="400" cy="205" r="1.8" fill="#0D0D16"/>
+    <circle cx="399" cy="204" r="0.8" fill="#FBFFF6" opacity="0.85"/>
     <!-- legs suggestion (partial visibility) -->
     <line x1="290" y1="280" x2="245" y2="268" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
     <line x1="280" y1="310" x2="235" y2="308" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>

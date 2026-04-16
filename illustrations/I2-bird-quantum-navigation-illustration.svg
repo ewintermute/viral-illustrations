@@ -57,7 +57,10 @@
     <path d="M 336 285 L 318 282" stroke="#6B4423" stroke-width="3" stroke-linecap="round"/>
     <!-- eye (special: glowing cyan hint for cryptochrome) -->
     <circle cx="348" cy="280" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="348" cy="280" r="3" fill="#8BA0D6" opacity="0.9"/>
+    <circle cx="348" cy="280" r="2.5" fill="#0D0D16"/>
+    <circle cx="347" cy="279" r="1" fill="#FBFFF6" opacity="0.85"/>
+    <!-- cryptochrome glow ring — faint blue aura around eye -->
+    <circle cx="348" cy="280" r="8" fill="none" stroke="#8BA0D6" stroke-width="1" opacity="0.4"/>
     <circle cx="347" cy="279" r="1.5" fill="#D1DCFF"/>
     <!-- tail -->
     <path d="M 445 318 Q 475 318 495 325 Q 510 332 505 345 Q 492 352 475 342 Q 462 332 445 328" fill="#8B6045" stroke="#6B4423" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -31,8 +31,12 @@
     <!-- eyes on stalks -->
     <line x1="368" y1="290" x2="352" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
     <circle cx="350" cy="270" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="350" cy="270" r="2.5" fill="#0D0D16"/>
+    <circle cx="349" cy="269" r="1" fill="#FBFFF6" opacity="0.85"/>
     <line x1="432" y1="290" x2="448" y2="272" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
     <circle cx="450" cy="270" r="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="450" cy="270" r="2.5" fill="#0D0D16"/>
+    <circle cx="449" cy="269" r="1" fill="#FBFFF6" opacity="0.85"/>
     <!-- chelae (claws - smaller, feminized) -->
     <path d="M 295 348 Q 260 340 238 350 Q 228 360 230 372 Q 238 378 252 374 Q 262 368 270 360 Q 282 355 295 352" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M 565 348 Q 600 340 622 350 Q 632 360 630 372 Q 622 378 608 374 Q 598 368 590 360 Q 578 355 565 352" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

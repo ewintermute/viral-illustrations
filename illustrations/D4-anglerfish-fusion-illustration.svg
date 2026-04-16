@@ -48,8 +48,8 @@
     <line x1="300" y1="378" x2="308" y2="360" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
     <!-- female eye (large, adapted) -->
     <circle cx="322" cy="272" r="22" fill="#E8EEFF" stroke="#8BA0D6" stroke-width="2.5"/>
-    <circle cx="322" cy="272" r="12" fill="#2D3E6B"/>
-    <circle cx="318" cy="268" r="4" fill="#FBFFF6" opacity="0.5"/>
+    <circle cx="322" cy="272" r="10" fill="#0D0D16"/>
+    <circle cx="317" cy="267" r="4" fill="#FBFFF6" opacity="0.85"/>
     <!-- pectoral fins -->
     <path d="M 480 258 Q 520 235 545 245 Q 555 258 540 268 Q 520 272 490 272" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M 480 398 Q 520 415 540 408 Q 548 395 532 385 Q 515 380 492 382" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
