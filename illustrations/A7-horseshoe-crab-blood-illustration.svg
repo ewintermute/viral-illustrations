@@ -1,110 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <radialGradient id="blood-pool" cx="50%" cy="70%" r="60%">
-      <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.7"/>
+    <!-- bioluminescent blue blood glow -->
+    <radialGradient id="blood-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.45"/>
       <stop offset="100%" stop-color="#8BA0D6" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background: dark ocean shelf -->
-  <g id="bg" data-label="Dark ocean shelf environment, navy-midnight tones">
-    <rect width="800" height="600" fill="#1C1E35"/>
-    <!-- water depth gradient hint - dark bands -->
-    <rect x="0" y="0" width="800" height="200" fill="#2D3E6B" opacity="0.4"/>
-    <rect x="0" y="480" width="800" height="120" fill="#1A5C1E" opacity="0.15"/>
+  <!-- bg: dark ocean shelf environment -->
+  <g id="bg" data-label="dark ocean floor background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+    <!-- ocean floor -->
+    <rect x="0" y="430" width="800" height="170" fill="#2D3E6B"/>
+    <!-- sandy texture bands -->
+    <path d="M 0 440 Q 200 435 400 442 Q 600 449 800 440" fill="none" stroke="#3D3E5B" stroke-width="2" opacity="0.4"/>
+    <path d="M 0 460 Q 250 456 500 463 Q 650 467 800 458" fill="none" stroke="#3D3E5B" stroke-width="2" opacity="0.3"/>
   </g>
 
-  <!-- Context: sandy bottom and horizon -->
-  <g id="context" data-label="Sandy ocean bottom texture and horizon line">
-    <!-- sandy bottom undulation -->
-    <path d="M 0 500 Q 100 490 200 502 Q 320 515 440 498 Q 560 482 680 497 Q 740 504 800 495 L 800 600 L 0 600 Z" fill="#6B4423" opacity="0.5"/>
-    <path d="M 0 510 Q 150 500 300 512 Q 450 524 600 508 Q 700 498 800 506 L 800 600 L 0 600 Z" fill="#A0785A" opacity="0.25"/>
-    <!-- horizon line -->
-    <line x1="0" y1="200" x2="800" y2="200" stroke="#2D3E6B" stroke-width="1" opacity="0.4"/>
-    <!-- water column suggestion -->
-    <ellipse cx="200" cy="150" rx="30" ry="8" fill="#5B6FA8" opacity="0.12"/>
-    <ellipse cx="560" cy="120" rx="22" ry="6" fill="#5B6FA8" opacity="0.1"/>
+  <!-- context: sandy bottom texture and horizon -->
+  <g id="context" data-label="sandy ocean shelf bottom with subtle sediment">
+    <!-- sand ripples -->
+    <ellipse cx="150" cy="470" rx="60" ry="8" fill="none" stroke="#5B6FA8" stroke-width="1" opacity="0.3"/>
+    <ellipse cx="600" cy="475" rx="50" ry="6" fill="none" stroke="#5B6FA8" stroke-width="1" opacity="0.25"/>
+    <ellipse cx="700" cy="460" rx="40" ry="5" fill="none" stroke="#5B6FA8" stroke-width="1" opacity="0.2"/>
+    <!-- some shell/debris on floor -->
+    <ellipse cx="120" cy="455" rx="8" ry="4" fill="#3D3E5B"/>
+    <ellipse cx="680" cy="452" rx="10" ry="5" fill="#3D3E5B"/>
   </g>
 
-  <!-- Subject: horseshoe crab from above, carapace detail -->
-  <g id="subject" data-label="Horseshoe crab viewed from above, carapace and tail detail">
-    <!-- carapace outline - prosoma (front shield) -->
-    <path d="M 400 180 Q 500 175 550 220 Q 570 260 555 310 Q 540 350 500 370 Q 460 385 420 382 Q 380 380 340 368 Q 295 350 275 308 Q 258 268 270 228 Q 288 188 340 177 Q 365 173 400 180 Z" fill="#A0785A" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- carapace surface texture lines -->
-    <path d="M 340 190 Q 400 186 455 198" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 310 230 Q 400 222 490 238" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <path d="M 290 275 Q 400 265 508 278" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <path d="M 295 318 Q 400 308 504 320" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round"/>
-    <!-- opisthosomal (rear section) -->
-    <path d="M 340 368 Q 400 375 460 368 Q 500 370 510 390 Q 515 420 505 440 Q 490 455 460 460 Q 420 462 380 460 Q 345 458 328 442 Q 316 422 320 398 Q 326 378 340 368 Z" fill="#8B6045" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- spine / tail (telson) -->
-    <path d="M 400 460 Q 402 490 404 530 Q 405 560 406 580" stroke="#6B4423" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <!-- compound eyes -->
-    <ellipse cx="355" cy="215" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="355" cy="215" r="3.5" fill="#0D0D16"/>
-    <circle cx="353" cy="213" r="1.4" fill="#FBFFF6" opacity="0.85"/>
-    <ellipse cx="445" cy="215" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="445" cy="215" r="3.5" fill="#0D0D16"/>
-    <circle cx="443" cy="213" r="1.4" fill="#FBFFF6" opacity="0.85"/>
-    <!-- simple median eye -->
-    <ellipse cx="400" cy="205" rx="5" ry="4" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="400" cy="205" r="1.8" fill="#0D0D16"/>
-    <circle cx="399" cy="204" r="0.8" fill="#FBFFF6" opacity="0.85"/>
-    <!-- legs suggestion (partial visibility) -->
-    <line x1="290" y1="280" x2="245" y2="268" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <line x1="280" y1="310" x2="235" y2="308" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <line x1="285" y1="340" x2="242" y2="345" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <line x1="510" y1="280" x2="555" y2="268" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <line x1="520" y1="310" x2="565" y2="308" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
-    <line x1="515" y1="340" x2="558" y2="345" stroke="#8B6045" stroke-width="3" stroke-linecap="round"/>
+  <!-- subject: horseshoe crab viewed from above, carapace -->
+  <g id="subject" data-label="Limulus polyphemus horseshoe crab from above, carapace and tail">
+    <!-- prosoma (front dome / horseshoe shield) -->
+    <path d="M 280 200 Q 220 195 190 240 Q 170 280 175 330 Q 180 370 220 390 Q 260 405 320 408 Q 360 412 400 410 Q 450 412 490 408 Q 535 403 565 385 Q 600 362 600 325 Q 605 280 590 240 Q 568 195 510 196 Q 450 192 400 188 Q 340 186 280 200 Z"
+          fill="#A0785A" stroke="#6B4423" stroke-width="3" stroke-linejoin="round"/>
+    <!-- carapace ridge lines -->
+    <path d="M 300 210 Q 310 280 315 380" fill="none" stroke="#6B4423" stroke-width="1.5" opacity="0.6"/>
+    <path d="M 500 210 Q 490 280 485 380" fill="none" stroke="#6B4423" stroke-width="1.5" opacity="0.6"/>
+    <!-- median ridge -->
+    <path d="M 400 188 Q 400 300 400 410" fill="none" stroke="#6B4423" stroke-width="2" opacity="0.5"/>
+    <!-- lateral spines on prosoma -->
+    <path d="M 190 280 L 158 265" stroke="#6B4423" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 192 315 L 155 310" stroke="#6B4423" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 605 280 L 640 265" stroke="#6B4423" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M 603 315 L 642 310" stroke="#6B4423" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- compound eyes (simple bumps on prosoma) -->
+    <ellipse cx="295" cy="225" rx="12" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="295" cy="225" r="5" fill="#0D0D16"/>
+    <circle cx="292" cy="222" r="2" fill="#FBFFF6" opacity="0.85"/>
+    <ellipse cx="505" cy="225" rx="12" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="505" cy="225" r="5" fill="#0D0D16"/>
+    <circle cx="502" cy="222" r="2" fill="#FBFFF6" opacity="0.85"/>
+    <!-- opisthosoma (abdomen / second plate) -->
+    <path d="M 250 395 Q 230 410 235 440 Q 245 460 290 470 Q 345 478 400 478 Q 455 478 510 470 Q 555 460 565 440 Q 572 412 550 395 Z"
+          fill="#8B6040" stroke="#6B4423" stroke-width="2.5"/>
+    <!-- opisthosoma spines -->
+    <path d="M 255 415 L 225 405" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 248 440 L 215 438" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 548 415 L 578 405" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 552 440 L 585 438" stroke="#6B4423" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- telson (tail spike) -->
+    <path d="M 400 477 Q 400 510 400 560" stroke="#6B4423" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <!-- legs (book gills) simplified -->
+    <g stroke="#6B4423" stroke-width="2" fill="none" opacity="0.7">
+      <path d="M 240 300 L 200 310 L 175 330"/>
+      <path d="M 242 330 L 196 345 L 168 360"/>
+      <path d="M 252 355 L 208 372 L 182 390"/>
+      <path d="M 560 300 L 600 310 L 625 330"/>
+      <path d="M 558 330 L 604 345 L 632 360"/>
+      <path d="M 548 355 L 592 372 L 618 390"/>
+    </g>
   </g>
 
-  <!-- Detail: blue blood pooling -->
-  <g id="detail-blood" data-label="Blue hemocyanin blood pooling from gill sampling site">
-    <circle cx="400" cy="385" r="55" fill="url(#blood-pool)"/>
-    <!-- blood flow paths from book gills area -->
-    <path d="M 360 372 Q 345 390 335 415 Q 330 430 340 445" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
-    <path d="M 440 372 Q 455 392 462 418 Q 466 435 458 448" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
-    <path d="M 400 376 Q 398 400 394 425 Q 390 445 395 460" stroke="#8BA0D6" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
-    <!-- blood pool -->
-    <ellipse cx="400" cy="460" rx="35" ry="14" fill="#8BA0D6" opacity="0.45"/>
-    <ellipse cx="340" cy="450" rx="18" ry="7" fill="#8BA0D6" opacity="0.35"/>
+  <!-- detail-blood: blue hemocyanin blood pooling from sampling site -->
+  <g id="detail-blood" data-label="blue hemocyanin blood pooling from cardiac puncture sampling site">
+    <!-- glow halo -->
+    <ellipse cx="400" cy="310" rx="90" ry="60" fill="url(#blood-glow)"/>
+    <!-- blood pool surface -->
+    <path d="M 340 300 Q 360 280 400 278 Q 440 280 455 300 Q 465 320 460 340 Q 452 358 400 362 Q 348 358 340 340 Q 335 322 340 300 Z"
+          fill="#5B6FA8" opacity="0.75"/>
+    <!-- blood highlights -->
+    <path d="M 365 298 Q 400 292 430 300" fill="none" stroke="#8BA0D6" stroke-width="2" opacity="0.6"/>
+    <!-- sampling puncture point -->
+    <circle cx="400" cy="305" r="5" fill="#CA1E08"/>
+    <!-- blood drips flowing out -->
+    <path d="M 395 305 Q 388 320 382 340 Q 376 360 378 380" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 405 305 Q 413 322 415 342 Q 418 362 414 382" fill="none" stroke="#8BA0D6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <!-- blood drip drops -->
+    <ellipse cx="380" cy="386" rx="5" ry="7" fill="#5B6FA8" opacity="0.7"/>
+    <ellipse cx="413" cy="390" rx="4" ry="6" fill="#8BA0D6" opacity="0.65"/>
   </g>
 
-  <!-- Detail: amebocyte cell inset -->
-  <g id="detail-cell" data-label="Enlarged amebocyte cell inset showing clotting reaction">
-    <!-- inset box background -->
-    <rect x="565" y="120" width="200" height="160" rx="6" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="2"/>
-    <!-- cell body -->
-    <ellipse cx="665" cy="200" rx="52" ry="42" fill="#5B6FA8" opacity="0.7" stroke="#8BA0D6" stroke-width="1.5"/>
-    <!-- cell nucleus -->
-    <ellipse cx="655" cy="198" rx="20" ry="16" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="1.5"/>
-    <!-- granules (clotting factors) -->
-    <circle cx="680" cy="190" r="5" fill="#E6B800" opacity="0.9"/>
-    <circle cx="690" cy="205" r="4" fill="#E6B800" opacity="0.8"/>
-    <circle cx="672" cy="215" r="5" fill="#E6B800" opacity="0.9"/>
-    <circle cx="645" cy="218" r="4" fill="#E6B800" opacity="0.8"/>
-    <circle cx="635" cy="195" r="3.5" fill="#E6B800" opacity="0.7"/>
-    <!-- clotting gel burst (radial lines) -->
-    <line x1="665" y1="200" x2="700" y2="175" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
-    <line x1="665" y1="200" x2="705" y2="210" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
-    <line x1="665" y1="200" x2="630" y2="170" stroke="#FBFFF6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
-    <!-- endotoxin dot (bacteria fragment) -->
-    <polygon points="665,148 672,160 658,160" fill="#CA1E08" opacity="0.9"/>
-    <!-- label inside inset -->
-    <text x="630" y="140" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#D1DCFF">amebocyte</text>
+  <!-- label: price per gallon -->
+  <g id="label" data-label="cost label for processed LAL reagent">
+    <text x="58" y="105" font-family="Barlow, sans-serif" font-size="32" font-weight="900"
+          fill="#FBFFF6">$60,000 / gal</text>
   </g>
 
-  <!-- Label -->
-  <g id="label" data-label="Value label and connection annotation">
-    <text x="80" y="85" font-family="Barlow, system-ui, sans-serif" font-size="22" font-weight="900" fill="#FFFF77">$60,000 / gal</text>
-    <text x="80" y="108" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#D1DCFF" opacity="0.75">Limulus Amebocyte Lysate</text>
-  </g>
-
-  <!-- Overlay: inset border connection line -->
-  <g id="overlay" data-label="Connection line from crab to amebocyte inset, emphasis marks">
-    <!-- connection line from crab gill area to inset -->
-    <line x1="510" y1="340" x2="565" y2="220" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" stroke-linecap="round"/>
-    <circle cx="510" cy="340" r="4" fill="none" stroke="#8BA0D6" stroke-width="1.5" opacity="0.6"/>
+  <!-- overlay: small amebocyte inset box -->
+  <g id="overlay" data-label="amebocyte cell inset detail with connection line">
+    <!-- inset border -->
+    <rect x="580" y="60" width="185" height="130" rx="4" fill="#1C1E35" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 3"/>
+    <!-- amebocyte cell body -->
+    <ellipse cx="672" cy="120" rx="38" ry="28" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1.5"/>
+    <!-- nucleus -->
+    <ellipse cx="668" cy="118" rx="14" ry="10" fill="#5B6FA8" opacity="0.8"/>
+    <!-- clotting granules -->
+    <circle cx="650" cy="124" r="5" fill="#E6B800" opacity="0.7"/>
+    <circle cx="660" cy="132" r="4" fill="#E6B800" opacity="0.6"/>
+    <circle cx="685" cy="128" r="4" fill="#E6B800" opacity="0.7"/>
+    <circle cx="695" cy="118" r="3" fill="#E6B800" opacity="0.5"/>
+    <!-- pseudopods -->
+    <path d="M 634 112 Q 620 108 614 100" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 638 130 Q 624 138 618 148" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 710 115 Q 724 109 730 102" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <!-- connection line from inset to blood pool -->
+    <line x1="580" y1="125" x2="460" y2="295" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="6 4"/>
   </g>
 </svg>

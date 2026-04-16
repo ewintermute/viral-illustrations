@@ -1,124 +1,195 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <radialGradient id="lure-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFF77" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#FFFF77" stop-opacity="0"/>
+    <radialGradient id="deepSeaBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1C1E35"/>
+      <stop offset="100%" stop-color="#0D0D16"/>
+    </radialGradient>
+    <radialGradient id="escaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6FD877" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#2FBF39" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#2FBF39" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloodGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#CA1E08" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#CA1E08" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background: deep sea darkness -->
-  <g id="bg" data-label="Deep sea abyss background, absolute darkness with faint particle scatter">
-    <rect width="800" height="600" fill="#0D0D16"/>
-    <!-- rare bioluminescent particles in water column -->
-    <circle cx="100" cy="80" r="1.5" fill="#8BA0D6" opacity="0.4"/>
-    <circle cx="240" cy="145" r="1" fill="#8BA0D6" opacity="0.3"/>
-    <circle cx="680" cy="95" r="1.5" fill="#8BA0D6" opacity="0.35"/>
-    <circle cx="750" cy="200" r="1" fill="#2FBF39" opacity="0.3"/>
-    <circle cx="55" cy="310" r="1" fill="#8BA0D6" opacity="0.25"/>
-    <circle cx="780" cy="380" r="1.5" fill="#8BA0D6" opacity="0.3"/>
-    <circle cx="130" cy="480" r="1" fill="#2FBF39" opacity="0.25"/>
-    <circle cx="720" cy="520" r="1.5" fill="#8BA0D6" opacity="0.2"/>
-    <!-- faint depth darkness gradient bands -->
-    <rect x="0" y="0" width="800" height="200" fill="#1C1E35" opacity="0.2"/>
+  <!-- bg: abyssal deep ocean — near-total darkness -->
+  <g id="bg" data-label="Abyssal deep ocean environment — near total darkness">
+    <rect width="800" height="600" fill="url(#deepSeaBg)"/>
+    <!-- Faint particle drift — marine snow -->
+    <circle cx="82" cy="45" r="1.2" fill="#FBFFF6" opacity="0.12"/>
+    <circle cx="195" cy="88" r="0.9" fill="#FBFFF6" opacity="0.08"/>
+    <circle cx="340" cy="32" r="1.5" fill="#FBFFF6" opacity="0.1"/>
+    <circle cx="455" cy="110" r="1" fill="#FBFFF6" opacity="0.07"/>
+    <circle cx="590" cy="55" r="1.3" fill="#FBFFF6" opacity="0.09"/>
+    <circle cx="720" cy="95" r="1.1" fill="#FBFFF6" opacity="0.1"/>
+    <circle cx="128" cy="190" r="0.8" fill="#FBFFF6" opacity="0.06"/>
+    <circle cx="640" cy="170" r="1" fill="#FBFFF6" opacity="0.08"/>
+    <circle cx="280" cy="155" r="1.2" fill="#FBFFF6" opacity="0.07"/>
+    <circle cx="760" cy="220" r="0.9" fill="#FBFFF6" opacity="0.06"/>
+    <circle cx="50" cy="350" r="1" fill="#FBFFF6" opacity="0.05"/>
+    <circle cx="740" cy="400" r="1.3" fill="#FBFFF6" opacity="0.07"/>
+    <circle cx="180" cy="520" r="0.9" fill="#FBFFF6" opacity="0.05"/>
+    <circle cx="620" cy="545" r="1.1" fill="#FBFFF6" opacity="0.06"/>
+    <!-- Subtle ambient deep blue haze at bottom -->
+    <rect x="0" y="520" width="800" height="80" fill="#2D3E6B" opacity="0.08"/>
   </g>
 
-  <!-- Context: depth indicator and scale reference -->
-  <g id="context" data-label="Deep sea depth indicator and scale context">
-    <!-- depth text -->
-    <text x="40" y="55" font-family="Barlow, system-ui, sans-serif" font-size="14" fill="#5B6FA8" opacity="0.7">ceratioid deep sea</text>
-    <!-- depth bar -->
-    <line x1="42" y1="68" x2="42" y2="120" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5" stroke-linecap="round"/>
-    <text x="50" y="98" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#5B6FA8" opacity="0.5">&gt;1000m</text>
+  <!-- context: faint distant male anglerfish searching in background -->
+  <g id="context" data-label="Distant tiny male anglerfish searching — scale and context">
+    <!-- Distant male, very small, upper left -->
+    <ellipse cx="95" cy="110" rx="18" ry="10" fill="#2D3E6B" stroke="#3D3D52" stroke-width="1.5" opacity="0.6"/>
+    <!-- Tail -->
+    <path d="M 77,110 C 68,105 62,110 68,116 C 62,110 58,107 52,110" fill="none" stroke="#3D3D52" stroke-width="2" opacity="0.5"/>
+    <!-- Tiny eye -->
+    <ellipse cx="110" cy="107" rx="5" ry="4" fill="#E8EEFF" stroke="#D4A574" stroke-width="1" opacity="0.6"/>
+    <circle cx="110" cy="107" r="2.5" fill="#0D0D16" opacity="0.6"/>
+    <circle cx="108" cy="105" r="1" fill="#FBFFF6" opacity="0.7"/>
+    <!-- Male reaching toward female's lure (directional) -->
+    <path d="M 113,108 C 130,108 148,108 160,115" fill="none" stroke="#5B6FA8" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
   </g>
 
-  <!-- Subject: female anglerfish with fused male -->
-  <g id="subject" data-label="Large female ceratioid anglerfish with small male fused to her underside">
-    <!-- female body - large, bulbous -->
-    <path d="M 280 280 Q 320 245 380 238 Q 450 232 510 248 Q 565 262 590 295 Q 608 322 600 358 Q 590 392 558 410 Q 525 425 478 428 Q 430 430 385 422 Q 340 412 308 392 Q 275 368 268 335 Q 260 305 280 280 Z" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- large lower jaw (anglerfish characteristic) -->
-    <path d="M 268 335 Q 250 350 245 375 Q 242 398 258 415 Q 275 430 300 428 Q 325 425 340 410 Q 308 392 285 370 Q 272 352 268 335 Z" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- teeth (upper) -->
-    <line x1="278" y1="335" x2="270" y2="352" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="292" y1="332" x2="285" y2="350" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="308" y1="330" x2="302" y2="349" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="325" y1="328" x2="320" y2="348" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- teeth (lower) -->
-    <line x1="270" y1="370" x2="278" y2="353" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="285" y1="375" x2="292" y2="358" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="300" y1="378" x2="308" y2="360" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- female eye (large, adapted) -->
-    <ellipse cx="322" cy="272" rx="26" ry="20" fill="#E8EEFF" stroke="#8BA0D6" stroke-width="2.5"/>
-    <circle cx="322" cy="272" r="10" fill="#0D0D16"/>
-    <circle cx="317" cy="267" r="4" fill="#FBFFF6" opacity="0.85"/>
-    <!-- pectoral fins -->
-    <path d="M 480 258 Q 520 235 545 245 Q 555 258 540 268 Q 520 272 490 272" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 480 398 Q 520 415 540 408 Q 548 395 532 385 Q 515 380 492 382" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- tail fin -->
-    <path d="M 588 310 Q 630 295 650 318 Q 630 340 588 338" fill="#3D3D52" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- esca / lure stalk -->
-    <path d="M 365 248 Q 350 218 338 188 Q 330 162 340 145 Q 348 132 358 128" stroke="#5B6FA8" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- subject: large female ceratioid anglerfish with fused male -->
+  <g id="subject" data-label="Female ceratioid anglerfish body — primary subject">
+    <!-- Female body: massive, blob-like deep-sea form -->
+    <!-- Main body -->
+    <path d="M 180,330 C 170,295 172,260 182,232 C 192,204 210,185 238,176 C 268,166 305,166 340,172 C 378,178 415,195 445,218 C 478,243 502,272 515,302 C 528,332 530,362 520,388 C 510,414 490,432 462,443 C 432,454 394,458 358,455 C 320,452 283,442 252,424 C 220,406 192,382 180,358 C 174,346 173,338 180,330 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Body texture / depth shading — dorsal darker patch -->
+    <path d="M 220,210 C 255,195 295,186 335,186 C 370,186 408,196 438,212 C 415,205 375,200 340,200 C 305,200 265,205 238,218 Z"
+          fill="#1C1E35" opacity="0.4"/>
+    <!-- Belly — slightly lighter, more rounded -->
+    <path d="M 195,370 C 205,395 225,412 258,425 C 290,438 330,444 365,440 C 400,436 432,424 454,406 C 475,390 485,370 480,352 C 458,378 420,398 378,407 C 335,416 290,414 255,402 C 225,392 205,380 195,370 Z"
+          fill="#3D3D52" opacity="0.5"/>
+    <!-- Lateral line -->
+    <path d="M 225,290 C 280,278 340,275 400,278 C 445,280 480,288 505,298"
+          fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Dorsal fin -->
+    <path d="M 310,172 C 308,148 305,128 302,108 C 300,92 302,80 308,78 C 314,76 320,82 322,96 C 325,112 324,135 320,155 C 316,168 312,172 310,172 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2"/>
+    <!-- Second dorsal fin spine -->
+    <path d="M 355,170 C 354,148 354,128 352,112 C 350,96 350,82 354,78 C 358,74 363,78 364,92 C 366,108 364,130 360,152 C 358,162 356,170 355,170 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2"/>
+    <!-- Pectoral fin left -->
+    <path d="M 198,340 C 175,325 158,310 148,292 C 140,278 142,264 150,262 C 158,260 168,272 178,288 C 188,305 194,322 198,340 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2"/>
+    <!-- Pectoral fin right -->
+    <path d="M 498,340 C 520,325 538,308 545,290 C 552,275 548,262 540,261 C 532,260 522,272 514,288 C 506,305 500,322 498,340 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2"/>
+    <!-- Caudal fin tail -->
+    <path d="M 180,342 C 158,330 138,318 118,305 C 100,293 88,282 82,270 C 92,272 105,280 120,290 C 112,278 108,262 118,258 C 128,260 140,274 155,290 C 168,305 175,320 180,336 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="2"/>
+    <!-- Anal fin -->
+    <path d="M 280,452 C 272,470 268,488 270,502 C 272,516 278,524 284,520 C 290,516 292,502 290,486 C 288,472 284,460 280,452 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="1.5"/>
+    <!-- Mouth: wide, gaping, enormous relative to body -->
+    <path d="M 450,265 C 470,270 490,278 505,292 C 518,305 522,322 516,336 C 508,352 490,360 470,362 C 450,364 428,355 418,340 C 408,325 412,305 425,292 C 436,280 445,268 450,265 Z"
+          fill="#0D0D16" stroke="#1C1E35" stroke-width="2.5"/>
+    <!-- Lower jaw -->
+    <path d="M 458,340 C 470,355 480,362 490,360 C 502,358 510,350 514,338 C 505,348 490,354 475,352 C 462,350 456,343 458,340 Z"
+          fill="#1C1E35"/>
+    <!-- Teeth - upper jaw, iconic fang teeth -->
+    <path d="M 450,285 L 448,300 L 455,292 L 453,308 L 460,298 L 458,314" fill="none" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 465,278 L 462,294 L 470,285 L 468,301 L 474,292" fill="none" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 482,278 L 479,295 L 486,285 L 485,302" fill="none" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 500,286 L 498,302 L 505,292 L 503,308" fill="none" stroke="#FBFFF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Lower teeth -->
+    <path d="M 458,340 L 462,325 L 466,338 L 470,322 L 474,336 L 478,320 L 483,334 L 488,318 L 492,332" fill="none" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <!-- Detail: bioluminescent lure -->
-  <g id="detail-lure" data-label="Bioluminescent esca lure emitting light to attract prey in darkness">
-    <!-- lure glow -->
-    <circle cx="362" cy="120" r="40" fill="url(#lure-glow)"/>
-    <!-- lure bulb -->
-    <circle cx="362" cy="122" r="16" fill="#FFFF77" opacity="0.9"/>
-    <!-- inner light core -->
-    <circle cx="362" cy="122" r="8" fill="#FBFFF6"/>
-    <!-- light ray spikes -->
-    <line x1="362" y1="104" x2="362" y2="92" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="376" y1="108" x2="384" y2="98" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="380" y1="122" x2="392" y2="122" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="376" y1="136" x2="384" y2="146" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="348" y1="108" x2="340" y2="98" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="344" y1="122" x2="332" y2="122" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
-    <line x1="348" y1="136" x2="340" y2="146" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- detail-eye: female anglerfish eye — standard 3-layer anatomy -->
+  <g id="detail-eye" data-label="Female anglerfish eye — 3-layer construction: sclera, pupil, specular">
+    <!-- Sclera: ellipse, horizontal ratio ~1.25:1 -->
+    <ellipse cx="435" cy="250" rx="22" ry="18" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <!-- Pupil -->
+    <circle cx="435" cy="250" r="10" fill="#0D0D16"/>
+    <!-- Specular: offset up-left -->
+    <circle cx="428" cy="243" r="4.5" fill="#FBFFF6" opacity="0.85"/>
   </g>
 
-  <!-- Detail: fused male on female underside -->
-  <g id="detail-fused-male" data-label="Tiny male permanently fused to female, showing merged blood vessels">
-    <!-- fused male body - tiny compared to female -->
-    <path d="M 408 420 Q 422 415 436 418 Q 445 422 444 432 Q 440 440 428 442 Q 415 442 408 436 Q 403 430 408 420 Z" fill="#5B6FA8" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- male vestigial features (degenerate: no eyes drawn, rudimentary fins) -->
-    <!-- tiny fin stub -->
-    <path d="M 436 420 Q 445 415 448 420 Q 445 424 436 424" fill="#5B6FA8" stroke="#8BA0D6" stroke-width="1.5"/>
-    <!-- testes retained (small circles) -->
-    <circle cx="412" cy="432" r="4" fill="#8BA0D6" stroke="#D1DCFF" stroke-width="1"/>
-    <circle cx="420" cy="434" r="4" fill="#8BA0D6" stroke="#D1DCFF" stroke-width="1"/>
-    <!-- fusion boundary (the bite site becoming shared skin) -->
-    <path d="M 408 420 Q 400 412 400 402 Q 400 394 408 392" stroke="#CA1E08" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
-    <!-- shared blood vessel threads -->
-    <path d="M 410 425 Q 402 418 402 408 Q 402 399 410 395" stroke="#CA1E08" stroke-width="1.5" fill="none" stroke-dasharray="3 2" stroke-linecap="round" opacity="0.7"/>
-    <path d="M 413 423 Q 406 417 406 406 Q 406 397 413 393" stroke="#CA1E08" stroke-width="1.5" fill="none" stroke-dasharray="3 2" stroke-linecap="round" opacity="0.6"/>
-    <!-- second fused male (body shows up to 8 possible) -->
-    <path d="M 460 415 Q 472 410 484 414 Q 492 418 490 428 Q 486 436 474 438 Q 462 437 457 430 Q 453 422 460 415 Z" fill="#5B6FA8" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-    <path d="M 460 415 Q 452 408 452 398 Q 452 390 460 388" stroke="#CA1E08" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <!-- detail-lure: bioluminescent esca on illicium rod -->
+  <g id="detail-lure" data-label="Bioluminescent esca lure on illicium — the hunting lure drawing prey">
+    <!-- Glow halo -->
+    <circle cx="380" cy="72" r="50" fill="url(#escaGlow)"/>
+    <!-- Illicium spine/rod -->
+    <path d="M 308,108 C 312,98 320,85 330,75 C 340,66 352,60 362,58 C 370,56 376,58 378,63"
+          fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
+    <!-- Esca bulb -->
+    <ellipse cx="382" cy="70" rx="20" ry="16" fill="#6FD877" stroke="#2FBF39" stroke-width="2"/>
+    <!-- Inner bioluminescent glow of esca -->
+    <ellipse cx="382" cy="70" rx="14" ry="10" fill="#FBFFF6" opacity="0.3"/>
+    <!-- Bioluminescent filaments dangling from esca -->
+    <path d="M 375,85 C 373,96 374,106 372,115" fill="none" stroke="#6FD877" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 382,87 C 381,99 382,110 380,120" fill="none" stroke="#6FD877" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 390,85 C 392,96 392,107 394,116" fill="none" stroke="#6FD877" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <!-- Light emanating beams -->
+    <line x1="382" y1="54" x2="382" y2="44" stroke="#6FD877" stroke-width="1.5" opacity="0.5"/>
+    <line x1="398" y1="58" x2="406" y2="50" stroke="#6FD877" stroke-width="1.5" opacity="0.5"/>
+    <line x1="365" y1="58" x2="357" y2="50" stroke="#6FD877" stroke-width="1.5" opacity="0.5"/>
+    <line x1="402" y1="70" x2="413" y2="70" stroke="#6FD877" stroke-width="1.5" opacity="0.4"/>
+    <line x1="362" y1="70" x2="351" y2="70" stroke="#6FD877" stroke-width="1.5" opacity="0.4"/>
   </g>
 
-  <!-- Label -->
-  <g id="label" data-label="Specimen label for female anglerfish">
-    <text x="530" y="480" font-family="Barlow, system-ui, sans-serif" font-size="15" font-weight="700" fill="#FBFFF6" opacity="0.8">ceratioid ♀</text>
-    <text x="530" y="500" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#8BA0D6" opacity="0.7">no adaptive immunity</text>
+  <!-- detail-fused-male: atrophied male fused to female flank -->
+  <g id="detail-fused-male" data-label="Atrophied male permanently fused to female — parasite-like attachment">
+    <!-- Shared circulation glow at fusion point -->
+    <ellipse cx="248" cy="395" rx="30" ry="22" fill="url(#bloodGlow)"/>
+    <!-- Fused male body — tiny, vestigial, attached at ventral surface -->
+    <path d="M 220,385 C 218,372 222,360 230,352 C 238,344 248,340 258,342 C 268,344 274,352 274,362 C 274,372 268,382 260,388 C 252,394 240,398 230,396 C 225,394 221,390 220,385 Z"
+          fill="#3D3D52" stroke="#2D3E6B" stroke-width="1.5"/>
+    <!-- Atrophied male tail stub -->
+    <path d="M 220,385 C 208,385 200,382 196,378 C 192,374 193,368 198,368 C 203,368 210,374 218,380 Z"
+          fill="#2D3E6B" stroke="#1C1E35" stroke-width="1.5"/>
+    <!-- Fusion wound: merged skin line, healed together -->
+    <path d="M 224,396 C 232,400 242,402 252,400 C 261,398 268,393 272,387"
+          fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <!-- Shared vascular connection at fusion point -->
+    <path d="M 242,390 C 242,398 242,408 245,418"
+          fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.6"/>
+    <!-- Vestigial testes -->
+    <ellipse cx="255" cy="365" rx="5" ry="4" fill="#5B6FA8" stroke="#8BA0D6" stroke-width="1"/>
+    <ellipse cx="263" cy="368" rx="4" ry="3.5" fill="#5B6FA8" stroke="#8BA0D6" stroke-width="1"/>
+    <!-- Degenerated eye socket hint — no longer functional -->
+    <ellipse cx="232" cy="362" rx="5" ry="4" fill="#1C1E35" stroke="#3D3D52" stroke-width="1" opacity="0.6"/>
+    <!-- Second fused male, smaller, more atrophied, lower on body -->
+    <path d="M 295,435 C 293,423 297,412 304,406 C 312,400 322,398 330,402 C 338,406 342,415 340,424 C 338,433 330,440 320,442 C 310,444 298,440 295,435 Z"
+          fill="#2D2D42" stroke="#1C1E35" stroke-width="1.5"/>
+    <path d="M 295,435 C 284,435 277,430 274,426 C 271,422 273,416 278,416 C 283,416 289,422 293,430 Z"
+          fill="#1C1E35" stroke="none"/>
+    <path d="M 300,442 C 308,446 320,447 330,444"
+          fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <!-- Tiny eye degenerated on 2nd male -->
+    <ellipse cx="308" cy="415" rx="4" ry="3" fill="#1C1E35" stroke="#3D3D52" stroke-width="1" opacity="0.5"/>
   </g>
 
-  <!-- Overlay: size comparison callout and immune gene annotation -->
-  <g id="overlay" data-label="Size comparison annotation and immune gene loss callout">
-    <!-- size comparison bracket for male vs female -->
-    <line x1="400" y1="450" x2="500" y2="450" stroke="#8BA0D6" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
-    <line x1="268" y1="460" x2="620" y2="460" stroke="#8BA0D6" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
-    <line x1="268" y1="455" x2="268" y2="465" stroke="#8BA0D6" stroke-width="1.5" opacity="0.4"/>
-    <line x1="620" y1="455" x2="620" y2="465" stroke="#8BA0D6" stroke-width="1.5" opacity="0.4"/>
-    <line x1="400" y1="445" x2="400" y2="455" stroke="#8BA0D6" stroke-width="1.5" opacity="0.5"/>
-    <line x1="500" y1="445" x2="500" y2="455" stroke="#8BA0D6" stroke-width="1.5" opacity="0.5"/>
-    <!-- MHC loss indicator -->
-    <rect x="565" y="510" width="200" height="60" rx="4" fill="#1C1E35" stroke="#CA1E08" stroke-width="1.5" opacity="0.85"/>
-    <text x="578" y="532" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#CA1E08">MHC II ✕  T cells ✕</text>
-    <text x="578" y="553" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8BA0D6">adaptive immunity lost</text>
-    <!-- fusion site emphasis ring on male #1 -->
-    <ellipse cx="426" cy="430" rx="26" ry="16" fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
-    <!-- up to 8 males count notation -->
-    <text x="40" y="570" font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#FBFFF6" opacity="0.55">up to 8 males per female</text>
+  <!-- label: 2 text elements only -->
+  <g id="label" data-label="Species label and body count annotation">
+    <text x="400" y="555"
+          text-anchor="middle"
+          font-family="Barlow, sans-serif"
+          font-size="22"
+          font-weight="600"
+          font-style="italic"
+          fill="#8BA0D6">ceratioid anglerfish</text>
+    <text x="400" y="585"
+          text-anchor="middle"
+          font-family="Barlow, sans-serif"
+          font-size="20"
+          font-weight="700"
+          fill="#FBFFF6">permanent fusion</text>
+  </g>
+
+  <!-- overlay: annotation arrow to fusion point and immune note -->
+  <g id="overlay" data-label="Callout arrows and fusion point annotation">
+    <!-- Arrow pointing to first fused male -->
+    <path d="M 145,380 C 170,382 192,385 215,388" fill="none" stroke="#8BA0D6" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="215,388 203,382 203,394" fill="#8BA0D6"/>
+    <!-- No-adaptive-immunity badge -->
+    <rect x="22" y="340" width="118" height="36" rx="5" fill="#1C1E35" stroke="#CA1E08" stroke-width="1.5" opacity="0.9"/>
+    <text x="81" y="363" text-anchor="middle" fill="#CA1E08" font-family="Barlow, sans-serif" font-size="13" font-weight="700">no adaptive immunity</text>
+    <!-- Esca glow annotation -->
+    <path d="M 420,72 L 450,72" fill="none" stroke="#6FD877" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
   </g>
 </svg>

@@ -1,124 +1,92 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
 
-  <!-- Background: neutral clinical white with mint wash -->
-  <g id="bg" data-label="Clinical light background with subtle pale mint wash">
-    <rect width="800" height="600" fill="#FBFFF6"/>
-    <rect width="800" height="600" fill="#E3F7E3" opacity="0.3"/>
+  <!-- bg: clinical white on dark diagnostic -->
+  <g id="bg" data-label="dark clinical background with gut anatomy suggestion">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
   </g>
 
-  <!-- Context: gut cross-section tube environment -->
-  <g id="context" data-label="Intestinal cross-section environment showing gut lumen">
-    <!-- gut tube wall - outer -->
-    <path d="M 80 150 Q 100 140 120 150 L 120 450 Q 100 460 80 450 Z" fill="#F19B8F" opacity="0.4"/>
-    <path d="M 680 150 Q 660 140 640 150 L 640 450 Q 660 460 680 450 Z" fill="#F19B8F" opacity="0.4"/>
-    <!-- gut lumen (interior) -->
-    <rect x="120" y="150" width="520" height="300" fill="#FBFFF6" opacity="0.7"/>
-    <!-- mucosa layer top and bottom -->
-    <path d="M 120 150 Q 200 130 300 155 Q 400 175 500 150 Q 580 132 640 150" fill="#F19B8F" stroke="#E85542" stroke-width="1.5" opacity="0.5"/>
-    <path d="M 120 450 Q 200 470 300 445 Q 400 425 500 450 Q 580 468 640 450" fill="#F19B8F" stroke="#E85542" stroke-width="1.5" opacity="0.5"/>
-    <!-- villi projections (top wall) -->
-    <path d="M 160 155 Q 165 130 170 155" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 200 148 Q 205 123 210 148" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 240 154 Q 245 129 250 154" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 280 150 Q 285 125 290 150" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 340 155 Q 345 130 350 155" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 380 148 Q 385 123 390 148" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 420 154 Q 425 129 430 154" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 460 150 Q 465 125 470 150" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 500 154 Q 505 129 510 154" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 540 148 Q 545 123 550 148" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 580 154 Q 585 129 590 154" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 610 150 Q 615 125 620 150" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <!-- villi bottom wall -->
-    <path d="M 160 445 Q 165 470 170 445" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 210 448 Q 215 473 220 448" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 260 445 Q 265 470 270 445" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 320 448 Q 325 473 330 448" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 370 445 Q 375 470 380 445" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 420 448 Q 425 473 430 448" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 470 445 Q 475 470 480 445" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 520 448 Q 525 473 530 448" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 570 445 Q 575 470 580 445" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
-    <path d="M 610 448 Q 615 473 620 448" stroke="#E85542" stroke-width="2" fill="#F19B8F" opacity="0.5"/>
+  <!-- context: large intestine silhouette as environment -->
+  <g id="context" data-label="cross-section of colon wall as environmental context">
+    <!-- colon lumen outline -->
+    <path d="M 80 80 Q 60 200 70 320 Q 80 440 110 520 Q 150 570 200 575 Q 600 575 650 565 Q 700 550 720 510 Q 740 440 730 320 Q 725 200 740 80 Z"
+          fill="#1A5C1E" stroke="#248A28" stroke-width="2.5" opacity="0.25"/>
+    <!-- mucosa lining texture -->
+    <path d="M 120 100 Q 115 220 120 340 Q 125 460 150 540" fill="none" stroke="#248A28" stroke-width="1.5" opacity="0.3"/>
+    <path d="M 680 100 Q 685 220 680 340 Q 675 460 650 540" fill="none" stroke="#248A28" stroke-width="1.5" opacity="0.3"/>
   </g>
 
-  <!-- Subject: healthy diverse microbiome community on right side of gut -->
-  <g id="subject" data-label="Healthy diverse donor microbiome community colonizing gut lumen">
-    <!-- diverse microbiome on the right side - healthy, colorful, dense -->
-    <!-- Rod bacteria (lactobacillus-like) -->
-    <ellipse cx="520" cy="230" rx="12" ry="5" fill="#2FBF39" transform="rotate(30 520 230)"/>
-    <ellipse cx="560" cy="250" rx="12" ry="5" fill="#2FBF39" transform="rotate(-20 560 250)"/>
-    <ellipse cx="500" cy="270" rx="12" ry="5" fill="#2FBF39" transform="rotate(50 500 270)"/>
-    <ellipse cx="545" cy="295" rx="11" ry="4.5" fill="#6FD877" transform="rotate(10 545 295)"/>
-    <ellipse cx="580" cy="280" rx="12" ry="5" fill="#2FBF39" transform="rotate(-40 580 280)"/>
-    <ellipse cx="520" cy="310" rx="12" ry="5" fill="#6FD877" transform="rotate(60 520 310)"/>
-    <ellipse cx="560" cy="330" rx="11" ry="4.5" fill="#2FBF39" transform="rotate(15 560 330)"/>
-    <ellipse cx="590" cy="315" rx="12" ry="5" fill="#248A28" transform="rotate(-30 590 315)"/>
-    <ellipse cx="505" cy="345" rx="12" ry="5" fill="#6FD877" transform="rotate(45 505 345)"/>
-    <ellipse cx="540" cy="355" rx="11" ry="4.5" fill="#2FBF39" transform="rotate(-10 540 355)"/>
-    <ellipse cx="575" cy="340" rx="12" ry="5" fill="#248A28" transform="rotate(35 575 340)"/>
-    <ellipse cx="610" cy="290" rx="12" ry="5" fill="#2FBF39" transform="rotate(-55 610 290)"/>
-    <!-- Round bacteria (bifidobacterium-like) -->
-    <circle cx="495" cy="230" r="7" fill="#E6B800"/>
-    <circle cx="535" cy="218" r="6" fill="#E6B800"/>
-    <circle cx="610" cy="255" r="7" fill="#Mustard" fill="#E6B800"/>
-    <circle cx="570" cy="215" r="6" fill="#E6B800"/>
-    <circle cx="615" cy="330" r="7" fill="#E6B800"/>
-    <circle cx="495" cy="310" r="6" fill="#FFFF77" opacity="0.9"/>
-    <!-- Curved bacteria (bifidobacterium arch) -->
-    <path d="M 488 350 Q 496 342 504 350" stroke="#8BA0D6" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M 568 218 Q 576 210 584 218" stroke="#8BA0D6" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M 598 260 Q 606 252 614 260" stroke="#D1DCFF" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <!-- chain bacteria -->
-    <circle cx="524" cy="380" r="5" fill="#6FD877"/>
-    <circle cx="534" cy="376" r="5" fill="#6FD877"/>
-    <circle cx="544" cy="380" r="5" fill="#6FD877"/>
-    <circle cx="554" cy="376" r="5" fill="#6FD877"/>
-    <!-- small cocci clusters -->
-    <circle cx="580" cy="380" r="4" fill="#8BA0D6"/>
-    <circle cx="589" cy="374" r="4" fill="#8BA0D6"/>
-    <circle cx="598" cy="380" r="4" fill="#8BA0D6"/>
-    <circle cx="607" cy="374" r="4" fill="#8BA0D6"/>
+  <!-- subject: healthy microbial community — diverse bacteria shapes -->
+  <g id="subject" data-label="healthy diverse donor microbiome community filling the gut lumen">
+    <!-- Rod bacteria (bacilli) -->
+    <rect x="200" y="200" width="28" height="12" rx="6" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" transform="rotate(-15,214,206)"/>
+    <rect x="300" y="180" width="28" height="12" rx="6" fill="#6FD877" stroke="#248A28" stroke-width="1.5" transform="rotate(20,314,186)"/>
+    <rect x="460" y="210" width="28" height="12" rx="6" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" transform="rotate(-10,474,216)"/>
+    <rect x="560" y="190" width="28" height="12" rx="6" fill="#6FD877" stroke="#248A28" stroke-width="1.5" transform="rotate(30,574,196)"/>
+    <rect x="240" y="280" width="28" height="12" rx="6" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" transform="rotate(5,254,286)"/>
+    <rect x="490" y="310" width="28" height="12" rx="6" fill="#6FD877" stroke="#248A28" stroke-width="1.5" transform="rotate(-20,504,316)"/>
+    <rect x="350" y="360" width="28" height="12" rx="6" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" transform="rotate(40,364,366)"/>
+    <rect x="580" y="290" width="28" height="12" rx="6" fill="#6FD877" stroke="#248A28" stroke-width="1.5" transform="rotate(-5,594,296)"/>
+    <rect x="160" y="350" width="28" height="12" rx="6" fill="#2FBF39" stroke="#1A5C1E" stroke-width="1.5" transform="rotate(15,174,356)"/>
+    <rect x="430" y="390" width="28" height="12" rx="6" fill="#6FD877" stroke="#248A28" stroke-width="1.5" transform="rotate(-25,444,396)"/>
+    <!-- Spiral bacteria (spirochaetes/helicobacters) -->
+    <path d="M 380 240 Q 392 232 404 240 Q 416 248 428 240" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 280 320 Q 292 312 304 320 Q 316 328 328 320" fill="none" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 510 260 Q 522 252 534 260 Q 546 268 558 260" fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 330 420 Q 342 412 354 420 Q 366 428 378 420" fill="none" stroke="#8BA0D6" stroke-width="3" stroke-linecap="round"/>
+    <!-- Coccus (round bacteria) -->
+    <circle cx="260" cy="240" r="8" fill="#E6B800" stroke="#B8860B" stroke-width="1.5"/>
+    <circle cx="540" cy="230" r="8" fill="#E6B800" stroke="#B8860B" stroke-width="1.5"/>
+    <circle cx="310" cy="370" r="8" fill="#E6B800" stroke="#B8860B" stroke-width="1.5"/>
+    <circle cx="610" cy="350" r="8" fill="#E6B800" stroke="#B8860B" stroke-width="1.5"/>
+    <circle cx="450" cy="170" r="8" fill="#E6B800" stroke="#B8860B" stroke-width="1.5"/>
+    <!-- Diplococcus pairs -->
+    <circle cx="195" cy="290" r="7" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
+    <circle cx="210" cy="290" r="7" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
+    <circle cx="615" cy="440" r="7" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
+    <circle cx="630" cy="440" r="7" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
   </g>
 
-  <!-- Detail: C. diff bacteria on left side being displaced -->
-  <g id="detail-cdiff" data-label="C. difficile bacteria being outcompeted and pushed out on left side">
-    <!-- C. diff rods - irregular, menacing, red-tinted -->
-    <ellipse cx="215" cy="245" rx="14" ry="6" fill="#CA1E08" transform="rotate(20 215 245)" opacity="0.9"/>
-    <ellipse cx="185" cy="270" rx="14" ry="6" fill="#CA1E08" transform="rotate(-35 185 270)" opacity="0.85"/>
-    <ellipse cx="240" cy="290" rx="13" ry="5.5" fill="#8B1506" transform="rotate(55 240 290)" opacity="0.9"/>
-    <ellipse cx="200" cy="315" rx="14" ry="6" fill="#CA1E08" transform="rotate(-15 200 315)" opacity="0.8"/>
-    <ellipse cx="235" cy="330" rx="13" ry="5.5" fill="#8B1506" transform="rotate(40 235 330)" opacity="0.85"/>
-    <ellipse cx="170" cy="295" rx="14" ry="6" fill="#CA1E08" transform="rotate(-50 170 295)" opacity="0.8"/>
-    <ellipse cx="210" cy="355" rx="13" ry="5.5" fill="#CA1E08" transform="rotate(25 210 355)" opacity="0.75"/>
-    <ellipse cx="175" cy="340" rx="12" ry="5" fill="#8B1506" transform="rotate(-30 175 340)" opacity="0.7"/>
-    <!-- C. diff spores (oval, darker) -->
-    <ellipse cx="195" cy="230" rx="7" ry="5" fill="#8B1506" opacity="0.8"/>
-    <ellipse cx="245" cy="355" rx="6" ry="4.5" fill="#8B1506" opacity="0.7"/>
-    <ellipse cx="165" cy="360" rx="7" ry="5" fill="#8B1506" opacity="0.65"/>
-    <!-- displacement arrows (healthy microbes pushing out C diff) -->
-    <line x1="435" y1="300" x2="390" y2="300" stroke="#1A5C1E" stroke-width="2" stroke-dasharray="none" stroke-linecap="round"/>
-    <polyline points="396,294 390,300 396,306" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="435" y1="270" x2="395" y2="270" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <polyline points="401,264 395,270 401,276" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="435" y1="330" x2="395" y2="330" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <polyline points="401,324 395,330 401,336" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- detail-cdiff: C. diff pathogen highlighted and suppressed -->
+  <g id="detail-cdiff" data-label="C. difficile pathogen cells being outcompeted and fading">
+    <!-- C. diff rods - distinctive drum-stick shape (sporulated) -->
+    <rect x="148" y="420" width="34" height="14" rx="7" fill="#CA1E08" stroke="#8B1506" stroke-width="2" opacity="0.5"/>
+    <!-- spore swelling at end -->
+    <circle cx="182" cy="427" r="9" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5" opacity="0.5"/>
+    <rect x="610" y="480" width="34" height="14" rx="7" fill="#CA1E08" stroke="#8B1506" stroke-width="2" opacity="0.4"/>
+    <circle cx="644" cy="487" r="9" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5" opacity="0.4"/>
+    <!-- suppression X marks -->
+    <line x1="148" y1="420" x2="196" y2="445" stroke="#CA1E08" stroke-width="2" opacity="0.5"/>
+    <line x1="196" y1="420" x2="148" y2="445" stroke="#CA1E08" stroke-width="2" opacity="0.5"/>
   </g>
 
-  <!-- Label -->
-  <g id="label" data-label="Treatment outcome statistic label">
-    <text x="295" y="548" font-family="Barlow, system-ui, sans-serif" font-size="22" font-weight="900" fill="#2FBF39">80–95% cure rate</text>
+  <!-- detail-capsule: oral capsule FMT delivery -->
+  <g id="detail-capsule" data-label="oral capsule FMT product (Vowst) delivery vessel">
+    <!-- capsule body -->
+    <rect x="630" y="100" width="112" height="45" rx="22" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- capsule separation line -->
+    <line x1="686" y1="100" x2="686" y2="145" stroke="#CA1E08" stroke-width="2"/>
+    <!-- capsule left half lighter -->
+    <rect x="630" y="100" width="56" height="45" rx="22" fill="#Salmon" fill-opacity="0"/>
+    <!-- bacteria symbol inside capsule -->
+    <circle cx="660" cy="122" r="5" fill="#6FD877" opacity="0.7"/>
+    <circle cx="672" cy="118" r="5" fill="#6FD877" opacity="0.7"/>
+    <circle cx="660" cy="132" r="5" fill="#2FBF39" opacity="0.7"/>
+    <!-- connection arrow from capsule into gut -->
+    <path d="M 686 145 Q 686 175 600 200" fill="none" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="600" cy="200" r="4" fill="#8BA0D6"/>
   </g>
 
-  <!-- Overlay: before/after divider and annotations -->
-  <g id="overlay" data-label="Before-after divider line and annotation markers">
-    <!-- central divider -->
-    <line x1="385" y1="155" x2="385" y2="445" stroke="#3D3D52" stroke-width="2" stroke-dasharray="8 5" opacity="0.5" stroke-linecap="round"/>
-    <!-- C. diff label marker -->
-    <circle cx="210" cy="192" r="14" fill="#CA1E08" opacity="0.85"/>
-    <text x="204" y="197" font-family="Barlow, system-ui, sans-serif" font-size="11" font-weight="700" fill="#FBFFF6">C·d</text>
-    <!-- FMT label marker -->
-    <circle cx="570" cy="192" r="14" fill="#2FBF39" opacity="0.85"/>
-    <text x="561" y="197" font-family="Barlow, system-ui, sans-serif" font-size="11" font-weight="700" fill="#FBFFF6">FMT</text>
+  <!-- label: cure rate -->
+  <g id="label" data-label="FMT cure rate stat label">
+    <text x="58" y="78" font-family="Barlow, sans-serif" font-size="32" font-weight="900"
+          fill="#FBFFF6">80–95% cure</text>
+  </g>
+
+  <!-- overlay: before/after divider arrow (no extra text) -->
+  <g id="overlay" data-label="annotation showing microbial restoration">
+    <!-- curved arrow suggesting community restoration -->
+    <path d="M 400 550 Q 400 530 400 510" fill="none" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="5 4"/>
+    <!-- arrowhead -->
+    <polygon points="394,512 406,512 400,500" fill="#8BA0D6"/>
   </g>
 </svg>

@@ -1,129 +1,158 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <radialGradient id="quantum-glow" cx="50%" cy="50%" r="50%">
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#8BA0D6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGrad" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#2D3E6B"/>
+      <stop offset="100%" stop-color="#1C1E35"/>
+    </radialGradient>
+    <radialGradient id="quantumGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#8BA0D6" stop-opacity="0.5"/>
       <stop offset="100%" stop-color="#8BA0D6" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background: night sky migration scene -->
-  <g id="bg" data-label="Night sky migration background, deep midnight with stars">
-    <rect width="800" height="600" fill="#1C1E35"/>
-    <!-- stars -->
-    <circle cx="85" cy="42" r="1.5" fill="#FBFFF6" opacity="0.8"/>
-    <circle cx="142" cy="88" r="1" fill="#FBFFF6" opacity="0.7"/>
-    <circle cx="220" cy="55" r="1.5" fill="#FBFFF6" opacity="0.9"/>
-    <circle cx="310" cy="30" r="1" fill="#FBFFF6" opacity="0.6"/>
-    <circle cx="378" cy="72" r="1.5" fill="#FBFFF6" opacity="0.8"/>
-    <circle cx="445" cy="40" r="1" fill="#FBFFF6" opacity="0.7"/>
-    <circle cx="520" cy="65" r="1.5" fill="#FBFFF6" opacity="0.85"/>
-    <circle cx="610" cy="38" r="1" fill="#FBFFF6" opacity="0.6"/>
-    <circle cx="680" cy="75" r="1.5" fill="#FBFFF6" opacity="0.8"/>
-    <circle cx="752" cy="45" r="1" fill="#FBFFF6" opacity="0.7"/>
-    <circle cx="55" cy="118" r="1" fill="#FBFFF6" opacity="0.5"/>
-    <circle cx="188" cy="138" r="1.5" fill="#FBFFF6" opacity="0.7"/>
-    <circle cx="720" cy="112" r="1.5" fill="#FBFFF6" opacity="0.8"/>
-    <circle cx="640" cy="140" r="1" fill="#FBFFF6" opacity="0.6"/>
-    <circle cx="420" cy="115" r="1" fill="#FBFFF6" opacity="0.5"/>
-    <!-- horizon glow (earth magnetic field source) -->
-    <path d="M 0 520 Q 400 498 800 520 L 800 600 L 0 600 Z" fill="#2D3E6B" opacity="0.6"/>
-    <path d="M 0 540 Q 400 520 800 540 L 800 600 L 0 600 Z" fill="#2D3E6B" opacity="0.5"/>
+  <!-- bg: deep night sky gradient -->
+  <g id="bg" data-label="Night sky background — deep midnight and navy">
+    <rect width="800" height="600" fill="url(#bgGrad)"/>
   </g>
 
-  <!-- Context: Earth magnetic field lines sweeping across scene -->
-  <g id="context" data-label="Earth magnetic field lines curving across sky as navigational context">
-    <!-- field lines curving from lower right (south) to upper left (north) -->
-    <path d="M 720 560 Q 600 480 480 380 Q 360 280 240 180 Q 160 120 80 60" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.6" stroke-dasharray="none" stroke-linecap="round"/>
-    <path d="M 760 560 Q 650 475 530 370 Q 415 268 300 170 Q 215 108 130 50" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <path d="M 800 545 Q 700 465 580 360 Q 468 260 360 165 Q 275 102 200 50" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.45" stroke-linecap="round"/>
-    <path d="M 680 560 Q 555 490 430 390 Q 310 294 190 196 Q 118 138 50 80" stroke="#2D3E6B" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
-    <path d="M 640 560 Q 510 498 380 398 Q 258 305 145 210 Q 82 158 30 110" stroke="#2D3E6B" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
-    <!-- faint field lines brighter near bird (interaction zone) -->
-    <path d="M 520 560 Q 430 480 360 400 Q 300 330 248 260 Q 216 218 192 178" stroke="#5B6FA8" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 560 560 Q 468 478 395 396 Q 330 322 278 252 Q 244 210 218 170" stroke="#5B6FA8" stroke-width="2" fill="none" opacity="0.55" stroke-linecap="round"/>
+  <!-- context: star field and faint magnetic field lines across scene -->
+  <g id="context" data-label="Star field and Earth magnetic field lines — ambient environment">
+    <!-- Stars scattered -->
+    <circle cx="60" cy="40" r="1.2" fill="#FBFFF6" opacity="0.7"/>
+    <circle cx="130" cy="20" r="0.9" fill="#FBFFF6" opacity="0.5"/>
+    <circle cx="210" cy="55" r="1.5" fill="#FBFFF6" opacity="0.6"/>
+    <circle cx="310" cy="15" r="1" fill="#FBFFF6" opacity="0.4"/>
+    <circle cx="420" cy="30" r="1.2" fill="#FBFFF6" opacity="0.7"/>
+    <circle cx="550" cy="12" r="0.8" fill="#FBFFF6" opacity="0.5"/>
+    <circle cx="650" cy="45" r="1.3" fill="#FBFFF6" opacity="0.6"/>
+    <circle cx="730" cy="25" r="1" fill="#FBFFF6" opacity="0.4"/>
+    <circle cx="760" cy="70" r="1.5" fill="#FBFFF6" opacity="0.5"/>
+    <circle cx="40" cy="100" r="0.9" fill="#FBFFF6" opacity="0.4"/>
+    <circle cx="490" cy="60" r="1.1" fill="#FBFFF6" opacity="0.5"/>
+    <circle cx="580" cy="80" r="0.8" fill="#FBFFF6" opacity="0.3"/>
+    <!-- Magnetic field lines — subtle sweeping arcs across background -->
+    <path d="M 0,520 Q 200,380 400,420 Q 600,460 800,340" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.4"/>
+    <path d="M 0,480 Q 200,340 400,380 Q 600,420 800,300" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.3"/>
+    <path d="M 0,440 Q 200,300 400,340 Q 600,380 800,260" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.25"/>
+    <!-- Arrow tips on magnetic field lines -->
+    <polygon points="795,340 785,334 785,346" fill="#5B6FA8" opacity="0.4"/>
+    <polygon points="795,300 785,294 785,306" fill="#5B6FA8" opacity="0.3"/>
   </g>
 
-  <!-- Subject: European robin in flight, centered -->
-  <g id="subject" data-label="European robin in flight, wings spread, migrating">
-    <!-- body -->
-    <path d="M 360 290 Q 390 275 420 280 Q 442 288 450 305 Q 452 322 438 332 Q 418 342 395 338 Q 372 332 360 318 Q 350 305 360 290 Z" fill="#A0785A" stroke="#8B6045" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- robin's characteristic red breast -->
-    <path d="M 370 298 Q 390 292 410 300 Q 425 310 422 324 Q 412 332 395 334 Q 378 330 368 320 Q 362 310 370 298 Z" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- head -->
-    <circle cx="358" cy="285" r="22" fill="#A0785A" stroke="#8B6045" stroke-width="2.5"/>
-    <!-- red face -->
-    <path d="M 340 278 Q 358 268 372 278 Q 372 292 358 294 Q 344 290 340 278 Z" fill="#E85542"/>
-    <!-- beak -->
-    <path d="M 336 285 L 318 282" stroke="#6B4423" stroke-width="3" stroke-linecap="round"/>
-    <!-- eye (special: glowing cyan hint for cryptochrome) -->
-    <ellipse cx="348" cy="280" rx="8" ry="6.5" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="348" cy="280" r="2.5" fill="#0D0D16"/>
-    <circle cx="347" cy="279" r="1" fill="#FBFFF6" opacity="0.85"/>
-    <!-- cryptochrome glow ring — faint blue aura around eye -->
-    <ellipse cx="348" cy="280" rx="10" ry="8.5" fill="none" stroke="#8BA0D6" stroke-width="1" opacity="0.4"/>
-    <circle cx="347" cy="279" r="1.5" fill="#D1DCFF"/>
-    <!-- tail -->
-    <path d="M 445 318 Q 475 318 495 325 Q 510 332 505 345 Q 492 352 475 342 Q 462 332 445 328" fill="#8B6045" stroke="#6B4423" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- wing left (far) -->
-    <path d="M 380 295 Q 340 268 295 248 Q 248 228 210 232 Q 188 236 182 250 Q 195 260 225 260 Q 268 260 305 278 Q 342 295 370 308" fill="#8B6045" stroke="#6B4423" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- wing right (near) -->
-    <path d="M 415 295 Q 455 268 502 248 Q 548 228 585 232 Q 608 236 612 250 Q 598 260 568 260 Q 525 260 488 278 Q 452 295 430 308" fill="#A0785A" stroke="#8B6045" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- wing feather detail -->
-    <path d="M 182 250 Q 218 258 255 260" stroke="#6B4423" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
-    <path d="M 612 250 Q 575 258 538 260" stroke="#8B6045" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <!-- subject: European robin, close-up head and upper body, facing slightly right -->
+  <g id="subject" data-label="European robin head and upper body — primary subject">
+    <!-- Body / torso -->
+    <path d="M 220,380 C 200,340 195,290 215,255 C 230,225 260,210 300,208 C 340,206 380,215 400,240 C 425,270 430,310 420,360 C 415,390 400,420 380,445 C 355,470 320,480 290,478 C 255,475 230,455 220,430 Z"
+          fill="#3D3D52" stroke="#1C1E35" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Reddish-orange breast — the robin's iconic red -->
+    <path d="M 250,320 C 255,295 270,275 295,268 C 320,261 345,268 360,285 C 378,305 382,335 375,358 C 367,380 348,398 325,405 C 298,412 272,403 258,385 C 246,368 246,343 250,320 Z"
+          fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <!-- Head -->
+    <path d="M 255,210 C 255,175 270,148 300,138 C 330,128 365,138 378,165 C 390,190 385,220 375,240 C 362,258 340,265 315,263 C 285,260 258,242 255,210 Z"
+          fill="#3D3D52" stroke="#1C1E35" stroke-width="2.5"/>
+    <!-- Orange-red face patch -->
+    <path d="M 280,180 C 285,162 295,150 310,148 C 325,146 340,155 348,170 C 355,185 352,202 342,212 C 330,222 312,224 298,216 C 284,208 277,195 280,180 Z"
+          fill="#E85542" stroke="none"/>
+    <!-- Beak -->
+    <path d="M 378,175 C 388,170 400,168 408,172 C 414,175 415,182 410,186 C 404,190 393,188 385,184 Z"
+          fill="#A0785A" stroke="#6B4423" stroke-width="1.5"/>
+    <path d="M 378,178 C 388,182 402,183 408,183 C 412,183 413,186 408,188 C 400,191 386,189 378,184 Z"
+          fill="#6B4423" stroke="#6B4423" stroke-width="1"/>
+    <!-- Wing hints on body -->
+    <path d="M 220,330 C 210,310 205,285 212,265 C 218,250 228,243 235,250 C 238,260 237,285 237,310 Z"
+          fill="#2D2D42" stroke="#1C1E35" stroke-width="1.5"/>
+    <path d="M 215,330 C 205,308 200,280 208,258"
+          fill="none" stroke="#1C1E35" stroke-width="1.5"/>
+    <!-- Tail feather hints -->
+    <path d="M 235,445 C 225,462 218,478 215,492 C 220,490 228,485 233,488 C 235,475 240,460 245,450 Z"
+          fill="#2D2D42" stroke="#1C1E35" stroke-width="1.5"/>
+    <path d="M 250,450 C 243,465 240,480 240,495 C 245,493 252,488 256,490 C 254,478 254,464 255,452 Z"
+          fill="#2D2D42" stroke="#1C1E35" stroke-width="1.5"/>
   </g>
 
-  <!-- Detail: radical pair in retina (eye glow + quantum diagram) -->
-  <g id="detail-radical-pair" data-label="Cryptochrome radical pair quantum mechanism in robin retina">
-    <!-- eye glow - quantum coherence -->
-    <circle cx="348" cy="280" r="28" fill="url(#quantum-glow)"/>
-    <!-- radical pair diagram inset upper right -->
-    <rect x="570" y="80" width="200" height="140" rx="6" fill="#2D3E6B" stroke="#8BA0D6" stroke-width="1.5"/>
-    <!-- cryptochrome molecule representation -->
-    <ellipse cx="640" cy="130" rx="28" ry="18" fill="#5B6FA8" opacity="0.8" stroke="#8BA0D6" stroke-width="1.5"/>
-    <!-- FAD cofactor -->
-    <rect cx="625" cy="124" x="625" y="122" width="14" height="10" rx="2" fill="#E6B800" opacity="0.9"/>
-    <!-- radical pair electrons (two paired dots with spin arrows) -->
-    <circle cx="605" cy="135" r="7" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
-    <circle cx="675" cy="135" r="7" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="1.5"/>
-    <!-- spin correlation arc -->
-    <path d="M 612 135 Q 640 122 668 135" stroke="#FBFFF6" stroke-width="1.5" fill="none" opacity="0.7" stroke-dasharray="4 3" stroke-linecap="round"/>
-    <!-- spin arrows -->
-    <line x1="605" y1="128" x2="605" y2="122" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round"/>
-    <polyline points="601,126 605,122 609,126" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="675" y1="142" x2="675" y2="148" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round"/>
-    <polyline points="671,144 675,148 679,144" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- entanglement label -->
-    <text x="588" y="165" font-family="Barlow, system-ui, sans-serif" font-size="12" fill="#D1DCFF">radical pair</text>
-    <text x="591" y="180" font-family="Barlow, system-ui, sans-serif" font-size="12" fill="#D1DCFF">Cry4a</text>
-    <!-- field influence arrow -->
-    <line x1="570" y1="155" x2="558" y2="290" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.6" stroke-linecap="round"/>
-    <circle cx="554" cy="294" r="4" fill="none" stroke="#8BA0D6" stroke-width="1.5" opacity="0.6"/>
+  <!-- detail-eye: robin eye with standard 3-layer construction + quantum glow -->
+  <g id="detail-eye" data-label="Robin eye with quantum-sensitive cryptochrome glow — standard 3-layer anatomy">
+    <!-- Quantum glow around eye -->
+    <ellipse cx="340" cy="193" rx="38" ry="32" fill="url(#eyeGlow)"/>
+    <!-- Sclera: ellipse, horizontal ratio ~1.25:1 -->
+    <ellipse cx="340" cy="193" rx="18" ry="14" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <!-- Pupil -->
+    <circle cx="340" cy="193" r="8" fill="#0D0D16"/>
+    <!-- Specular: offset up-left -->
+    <circle cx="334" cy="187" r="3.5" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Quantum magnetic overlay in eye — subtle field pattern visible in retina -->
+    <ellipse cx="340" cy="193" rx="14" ry="10" fill="none" stroke="#8BA0D6" stroke-width="1" opacity="0.5" stroke-dasharray="3 2"/>
   </g>
 
-  <!-- Detail: magnetic field visual overlay on bird's view (magnetic image) -->
-  <g id="detail-magfield" data-label="Magnetic field visual overlay simulating what robin sees in its visual field">
-    <!-- light/dark modulation pattern emanating from eye -->
-    <path d="M 320 268 Q 270 250 230 248" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="4 4" stroke-linecap="round"/>
-    <path d="M 318 275 Q 268 265 228 262" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.35" stroke-dasharray="4 4" stroke-linecap="round"/>
-    <path d="M 320 282 Q 270 278 230 275" stroke="#8BA0D6" stroke-width="2" fill="none" opacity="0.3" stroke-dasharray="4 4" stroke-linecap="round"/>
-    <!-- magnetic north indicator -->
-    <path d="M 68 495 L 68 430" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round"/>
-    <polyline points="62,436 68,430 74,436" fill="none" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="58" y="512" font-family="Barlow, system-ui, sans-serif" font-size="16" font-weight="700" fill="#E6B800">N</text>
+  <!-- detail-cryptochrome: cryptochrome molecule diagram in upper right corner -->
+  <g id="detail-cryptochrome" data-label="Cry4a cryptochrome molecule with radical pair electron spin states">
+    <!-- Inset background panel -->
+    <rect x="490" y="60" width="280" height="220" rx="8" ry="8" fill="#1C1E35" stroke="#2D3E6B" stroke-width="2"/>
+    <!-- Flavin chromophore ring structure (simplified) -->
+    <!-- Isoalloxazine ring system -->
+    <polygon points="560,120 588,108 616,120 616,148 588,162 560,148"
+             fill="none" stroke="#E6B800" stroke-width="2" stroke-linejoin="round"/>
+    <polygon points="616,120 636,110 656,120 656,148 636,158 616,148"
+             fill="none" stroke="#E6B800" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Tryptophan radical site A -->
+    <circle cx="570" cy="190" r="16" fill="none" stroke="#8BA0D6" stroke-width="2"/>
+    <text x="570" y="195" text-anchor="middle" fill="#8BA0D6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">e⁻</text>
+    <!-- Tryptophan radical site B -->
+    <circle cx="690" cy="190" r="16" fill="none" stroke="#8BA0D6" stroke-width="2"/>
+    <text x="690" y="195" text-anchor="middle" fill="#8BA0D6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">e⁻</text>
+    <!-- Entanglement connection line with wavy quantum path -->
+    <path d="M 587,190 C 600,178 612,202 625,190 C 638,178 650,202 673,190"
+          fill="none" stroke="#6FD877" stroke-width="2" stroke-linecap="round"/>
+    <!-- Spin arrows on electron sites -->
+    <path d="M 562,180 L 562,172 L 559,175" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 698,200 L 698,208 L 695,205" fill="none" stroke="#FBFFF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Magnetic field direction arrow at top of inset -->
+    <path d="M 530,85 L 530,100 L 527,97" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 533,97 L 530,100" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="540" y="100" fill="#5B6FA8" font-family="Barlow, sans-serif" font-size="13">B⊕</text>
+    <!-- Inset border connector line to eye -->
+    <line x1="490" y1="170" x2="410" y2="200" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.7"/>
+    <circle cx="490" cy="170" r="3" fill="#5B6FA8" opacity="0.7"/>
   </g>
 
-  <!-- Label -->
-  <g id="label" data-label="Species label for European robin">
-    <text x="305" y="560" font-family="Barlow, system-ui, sans-serif" font-size="15" font-weight="700" fill="#FBFFF6" opacity="0.8">Erithacus rubecula</text>
+  <!-- detail-field-lines: magnetic field lines emanating from eye outward -->
+  <g id="detail-field-lines" data-label="Magnetic field topology projected from eye as visual overlay">
+    <!-- Arcs suggesting field geometry perceived visually -->
+    <path d="M 380,190 C 420,160 460,155 490,165" fill="none" stroke="#8BA0D6" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.6"/>
+    <path d="M 380,195 C 420,180 455,178 485,185" fill="none" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="4 5" opacity="0.4"/>
+    <path d="M 380,200 C 415,200 450,200 480,205" fill="none" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="4 5" opacity="0.3"/>
+    <!-- Arrowheads on field lines -->
+    <polygon points="490,165 480,159 480,171" fill="#8BA0D6" opacity="0.6"/>
+    <polygon points="485,185 475,179 475,191" fill="#8BA0D6" opacity="0.4"/>
   </g>
 
-  <!-- Overlay: migration path arc -->
-  <g id="overlay" data-label="Migration path arc and field line emphasis marks">
-    <!-- migration path arrow (from bottom right toward upper left) -->
-    <path d="M 650 520 Q 520 440 400 360 Q 310 300 240 230 Q 190 182 155 138" stroke="#2FBF39" stroke-width="2.5" fill="none" stroke-dasharray="8 5" opacity="0.5" stroke-linecap="round"/>
-    <polyline points="161,144 155,138 162,133" fill="none" stroke="#2FBF39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
-    <!-- 50 µT field strength annotation -->
-    <text x="658" y="478" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#8BA0D6" opacity="0.7">50 µT</text>
+  <!-- label: species name only (max 2 text elements) -->
+  <g id="label" data-label="Species name label">
+    <text x="300" y="556"
+          text-anchor="middle"
+          font-family="Barlow, sans-serif"
+          font-size="22"
+          font-weight="600"
+          font-style="italic"
+          fill="#8BA0D6">Erithacus rubecula</text>
+    <text x="300" y="582"
+          text-anchor="middle"
+          font-family="Barlow, sans-serif"
+          font-size="20"
+          font-weight="700"
+          fill="#FBFFF6">Cry4a</text>
+  </g>
+
+  <!-- overlay: north arrow and scale context -->
+  <g id="overlay" data-label="Magnetic north indicator and emphasis marks">
+    <!-- North arrow -->
+    <circle cx="720" cy="530" r="28" fill="#1C1E35" stroke="#2D3E6B" stroke-width="2"/>
+    <path d="M 720,508 L 726,530 L 720,524 L 714,530 Z" fill="#FBFFF6"/>
+    <path d="M 720,552 L 726,530 L 720,536 L 714,530 Z" fill="#5B6FA8"/>
+    <text x="720" y="516" text-anchor="middle" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">N</text>
   </g>
 </svg>
