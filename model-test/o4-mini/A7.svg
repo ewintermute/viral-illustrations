@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a7-horseshoe-crab-blood" xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  <!-- Tidal flat -->
+  <rect id="tidal-flat" y="400" width="800" height="200" fill="#5B6FA8" opacity="0.6"/>
+  <!-- Crab carapace -->
+  <g id="crab-carapace" transform="translate(400,300)">
+    <ellipse id="carapace-outer" cx="0" cy="0" rx="200" ry="120" fill="#2FBF39" opacity="0.8"/>
+    <ellipse id="carapace-inner" cx="0" cy="10" rx="180" ry="100" fill="#248A28" opacity="0.6"/>
+  </g>
+  <!-- Tail spine -->
+  <path id="tail-spine" d="M600,350 L720,300" stroke="#2FBF39" stroke-width="12" stroke-linecap="round"/>
+  <!-- Blood droplet -->
+  <circle id="blood-sample" cx="500" cy="320" r="30" fill="#D1DCFF" opacity="0.7"/>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  
+  <!-- Cold blue water environment -->
+  <ellipse id="water-layer-1" cx="400" cy="500" rx="350" ry="80" fill="#2D3E6B" opacity="0.3"/>
+  <ellipse id="water-layer-2" cx="200" cy="450" rx="180" ry="50" fill="#5B6FA8" opacity="0.2"/>
+  <ellipse id="water-layer-3" cx="600" cy="480" rx="200" ry="60" fill="#2D3E6B" opacity="0.25"/>
+  
+  <!-- Octopus mantle (head/body) -->
+  <ellipse id="mantle-body" cx="400" cy="280" rx="70" ry="85" fill="#5B6FA8" opacity="0.8"/>
+  <ellipse id="mantle-highlight" cx="390" cy="265" rx="50" ry="60" fill="#D1DCFF" opacity="0.3"/>
+  <ellipse id="mantle-texture-1" cx="420" cy="290" rx="25" ry="30" fill="#2D3E6B" opacity="0.4"/>
+  
+  <!-- Eyes -->
+  <ellipse id="eye-left" cx="375" cy="270" rx="18" ry="20" fill="#0D0D16" opacity="0.9"/>
+  <ellipse id="pupil-left" cx="375" cy="270" rx="8" ry="10" fill="#1C1E35"/>
+  <circle id="eye-highlight-left" cx="372" cy="266" r="4" fill="#FBFFF6" opacity="0.95"/>
+  
+  <ellipse id="eye-right" cx="425" cy="270" rx="18" ry="20" fill="#0D0D16" opacity="0.9"/>
+  <ellipse id="pupil-right" cx="425" cy="270" rx="8" ry="10" fill="#1C1E35"/>
+  <circle id="eye-highlight-right" cx="422" cy="266" r="4" fill="#FBFFF6" opacity="0.95"/>
+  
+  <!-- Eight arms splayed out -->
+  <!-- Arm 1 (top left) -->
+  <path id="arm-1" d="M 370 320 Q 320 340 280 380 Q 260 410 250 450" stroke="#5B6FA8" stroke-width="20" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path id="arm-1-highlight" d="M 368 322 Q 318 342 278 382" stroke="#D1DCFF" stroke-width="6" fill="none" opacity="0.3" stroke-linecap="round"/>
+  <circle id="sucker-1-1" cx="290" cy="370" r="4" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-1-2" cx="275" cy="400" r="4" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-1-3" cx="260" cy="430" r="3.5" fill="#2D3E6B" opacity="0.5"/>
+  
+  <!-- Arm 2 (left) -->
+  <path id="arm-2" d="M 360 330 Q 300 380 250 420 Q 220 450 200 490" stroke="#5B6FA8" stroke-width="22" fill="none" opacity="0.75" stroke-linecap="round"/>
+  <circle id="sucker-2-1" cx="280" cy="400" r="4.5" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-2-2" cx="250" cy="440" r="4" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 3 (bottom left) -->
+  <path id="arm-3" d="M 375 340 Q 340 420 320 480 Q 310 520 300 560" stroke="#5B6FA8" stroke-width="24" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <circle id="sucker-3-1" cx="350" cy="410" r="5" fill="#2D3E6B" opacity="0.7"/>
+  <circle id="sucker-3-2" cx="330" cy="460" r="4.5" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-3-3" cx="315" cy="510" r="4" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 4 (center left) -->
+  <path id="arm-4" d="M 390 345 Q 380 430 380 490 Q 380 530 380 570" stroke="#5B6FA8" stroke-width="26" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <circle id="sucker-4-1" cx="385" cy="420" r="5" fill="#2D3E6B" opacity="0.7"/>
+  <circle id="sucker-4-2" cx="382" cy="480" r="5" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 5 (center right) -->
+  <path id="arm-5" d="M 410 345 Q 420 430 420 490 Q 420 530 420 570" stroke="#5B6FA8" stroke-width="26" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <circle id="sucker-5-1" cx="415" cy="420" r="5" fill="#2D3E6B" opacity="0.7"/>
+  <circle id="sucker-5-2" cx="418" cy="480" r="5" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 6 (bottom right) -->
+  <path id="arm-6" d="M 425 340 Q 460 420 480 480 Q 490 520 500 560" stroke="#5B6FA8" stroke-width="24" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <circle id="sucker-6-1" cx="450" cy="410" r="5" fill="#2D3E6B" opacity="0.7"/>
+  <circle id="sucker-6-2" cx="470" cy="460" r="4.5" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 7 (right) -->
+  <path id="arm-7" d="M 440 330 Q 500 380 550 420 Q 580 450 600 490" stroke="#5B6FA8" stroke-width="22" fill="none" opacity="0.75" stroke-linecap="round"/>
+  <circle id="sucker-7-1" cx="520" cy="400" r="4.5" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-7-2" cx="560" cy="440" r="4" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Arm 8 (top right) -->
+  <path id="arm-8" d="M 430 320 Q 480 340 520 380 Q 540 410 550 450" stroke="#5B6FA8" stroke-width="20" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <circle id="sucker-8-1" cx="510" cy="370" r="4" fill="#2D3E6B" opacity="0.6"/>
+  <circle id="sucker-8-2" cx="535" cy="410" r="3.5" fill="#2D3E6B" opacity="0.5"/>
+  
+  <!-- RNA editing annotation diagram -->
+  <rect id="annotation-box" x="520" y="140" width="240" height="120" fill="#2D3E6B" opacity="0.4" rx="4"/>
+  <text id="label-title" x="540" y="165" font-family="Barlow, sans-serif" font-size="14" fill="#D1DCFF" opacity="0.9">RNA Editing (A→I)</text>
+  
+  <!-- Simple A to I diagram -->
+  <circle id="nucleotide-a" cx="580" cy="200" r="18" fill="#E85542" opacity="0.7"/>
+  <text id="label-a" x="573" y="208" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#FBFFF6">A</text>
+  
+  <path id="arrow-edit" d="M 605 200 L 645 200" stroke="#2FBF39" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+  <path id="arrow-head" d="M 640 195 L 645 200 L 640 205" stroke="#2FBF39" stroke-width="3" fill="none" opacity="0.8" stroke-linecap="round"/>
+  
+  <circle id="nucleotide-i" cx="680" cy="200" r="18" fill="#6FD877" opacity="0.7"/>
+  <text id="label-i" x="675" y="208" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#0D0D16">I</text>
+  
+  <text id="label-enzyme" x="540" y="235" font-family="Barlow, sans-serif" font-size="11" fill="#D1DCFF" opacity="0.7">ADAR enzyme recodes</text>
+  <text id="label-detail" x="540" y="250" font-family="Barlow, sans-serif" font-size="11" fill="#D1DCFF" opacity="0.7">transcriptome on-the-fly</text>
+  
+  <!-- Callout line to octopus -->
+  <line id="callout-line" x1="520" y1="220" x2="430" y2="260" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+</svg>

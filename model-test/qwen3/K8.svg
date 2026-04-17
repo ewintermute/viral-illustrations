@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1C1E35"/>
+  <path id="mantis-shrimp-body" d="M200,300 Q250,250 300,300 Q250,350 200,300 Z" fill="#E6B800" stroke="#A0785A" stroke-width="5" stroke-linecap="round"/>
+  <path id="dactyl-club" d="M320,320 Q360,300 400,320" fill="none" stroke="#CA1E08" stroke-width="15" stroke-linecap="round"/>
+  <path id="crab-shell" d="M420,300 Q430,280 440,300 Q430,320 420,300 Z" fill="#A0785A" opacity="0.7"/>
+  <ellipse id="eye" cx="240" cy="280" r="15" fill="#0D0D16"/>
+  <circle id="highlight" cx="230" cy="270" r="4" fill="#FBFFF6"/>
+  <text x="700" y="580" font-family="Inter" fill="#FBFFF6" font-size="12">K8</text>
+</svg>

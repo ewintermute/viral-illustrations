@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="d4-anglerfish-fusion" xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  <!-- Anglerfish body -->
+  <g id="anglerfish-body" transform="translate(400,350)">
+    <path id="body-shape" d="M0,0 C-150,-50 -200,100 -100,200 C0,250 100,200 150,100 C200,0 100,-100 0,0" fill="#2D3E6B" opacity="0.8"/>
+    <!-- Eye -->
+    <ellipse id="eye-white" cx="50" cy="-20" rx="15" ry="10" fill="#FBFFF6"/>
+    <ellipse id="eye-pupil" cx="55" cy="-20" rx="5" ry="5" fill="#1C1E35"/>
+    <circle id="eye-highlight" cx="52" cy="-23" r="2" fill="#FBFFF6"/>
+  </g>
+  <!-- Bioluminescent lure -->
+  <g id="bioluminescent-lure" transform="translate(500,200)">
+    <ellipse cx="0" cy="0" rx="10" ry="30" fill="#FFFF77" opacity="0.8"/>
+    <ellipse cx="0" cy="0" rx="20" ry="60" fill="#FFFF77" opacity="0.5"/>
+    <ellipse cx="0" cy="0" rx="30" ry="90" fill="#FFFF77" opacity="0.3"/>
+  </g>
+  <!-- Tiny male fused -->
+  <g id="tiny-male" transform="translate(470,380) scale(0.3)">
+    <ellipse id="male-body" cx="0" cy="0" rx="20" ry="15" fill="#5B6FA8"/>
+  </g>
+</svg>

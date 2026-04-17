@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1C1E35"/>
+  <ellipse id="horseshoe-body" cx="400" cy="300" rx="200" ry="150" fill="#1E5C1E" stroke="#0D0D16" stroke-width="8"/>
+  <path id="tail-spine" d="M400,450 Q450,500 500,550" fill="none" stroke="#1E5C1E" stroke-width="10" stroke-linecap="round"/>
+  <ellipse id="blood-suggestion" cx="400" cy="300" rx="100" ry="50" fill="#D1DCFF" opacity="0.5"/>
+  <circle id="eye" cx="360" cy="280" r="20" fill="#0D0D16"/>
+  <circle id="highlight" cx="350" cy="270" r="5" fill="#FBFFF6"/>
+  <text x="700" y="580" font-family="Inter" fill="#FBFFF6" font-size="12">A7</text>
+</svg>

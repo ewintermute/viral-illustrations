@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1C1E35"/>
+  <path id="octopus-body" d="M400,300 Q350,200 300,150 Q400,120 450,150 Q400,100 380,50" fill="#2D3E6B" stroke="#0D0D16" stroke-width="5" stroke-linecap="round"/>
+  <path id="arm-1" d="M320,180 Q300,250 310,320" fill="none" stroke="#5B6FA8" stroke-width="15" stroke-linecap="round"/>
+  <path id="arm-2" d="M340,170 Q330,250 330,320" fill="none" stroke="#5B6FA8" stroke-width="15" stroke-linecap="round"/>
+  <circle id="bioluminescent-eye" cx="320" cy="180" r="5" fill="#1C1E35">
+    <animate attributeName="r" values="5;10;5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="700" y="580" font-family="Inter" fill="#FBFFF6" font-size="12">B10</text>
+</svg>

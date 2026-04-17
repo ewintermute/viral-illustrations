@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  
+  <!-- Tidal flat environment -->
+  <ellipse id="sand-patch-1" cx="200" cy="520" rx="150" ry="30" fill="#A0785A" opacity="0.3"/>
+  <ellipse id="sand-patch-2" cx="600" cy="540" rx="180" ry="25" fill="#D4A574" opacity="0.25"/>
+  <ellipse id="water-pool-1" cx="650" cy="480" rx="100" ry="20" fill="#5B6FA8" opacity="0.3"/>
+  
+  <!-- Sand ripples -->
+  <path id="ripple-1" d="M 100 480 Q 150 475 200 480 Q 250 485 300 480" stroke="#A0785A" stroke-width="1" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path id="ripple-2" d="M 150 510 Q 200 505 250 510 Q 300 515 350 510" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Horseshoe crab from above - main body (prosoma/carapace) -->
+  <path id="carapace-outline" d="M 400 250 Q 300 280 280 350 Q 285 420 320 460 Q 380 490 400 495 Q 420 490 480 460 Q 515 420 520 350 Q 500 280 400 250 Z" fill="#2D3E6B" opacity="0.8"/>
+  <path id="carapace-top" d="M 400 260 Q 315 285 300 350 Q 305 410 335 445 Q 385 470 400 473 Q 415 470 465 445 Q 495 410 500 350 Q 485 285 400 260 Z" fill="#5B6FA8" opacity="0.7"/>
+  
+  <!-- Carapace ridge detail -->
+  <path id="ridge-center" d="M 400 270 L 400 460" stroke="#2D3E6B" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <path id="ridge-left-1" d="M 380 290 Q 375 350 380 440" stroke="#2D3E6B" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  <path id="ridge-right-1" d="M 420 290 Q 425 350 420 440" stroke="#2D3E6B" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+  
+  <!-- Eye bumps -->
+  <ellipse id="eye-left" cx="370" cy="310" rx="8" ry="10" fill="#0D0D16" opacity="0.8"/>
+  <ellipse id="eye-right" cx="430" cy="310" rx="8" ry="10" fill="#0D0D16" opacity="0.8"/>
+  <circle id="eye-highlight-left" cx="368" cy="307" r="2" fill="#FBFFF6" opacity="0.9"/>
+  <circle id="eye-highlight-right" cx="428" cy="307" r="2" fill="#FBFFF6" opacity="0.9"/>
+  
+  <!-- Book gills (ventral, barely visible from above) -->
+  <path id="gill-hint-1" d="M 350 420 Q 360 425 370 420" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  <path id="gill-hint-2" d="M 350 435 Q 360 440 370 435" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  <path id="gill-hint-3" d="M 430 420 Q 440 425 450 420" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  <path id="gill-hint-4" d="M 430 435 Q 440 440 450 435" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Telson (tail spine) -->
+  <path id="telson-spine" d="M 400 495 L 400 580" stroke="#5B6FA8" stroke-width="6" opacity="0.8" stroke-linecap="round"/>
+  <path id="telson-highlight" d="M 398 495 L 398 575" stroke="#D1DCFF" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+  
+  <!-- Blue blood suggestion - periwinkle hemolymph glow -->
+  <ellipse id="blood-glow-1" cx="400" cy="360" rx="60" ry="40" fill="#D1DCFF" opacity="0.15"/>
+  <ellipse id="blood-glow-2" cx="400" cy="360" rx="40" ry="25" fill="#D1DCFF" opacity="0.2"/>
+  <ellipse id="blood-glow-3" cx="400" cy="360" rx="25" ry="15" fill="#D1DCFF" opacity="0.25"/>
+  
+  <!-- Small droplet suggestion near edge -->
+  <circle id="blood-droplet" cx="480" cy="440" r="6" fill="#D1DCFF" opacity="0.6"/>
+  <circle id="droplet-highlight" cx="478" cy="438" r="2" fill="#FBFFF6" opacity="0.8"/>
+  
+  <!-- Annotations -->
+  <line id="callout-blood" x1="480" y1="440" x2="550" y2="380" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <text id="label-blood" x="560" y="375" font-family="Barlow, sans-serif" font-size="15" fill="#D1DCFF" opacity="0.9">Copper-based</text>
+  <text id="label-hemolymph" x="560" y="395" font-family="Barlow, sans-serif" font-size="13" fill="#D1DCFF" opacity="0.7">hemolymph</text>
+  
+  <line id="callout-species" x1="350" y1="280" x2="200" y2="200" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <text id="label-species" x="80" y="195" font-family="Barlow, sans-serif" font-size="16" fill="#D1DCFF" opacity="0.9">Limulus polyphemus</text>
+</svg>

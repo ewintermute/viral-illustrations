@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  
+  <!-- Forest understorey context -->
+  <ellipse id="forest-shadow-1" cx="150" cy="500" rx="120" ry="40" fill="#0D0D16" opacity="0.4"/>
+  <ellipse id="forest-shadow-2" cx="650" cy="520" rx="100" ry="35" fill="#0D0D16" opacity="0.3"/>
+  
+  <!-- Leaf -->
+  <ellipse id="leaf-body" cx="400" cy="280" rx="180" ry="85" fill="#1A5C1E" opacity="0.7"/>
+  <path id="leaf-outline" d="M 220 280 Q 400 220 580 280 Q 400 340 220 280" fill="#248A28" opacity="0.6"/>
+  <line id="leaf-vein-center" x1="220" y1="280" x2="580" y2="280" stroke="#2FBF39" stroke-width="3" opacity="0.8" stroke-linecap="round"/>
+  <line id="leaf-vein-1" x1="300" y1="280" x2="280" y2="310" stroke="#2FBF39" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <line id="leaf-vein-2" x1="350" y1="280" x2="340" y2="315" stroke="#2FBF39" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <line id="leaf-vein-3" x1="450" y1="280" x2="460" y2="315" stroke="#2FBF39" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  <line id="leaf-vein-4" x1="500" y1="280" x2="520" y2="310" stroke="#2FBF39" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  
+  <!-- Ant body -->
+  <ellipse id="ant-abdomen" cx="420" cy="285" rx="35" ry="25" fill="#0D0D16" opacity="0.8"/>
+  <ellipse id="ant-thorax" cx="380" cy="278" rx="22" ry="18" fill="#0D0D16" opacity="0.85"/>
+  <ellipse id="ant-head" cx="350" cy="275" rx="16" ry="14" fill="#0D0D16" opacity="0.9"/>
+  
+  <!-- Ant legs (gripping leaf) -->
+  <path id="ant-leg-1" d="M 375 285 L 365 295 L 360 305" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path id="ant-leg-2" d="M 385 285 L 380 295 L 378 303" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path id="ant-leg-3" d="M 395 285 L 400 295 L 405 303" stroke="#2D3E6B" stroke-width="2.5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  
+  <!-- Mandibles locked on vein -->
+  <path id="ant-mandible-left" d="M 345 278 L 335 280 L 330 282" stroke="#5B6FA8" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <path id="ant-mandible-right" d="M 345 272 L 335 273 L 330 278" stroke="#5B6FA8" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <circle id="mandible-grip-point" cx="330" cy="280" r="3" fill="#E85542" opacity="0.9"/>
+  
+  <!-- Fungal stalk erupting from head -->
+  <path id="fungal-stalk-base" d="M 355 265 Q 360 230 365 180" stroke="#CA1E08" stroke-width="8" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path id="fungal-stalk-mid" d="M 357 260 Q 362 225 367 180" stroke="#E85542" stroke-width="6" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <path id="fungal-stalk-highlight" d="M 359 258 Q 364 223 369 185" stroke="#E6B800" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round"/>
+  
+  <!-- Fungal fruiting body at top -->
+  <ellipse id="fruiting-body-cap" cx="367" cy="165" rx="25" ry="12" fill="#CA1E08" opacity="0.8"/>
+  <ellipse id="fruiting-body-top" cx="367" cy="162" rx="22" ry="10" fill="#E85542" opacity="0.9"/>
+  <ellipse id="fruiting-body-highlight" cx="365" cy="160" rx="10" ry="5" fill="#E6B800" opacity="0.7"/>
+  
+  <!-- Spores drifting down -->
+  <circle id="spore-1" cx="340" cy="200" r="2.5" fill="#E6B800" opacity="0.8"/>
+  <circle id="spore-2" cx="390" cy="220" r="2" fill="#E6B800" opacity="0.7"/>
+  <circle id="spore-3" cx="360" cy="240" r="2.5" fill="#FFFF77" opacity="0.6"/>
+  <circle id="spore-4" cx="320" cy="260" r="2" fill="#E6B800" opacity="0.5"/>
+  <circle id="spore-5" cx="400" cy="250" r="2" fill="#E6B800" opacity="0.6"/>
+  <circle id="spore-6" cx="370" cy="280" r="2.5" fill="#FFFF77" opacity="0.5"/>
+  <circle id="spore-7" cx="335" cy="230" r="2" fill="#E6B800" opacity="0.7"/>
+  <circle id="spore-8" cx="385" cy="190" r="2" fill="#FFFF77" opacity="0.8"/>
+  
+  <!-- Annotation -->
+  <line id="callout-line" x1="365" y1="180" x2="480" y2="120" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <text id="label-fungus" x="490" y="115" font-family="Barlow, sans-serif" font-size="16" fill="#D1DCFF" opacity="0.9">Ophiocordyceps</text>
+  <text id="label-detail" x="490" y="135" font-family="Barlow, sans-serif" font-size="13" fill="#D1DCFF" opacity="0.7">unilateralis</text>
+</svg>

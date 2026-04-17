@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="k8-mantis-shrimp-club" xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  <!-- Crab shell fragment -->
+  <polygon id="shell-fragment" points="600,400 650,380 680,430 630,460" fill="#D4A574" opacity="0.7"/>
+  <!-- Mantis shrimp body -->
+  <g id="mantis-body" transform="translate(300,350)">
+    <ellipse id="body" cx="0" cy="0" rx="80" ry="40" fill="#E85542"/>
+    <!-- Club dactyl -->
+    <path id="club" d="M80,0 L200,-20" stroke="#2FBF39" stroke-width="20" stroke-linecap="round"/> 
+    <!-- Eyes -->
+    <ellipse id="eye1" cx="-20" cy="-10" rx="8" ry="5" fill="#1C1E35"/>
+    <circle id="eye1-highlight" cx="-22" cy="-13" r="2" fill="#FBFFF6"/>
+    <ellipse id="eye2" cx="-20" cy="10" rx="8" ry="5" fill="#1C1E35"/>
+    <circle id="eye2-highlight" cx="-22" cy="7" r="2" fill="#FBFFF6"/>
+  </g>
+  <!-- Action lines -->
+  <line id="action-line1" x1="200" y1="330" x2="600" y2="380" stroke="#D1DCFF" stroke-width="4" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <line id="action-line2" x1="200" y1="370" x2="600" y2="420" stroke="#D1DCFF" stroke-width="4" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+</svg>

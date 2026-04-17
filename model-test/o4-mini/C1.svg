@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="c1-zombie-ant-fungus" xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  <!-- Leaf vein -->
+  <path id="leaf-vein" d="M100,450 C300,400 500,500 700,450" stroke="#248A28" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Ant body -->
+  <g id="ant-body" transform="translate(350,380)">
+    <ellipse id="ant-head" cx="0" cy="-20" rx="30" ry="20" fill="#0D0D16"/>
+    <ellipse id="ant-thorax" cx="0" cy="10" rx="40" ry="25" fill="#0D0D16"/>
+    <ellipse id="ant-abdomen" cx="0" cy="50" rx="50" ry="30" fill="#0D0D16"/>
+    <!-- Mandibles locked on vein -->
+    <path id="mandibles" d="M-20,-10 L-80,50 M20,-10 L80,50" stroke="#0D0D16" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- Fungal stalk -->
+  <path id="fungal-stalk" d="M350,360 C350,300 370,260 380,200" stroke="#E85542" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- Spores -->
+  <circle id="spore-1" cx="390" cy="190" r="4" fill="#E6B800" opacity="0.5"/>
+  <circle id="spore-2" cx="400" cy="210" r="5" fill="#E6B800" opacity="0.4"/>
+  <circle id="spore-3" cx="420" cy="230" r="3" fill="#E6B800" opacity="0.3"/>
+</svg>

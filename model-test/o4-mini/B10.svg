@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="b10-octopus-rna-editing" xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect id="background" width="800" height="600" fill="#1C1E35"/>
+  <!-- Water gradient effect via layered planes -->
+  <rect x="0" y="0" width="800" height="200" fill="#2D3E6B" opacity="0.8"/>
+  <rect x="0" y="200" width="800" height="400" fill="#5B6FA8" opacity="0.6"/>
+  <!-- Octopus arms -->
+  <g id="octopus-arms" transform="translate(400,350)">
+    <path id="arm1" d="M0,0 C-100,-80 -150,-200 -200,-180" stroke="#A0785A" stroke-width="20" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path id="arm2" d="M0,0 C100,-80 150,-200 200,-180" stroke="#A0785A" stroke-width="20" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path id="arm3" d="M0,0 C-120,50 -180,150 -160,200" stroke="#A0785A" stroke-width="20" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path id="arm4" d="M0,0 C120,50 180,150 160,200" stroke="#A0785A" stroke-width="20" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- Octopus head -->
+  <ellipse id="octopus-head" cx="400" cy="350" rx="60" ry="50" fill="#A0785A"/>
+  <!-- Annotation A->I diagram -->
+  <g id="annotation-diagram" transform="translate(550,150)">
+    <text id="annotation-label" x="0" y="0" font-family="Barlow" font-size="24" fill="#FBFFF6">A → I</text>
+    <circle id="nucleotide-a" cx="0" cy="30" r="15" fill="#D1DCFF"/>
+    <path id="arrow" d="M20,30 L60,30" stroke="#FBFFF6" stroke-width="4" marker-end="url(#arrowhead)"/>
+    <circle id="nucleotide-i" cx="80" cy="30" r="15" fill="#FFFF77"/>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#FBFFF6"/>
+      </marker>
+    </defs>
+  </g>
+</svg>
