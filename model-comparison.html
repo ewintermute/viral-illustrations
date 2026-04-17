@@ -46,7 +46,7 @@
     /* 4-column grid per story */
     .model-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 1px;
       background: #3D3D52;
     }
@@ -110,6 +110,7 @@
   <div class="model-tab"><span class="dot dot-gpt4o"></span><span class="label-gpt4o">GPT-4o</span></div>
   <div class="model-tab"><span class="dot dot-gemini"></span><span class="label-gemini">Gemini 2.5 Pro</span></div>
   <div class="model-tab"><span class="dot dot-deepseek"></span><span class="label-deepseek">DeepSeek V3.2</span></div>
+  <div class="model-tab"><span class="dot dot-gemini31"></span><span class="label-gemini31">Gemini 3.1 Pro</span></div>
 </div>
 
 <div id="stories"></div>
@@ -128,6 +129,7 @@ const models = [
   { key:'gpt4o',       label:'GPT-4o',          cls:'gpt4o'  },
   { key:'gemini-25-pro',label:'Gemini 2.5 Pro', cls:'gemini' },
   { key:'deepseek-v3', label:'DeepSeek V3.2',   cls:'deepseek'},
+  { key:'gemini-31-pro', label:'Gemini 3.1 Pro',  cls:'gemini31'},
 ];
 
 const container = document.getElementById('stories');
