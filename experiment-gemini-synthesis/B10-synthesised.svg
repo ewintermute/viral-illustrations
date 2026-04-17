@@ -1,0 +1,441 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- ============================================================ -->
+  <!-- B10: Octopus RNA Editing — Final Synthesised Illustration    -->
+  <!-- AWW Style · No gradients · No filters · Flat layered shapes  -->
+  <!-- ============================================================ -->
+
+  <!-- BACKGROUND: Two overlapping rects to suggest cold→warm shift -->
+  <rect id="bg-base" x="0" y="0" width="800" height="600" fill="#0D0D16"/>
+  <rect id="bg-warm-zone" x="420" y="0" width="380" height="600" fill="#1C1E35"/>
+  <!-- Transition blending shapes -->
+  <rect id="bg-blend-1" x="380" y="0" width="120" height="600" fill="#1C1E35" opacity="0.3"/>
+  <rect id="bg-blend-2" x="440" y="0" width="60" height="600" fill="#1C1E35" opacity="0.5"/>
+  <!-- Subtle warm undertone far right -->
+  <rect id="bg-warm-accent" x="600" y="0" width="200" height="600" fill="#A0785A" opacity="0.06"/>
+  <rect id="bg-warm-accent-2" x="680" y="200" width="120" height="400" fill="#D4A574" opacity="0.04"/>
+
+  <!-- SNOWFLAKE GEOMETRIC ELEMENTS (cold left side) -->
+  <g id="snowflakes">
+    <!-- Snowflake 1 — hexagonal star -->
+    <g transform="translate(80, 80)" opacity="0.18">
+      <line x1="0" y1="-18" x2="0" y2="18" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-15.6" y1="-9" x2="15.6" y2="9" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="-15.6" y1="9" x2="15.6" y2="-9" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="0" cy="-18" r="2" fill="#D1DCFF"/>
+      <circle cx="0" cy="18" r="2" fill="#D1DCFF"/>
+      <circle cx="-15.6" cy="-9" r="2" fill="#D1DCFF"/>
+      <circle cx="15.6" cy="9" r="2" fill="#D1DCFF"/>
+      <circle cx="-15.6" cy="9" r="2" fill="#D1DCFF"/>
+      <circle cx="15.6" cy="-9" r="2" fill="#D1DCFF"/>
+    </g>
+    <!-- Snowflake 2 -->
+    <g transform="translate(200, 50)" opacity="0.12">
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-10.4" y1="-6" x2="10.4" y2="6" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-10.4" y1="6" x2="10.4" y2="-6" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="0" cy="-12" r="1.5" fill="#FBFFF6"/>
+      <circle cx="0" cy="12" r="1.5" fill="#FBFFF6"/>
+    </g>
+    <!-- Snowflake 3 -->
+    <g transform="translate(50, 250)" opacity="0.15">
+      <line x1="0" y1="-14" x2="0" y2="14" stroke="#D1DCFF" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="-12.1" y1="-7" x2="12.1" y2="7" stroke="#D1DCFF" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="-12.1" y1="7" x2="12.1" y2="-7" stroke="#D1DCFF" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="-6" y1="-11" x2="6" y2="11" stroke="#D1DCFF" stroke-width="0.8" stroke-linecap="round"/>
+      <line x1="6" y1="-11" x2="-6" y2="11" stroke="#D1DCFF" stroke-width="0.8" stroke-linecap="round"/>
+    </g>
+    <!-- Snowflake 4 (small) -->
+    <g transform="translate(320, 100)" opacity="0.10">
+      <line x1="0" y1="-8" x2="0" y2="8" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-6.9" y1="-4" x2="6.9" y2="4" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-6.9" y1="4" x2="6.9" y2="-4" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+    </g>
+    <!-- Snowflake 5 -->
+    <g transform="translate(140, 450)" opacity="0.13">
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-8.7" y1="-5" x2="8.7" y2="5" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-8.7" y1="5" x2="8.7" y2="-5" stroke="#FBFFF6" stroke-width="1" stroke-linecap="round"/>
+    </g>
+    <!-- Snowflake 6 -->
+    <g transform="translate(30, 520)" opacity="0.16">
+      <line x1="0" y1="-11" x2="0" y2="11" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-9.5" y1="-5.5" x2="9.5" y2="5.5" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+      <line x1="-9.5" y1="5.5" x2="9.5" y2="-5.5" stroke="#D1DCFF" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="0" cy="-11" r="1.5" fill="#D1DCFF"/>
+      <circle cx="0" cy="11" r="1.5" fill="#D1DCFF"/>
+    </g>
+    <!-- Snowflake 7 (tiny) -->
+    <g transform="translate(260, 160)" opacity="0.09">
+      <line x1="0" y1="-6" x2="0" y2="6" stroke="#D1DCFF" stroke-width="0.8" stroke-linecap="round"/>
+      <line x1="-5.2" y1="-3" x2="5.2" y2="3" stroke="#D1DCFF" stroke-width="0.8" stroke-linecap="round"/>
+      <line x1="-5.2" y1="3" x2="5.2" y2="-3" stroke="#D1DCFF" stroke-width="0.8" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- 4°C COLD EXPOSURE label (top-left area) -->
+  <text id="label-cold-exposure" x="72" y="155" font-family="Barlow, sans-serif" font-size="13" fill="#D1DCFF" opacity="0.7" font-weight="600" letter-spacing="1.5">4°C COLD EXPOSURE</text>
+  <rect x="72" y="160" width="130" height="1.5" fill="#D1DCFF" opacity="0.3" rx="0.75"/>
+
+  <!-- ============================================================ -->
+  <!-- OCTOPUS BODY — main mantle + head                            -->
+  <!-- ============================================================ -->
+  <g id="octopus-body">
+    <!-- Shadow/depth under body -->
+    <ellipse id="body-shadow" cx="330" cy="310" rx="175" ry="105" fill="#0D0D16" opacity="0.5"/>
+
+    <!-- Main mantle -->
+    <ellipse id="mantle-base" cx="320" cy="280" rx="155" ry="95" fill="#2D3E6B"/>
+    <ellipse id="mantle-highlight" cx="305" cy="265" rx="130" ry="75" fill="#5B6FA8" opacity="0.35"/>
+    <ellipse id="mantle-top-light" cx="295" cy="255" rx="100" ry="55" fill="#D1DCFF" opacity="0.08"/>
+
+    <!-- Skin texture — chromatophore patches (layered opacity shapes) -->
+    <g id="skin-texture">
+      <circle cx="270" cy="260" r="18" fill="#A0785A" opacity="0.12"/>
+      <circle cx="310" cy="240" r="14" fill="#D4A574" opacity="0.10"/>
+      <circle cx="350" cy="270" r="20" fill="#A0785A" opacity="0.15"/>
+      <circle cx="290" cy="290" r="16" fill="#D4A574" opacity="0.08"/>
+      <circle cx="380" cy="250" r="12" fill="#A0785A" opacity="0.10"/>
+      <circle cx="240" cy="280" r="15" fill="#D4A574" opacity="0.12"/>
+      <circle cx="330" cy="300" r="19" fill="#A0785A" opacity="0.09"/>
+      <circle cx="260" cy="240" r="10" fill="#5B6FA8" opacity="0.15"/>
+      <circle cx="370" cy="290" r="13" fill="#D4A574" opacity="0.11"/>
+      <circle cx="300" cy="310" r="11" fill="#A0785A" opacity="0.13"/>
+      <ellipse cx="320" cy="260" rx="22" ry="12" fill="#D4A574" opacity="0.07"/>
+      <ellipse cx="280" cy="275" rx="18" ry="10" fill="#5B6FA8" opacity="0.10"/>
+      <circle cx="355" cy="240" r="8" fill="#D1DCFF" opacity="0.06"/>
+      <circle cx="245" cy="260" r="9" fill="#A0785A" opacity="0.14"/>
+      <circle cx="335" cy="285" r="7" fill="#D4A574" opacity="0.13"/>
+      <circle cx="390" cy="265" r="11" fill="#2D3E6B" opacity="0.20"/>
+      <circle cx="265" cy="305" r="12" fill="#D4A574" opacity="0.09"/>
+      <circle cx="230" cy="290" r="8" fill="#A0785A" opacity="0.11"/>
+      <circle cx="345" cy="310" r="10" fill="#5B6FA8" opacity="0.08"/>
+      <circle cx="215" cy="270" r="7" fill="#D4A574" opacity="0.10"/>
+    </g>
+
+    <!-- HEAD RIDGE / BROW -->
+    <ellipse id="brow-ridge" cx="285" cy="275" rx="60" ry="30" fill="#5B6FA8" opacity="0.18"/>
+
+    <!-- ============================================================ -->
+    <!-- EYE — AWW spec: dark pupil, white highlight upper-left       -->
+    <!-- ============================================================ -->
+    <g id="octopus-eye" transform="translate(275, 270)">
+      <!-- Eye socket shadow -->
+      <ellipse cx="0" cy="0" rx="28" ry="22" fill="#0D0D16" opacity="0.6"/>
+      <!-- Outer eye (sclera-like) -->
+      <ellipse cx="0" cy="0" rx="24" ry="18" fill="#2D3E6B"/>
+      <ellipse cx="0" cy="0" rx="22" ry="16" fill="#5B6FA8" opacity="0.4"/>
+      <!-- Iris -->
+      <ellipse cx="0" cy="0" rx="16" ry="14" fill="#1C1E35"/>
+      <!-- Pupil — horizontal slit characteristic of octopus -->
+      <ellipse id="eye-pupil" cx="0" cy="0" rx="14" ry="8" fill="#1C1E35"/>
+      <ellipse cx="0" cy="0" rx="12" ry="5" fill="#0D0D16"/>
+      <!-- Highlight upper-left — AWW spec -->
+      <ellipse id="eye-highlight" cx="-7" cy="-6" rx="5" ry="3.5" fill="#FBFFF6" opacity="0.9"/>
+      <!-- Secondary smaller highlight -->
+      <ellipse cx="-3" cy="-8" rx="2" ry="1.5" fill="#FBFFF6" opacity="0.5"/>
+    </g>
+
+    <!-- Blue ring markings (O. bimaculoides) -->
+    <g id="blue-rings">
+      <circle cx="360" cy="265" r="14" fill="none" stroke="#5B6FA8" stroke-width="3" opacity="0.35"/>
+      <circle cx="360" cy="265" r="10" fill="#2D3E6B" opacity="0.25"/>
+      <circle cx="240" cy="285" r="12" fill="none" stroke="#5B6FA8" stroke-width="2.5" opacity="0.30"/>
+      <circle cx="240" cy="285" r="8" fill="#2D3E6B" opacity="0.20"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ARMS / TENTACLES                                             -->
+  <!-- ============================================================ -->
+  <g id="octopus-arms">
+    <!-- ARM 1: Lower-left, curling down -->
+    <path id="arm-1-lower-left" d="M220,330 Q160,380 120,440 Q100,480 80,530 Q70,555 55,570" 
+          fill="none" stroke="#2D3E6B" stroke-width="22" stroke-linecap="round" opacity="0.9"/>
+    <path d="M220,330 Q160,380 120,440 Q100,480 80,530 Q70,555 55,570" 
+          fill="none" stroke="#5B6FA8" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+    <!-- Suction cups -->
+    <circle cx="170" cy="378" r="4" fill="#5B6FA8" opacity="0.25"/>
+    <circle cx="140" cy="418" r="3.5" fill="#5B6FA8" opacity="0.22"/>
+    <circle cx="115" cy="452" r="3" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="95" cy="495" r="2.8" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="80" cy="535" r="2.5" fill="#5B6FA8" opacity="0.16"/>
+    <!-- Skin texture on arm -->
+    <circle cx="155" cy="395" r="8" fill="#A0785A" opacity="0.10"/>
+    <circle cx="110" cy="455" r="6" fill="#D4A574" opacity="0.08"/>
+
+    <!-- ARM 2: Left, curling out -->
+    <path id="arm-2-left" d="M195,310 Q130,330 80,350 Q40,365 15,390 Q5,400 10,420" 
+          fill="none" stroke="#2D3E6B" stroke-width="20" stroke-linecap="round" opacity="0.85"/>
+    <path d="M195,310 Q130,330 80,350 Q40,365 15,390 Q5,400 10,420" 
+          fill="none" stroke="#5B6FA8" stroke-width="12" stroke-linecap="round" opacity="0.25"/>
+    <circle cx="120" cy="340" r="3.5" fill="#5B6FA8" opacity="0.22"/>
+    <circle cx="72" cy="358" r="3" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="35" cy="378" r="2.8" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="105" cy="345" r="7" fill="#A0785A" opacity="0.09"/>
+
+    <!-- ARM 3: Upper-left, reaching up -->
+    <path id="arm-3-upper-left" d="M235,250 Q190,220 150,200 Q110,185 75,195 Q50,205 40,220" 
+          fill="none" stroke="#2D3E6B" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
+    <path d="M235,250 Q190,220 150,200 Q110,185 75,195 Q50,205 40,220" 
+          fill="none" stroke="#5B6FA8" stroke-width="10" stroke-linecap="round" opacity="0.25"/>
+    <circle cx="172" cy="210" r="3" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="130" cy="198" r="2.8" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="90" cy="198" r="2.5" fill="#5B6FA8" opacity="0.16"/>
+    <circle cx="145" cy="205" r="6" fill="#D4A574" opacity="0.09"/>
+
+    <!-- ARM 4: Lower, sprawling center-down -->
+    <path id="arm-4-center-down" d="M310,340 Q300,400 280,460 Q265,500 250,550 Q245,570 240,585" 
+          fill="none" stroke="#2D3E6B" stroke-width="20" stroke-linecap="round" opacity="0.85"/>
+    <path d="M310,340 Q300,400 280,460 Q265,500 250,550 Q245,570 240,585" 
+          fill="none" stroke="#5B6FA8" stroke-width="12" stroke-linecap="round" opacity="0.28"/>
+    <circle cx="298" cy="410" r="4" fill="#5B6FA8" opacity="0.22"/>
+    <circle cx="285" cy="455" r="3.5" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="270" cy="500" r="3" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="255" cy="540" r="2.5" fill="#5B6FA8" opacity="0.15"/>
+    <circle cx="290" cy="430" r="7" fill="#A0785A" opacity="0.10"/>
+
+    <!-- ARM 5: Lower-right, curling -->
+    <path id="arm-5-lower-right" d="M380,330 Q430,390 460,450 Q475,490 470,530 Q465,555 460,575" 
+          fill="none" stroke="#2D3E6B" stroke-width="20" stroke-linecap="round" opacity="0.85"/>
+    <path d="M380,330 Q430,390 460,450 Q475,490 470,530 Q465,555 460,575" 
+          fill="none" stroke="#5B6FA8" stroke-width="12" stroke-linecap="round" opacity="0.25"/>
+    <circle cx="430" cy="395" r="3.5" fill="#5B6FA8" opacity="0.22"/>
+    <circle cx="455" cy="440" r="3" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="470" cy="488" r="2.8" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="468" cy="535" r="2.5" fill="#5B6FA8" opacity="0.15"/>
+    <circle cx="445" cy="420" r="7" fill="#D4A574" opacity="0.09"/>
+
+    <!-- ARM 6: Right, reaching across into warm zone — THE KEY ARM -->
+    <path id="arm-6-right-warm" d="M420,300 Q490,310 560,330 Q630,350 700,345 Q740,340 770,330" 
+          fill="none" stroke="#2D3E6B" stroke-width="22" stroke-linecap="round" opacity="0.9"/>
+    <path d="M420,300 Q490,310 560,330 Q630,350 700,345 Q740,340 770,330" 
+          fill="none" stroke="#5B6FA8" stroke-width="14" stroke-linecap="round" opacity="0.3"/>
+    <!-- Warm-side color shift on this arm -->
+    <path d="M560,330 Q630,350 700,345 Q740,340 770,330" 
+          fill="none" stroke="#A0785A" stroke-width="10" stroke-linecap="round" opacity="0.15"/>
+    <path d="M630,350 Q700,345 Q740,340 770,330" 
+          fill="none" stroke="#D4A574" stroke-width="6" stroke-linecap="round" opacity="0.10"/>
+    <circle cx="500" cy="314" r="4" fill="#5B6FA8" opacity="0.22"/>
+    <circle cx="570" cy="332" r="3.5" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="640" cy="348" r="3" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="710" cy="343" r="2.8" fill="#5B6FA8" opacity="0.16"/>
+    <circle cx="540" cy="325" r="8" fill="#A0785A" opacity="0.10"/>
+    <circle cx="660" cy="348" r="6" fill="#D4A574" opacity="0.11"/>
+
+    <!-- ARM 7: Upper-right -->
+    <path id="arm-7-upper-right" d="M400,260 Q450,240 500,230 Q540,225 570,235" 
+          fill="none" stroke="#2D3E6B" stroke-width="16" stroke-linecap="round" opacity="0.75"/>
+    <path d="M400,260 Q450,240 500,230 Q540,225 570,235" 
+          fill="none" stroke="#5B6FA8" stroke-width="9" stroke-linecap="round" opacity="0.25"/>
+    <circle cx="458" cy="240" r="3" fill="#5B6FA8" opacity="0.20"/>
+    <circle cx="515" cy="230" r="2.5" fill="#5B6FA8" opacity="0.18"/>
+    <circle cx="480" cy="235" r="6" fill="#A0785A" opacity="0.09"/>
+
+    <!-- ARM 8: Behind/below, barely visible -->
+    <path id="arm-8-behind" d="M350,340 Q370,410 390,470 Q400,510 395,550" 
+          fill="none" stroke="#2D3E6B" stroke-width="16" stroke-linecap="round" opacity="0.5"/>
+    <path d="M350,340 Q370,410 390,470 Q400,510 395,550" 
+          fill="none" stroke="#5B6FA8" stroke-width="8" stroke-linecap="round" opacity="0.15"/>
+  </g>
+
+  <!-- Web between arms (subtle) -->
+  <g id="arm-webbing" opacity="0.12">
+    <path d="M220,330 Q265,360 310,340" fill="#2D3E6B" stroke="none"/>
+    <path d="M310,340 Q345,355 380,330" fill="#2D3E6B" stroke="none"/>
+    <path d="M380,330 Q400,340 420,300" fill="#2D3E6B" stroke="none"/>
+    <path d="M195,310 Q210,330 220,330" fill="#2D3E6B" stroke="none"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ANNOTATION CALLOUTS on arms                                  -->
+  <!-- ============================================================ -->
+  
+  <!-- "kinesin-1 tuned" on arm 6 (right, warm zone arm) -->
+  <line id="callout-line-kinesin" x1="640" y1="348" x2="680" y2="400" 
+        stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <g id="label-kinesin" transform="translate(685, 408)">
+    <rect x="-5" y="-14" width="105" height="20" rx="3" fill="#0D0D16" opacity="0.7"/>
+    <text font-family="Barlow, sans-serif" font-size="11" fill="#D1DCFF" font-weight="600" letter-spacing="0.5">kinesin-1 tuned</text>
+  </g>
+
+  <!-- "synaptotagmin adjusted" on arm 5 (lower-right) -->
+  <line id="callout-line-synapto" x1="460" y1="450" x2="520" y2="480" 
+        stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <g id="label-synaptotagmin" transform="translate(525, 488)">
+    <rect x="-5" y="-14" width="145" height="20" rx="3" fill="#0D0D16" opacity="0.7"/>
+    <text font-family="Barlow, sans-serif" font-size="11" fill="#D1DCFF" font-weight="600" letter-spacing="0.5">synaptotagmin adjusted</text>
+  </g>
+
+  <!-- "13,000+ RNA edits" near head -->
+  <line id="callout-line-edits" x1="350" y1="255" x2="420" y2="200" 
+        stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  <g id="label-rna-edits" transform="translate(425, 203)">
+    <rect x="-5" y="-16" width="160" height="22" rx="3" fill="#0D0D16" opacity="0.75"/>
+    <text font-family="Inter, sans-serif" font-size="13" fill="#FFFF77" font-weight="700">13,000+ RNA edits</text>
+  </g>
+  <text x="427" y="218" font-family="Barlow, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.55" letter-spacing="0.8">in neural tissue</text>
+
+  <!-- ============================================================ -->
+  <!-- INSET: ADAR A→I EDITING DIAGRAM (emerging from arm 7)       -->
+  <!-- Connected by dashed callout from upper-right arm             -->
+  <!-- ============================================================ -->
+  
+  <!-- Callout line from arm 7 to ADAR inset -->
+  <line id="callout-line-adar-inset" x1="545" y1="232" x2="590" y2="130" 
+        stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+  
+  <g id="adar-inset-diagram" transform="translate(590, 55)">
+    <!-- Panel background -->
+    <rect id="adar-inset-bg" x="0" y="0" width="185" height="105" rx="6" fill="#0D0D16" opacity="0.85"/>
+    <rect x="0" y="0" width="185" height="105" rx="6" fill="none" stroke="#5B6FA8" stroke-width="1" opacity="0.4"/>
+    
+    <!-- Title -->
+    <text x="92" y="18" font-family="Barlow, sans-serif" font-size="10" fill="#D1DCFF" text-anchor="middle" font-weight="600" letter-spacing="1">A-TO-I RNA EDITING</text>
+    
+    <!-- mRNA strand BEFORE -->
+    <line x1="15" y1="42" x2="170" y2="42" stroke="#5B6FA8" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <!-- Base sequence symbols -->
+    <text x="25" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">U</text>
+    <text x="45" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">C</text>
+    <text x="65" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">G</text>
+    <!-- A (highlighted in yellow — the edited base) -->
+    <rect x="80" y="28" width="16" height="16" rx="3" fill="#FFFF77" opacity="0.85"/>
+    <text x="84" y="40" font-family="Inter, sans-serif" font-size="10" fill="#0D0D16" font-weight="700">A</text>
+    <text x="105" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">U</text>
+    <text x="125" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">G</text>
+    <text x="145" y="38" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">C</text>
+
+    <!-- Arrow down -->
+    <line x1="88" y1="48" x2="88" y2="60" stroke="#FBFFF6" stroke-width="1.2" opacity="0.5" stroke-linecap="round"/>
+    <polygon points="84,58 88,65 92,58" fill="#FBFFF6" opacity="0.5"/>
+    
+    <!-- ADAR enzyme shape (green rounded rect) -->
+    <rect id="adar-enzyme-inset" x="60" y="52" width="56" height="16" rx="8" fill="#2FBF39" opacity="0.8"/>
+    <text x="88" y="64" font-family="Barlow, sans-serif" font-size="8" fill="#FBFFF6" text-anchor="middle" font-weight="600">ADAR</text>
+
+    <!-- mRNA strand AFTER -->
+    <line x1="15" y1="82" x2="170" y2="82" stroke="#5B6FA8" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+    <text x="25" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">U</text>
+    <text x="45" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">C</text>
+    <text x="65" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">G</text>
+    <!-- I (result — green highlight) -->
+    <rect x="80" y="68" width="16" height="16" rx="3" fill="#6FD877" opacity="0.85"/>
+    <text x="86" y="80" font-family="Inter, sans-serif" font-size="10" fill="#0D0D16" font-weight="700">I</text>
+    <text x="105" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">U</text>
+    <text x="125" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">G</text>
+    <text x="145" y="78" font-family="Inter, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.7">C</text>
+    
+    <!-- "read as G" annotation -->
+    <text x="105" y="96" font-family="Barlow, sans-serif" font-size="8" fill="#6FD877" opacity="0.7" font-style="italic">read as G</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RNA MECHANISM DIAGRAM PANEL (left side, below octopus)       -->
+  <!-- ============================================================ -->
+  <g id="rna-mechanism-panel" transform="translate(20, 360)">
+    <!-- Panel background -->
+    <rect id="rna-panel-bg" x="0" y="0" width="220" height="130" rx="6" fill="#0D0D16" opacity="0.8"/>
+    <rect x="0" y="0" width="220" height="130" rx="6" fill="none" stroke="#5B6FA8" stroke-width="1" opacity="0.35"/>
+    
+    <!-- Title -->
+    <text x="110" y="18" font-family="Barlow, sans-serif" font-size="10" fill="#D1DCFF" text-anchor="middle" font-weight="700" letter-spacing="1.2">RNA EDITING MECHANISM</text>
+    
+    <!-- BEFORE: mRNA strand with A highlighted -->
+    <text x="12" y="38" font-family="Barlow, sans-serif" font-size="8" fill="#D1DCFF" opacity="0.5" font-weight="600">BEFORE</text>
+    
+    <!-- mRNA backbone -->
+    <line x1="12" y1="52" x2="208" y2="52" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <!-- Bases on strand -->
+    <rect x="20" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="24" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+    <rect x="40" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="44" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">C</text>
+    <rect x="60" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="64" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">U</text>
+    <!-- TARGET A — bright yellow -->
+    <rect x="80" y="40" width="18" height="18" rx="3" fill="#FFFF77" opacity="0.9"/>
+    <text x="85" y="53" font-family="Inter, sans-serif" font-size="10" fill="#0D0D16" font-weight="700">A</text>
+    <rect x="104" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="108" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+    <rect x="124" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="128" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">U</text>
+    <rect x="144" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="148" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">A</text>
+    <rect x="164" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="168" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">C</text>
+    <rect x="184" y="42" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="188" y="53" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+
+    <!-- ADAR enzyme approaching -->
+    <rect id="adar-enzyme-mech" x="72" y="60" width="44" height="16" rx="8" fill="#2FBF39" opacity="0.85"/>
+    <text x="94" y="72" font-family="Barlow, sans-serif" font-size="8" fill="#FBFFF6" text-anchor="middle" font-weight="700">ADAR</text>
+    <!-- Arrow from ADAR to the A base -->
+    <line x1="94" y1="60" x2="89" y2="58" stroke="#2FBF39" stroke-width="1.2" opacity="0.7" stroke-linecap="round"/>
+
+    <!-- AFTER: mRNA strand with I (read as G) -->
+    <text x="12" y="90" font-family="Barlow, sans-serif" font-size="8" fill="#D1DCFF" opacity="0.5" font-weight="600">AFTER</text>
+    
+    <line x1="12" y1="104" x2="208" y2="104" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <rect x="20" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="24" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+    <rect x="40" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="44" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">C</text>
+    <rect x="60" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="64" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">U</text>
+    <!-- I (inosine) — green -->
+    <rect x="80" y="92" width="18" height="18" rx="3" fill="#6FD877" opacity="0.9"/>
+    <text x="87" y="105" font-family="Inter, sans-serif" font-size="10" fill="#0D0D16" font-weight="700">I</text>
+    <rect x="104" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="108" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+    <rect x="124" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="128" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">U</text>
+    <rect x="144" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="148" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">A</text>
+    <rect x="164" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="168" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">C</text>
+    <rect x="184" y="94" width="14" height="14" rx="2" fill="#2D3E6B" opacity="0.6"/>
+    <text x="188" y="105" font-family="Inter, sans-serif" font-size="8" fill="#D1DCFF">G</text>
+
+    <!-- "→ G" equivalence label -->
+    <text x="102" y="105" font-family="Inter, sans-serif" font-size="7" fill="#6FD877" opacity="0.7">→G</text>
+    
+    <!-- Result label -->
+    <text x="110" y="125" font-family="Barlow, sans-serif" font-size="9" fill="#D1DCFF" text-anchor="middle" opacity="0.65" font-style="italic">→ protein sequence changes</text>
+  </g>
+
+  <!-- Callout line from RNA panel to octopus arm 2 -->
+  <line id="callout-line-rna-panel" x1="240" y1="395" x2="195" y2="395" 
+        stroke="#5B6FA8" stroke-width="1.2" stroke-dasharray="8,5" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- ============================================================ -->
+  <!-- ADAR ENZYME label near inset                                 -->
+  <!-- ============================================================ -->
+  <g id="label-adar-enzyme" transform="translate(598, 170)">
+    <text font-family="Barlow, sans-serif" font-size="11" fill="#2FBF39" font-weight="700" letter-spacing="0.8">ADAR enzyme</text>
+    <text x="0" y="13" font-family="Barlow, sans-serif" font-size="8" fill="#D1DCFF" opacity="0.5">adenosine deaminase</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- TITLE AND CREDITS                                            -->
+  <!-- ============================================================ -->
+  <g id="title-block">
+    <text x="400" y="585" font-family="Barlow, sans-serif" font-size="10" fill="#D1DCFF" text-anchor="middle" opacity="0.35" letter-spacing="2" font-weight="600">OCTOPUS BIMACULOIDES · RNA EDITING IN COLD ADAPTATION</text>
+  </g>
+
+  <!-- Warm zone label -->
+  <text id="label-warm-zone" x="730" y="568" font-family="Barlow, sans-serif" font-size="9" fill="#D4A574" opacity="0.35" text-anchor="middle" letter-spacing="1">WARM</text>
+  <text id="label-cold-zone" x="60" y="568" font-family="Barlow, sans-serif" font-size="9" fill="#D1DCFF" opacity="0.35" text-anchor="middle" letter-spacing="1">COLD</text>
+
+  <!-- ============================================================ -->
+  <!-- ADDITIONAL DEPTH: subtle environmental scatter shapes        -->
+  <!-- ============================================================ -->
+  <g id="depth-particles" opacity="0.08">
+    <circle cx="620" cy="480" r="30" fill="#A0785A"/>
+    <circle cx="700" cy="200" r="20" fill="#D4A574"/>
+    <circle cx="750" cy="500" r="25" fill="#A0785A"/>
+    <circle cx="50" cy="150" r="15" fill="#D1DCFF"/>
+    <circle cx="180" cy="530" r="18" fill="#5B6FA8"/>
+    <circle cx="400" cy="550" r="22" fill="#2D3E6B"/>
+  </g>
+
+</svg>

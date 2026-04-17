@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>B10: Octopus RNA Editing — Gemini Synthesis Experiment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0D0D16; color: #FBFFF6; font-family: 'Inter', system-ui, sans-serif; padding-bottom: 80px; }
+
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 0 48px; }
+
+    header { padding: 40px 48px 32px; border-bottom: 1px solid #2D3E6B; max-width: 1400px; margin: 0 auto; }
+    .experiment-tag { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: #FFFF77; margin-bottom: 12px; }
+    header h1 { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: clamp(22px, 3vw, 40px); line-height: 1.1; margin-bottom: 12px; }
+    header p { font-size: 14px; color: #8BA0D6; max-width: 72ch; line-height: 1.7; }
+
+    .pipeline { display: flex; align-items: center; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+    .ps { background: #1C1E35; border: 1px solid #2D3E6B; border-radius: 5px; padding: 7px 14px; font-size: 11px; font-family: 'Barlow', sans-serif; font-weight: 700; letter-spacing: 0.08em; }
+    .ps.claude { border-color: #2FBF39; color: #2FBF39; }
+    .ps.gemini { border-color: #E6B800; color: #E6B800; }
+    .ps.final  { border-color: #6FD877; color: #6FD877; background: #0A1A0A; }
+    .pa { color: #3D3D52; font-size: 16px; }
+
+    section { margin-top: 48px; }
+    .section-label { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #5B6FA8; margin-bottom: 20px; }
+
+    /* 3-up grid */
+    .three-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #2D3E6B; border-radius: 8px; overflow: hidden; }
+    .img-panel { background: #0D0D16; display: flex; flex-direction: column; }
+    .img-header { padding: 12px 18px; border-bottom: 1px solid #2D3E6B; display: flex; align-items: center; gap: 10px; }
+    .ver-badge { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; background: #1C1E35; border: 1px solid #3D3D52; color: #8BA0D6; }
+    .img-header-title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 13px; }
+    .img-frame { aspect-ratio: 4/3; overflow: hidden; }
+    .img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Synthesis brief */
+    .brief-box { background: #1C1E35; border: 1px solid #2D3E6B; border-radius: 8px; overflow: hidden; }
+    .brief-header { padding: 18px 24px; border-bottom: 1px solid #2D3E6B; display: flex; align-items: center; gap: 12px; }
+    .gemini-badge { background: #2A2000; border: 1px solid #E6B800; color: #E6B800; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; }
+    .brief-header h2 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 15px; }
+    .brief-body { padding: 28px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .brief-col h3 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+    .brief-col.va h3 { color: #D1DCFF; }
+    .brief-col.vb h3 { color: #2FBF39; }
+    .brief-col.vc h3 { color: #FFFF77; }
+    .brief-col p { font-size: 13px; color: #8BA0D6; line-height: 1.65; }
+
+    .synth-desc { margin-top: 20px; padding: 20px 28px; background: #0D0D16; border-top: 1px solid #2D3E6B; }
+    .synth-desc h3 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6B800; margin-bottom: 10px; }
+    .synth-desc p { font-size: 13px; color: #8BA0D6; line-height: 1.7; }
+
+    .tech-notes { margin-top: 0; padding: 20px 28px; background: #1C1E35; border-top: 1px solid #2D3E6B; }
+    .tech-notes h3 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6FA8; margin-bottom: 12px; }
+    .tech-notes ol { padding-left: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .tech-notes li { font-size: 13px; color: #8BA0D6; line-height: 1.6; }
+
+    /* Final result */
+    .final-panel { background: #0A1A0A; border: 1px solid #1A5C1E; border-radius: 8px; overflow: hidden; }
+    .final-header { padding: 18px 24px; border-bottom: 1px solid #1A5C1E; display: flex; align-items: center; gap: 12px; }
+    .claude-badge { background: #0D1F0D; border: 1px solid #2FBF39; color: #2FBF39; font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px; }
+    .final-header h2 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 15px; }
+    .final-img { aspect-ratio: 4/3; overflow: hidden; max-height: 560px; }
+    .final-img img { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
+    .final-features { padding: 24px 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; border-top: 1px solid #1A5C1E; }
+    .feat { background: #0D1F0D; border: 1px solid #1A5C1E; border-radius: 5px; padding: 12px 16px; }
+    .feat-title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #6FD877; margin-bottom: 5px; }
+    .feat-text { font-size: 12px; color: #8BA0D6; line-height: 1.55; }
+
+    nav.back { padding: 24px 48px 0; max-width: 1400px; margin: 0 auto; }
+    nav.back a { font-size: 12px; color: #5B6FA8; text-decoration: none; }
+    nav.back a:hover { color: #D1DCFF; }
+
+    @media (max-width: 1000px) {
+      .wrap, header, nav.back { padding-left: 20px; padding-right: 20px; }
+      .three-grid { grid-template-columns: 1fr; }
+      .brief-body { grid-template-columns: 1fr; }
+      .tech-notes ol { grid-template-columns: 1fr; }
+      .final-features { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .final-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="back"><a href="../model-comparison.html">← Model Comparison</a> &nbsp;·&nbsp; <a href="../experiment-gemini-feedback/">Gemini Feedback Experiment</a></nav>
+
+<header>
+  <div class="experiment-tag">Experiment — Multi-Version Synthesis</div>
+  <h1>Can Gemini synthesise the best of three into one?</h1>
+  <p>Three visually distinct versions of the same biology illustration, generated in parallel by Claude Opus. Gemini Vision analyses all three simultaneously and produces a synthesis brief — identifying the best elements of each. Claude then executes the final illustration from that brief.</p>
+  <div class="pipeline">
+    <div class="ps claude">Claude Opus ×3</div>
+    <div class="pa">→</div>
+    <div class="ps">Version A · B · C</div>
+    <div class="pa">→</div>
+    <div class="ps gemini">Gemini 2.0 Flash Vision</div>
+    <div class="pa">→</div>
+    <div class="ps">Synthesis Brief</div>
+    <div class="pa">→</div>
+    <div class="ps claude">Claude Opus</div>
+    <div class="pa">→</div>
+    <div class="ps final">Final Illustration</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- Story -->
+  <section>
+    <div style="padding:18px 22px; background:#1C1E35; border:1px solid #2D3E6B; border-radius:8px; border-left: 3px solid #5B6FA8;">
+      <div style="font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5B6FA8;margin-bottom:8px;">B10 — OCTOPUS RNA EDITING</div>
+      <p style="font-size:13px;color:#8BA0D6;line-height:1.7;"><em>Octopus bimaculoides</em> edits its own RNA at massive scale in response to cold temperature — over 13,000 protein-altering edits in neural tissue within hours of cold exposure. ADAR enzymes convert adenosine (A) to inosine (I), effectively changing protein sequences without altering DNA. Specific edits tune kinesin-1 motor speed and synaptotagmin calcium sensitivity for cold conditions. Wild octopuses show seasonally higher editing frequencies in winter.</p>
+    </div>
+  </section>
+
+  <!-- 3 originals -->
+  <section>
+    <div class="section-label">Step 1 — Three original versions (Claude Opus, parallel)</div>
+    <div class="three-grid">
+      <div class="img-panel">
+        <div class="img-header">
+          <span class="ver-badge">Version A</span>
+          <span class="img-header-title">Close-up · Intimate</span>
+        </div>
+        <div class="img-frame"><img src="B10-vA.png" alt="Version A: close-up arm detail with RNA inset"/></div>
+      </div>
+      <div class="img-panel">
+        <div class="img-header">
+          <span class="ver-badge">Version B</span>
+          <span class="img-header-title">Wide · Environmental</span>
+        </div>
+        <div class="img-frame"><img src="B10-vB.png" alt="Version B: full octopus, temperature zones"/></div>
+      </div>
+      <div class="img-panel">
+        <div class="img-header">
+          <span class="ver-badge">Version C</span>
+          <span class="img-header-title">Conceptual · Mechanism</span>
+        </div>
+        <div class="img-frame"><img src="B10-vC.png" alt="Version C: octopus + RNA editing diagram panel"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gemini synthesis brief -->
+  <section>
+    <div class="section-label">Step 2 — Gemini 2.0 Flash Vision synthesis brief</div>
+    <div class="brief-box">
+      <div class="brief-header">
+        <span class="gemini-badge">Gemini 2.0 Flash Vision</span>
+        <h2>Best elements identified in each version</h2>
+      </div>
+      <div class="brief-body">
+        <div class="brief-col va">
+          <h3>Version A — Keep</h3>
+          <p>Rich skin/tentacle texture. Clear A→I→G diagram with ADAR label. Temperature indicator ("4°C cold exposure") and "13,000+ edits in neural tissue" text effectively communicates the story trigger.</p>
+        </div>
+        <div class="brief-col vb">
+          <h3>Version B — Keep</h3>
+          <p>Cold/warm environmental gradient as visual driver. Rounded full-body mid-shot composition. Specific protein labels on arms ("kinesin-1 tuned", "synaptotagmin adjusted") ground the biology in specifics.</p>
+        </div>
+        <div class="brief-col vc">
+          <h3>Version C — Keep</h3>
+          <p>Clean, schematic RNA editing mechanism diagram with ADAR enzyme shape, before/after mRNA strand, and "protein sequence changes" label. Clear and concise scientific communication.</p>
+        </div>
+      </div>
+      <div class="synth-desc">
+        <h3>Synthesised scene description</h3>
+        <p>Mid-shot <em>Octopus bimaculoides</em>, body dominant in frame, arms sprawling wide. Left side dark/cold (deep navy, periwinkle, subtle snowflake geometric elements). One tentacle extends right into a slightly warmer zone (muted clay/slate tones). Octopus has rounded form of Version B with textured skin of Version A. ADAR inset diagram emerges from one arm via dashed callout. Version C's RNA mechanism panel sits to one side. Cold/warm zones labelled. Annotation callouts for kinesin-1 and synaptotagmin on specific arms.</p>
+      </div>
+      <div class="tech-notes">
+        <h3>Technical notes for artist</h3>
+        <ol>
+          <li><strong>Palette:</strong> Deep navy/blue background; warm amber-clay on right side — no hard line, suggest through layered shapes</li>
+          <li><strong>Snowflakes:</strong> Subtle, semi-transparent in #D1DCFF or #FBFFF6, opacity 0.15–0.25, left cold zone only</li>
+          <li><strong>Skin texture:</strong> Opacity patches 0.1–0.25 in clay/slate tones — reference Version A's approach, not distracting</li>
+          <li><strong>ADAR box:</strong> Position callout so connecting line avoids the eye and major features</li>
+          <li><strong>RNA diagram:</strong> #2FBF39 for ADAR enzyme, #FFFF77 for A highlight, #6FD877 for I/G result — clean schematic style</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final result -->
+  <section>
+    <div class="section-label">Step 3 — Final synthesised illustration (Claude Opus)</div>
+    <div class="final-panel">
+      <div class="final-header">
+        <span class="claude-badge">Claude Opus — Final</span>
+        <h2>B10: Synthesised from Gemini's brief</h2>
+      </div>
+      <div class="final-img">
+        <img src="B10-synthesised.png" alt="Final synthesised octopus RNA editing illustration"/>
+      </div>
+      <div class="final-features">
+        <div class="feat">
+          <div class="feat-title">From Version A</div>
+          <div class="feat-text">Rich skin texture (20+ chromatophore patches), ADAR inset diagram with A→I→G sequence, 4°C cold exposure label</div>
+        </div>
+        <div class="feat">
+          <div class="feat-title">From Version B</div>
+          <div class="feat-text">Mid-shot full body, cold/warm zone split, kinesin-1 + synaptotagmin annotation callouts on specific arms, seafloor environment</div>
+        </div>
+        <div class="feat">
+          <div class="feat-title">From Version C</div>
+          <div class="feat-text">Clean RNA mechanism panel with mRNA strand, ADAR enzyme shape (green), before/after sequence, "protein sequence changes" label</div>
+        </div>
+        <div class="feat">
+          <div class="feat-title">New elements</div>
+          <div class="feat-text">7 snowflake geometric shapes in cold zone, blue ring markings (O. bimaculoides signature), horizontal-slit cephalopod pupil, COLD/WARM zone labels</div>
+        </div>
+        <div class="feat">
+          <div class="feat-title">Eye spec</div>
+          <div class="feat-text">AWW-compliant: #1C1E35 horizontal-slit pupil, #FBFFF6 highlight upper-left, gold iris ring</div>
+        </div>
+        <div class="feat">
+          <div class="feat-title">Style compliance</div>
+          <div class="feat-text">No gradients, no filters, approved palette only, dashed callouts #5B6FA8, stroke-linecap round, Barlow labels</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

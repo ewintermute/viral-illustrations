@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect id="background" width="800" height="600" fill="#0D0D16"/>
+
+  <!-- === LEFT SIDE: OCTOPUS (0-440) === -->
+  <g id="octopus-group">
+
+    <!-- Arms (behind body) -->
+    <g id="octopus-arms-back" opacity="0.5">
+      <!-- Back arms, darker, partially hidden -->
+      <path id="arm-back-left" d="M160,340 Q120,400 90,460 Q70,500 85,530 Q95,545 110,530 Q130,500 145,460 Q155,420 170,380" fill="none" stroke="#2D3E6B" stroke-width="14" stroke-linecap="round"/>
+      <path id="arm-back-right" d="M280,340 Q320,400 350,460 Q370,500 355,530 Q345,545 330,530 Q310,500 295,460 Q285,420 270,380" fill="none" stroke="#2D3E6B" stroke-width="14" stroke-linecap="round"/>
+    </g>
+
+    <!-- Mantle (body) -->
+    <g id="octopus-mantle">
+      <!-- Main mantle shape -->
+      <ellipse id="mantle-base" cx="220" cy="220" rx="105" ry="130" fill="#2D3E6B" opacity="0.8"/>
+      <ellipse id="mantle-highlight" cx="220" cy="215" rx="95" ry="120" fill="#5B6FA8" opacity="0.6"/>
+      <ellipse id="mantle-top-highlight" cx="220" cy="185" rx="70" ry="80" fill="#5B6FA8" opacity="0.4"/>
+
+      <!-- Neural activation lines on mantle -->
+      <g id="neural-lines" opacity="0.35">
+        <path d="M170,170 Q190,200 175,240 Q165,270 180,300" fill="none" stroke="#D1DCFF" stroke-width="1.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+        <path d="M200,150 Q210,190 205,230 Q200,270 215,310" fill="none" stroke="#D1DCFF" stroke-width="1.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+        <path d="M240,150 Q230,190 235,230 Q240,270 225,310" fill="none" stroke="#D1DCFF" stroke-width="1.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+        <path d="M270,170 Q255,200 265,240 Q275,270 260,300" fill="none" stroke="#D1DCFF" stroke-width="1.5" stroke-dasharray="6,4" stroke-linecap="round"/>
+        <!-- Cross connections -->
+        <path d="M175,210 Q200,220 225,215 Q250,210 270,220" fill="none" stroke="#D1DCFF" stroke-width="1" stroke-dasharray="4,6" stroke-linecap="round"/>
+        <path d="M180,260 Q205,250 230,255 Q255,260 265,250" fill="none" stroke="#D1DCFF" stroke-width="1" stroke-dasharray="4,6" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- Head/face area -->
+    <g id="octopus-face">
+      <!-- Eye sockets -->
+      <ellipse id="eye-socket-left" cx="185" cy="225" rx="28" ry="24" fill="#1C1E35" opacity="0.8"/>
+      <ellipse id="eye-socket-right" cx="255" cy="225" rx="28" ry="24" fill="#1C1E35" opacity="0.8"/>
+
+      <!-- Eye whites -->
+      <ellipse id="eye-white-left" cx="185" cy="225" rx="22" ry="18" fill="#D1DCFF" opacity="0.9"/>
+      <ellipse id="eye-white-right" cx="255" cy="225" rx="22" ry="18" fill="#D1DCFF" opacity="0.9"/>
+
+      <!-- Pupils - looking at viewer -->
+      <ellipse id="pupil-left" cx="185" cy="225" rx="11" ry="15" fill="#1C1E35"/>
+      <ellipse id="pupil-right" cx="255" cy="225" rx="11" ry="15" fill="#1C1E35"/>
+
+      <!-- Eye highlights -->
+      <ellipse id="highlight-left" cx="180" cy="220" rx="4" ry="3" fill="#FBFFF6" opacity="0.9"/>
+      <ellipse id="highlight-right" cx="250" cy="220" rx="4" ry="3" fill="#FBFFF6" opacity="0.9"/>
+    </g>
+
+    <!-- Arms (front, curling inward) -->
+    <g id="octopus-arms-front">
+      <!-- Left arms -->
+      <path id="arm-front-left-1" d="M155,320 Q120,370 100,420 Q85,460 105,490 Q120,505 135,485 Q150,455 155,420 Q158,390 165,360" fill="none" stroke="#5B6FA8" stroke-width="16" stroke-linecap="round" opacity="0.8"/>
+      <path id="arm-front-left-2" d="M175,330 Q145,385 135,440 Q128,475 150,500 Q168,515 178,495 Q185,465 180,430 Q178,400 182,370" fill="none" stroke="#5B6FA8" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+      <path id="arm-front-left-3" d="M195,340 Q172,390 170,445 Q168,480 185,505 Q200,518 208,498 Q212,468 205,435 Q200,405 200,375" fill="none" stroke="#5B6FA8" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Right arms -->
+      <path id="arm-front-right-1" d="M285,320 Q320,370 340,420 Q355,460 335,490 Q320,505 305,485 Q290,455 285,420 Q282,390 275,360" fill="none" stroke="#5B6FA8" stroke-width="16" stroke-linecap="round" opacity="0.8"/>
+      <path id="arm-front-right-2" d="M265,330 Q295,385 305,440 Q312,475 290,500 Q272,515 262,495 Q255,465 260,430 Q262,400 258,370" fill="none" stroke="#5B6FA8" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+      <path id="arm-front-right-3" d="M245,340 Q268,390 270,445 Q272,480 255,505 Q240,518 232,498 Q228,468 235,435 Q240,405 240,375" fill="none" stroke="#5B6FA8" stroke-width="12" stroke-linecap="round" opacity="0.6"/>
+
+      <!-- Sucker dots on front arms -->
+      <g id="suckers" fill="#2D3E6B" opacity="0.6">
+        <circle cx="118" cy="400" r="3"/>
+        <circle cx="112" cy="420" r="2.5"/>
+        <circle cx="108" cy="440" r="2.5"/>
+        <circle cx="105" cy="460" r="2"/>
+        <circle cx="322" cy="400" r="3"/>
+        <circle cx="328" cy="420" r="2.5"/>
+        <circle cx="332" cy="440" r="2.5"/>
+        <circle cx="335" cy="460" r="2"/>
+        <circle cx="150" cy="420" r="2.5"/>
+        <circle cx="145" cy="445" r="2"/>
+        <circle cx="143" cy="468" r="2"/>
+        <circle cx="290" cy="420" r="2.5"/>
+        <circle cx="295" cy="445" r="2"/>
+        <circle cx="297" cy="468" r="2"/>
+      </g>
+    </g>
+
+    <!-- Siphon -->
+    <ellipse id="siphon" cx="220" cy="295" rx="12" ry="8" fill="#2D3E6B" opacity="0.7"/>
+  </g>
+
+  <!-- === DASHED VERTICAL BORDER === -->
+  <line id="panel-divider" x1="445" y1="40" x2="445" y2="560" stroke="#2D3E6B" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6"/>
+
+  <!-- === CALLOUT LINE from octopus to diagram === -->
+  <path id="callout-line-to-diagram" d="M310,225 L380,225 L445,180" fill="none" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- === RIGHT SIDE: SCIENTIFIC DIAGRAM PANEL (445-800) === -->
+  <g id="diagram-panel">
+
+    <!-- Panel title -->
+    <text id="panel-title" x="622" y="55" fill="#D1DCFF" font-family="Barlow, Inter, sans-serif" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="2" opacity="0.8">RNA EDITING MECHANISM</text>
+
+    <!-- === STAGE 1: Original RNA strand (top) === -->
+    <g id="stage-original-rna" transform="translate(0,0)">
+      <text id="label-before" x="622" y="100" fill="#5B6FA8" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" opacity="0.7">Original mRNA</text>
+
+      <!-- RNA backbone bar -->
+      <rect id="rna-backbone-1" x="490" y="112" width="264" height="10" rx="5" fill="#2D3E6B" opacity="0.6"/>
+
+      <!-- Base letters along strand -->
+      <text x="505" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="530" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+      <text x="555" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">C</text>
+      <!-- The A that will be edited - highlighted in yellow -->
+      <rect id="a-highlight-box" x="573" y="126" width="22" height="20" rx="3" fill="#FFFF77" opacity="0.2"/>
+      <text id="base-a-original" x="580" y="140" fill="#FFFF77" font-family="Barlow, sans-serif" font-size="15" font-weight="700">A</text>
+      <text x="605" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="630" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+      <text x="655" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">C</text>
+      <text x="680" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">A</text>
+      <text x="705" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="730" y="140" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+
+      <!-- Tick marks for bases on backbone -->
+      <g stroke="#5B6FA8" stroke-width="1" opacity="0.4">
+        <line x1="510" y1="112" x2="510" y2="122"/>
+        <line x1="535" y1="112" x2="535" y2="122"/>
+        <line x1="560" y1="112" x2="560" y2="122"/>
+        <line x1="585" y1="112" x2="585" y2="122"/>
+        <line x1="610" y1="112" x2="610" y2="122"/>
+        <line x1="635" y1="112" x2="635" y2="122"/>
+        <line x1="660" y1="112" x2="660" y2="122"/>
+        <line x1="685" y1="112" x2="685" y2="122"/>
+        <line x1="710" y1="112" x2="710" y2="122"/>
+        <line x1="735" y1="112" x2="735" y2="122"/>
+      </g>
+    </g>
+
+    <!-- === Downward arrow 1 === -->
+    <g id="arrow-down-1" opacity="0.6">
+      <line x1="584" y1="155" x2="584" y2="195" stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round"/>
+      <polygon points="584,200 579,192 589,192" fill="#5B6FA8"/>
+    </g>
+
+    <!-- === STAGE 2: ADAR enzyme acting (middle) === -->
+    <g id="stage-adar-enzyme">
+      <!-- ADAR enzyme shape — rounded rectangle -->
+      <rect id="adar-body" x="540" y="210" width="88" height="50" rx="12" fill="#2FBF39" opacity="0.7"/>
+      <rect id="adar-inner" x="548" y="218" width="72" height="34" rx="8" fill="#248A28" opacity="0.5"/>
+      <text id="adar-label" x="584" y="240" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="13" font-weight="700" text-anchor="middle">ADAR</text>
+
+      <!-- "enzyme" label below -->
+      <text id="adar-sublabel" x="584" y="278" fill="#6FD877" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" opacity="0.7">enzyme</text>
+
+      <!-- Action annotation -->
+      <text id="action-label" x="660" y="232" fill="#FFFF77" font-family="Inter, sans-serif" font-size="11" opacity="0.8">A → I edit</text>
+
+      <!-- Callout line from enzyme to A base above -->
+      <path id="callout-adar-to-a" d="M584,210 L584,155" fill="none" stroke="#6FD877" stroke-width="1" stroke-dasharray="4,4" opacity="0.4" stroke-linecap="round"/>
+
+      <!-- Small annotation: deamination -->
+      <text x="680" y="250" fill="#5B6FA8" font-family="Inter, sans-serif" font-size="9" opacity="0.5">deamination</text>
+    </g>
+
+    <!-- === Downward arrow 2 === -->
+    <g id="arrow-down-2" opacity="0.6">
+      <line x1="584" y1="290" x2="584" y2="330" stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round"/>
+      <polygon points="584,335 579,327 589,327" fill="#5B6FA8"/>
+    </g>
+
+    <!-- === STAGE 3: Edited RNA strand (bottom) === -->
+    <g id="stage-edited-rna">
+      <text id="label-after" x="622" y="355" fill="#5B6FA8" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" opacity="0.7">Edited mRNA</text>
+
+      <!-- RNA backbone bar -->
+      <rect id="rna-backbone-2" x="490" y="367" width="264" height="10" rx="5" fill="#2D3E6B" opacity="0.6"/>
+
+      <!-- Base letters — I replacing A, shown as G -->
+      <text x="505" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="530" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+      <text x="555" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">C</text>
+      <!-- The I (reads as G) - highlighted in green -->
+      <rect id="i-highlight-box" x="573" y="381" width="22" height="20" rx="3" fill="#2FBF39" opacity="0.2"/>
+      <text id="base-i-edited" x="580" y="395" fill="#6FD877" font-family="Barlow, sans-serif" font-size="15" font-weight="700">I</text>
+      <text x="605" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="630" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+      <text x="655" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">C</text>
+      <text x="680" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">A</text>
+      <text x="705" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">U</text>
+      <text x="730" y="395" fill="#D1DCFF" font-family="Barlow, sans-serif" font-size="13" opacity="0.5">G</text>
+
+      <!-- Tick marks -->
+      <g stroke="#5B6FA8" stroke-width="1" opacity="0.4">
+        <line x1="510" y1="367" x2="510" y2="377"/>
+        <line x1="535" y1="367" x2="535" y2="377"/>
+        <line x1="560" y1="367" x2="560" y2="377"/>
+        <line x1="585" y1="367" x2="585" y2="377"/>
+        <line x1="610" y1="367" x2="610" y2="377"/>
+        <line x1="635" y1="367" x2="635" y2="377"/>
+        <line x1="660" y1="367" x2="660" y2="377"/>
+        <line x1="685" y1="367" x2="685" y2="377"/>
+        <line x1="710" y1="367" x2="710" y2="377"/>
+        <line x1="735" y1="367" x2="735" y2="377"/>
+      </g>
+
+      <!-- "reads as G" annotation -->
+      <g id="reads-as-g-annotation">
+        <line x1="594" y1="390" x2="630" y2="405" stroke="#5B6FA8" stroke-width="1" stroke-dasharray="4,3" opacity="0.6" stroke-linecap="round"/>
+        <text x="634" y="410" fill="#D1DCFF" font-family="Inter, sans-serif" font-size="10" opacity="0.7">reads as G</text>
+      </g>
+    </g>
+
+    <!-- === Downward arrow 3 === -->
+    <g id="arrow-down-3" opacity="0.6">
+      <line x1="584" y1="420" x2="584" y2="455" stroke="#5B6FA8" stroke-width="1.5" stroke-linecap="round"/>
+      <polygon points="584,460 579,452 589,452" fill="#5B6FA8"/>
+    </g>
+
+    <!-- === STAGE 4: Outcome — protein change === -->
+    <g id="stage-protein-change">
+      <!-- Protein shape — abstract chain of circles -->
+      <g id="protein-chain" opacity="0.6">
+        <circle cx="530" cy="490" r="10" fill="#5B6FA8" opacity="0.5"/>
+        <circle cx="555" cy="485" r="10" fill="#5B6FA8" opacity="0.5"/>
+        <circle cx="580" cy="488" r="12" fill="#E85542" opacity="0.6"/>
+        <circle cx="607" cy="485" r="10" fill="#5B6FA8" opacity="0.5"/>
+        <circle cx="632" cy="490" r="10" fill="#5B6FA8" opacity="0.5"/>
+        <!-- Connecting lines -->
+        <line x1="540" y1="490" x2="545" y2="487" stroke="#5B6FA8" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+        <line x1="565" y1="485" x2="570" y2="487" stroke="#5B6FA8" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+        <line x1="592" y1="487" x2="597" y2="485" stroke="#5B6FA8" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+        <line x1="617" y1="486" x2="622" y2="489" stroke="#5B6FA8" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+      </g>
+
+      <!-- Changed amino acid callout -->
+      <path id="callout-changed-aa" d="M580,475 L580,465" fill="none" stroke="#E85542" stroke-width="1" stroke-dasharray="3,3" opacity="0.5" stroke-linecap="round"/>
+      <text x="580" y="515" fill="#D1DCFF" font-family="Inter, sans-serif" font-size="10" text-anchor="middle" opacity="0.6">altered amino acid</text>
+
+      <!-- Final label -->
+      <text id="label-outcome" x="622" y="545" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="12" font-weight="600" text-anchor="middle" opacity="0.7">protein sequence changes</text>
+    </g>
+
+    <!-- === STAT ANNOTATION === -->
+    <g id="stat-annotation" opacity="0.5">
+      <text x="622" y="575" fill="#FFFF77" font-family="Inter, sans-serif" font-size="9" text-anchor="middle">13,000+ edits in neural tissue</text>
+    </g>
+  </g>
+
+  <!-- === BOTTOM LEFT: Species label === -->
+  <text id="species-label" x="220" y="570" fill="#5B6FA8" font-family="Inter, sans-serif" font-size="11" font-style="italic" text-anchor="middle" opacity="0.5">Octopus bimaculoides</text>
+
+  <!-- === COLD INDICATOR: subtle ice crystals near octopus === -->
+  <g id="cold-indicators" opacity="0.25">
+    <text x="80" y="120" fill="#D1DCFF" font-family="sans-serif" font-size="18">❄</text>
+    <text x="340" y="85" fill="#D1DCFF" font-family="sans-serif" font-size="12">❄</text>
+    <text x="55" y="280" fill="#D1DCFF" font-family="sans-serif" font-size="10">❄</text>
+    <text x="370" y="450" fill="#D1DCFF" font-family="sans-serif" font-size="14">❄</text>
+  </g>
+
+  <!-- === TITLE === -->
+  <text id="title-label" x="220" y="45" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1" opacity="0.85">COLD-ADAPTIVE RNA EDITING</text>
+</svg>
