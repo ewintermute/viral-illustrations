@@ -33,13 +33,17 @@
     <path d="M300,340 L240,380" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
     <path d="M500,320 L550,350" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
     <path d="M500,340 L560,380" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
-    <!-- Eyes (simplified) -->
-    <circle cx="360" cy="280" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="360" cy="280" r="3" fill="#0D0D16"/>
-    <circle cx="358" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
-    <circle cx="440" cy="280" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-    <circle cx="440" cy="280" r="3" fill="#0D0D16"/>
-    <circle cx="438" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Eyes (ellipse sclera) -->
+    <g id="eye-left">
+      <ellipse cx="360" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="360" cy="280" r="3" fill="#0D0D16"/>
+      <circle cx="358" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <g id="eye-right">
+      <ellipse cx="440" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="440" cy="280" r="3" fill="#0D0D16"/>
+      <circle cx="438" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
   </g>
   <!-- Detail: blue blood pooling from gill/sampling cut -->
   <g id="detail-blood" data-label="hemocyanin blood pooling">

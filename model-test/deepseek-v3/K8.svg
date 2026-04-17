@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- No gradients -->
+  </defs>
+  <!-- Background: deep sea -->
+  <g id="bg" data-label="deep sea background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+  </g>
+  <!-- Context: water with light shafts -->
+  <g id="context" data-label="water context">
+    <ellipse cx="400" cy="600" rx="500" ry="100" fill="#2D3E6B" opacity="0.4"/>
+    <ellipse cx="400" cy="0" rx="300" ry="50" fill="#5B6FA8" opacity="0.3"/>
+  </g>
+  <!-- Subject: mantis shrimp -->
+  <g id="subject" data-label="mantis shrimp">
+    <!-- Body -->
+    <ellipse cx="200" cy="300" rx="80" ry="40" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Head -->
+    <ellipse cx="140" cy="300" rx="30" ry="25" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Eyes -->
+    <g id="eye-left">
+      <ellipse cx="120" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="120" cy="280" r="3" fill="#0D0D16"/>
+      <circle cx="118" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <g id="eye-right">
+      <ellipse cx="160" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="160" cy="280" r="3" fill="#0D0D16"/>
+      <circle cx="158" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <!-- Antennae -->
+    <path d="M140,270 L130,250" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+    <path d="M140,270 L150,250" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+    <!-- Tail -->
+    <path d="M280,300 L320,300 L310,320 L290,320 Z" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Legs (simplified) -->
+    <path d="M220,340 L240,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+    <path d="M240,340 L260,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+    <path d="M260,340 L280,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Detail: dactyl club -->
+  <g id="detail-club" data-label="dactyl club">
+    <!-- Club shape -->
+    <ellipse cx="500" cy="300" rx="100" ry="50" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3"/>
+    <!-- Impact region (herringbone pattern simplified) -->
+    <path d="M450,280 L550,280 L550,320 L450,320 Z" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="2"/>
+    <!-- Striking surface lines -->
+    <line x1="460" y1="290" x2="540" y2="290" stroke="#FBFFF6" stroke-width="2"/>
+    <line x1="460" y1="310" x2="540" y2="310" stroke="#FBFFF6" stroke-width="2"/>
+    <!-- Club arm -->
+    <path d="M400,300 L450,300" stroke="#5B6FA8" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <!-- Detail: helicoidal structure cross-section inset -->
+  <g id="detail-structure" data-label="helicoidal Bouligand structure">
+    <!-- Inset border -->
+    <rect x="500" y="100" width="250" height="250" fill="#1C1E35" stroke="#5B6FA8" stroke-width="2"/>
+    <!-- Circular cross-section -->
+    <circle cx="625" cy="225" r="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2"/>
+    <!-- Helicoidal pattern (simplified spiral) -->
+    <path d="M625,145 A80,80 0 0,1 705,225" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <path d="M705,225 A80,80 0 0,1 625,305" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <path d="M625,305 A80,80 0 0,1 545,225" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <path d="M545,225 A80,80 0 0,1 625,145" stroke="#8BA0D6" stroke-width="2" fill="none"/>
+    <!-- Radial lines -->
+    <line x1="625" y1="225" x2="625" y2="145" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
+    <line x1="625" y1="225" x2="705" y2="225" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
+    <line x1="625" y1="225" x2="625" y2="305" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
+    <line x1="625" y1="225" x2="545" y2="225" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
+    <!-- Label inside inset -->
+    <text x="625" y="370" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#8BA0D6">Bouligand structure</text>
+  </g>
+  <!-- Label: species name -->
+  <g id="label" data-label="species label">
+    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="22" fill="#8BA0D6">
+      <tspan font-style="italic">Stomatopoda</tspan> (mantis shrimp)
+    </text>
+  </g>
+  <!-- Overlay: impact arrow -->
+  <g id="overlay" data-label="impact arrow">
+    <path d="M500,300 Q550,250 600,200" stroke="#FBFFF6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#FBFFF6"/>
+      </marker>
+    </defs>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FBFFF6"/>
+    </marker>
+  </defs>
+  <!-- Background: deep ocean -->
+  <g id="bg" data-label="deep ocean background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+  </g>
+  <!-- Context: water column with temperature gradient -->
+  <g id="context" data-label="water temperature gradient">
+    <rect x="0" y="0" width="800" height="300" fill="#2D3E6B" opacity="0.8"/>
+    <rect x="0" y="300" width="800" height="300" fill="#5B6FA8" opacity="0.8"/>
+  </g>
+  <!-- Subject: octopus -->
+  <g id="subject" data-label="octopus bimaculoides">
+    <!-- Body -->
+    <ellipse cx="200" cy="300" rx="80" ry="60" fill="#A0785A" stroke="#6B4423" stroke-width="2"/>
+    <!-- Eyes -->
+    <g id="eye-left">
+      <ellipse cx="180" cy="280" rx="12" ry="10" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="180" cy="280" r="5" fill="#0D0D16"/>
+      <circle cx="178" cy="278" r="2" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <g id="eye-right">
+      <ellipse cx="220" cy="280" rx="12" ry="10" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="220" cy="280" r="5" fill="#0D0D16"/>
+      <circle cx="218" cy="278" r="2" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <!-- Arms (simplified) -->
+    <path d="M120,320 Q100,350 120,380 T140,410" stroke="#6B4423" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M160,330 Q140,360 160,390 T180,420" stroke="#6B4423" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M200,340 Q180,370 200,400 T220,430" stroke="#6B4423" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M240,330 Q220,360 240,390 T260,420" stroke="#6B4423" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M280,320 Q260,350 280,380 T300,410" stroke="#6B4423" stroke-width="8" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- Detail: RNA strand with editing sites -->
+  <g id="detail-rna" data-label="RNA strand with A-to-I editing">
+    <!-- Backbone -->
+    <path d="M400,100 L600,100 L600,500 L400,500" stroke="#8BA0D6" stroke-width="3" fill="none" stroke-linejoin="round"/>
+    <!-- Nucleotides as circles: green for A, red for I -->
+    <circle cx="450" cy="150" r="15" fill="#2FBF39" stroke="#248A28" stroke-width="2"/>
+    <circle cx="500" cy="200" r="15" fill="#2FBF39" stroke="#248A28" stroke-width="2"/>
+    <circle cx="550" cy="250" r="15" fill="#CA1E08" stroke="#8B1506" stroke-width="2"/>
+    <circle cx="450" cy="300" r="15" fill="#2FBF39" stroke="#248A28" stroke-width="2"/>
+    <circle cx="500" cy="350" r="15" fill="#CA1E08" stroke="#8B1506" stroke-width="2"/>
+    <circle cx="550" cy="400" r="15" fill="#CA1E08" stroke="#8B1506" stroke-width="2"/>
+    <circle cx="450" cy="450" r="15" fill="#2FBF39" stroke="#248A28" stroke-width="2"/>
+    <!-- Connecting lines -->
+    <line x1="465" y1="150" x2="485" y2="200" stroke="#8BA0D6" stroke-width="2"/>
+    <line x1="515" y1="200" x2="535" y2="250" stroke="#8BA0D6" stroke-width="2"/>
+    <line x1="565" y1="250" x2="435" y2="300" stroke="#8BA0D6" stroke-width="2"/>
+    <line x1="465" y1="300" x2="485" y2="350" stroke="#8BA0D6" stroke-width="2"/>
+    <line x1="515" y1="350" x2="535" y2="400" stroke="#8BA0D6" stroke-width="2"/>
+    <line x1="565" y1="400" x2="435" y2="450" stroke="#8BA0D6" stroke-width="2"/>
+  </g>
+  <!-- Detail: ADAR enzyme -->
+  <g id="detail-enzyme" data-label="ADAR enzyme">
+    <!-- Enzyme shape -->
+    <ellipse cx="650" cy="300" rx="50" ry="80" fill="#E6B800" stroke="#B8860B" stroke-width="3"/>
+    <!-- Active site -->
+    <circle cx="650" cy="300" r="20" fill="#CA1E08" opacity="0.7"/>
+  </g>
+  <!-- Label: species name -->
+  <g id="label" data-label="species label">
+    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="22" fill="#8BA0D6">
+      <tspan font-style="italic">Octopus bimaculoides</tspan>
+    </text>
+  </g>
+  <!-- Overlay: arrows indicating temperature influence -->
+  <g id="overlay" data-label="temperature influence arrows">
+    <path d="M200,100 Q300,50 400,100" stroke="#FBFFF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <path d="M200,500 Q300,550 400,500" stroke="#FBFFF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  </g>
+</svg>

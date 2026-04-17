@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Radial gradient for bioluminescent lure -->
+    <radialGradient id="lureGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF77" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFFF77" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background: deep sea black -->
+  <g id="bg" data-label="deep sea background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+  </g>
+  <!-- Context: water column with subtle light shafts -->
+  <g id="context" data-label="deep water context">
+    <ellipse cx="400" cy="600" rx="500" ry="100" fill="#2D3E6B" opacity="0.3"/>
+    <ellipse cx="400" cy="0" rx="300" ry="50" fill="#5B6FA8" opacity="0.2"/>
+  </g>
+  <!-- Subject: female anglerfish -->
+  <g id="subject" data-label="female anglerfish">
+    <!-- Body -->
+    <ellipse cx="400" cy="300" rx="120" ry="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3"/>
+    <!-- Mouth -->
+    <path d="M480,300 Q500,320 480,340" stroke="#8BA0D6" stroke-width="4" fill="none"/>
+    <!-- Dorsal fin -->
+    <path d="M400,220 L400,150 L380,180 L420,180 Z" fill="#5B6FA8"/>
+    <!-- Pelvic fins -->
+    <path d="M350,330 L330,350 L370,350 Z" fill="#5B6FA8"/>
+    <path d="M450,330 L470,350 L430,350 Z" fill="#5B6FA8"/>
+    <!-- Tail -->
+    <path d="M520,300 L600,300 L580,350 L540,320 Z" fill="#2D3E6B"/>
+    <!-- Eyes -->
+    <g id="eye-left">
+      <ellipse cx="370" cy="280" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="370" cy="280" r="4" fill="#0D0D16"/>
+      <circle cx="368" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <g id="eye-right">
+      <ellipse cx="430" cy="280" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="430" cy="280" r="4" fill="#0D0D16"/>
+      <circle cx="428" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+  </g>
+  <!-- Detail: bioluminescent lure -->
+  <g id="detail-lure" data-label="bioluminescent lure">
+    <!-- Lure rod -->
+    <line x1="400" y1="220" x2="400" y2="150" stroke="#8BA0D6" stroke-width="3"/>
+    <!-- Lure bulb -->
+    <circle cx="400" cy="130" r="25" fill="url(#lureGlow)"/>
+    <!-- Glow effect -->
+    <circle cx="400" cy="130" r="40" fill="#FFFF77" opacity="0.2"/>
+  </g>
+  <!-- Detail: fused males -->
+  <g id="detail-males" data-label="fused male anglerfish">
+    <!-- Male 1 -->
+    <circle cx="300" cy="350" r="20" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Male 2 -->
+    <circle cx="500" cy="400" r="20" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Male 3 -->
+    <circle cx="350" cy="450" r="20" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Male 4 -->
+    <circle cx="450" cy="250" r="20" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Connection lines to female body -->
+    <line x1="320" y1="350" x2="380" y2="330" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="4 2"/>
+    <line x1="480" y1="400" x2="420" y2="380" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="4 2"/>
+    <line x1="370" y1="450" x2="400" y2="380" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="4 2"/>
+    <line x1="430" y1="250" x2="420" y2="280" stroke="#8BA0D6" stroke-width="2" stroke-dasharray="4 2"/>
+  </g>
+  <!-- Label: species name (example ceratioid) -->
+  <g id="label" data-label="species label">
+    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="22" fill="#8BA0D6">
+      <tspan font-style="italic">Ceratioidei</tspan> (anglerfish)
+    </text>
+  </g>
+  <!-- Overlay: arrow indicating fusion process -->
+  <g id="overlay" data-label="fusion arrow">
+    <path d="M200,200 Q250,150 300,200" stroke="#FBFFF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#FBFFF6"/>
+      </marker>
+    </defs>
+    <text x="250" y="140" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#FBFFF6">fusion</text>
+  </g>
+</svg>
