@@ -25,6 +25,9 @@ def draw(smiles, outfile, width=400, height=300, highlight_smarts=None, dark=Tru
     mol = Chem.MolFromSmiles(smiles)
     if mol is None:
         sys.exit(f"Invalid SMILES: {smiles}")
+    # Remove stereo by default — we want flat planar skeletal structures
+    # (3D wedge/dash bonds are inappropriate for illustrative/educational SVGs)
+    Chem.rdmolops.RemoveStereochemistry(mol)
     rdDepictor.Compute2DCoords(mol)
 
     highlight_atoms, highlight_bonds, atom_colors, bond_colors = [], [], {}, {}
