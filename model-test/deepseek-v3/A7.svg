@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- No gradients -->
+  </defs>
+  <!-- Background: dark ocean shelf -->
+  <g id="bg" data-label="ocean shelf background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="400" width="800" height="200" fill="#2D3E6B"/>
+  </g>
+  <!-- Context: sandy bottom texture, horizon -->
+  <g id="context" data-label="sandy bottom and horizon">
+    <!-- Sandy bottom -->
+    <rect x="0" y="400" width="800" height="200" fill="#6B4423" opacity="0.7"/>
+    <!-- Sand texture dots -->
+    <circle cx="100" cy="450" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="200" cy="500" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="300" cy="480" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="400" cy="520" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="500" cy="460" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="600" cy="490" r="2" fill="#D4A574" opacity="0.5"/>
+    <circle cx="700" cy="540" r="2" fill="#D4A574" opacity="0.5"/>
+    <!-- Horizon line -->
+    <line x1="0" y1="400" x2="800" y2="400" stroke="#5B6FA8" stroke-width="1" opacity="0.5"/>
+  </g>
+  <!-- Subject: horseshoe crab viewed from above -->
+  <g id="subject" data-label="horseshoe crab">
+    <!-- Carapace (main shell) -->
+    <ellipse cx="400" cy="300" rx="120" ry="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3"/>
+    <!-- Tail (telson) -->
+    <path d="M400,380 L400,500 L380,480 L420,480 Z" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2"/>
+    <!-- Legs (simplified) -->
+    <path d="M300,320 L250,350" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M300,340 L240,380" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M500,320 L550,350" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M500,340 L560,380" stroke="#A0785A" stroke-width="4" stroke-linecap="round"/>
+    <!-- Eyes (simplified) -->
+    <circle cx="360" cy="280" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="360" cy="280" r="3" fill="#0D0D16"/>
+    <circle cx="358" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    <circle cx="440" cy="280" r="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="440" cy="280" r="3" fill="#0D0D16"/>
+    <circle cx="438" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+  </g>
+  <!-- Detail: blue blood pooling from gill/sampling cut -->
+  <g id="detail-blood" data-label="hemocyanin blood pooling">
+    <!-- Cut mark -->
+    <line x1="420" y1="340" x2="440" y2="360" stroke="#CA1E08" stroke-width="2"/>
+    <line x1="440" y1="340" x2="420" y2="360" stroke="#CA1E08" stroke-width="2"/>
+    <!-- Blood pool -->
+    <ellipse cx="450" cy="380" rx="40" ry="20" fill="#8BA0D6" opacity="0.7"/>
+    <!-- Dripping blood -->
+    <path d="M450,380 Q460,400 450,420 T440,450" stroke="#8BA0D6" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- Detail: amebocyte cell enlarged inset -->
+  <g id="detail-cell" data-label="amebocyte cell inset">
+    <!-- Inset border -->
+    <rect x="50" y="50" width="250" height="250" fill="#1C1E35" stroke="#5B6FA8" stroke-width="2"/>
+    <!-- Cell body -->
+    <circle cx="175" cy="175" r="60" fill="#D1DCFF" stroke="#8BA0D6" stroke-width="2"/>
+    <!-- Nucleus -->
+    <circle cx="175" cy="175" r="20" fill="#2D3E6B"/>
+    <!-- Granules -->
+    <circle cx="140" cy="150" r="5" fill="#E85542"/>
+    <circle cx="200" cy="200" r="5" fill="#E85542"/>
+    <circle cx="160" cy="210" r="5" fill="#E85542"/>
+    <!-- Clotting fibers -->
+    <path d="M120,175 Q140,160 160,175" stroke="#CA1E08" stroke-width="2" fill="none"/>
+    <path d="M190,175 Q210,190 230,175" stroke="#CA1E08" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Label: price -->
+  <g id="label" data-label="price label">
+    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="24" fill="#FFFF77">
+      $60,000 / gallon
+    </text>
+  </g>
+  <!-- Overlay: inset border and connection line -->
+  <g id="overlay" data-label="inset connection">
+    <!-- Connection line from crab to inset -->
+    <path d="M450,380 Q300,200 175,175" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+    <!-- Arrowhead -->
+    <polygon points="175,175 165,170 170,185" fill="#5B6FA8"/>
+  </g>
+</svg>

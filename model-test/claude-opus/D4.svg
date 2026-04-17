@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- D4: Anglerfish fusion - female with fused males, bioluminescent lure -->
+
+  <!-- bg: deep sea pitch dark -->
+  <g id="bg" data-label="abyssal deep sea background">
+    <rect x="0" y="0" width="800" height="600" fill="#0D0D16"/>
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35" opacity="0.7"/>
+  </g>
+
+  <!-- defs for bioluminescent glow -->
+  <defs>
+    <radialGradient id="lureGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF77" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFF77" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- context: faint particles -->
+  <g id="context" data-label="abyssal particulate matter">
+    <circle cx="80" cy="120" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="720" cy="90" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="60" cy="480" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="740" cy="520" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="400" cy="80" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="200" cy="540" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+  </g>
+
+  <!-- subject: female anglerfish (large), profile view -->
+  <g id="subject" data-label="female ceratioid anglerfish">
+    <!-- body -->
+    <path d="M 260 340
+             Q 240 240 340 210
+             Q 450 200 540 225
+             Q 610 250 620 310
+             Q 615 370 550 390
+             Q 470 405 380 395
+             Q 300 385 260 340 Z"
+          fill="#2D3E6B" stroke="#0D0D16" stroke-width="2.5"/>
+
+    <!-- head bulge -->
+    <path d="M 540 225 Q 590 230 610 260 Q 615 300 595 320 Q 555 325 540 300 Z"
+          fill="#2D3E6B" stroke="#0D0D16" stroke-width="2"/>
+
+    <!-- huge gaping mouth with needle teeth -->
+    <path d="M 548 320 Q 600 330 618 355 Q 602 360 560 355 Q 548 345 548 320 Z"
+          fill="#0D0D16" stroke="#0D0D16" stroke-width="1.5"/>
+    <!-- teeth -->
+    <path d="M 555 330 L 558 345 L 561 330 Z" fill="#FBFFF6"/>
+    <path d="M 568 333 L 572 348 L 576 333 Z" fill="#FBFFF6"/>
+    <path d="M 582 335 L 586 350 L 590 335 Z" fill="#FBFFF6"/>
+    <path d="M 598 336 L 602 350 L 606 336 Z" fill="#FBFFF6"/>
+
+    <!-- tail -->
+    <path d="M 260 340 Q 200 320 160 340 Q 180 355 260 360 Z"
+          fill="#2D3E6B" stroke="#0D0D16" stroke-width="2"/>
+    <path d="M 165 340 Q 135 310 120 270 M 165 345 Q 140 355 125 390"
+          fill="none" stroke="#2D3E6B" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- dorsal fin (small) -->
+    <path d="M 380 215 Q 400 190 430 210 Z" fill="#2D3E6B" stroke="#0D0D16" stroke-width="1.5"/>
+
+    <!-- pectoral fin -->
+    <path d="M 420 360 Q 430 400 410 420 Q 395 405 405 365 Z"
+          fill="#2D3E6B" stroke="#0D0D16" stroke-width="1.5"/>
+
+    <!-- eye -->
+    <g id="eye" data-label="female anglerfish eye">
+      <ellipse cx="575" cy="270" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="575" cy="270" r="4.5" fill="#0D0D16"/>
+      <circle cx="572.5" cy="268" r="2.2" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- detail-lure: bioluminescent esca above head -->
+  <g id="detail-lure" data-label="bioluminescent lure esca">
+    <!-- illicium rod -->
+    <path d="M 560 225 Q 530 150 500 100"
+          fill="none" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
+    <!-- glow halo -->
+    <circle cx="500" cy="100" r="45" fill="url(#lureGlow)"/>
+    <!-- glowing bulb -->
+    <circle cx="500" cy="100" r="11" fill="#FFFF77" stroke="#E6B800" stroke-width="1.5"/>
+  </g>
+
+  <!-- detail-males: three fused males at different stages -->
+  <g id="detail-males" data-label="dwarf males permanently fused to female">
+    <!-- male 1: belly attachment -->
+    <g id="male-1" data-label="fused male on belly">
+      <path d="M 350 390 Q 340 415 330 445 Q 335 465 355 465 Q 370 450 365 425 Q 360 400 350 390 Z"
+            fill="#3D3D52" stroke="#0D0D16" stroke-width="2"/>
+      <!-- vestigial eye -->
+      <circle cx="352" cy="410" r="2" fill="#0D0D16"/>
+      <!-- fusion seam -->
+      <path d="M 345 395 Q 355 392 358 395"
+            fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- male 2: underside back -->
+    <g id="male-2" data-label="fused male on underside">
+      <path d="M 450 395 Q 442 430 435 465 Q 445 485 470 478 Q 480 450 470 420 Q 462 398 450 395 Z"
+            fill="#3D3D52" stroke="#0D0D16" stroke-width="2"/>
+      <circle cx="452" cy="415" r="2" fill="#0D0D16"/>
+      <path d="M 445 398 Q 455 395 460 398"
+            fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+
+    <!-- male 3: flank -->
+    <g id="male-3" data-label="fused male on flank">
+      <path d="M 295 350 Q 280 370 285 395 Q 300 400 310 380 Q 310 360 295 350 Z"
+            fill="#3D3D52" stroke="#0D0D16" stroke-width="2"/>
+      <circle cx="295" cy="365" r="1.8" fill="#0D0D16"/>
+      <path d="M 292 353 Q 300 351 305 354"
+            fill="none" stroke="#CA1E08" stroke-width="1.5" stroke-dasharray="2 2"/>
+    </g>
+  </g>
+
+  <!-- label -->
+  <g id="label" data-label="species label and fused count">
+    <text x="40" y="75" font-family="Barlow, system-ui, sans-serif"
+          font-weight="800" font-size="32" fill="#FBFFF6">up to 8 fused males</text>
+    <text x="40" y="105" font-family="Barlow, system-ui, sans-serif"
+          font-weight="500" font-size="20" fill="#8BA0D6"
+          font-style="italic">Ceratioidei</text>
+  </g>
+
+  <!-- overlay: small arrow pointing at one fused male -->
+  <g id="overlay" data-label="annotation arrow to fused male">
+    <line x1="240" y1="475" x2="320" y2="450" stroke="#8BA0D6"
+          stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+    <polygon points="318,446 328,450 318,455" fill="#8BA0D6"/>
+  </g>
+</svg>

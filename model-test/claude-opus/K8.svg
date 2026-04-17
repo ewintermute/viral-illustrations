@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- K8: Mantis shrimp dactyl club - strike moment with Bouligand helicoidal structure cutaway -->
+
+  <!-- bg -->
+  <g id="bg" data-label="dark shallow-reef background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+  </g>
+
+  <!-- context: water ripple and cavitation bubble from strike -->
+  <g id="context" data-label="water medium and cavitation disturbance">
+    <!-- cavitation bubble/pressure wave -->
+    <circle cx="560" cy="330" r="58" fill="none" stroke="#8BA0D6"
+            stroke-width="1.5" stroke-dasharray="4 6" opacity="0.7"/>
+    <circle cx="560" cy="330" r="40" fill="none" stroke="#D1DCFF"
+            stroke-width="1.2" stroke-dasharray="3 5" opacity="0.55"/>
+    <circle cx="560" cy="330" r="22" fill="none" stroke="#FBFFF6"
+            stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>
+    <!-- faint particle motes -->
+    <circle cx="140" cy="120" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="720" cy="150" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="100" cy="500" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+    <circle cx="740" cy="470" r="1.5" fill="#8BA0D6" opacity="0.3"/>
+  </g>
+
+  <!-- subject: mantis shrimp body (side view, stylized) with dactyl club extended -->
+  <g id="subject" data-label="mantis shrimp with dactyl club striking">
+    <!-- tail/abdomen segmented -->
+    <g id="abdomen" data-label="segmented abdomen">
+      <path d="M 80 380 Q 100 370 130 375 L 130 415 Q 100 420 80 410 Z" fill="#2FBF39" stroke="#0D0D16" stroke-width="2"/>
+      <path d="M 130 375 Q 160 368 190 373 L 190 417 Q 160 423 130 415 Z" fill="#2FBF39" stroke="#0D0D16" stroke-width="2"/>
+      <path d="M 190 373 Q 225 368 260 375 L 260 418 Q 225 423 190 417 Z" fill="#2FBF39" stroke="#0D0D16" stroke-width="2"/>
+      <path d="M 260 375 Q 295 370 325 378 L 325 418 Q 295 422 260 418 Z" fill="#248A28" stroke="#0D0D16" stroke-width="2"/>
+      <!-- telson/tail fan -->
+      <path d="M 70 380 Q 40 370 35 395 Q 40 420 75 412 Z" fill="#2FBF39" stroke="#0D0D16" stroke-width="2"/>
+    </g>
+
+    <!-- carapace/thorax -->
+    <path d="M 325 378 Q 360 355 410 360 Q 440 365 445 400 Q 440 425 405 428 Q 360 430 325 418 Z"
+          fill="#6FD877" stroke="#0D0D16" stroke-width="2.5"/>
+
+    <!-- head and stalked eye -->
+    <path d="M 440 360 Q 465 350 480 368 Q 485 385 470 395 Q 450 395 445 380 Z"
+          fill="#6FD877" stroke="#0D0D16" stroke-width="2"/>
+    <!-- antennae -->
+    <path d="M 475 365 Q 500 345 515 330" fill="none" stroke="#0D0D16" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M 475 372 Q 505 360 525 350" fill="none" stroke="#0D0D16" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- stalked compound eye -->
+    <g id="eye" data-label="stalked compound eye">
+      <line x1="460" y1="360" x2="455" y2="335" stroke="#0D0D16" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="450" cy="325" rx="14" ry="11" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="450" cy="325" r="6" fill="#0D0D16"/>
+      <!-- mantis shrimp horizontal mid-band -->
+      <rect x="438" y="322" width="24" height="5" fill="#0D0D16" opacity="0.7"/>
+      <circle cx="447" cy="322" r="2.8" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+
+    <!-- raptorial appendage - folded arm -->
+    <g id="raptor-arm" data-label="raptorial appendage with dactyl club">
+      <!-- upper arm -->
+      <path d="M 430 410 Q 450 430 480 440 Q 500 445 515 430"
+            fill="none" stroke="#248A28" stroke-width="14" stroke-linecap="round"/>
+      <!-- forearm extending toward target -->
+      <path d="M 515 430 Q 535 420 555 395"
+            fill="none" stroke="#2FBF39" stroke-width="12" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- detail-club: the dactyl club (primary focus) and its impact -->
+  <g id="detail-club" data-label="dactyl club impact head">
+    <!-- club body (bulbous end) -->
+    <path d="M 540 380
+             Q 560 368 585 372
+             Q 605 380 608 400
+             Q 600 420 580 418
+             Q 555 415 542 400
+             Q 535 390 540 380 Z"
+          fill="#E6B800" stroke="#0D0D16" stroke-width="2.5"/>
+
+    <!-- herringbone impact surface on leading edge -->
+    <g id="impact-surface" data-label="hydroxyapatite herringbone impact face">
+      <path d="M 595 378 L 605 385" stroke="#0D0D16" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 600 383 L 608 390" stroke="#0D0D16" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 603 390 L 610 397" stroke="#0D0D16" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 600 400 L 608 407" stroke="#0D0D16" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M 595 408 L 604 414" stroke="#0D0D16" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- target (snail shell getting cracked) -->
+    <g id="target" data-label="shelled prey being struck">
+      <path d="M 640 395
+               Q 660 378 680 395
+               Q 690 415 670 425
+               Q 650 425 640 410 Z"
+            fill="#D4A574" stroke="#0D0D16" stroke-width="2"/>
+      <!-- crack -->
+      <path d="M 660 385 L 665 405 L 672 402 L 675 418"
+            fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- detail-bouligand: helicoidal structure cutaway -->
+  <g id="detail-bouligand" data-label="Bouligand helicoidal fiber architecture cutaway">
+    <!-- inset frame -->
+    <rect x="80" y="80" width="220" height="220" rx="8"
+          fill="#2D3E6B" stroke="#8BA0D6" stroke-width="1.5"
+          stroke-dasharray="6 4"/>
+    <!-- stack of rotating fiber plies - shown as horizontal lines rotating in angle -->
+    <g id="fiber-plies" data-label="rotating fiber plies">
+      <!-- each ply: a set of parallel thin lines; rotation changes per layer -->
+      <g transform="translate(190 105) rotate(0)">
+        <line x1="-80" y1="0" x2="80" y2="0" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-80" y1="4" x2="80" y2="4" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-80" y1="8" x2="80" y2="8" stroke="#D1DCFF" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 125) rotate(20)">
+        <line x1="-80" y1="0" x2="80" y2="0" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-80" y1="4" x2="80" y2="4" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-80" y1="8" x2="80" y2="8" stroke="#8BA0D6" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 150) rotate(40)">
+        <line x1="-70" y1="0" x2="70" y2="0" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-70" y1="4" x2="70" y2="4" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-70" y1="8" x2="70" y2="8" stroke="#D1DCFF" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 175) rotate(60)">
+        <line x1="-70" y1="0" x2="70" y2="0" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-70" y1="4" x2="70" y2="4" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-70" y1="8" x2="70" y2="8" stroke="#8BA0D6" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 200) rotate(80)">
+        <line x1="-60" y1="0" x2="60" y2="0" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-60" y1="4" x2="60" y2="4" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-60" y1="8" x2="60" y2="8" stroke="#D1DCFF" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 225) rotate(100)">
+        <line x1="-55" y1="0" x2="55" y2="0" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-55" y1="4" x2="55" y2="4" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-55" y1="8" x2="55" y2="8" stroke="#8BA0D6" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 250) rotate(120)">
+        <line x1="-55" y1="0" x2="55" y2="0" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-55" y1="4" x2="55" y2="4" stroke="#D1DCFF" stroke-width="1.5"/>
+        <line x1="-55" y1="8" x2="55" y2="8" stroke="#D1DCFF" stroke-width="1.5"/>
+      </g>
+      <g transform="translate(190 275) rotate(140)">
+        <line x1="-55" y1="0" x2="55" y2="0" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-55" y1="4" x2="55" y2="4" stroke="#8BA0D6" stroke-width="1.5"/>
+        <line x1="-55" y1="8" x2="55" y2="8" stroke="#8BA0D6" stroke-width="1.5"/>
+      </g>
+    </g>
+
+    <!-- crack path spiraling through the plies -->
+    <g id="crack-path" data-label="crack deflecting spirally through plies">
+      <path d="M 110 110 Q 160 135 180 160 Q 210 185 170 215 Q 140 240 200 270 Q 230 285 260 295"
+            fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"
+            stroke-dasharray="4 3"/>
+    </g>
+  </g>
+
+  <!-- label -->
+  <g id="label" data-label="acceleration and architecture labels">
+    <text x="480" y="85" font-family="Barlow, system-ui, sans-serif"
+          font-weight="800" font-size="32" fill="#FBFFF6">&gt; 10,000 g</text>
+    <text x="480" y="115" font-family="Barlow, system-ui, sans-serif"
+          font-weight="500" font-size="20" fill="#8BA0D6">Bouligand architecture</text>
+  </g>
+
+  <!-- overlay: connector from club to cutaway inset -->
+  <g id="overlay" data-label="connector from dactyl club to Bouligand inset">
+    <line x1="540" y1="398" x2="300" y2="195" stroke="#8BA0D6"
+          stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+  </g>
+</svg>

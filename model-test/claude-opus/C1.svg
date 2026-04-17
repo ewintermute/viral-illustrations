@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- C1: Zombie ant fungus - ant locked onto leaf vein, fungal stalk erupting from head -->
+
+  <!-- bg: dark forest floor environment -->
+  <g id="bg" data-label="dark forest understorey background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+    <rect x="0" y="420" width="800" height="180" fill="#2D3E6B" opacity="0.45"/>
+  </g>
+
+  <!-- context: leaf silhouettes and ant trail below -->
+  <g id="context" data-label="leaf silhouettes and forest floor ant trail">
+    <!-- distant leaves -->
+    <path d="M 60 140 Q 120 90 200 120 Q 180 170 110 180 Q 70 170 60 140 Z" fill="#1A5C1E" opacity="0.55"/>
+    <path d="M 620 90 Q 700 60 760 110 Q 740 170 660 170 Q 610 140 620 90 Z" fill="#1A5C1E" opacity="0.45"/>
+    <path d="M 30 360 Q 90 330 160 360 Q 140 400 80 400 Q 40 390 30 360 Z" fill="#248A28" opacity="0.35"/>
+    <!-- suggestion of ant trail dots on floor -->
+    <g id="ant-trail" data-label="distant ant trail">
+      <circle cx="120" cy="520" r="3" fill="#0D0D16"/>
+      <circle cx="200" cy="530" r="3" fill="#0D0D16"/>
+      <circle cx="280" cy="525" r="3" fill="#0D0D16"/>
+      <circle cx="370" cy="535" r="3" fill="#0D0D16"/>
+      <circle cx="460" cy="528" r="3" fill="#0D0D16"/>
+      <circle cx="550" cy="540" r="3" fill="#0D0D16"/>
+      <circle cx="640" cy="532" r="3" fill="#0D0D16"/>
+      <circle cx="720" cy="540" r="3" fill="#0D0D16"/>
+    </g>
+  </g>
+
+  <!-- subject: ant biting into leaf vein -->
+  <g id="subject" data-label="carpenter ant biting into leaf vein">
+    <!-- leaf/twig ant is biting -->
+    <g id="leaf-vein" data-label="leaf vein the ant has locked onto">
+      <path d="M 120 300 Q 300 270 520 280 Q 680 285 790 300"
+            fill="none" stroke="#248A28" stroke-width="8"
+            stroke-linecap="round"/>
+      <path d="M 520 280 Q 560 260 600 250" fill="none"
+            stroke="#248A28" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 420 285 Q 460 265 500 260" fill="none"
+            stroke="#248A28" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- ant body: segmented from head (left) to gaster (right) -->
+    <g id="ant-body" data-label="ant body segments">
+      <!-- gaster (abdomen) -->
+      <ellipse cx="480" cy="360" rx="55" ry="34" fill="#3D3D52" stroke="#0D0D16" stroke-width="2.5"/>
+      <!-- petiole connector -->
+      <circle cx="415" cy="352" r="8" fill="#3D3D52" stroke="#0D0D16" stroke-width="2"/>
+      <!-- thorax -->
+      <ellipse cx="370" cy="344" rx="38" ry="26" fill="#3D3D52" stroke="#0D0D16" stroke-width="2.5"/>
+      <!-- head -->
+      <ellipse cx="305" cy="332" rx="30" ry="28" fill="#3D3D52" stroke="#0D0D16" stroke-width="2.5"/>
+      <!-- mandibles locked onto vein -->
+      <path d="M 282 320 Q 268 308 258 300 Q 265 314 278 326 Z"
+            fill="#0D0D16" stroke="#0D0D16" stroke-width="1.5"/>
+      <path d="M 282 342 Q 268 352 258 360 Q 265 348 278 336 Z"
+            fill="#0D0D16" stroke="#0D0D16" stroke-width="1.5"/>
+
+      <!-- legs (six, dead posture limp) -->
+      <path d="M 350 360 Q 330 400 325 440" fill="none" stroke="#0D0D16" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 370 365 Q 370 410 378 448" fill="none" stroke="#0D0D16" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 390 362 Q 410 405 418 442" fill="none" stroke="#0D0D16" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M 355 325 Q 335 300 320 280" fill="none" stroke="#0D0D16" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 375 322 Q 380 290 385 270" fill="none" stroke="#0D0D16" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 395 326 Q 420 295 440 278" fill="none" stroke="#0D0D16" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- antennae, bent -->
+      <path d="M 295 310 Q 280 288 272 265 Q 268 258 262 260"
+            fill="none" stroke="#0D0D16" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 315 310 Q 310 285 305 265"
+            fill="none" stroke="#0D0D16" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- eye (single visible) -->
+      <ellipse cx="313" cy="326" rx="6" ry="4.8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="313" cy="326" r="2.5" fill="#0D0D16"/>
+      <circle cx="311.5" cy="324.5" r="1.3" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- detail-hyphae: fungal network inside ant body -->
+  <g id="detail-hyphae" data-label="fungal hyphae network in ant muscle tissue">
+    <path d="M 445 350 Q 450 340 460 348 Q 470 338 478 352 Q 488 344 498 358"
+          fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 450 370 Q 460 375 470 368 Q 480 378 492 370 Q 505 380 515 372"
+          fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 355 340 Q 365 335 372 344 Q 382 338 390 348"
+          fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+    <path d="M 358 355 Q 370 358 378 350 Q 388 358 395 352"
+          fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+    <path d="M 293 340 Q 300 348 308 344 Q 316 352 322 346"
+          fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- detail-stalk: fruiting body erupting from head -->
+  <g id="detail-stalk" data-label="Ophiocordyceps fruiting body erupting from ant head">
+    <path d="M 310 310 Q 308 260 312 210 Q 315 170 320 130"
+          fill="none" stroke="#E85542" stroke-width="6" stroke-linecap="round"/>
+    <!-- bulbous fruiting tip -->
+    <ellipse cx="322" cy="120" rx="14" ry="22" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+    <!-- secondary small stalk -->
+    <path d="M 312 300 Q 300 270 290 240" fill="none" stroke="#E85542" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="288" cy="235" r="6" fill="#E85542"/>
+  </g>
+
+  <!-- detail-spores: spore rain falling to trail -->
+  <g id="detail-spores" data-label="ascospores falling from fruiting body toward ant trail">
+    <circle cx="326" cy="150" r="2.2" fill="#FFFF77" opacity="0.9"/>
+    <circle cx="340" cy="200" r="2" fill="#FFFF77" opacity="0.85"/>
+    <circle cx="300" cy="240" r="1.8" fill="#FFFF77" opacity="0.8"/>
+    <circle cx="355" cy="290" r="1.8" fill="#FFFF77" opacity="0.75"/>
+    <circle cx="330" cy="340" r="2" fill="#FFFF77" opacity="0.7"/>
+    <circle cx="365" cy="400" r="1.8" fill="#FFFF77" opacity="0.65"/>
+    <circle cx="310" cy="450" r="2" fill="#FFFF77" opacity="0.6"/>
+    <circle cx="350" cy="500" r="1.8" fill="#FFFF77" opacity="0.55"/>
+    <circle cx="290" cy="525" r="1.8" fill="#FFFF77" opacity="0.5"/>
+    <circle cx="380" cy="540" r="2" fill="#FFFF77" opacity="0.5"/>
+  </g>
+
+  <!-- label -->
+  <g id="label" data-label="species label">
+    <text x="560" y="200" font-family="Barlow, system-ui, sans-serif"
+          font-weight="700" font-size="26" fill="#FBFFF6"
+          font-style="italic">O. unilateralis</text>
+    <text x="560" y="230" font-family="Inter, system-ui, sans-serif"
+          font-weight="500" font-size="20" fill="#8BA0D6">~25 cm above trail</text>
+  </g>
+
+  <!-- overlay: dashed height indicator -->
+  <g id="overlay" data-label="height indicator line">
+    <line x1="700" y1="310" x2="700" y2="540" stroke="#8BA0D6"
+          stroke-width="1.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+    <line x1="694" y1="310" x2="706" y2="310" stroke="#8BA0D6" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="694" y1="540" x2="706" y2="540" stroke="#8BA0D6" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
