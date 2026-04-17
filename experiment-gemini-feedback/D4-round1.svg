@@ -1,0 +1,389 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background: absolute deep-sea darkness -->
+  <rect id="background" width="800" height="600" fill="#0D0D16"/>
+
+  <!-- Deep ocean ambient layers -->
+  <ellipse id="ambient-glow-deep" cx="350" cy="320" rx="380" ry="280" fill="#2D3E6B" opacity="0.06"/>
+  <ellipse id="ambient-glow-mid" cx="380" cy="350" rx="260" ry="200" fill="#5B6FA8" opacity="0.04"/>
+
+  <!-- Scattered deep-sea particles -->
+  <g id="marine-snow">
+    <circle cx="120" cy="80" r="1" fill="#D1DCFF" opacity="0.2"/>
+    <circle cx="680" cy="150" r="0.8" fill="#D1DCFF" opacity="0.15"/>
+    <circle cx="45" cy="340" r="1.2" fill="#D1DCFF" opacity="0.12"/>
+    <circle cx="750" cy="420" r="0.7" fill="#D1DCFF" opacity="0.18"/>
+    <circle cx="200" cy="520" r="1" fill="#D1DCFF" opacity="0.1"/>
+    <circle cx="600" cy="60" r="0.9" fill="#D1DCFF" opacity="0.14"/>
+    <circle cx="500" cy="540" r="1.1" fill="#D1DCFF" opacity="0.11"/>
+    <circle cx="90" cy="200" r="0.6" fill="#D1DCFF" opacity="0.16"/>
+    <circle cx="720" cy="300" r="0.8" fill="#D1DCFF" opacity="0.09"/>
+    <circle cx="350" cy="45" r="1" fill="#D1DCFF" opacity="0.13"/>
+    <circle cx="160" cy="470" r="0.7" fill="#D1DCFF" opacity="0.17"/>
+    <circle cx="620" cy="510" r="0.9" fill="#D1DCFF" opacity="0.08"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ILLICIUM (stalk/fishing rod) -->
+  <!-- ============================================ -->
+  <path id="illicium-stalk" d="M 340 230 Q 310 160, 330 110 Q 345 75, 360 60" 
+        fill="none" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <!-- Illicium base attachment bump -->
+  <ellipse id="illicium-base" cx="340" cy="232" rx="8" ry="5" fill="#2D3E6B" opacity="0.8"/>
+
+  <!-- ============================================ -->
+  <!-- ESCA (bioluminescent lure) — concentric glow -->
+  <!-- ============================================ -->
+  <g id="esca-lure">
+    <!-- Outermost glow -->
+    <ellipse cx="360" cy="52" rx="60" ry="55" fill="#FFFF77" opacity="0.05"/>
+    <ellipse cx="360" cy="52" rx="45" ry="42" fill="#FFFF77" opacity="0.1"/>
+    <ellipse cx="360" cy="52" rx="32" ry="30" fill="#FFFF77" opacity="0.15"/>
+    <ellipse cx="360" cy="52" rx="22" ry="20" fill="#2FBF39" opacity="0.2"/>
+    <ellipse cx="360" cy="52" rx="15" ry="14" fill="#2FBF39" opacity="0.35"/>
+    <ellipse cx="360" cy="52" rx="10" ry="9" fill="#6FD877" opacity="0.55"/>
+    <ellipse cx="360" cy="52" rx="6" ry="5.5" fill="#FFFF77" opacity="0.75"/>
+    <ellipse cx="360" cy="52" rx="3" ry="2.8" fill="#FBFFF6" opacity="1.0"/>
+    <!-- Esca fleshy bulb -->
+    <ellipse cx="360" cy="55" rx="9" ry="11" fill="#2D3E6B" opacity="0.5"/>
+    <ellipse cx="360" cy="54" rx="5" ry="7" fill="#5B6FA8" opacity="0.4"/>
+    <!-- Small tendrils on esca -->
+    <path d="M 354 58 Q 348 68, 350 72" fill="none" stroke="#5B6FA8" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 366 58 Q 372 66, 369 73" fill="none" stroke="#5B6FA8" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 360 62 Q 360 72, 358 76" fill="none" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FEMALE ANGLERFISH — main body -->
+  <!-- ============================================ -->
+  <g id="female-anglerfish">
+    <!-- Body shadow/depth layer -->
+    <ellipse id="female-body-shadow" cx="370" cy="345" rx="195" ry="145" fill="#1C1E35" opacity="0.6"/>
+
+    <!-- Main body -->
+    <path id="female-body" d="
+      M 185 310
+      Q 170 260, 220 230
+      Q 260 210, 310 220
+      Q 340 225, 350 235
+      Q 380 215, 420 220
+      Q 480 230, 520 260
+      Q 560 290, 570 340
+      Q 575 380, 555 410
+      Q 530 445, 490 460
+      Q 440 475, 380 475
+      Q 310 472, 260 450
+      Q 210 420, 190 380
+      Q 175 350, 185 310
+      Z" fill="#2D3E6B" opacity="0.85"/>
+
+    <!-- Body highlight/texture overlay -->
+    <path id="female-body-highlight" d="
+      M 220 280
+      Q 250 250, 310 245
+      Q 370 240, 430 255
+      Q 480 270, 510 300
+      Q 530 330, 520 360
+      Q 500 390, 450 400
+      Q 380 410, 310 400
+      Q 250 385, 230 350
+      Q 215 320, 220 280
+      Z" fill="#5B6FA8" opacity="0.25"/>
+
+    <!-- Belly area lighter -->
+    <path id="female-belly" d="
+      M 240 380
+      Q 260 420, 320 440
+      Q 380 455, 440 440
+      Q 490 425, 510 395
+      Q 500 420, 460 445
+      Q 400 465, 330 460
+      Q 270 448, 240 420
+      Z" fill="#D1DCFF" opacity="0.08"/>
+
+    <!-- ============================================ -->
+    <!-- SPINES along dorsal ridge -->
+    <!-- ============================================ -->
+    <g id="female-spines" stroke="#5B6FA8" stroke-linecap="round" fill="none" opacity="0.6">
+      <line x1="250" y1="235" x2="240" y2="200" stroke-width="2.5"/>
+      <line x1="280" y1="225" x2="272" y2="188" stroke-width="2.2"/>
+      <line x1="310" y1="222" x2="305" y2="183" stroke-width="2.5"/>
+      <line x1="400" y1="222" x2="398" y2="184" stroke-width="2.3"/>
+      <line x1="430" y1="228" x2="432" y2="190" stroke-width="2.5"/>
+      <line x1="460" y1="240" x2="466" y2="202" stroke-width="2.2"/>
+      <line x1="488" y1="255" x2="498" y2="220" stroke-width="2"/>
+      <line x1="510" y1="275" x2="524" y2="242" stroke-width="1.8"/>
+    </g>
+
+    <!-- Smaller ventral spines -->
+    <g id="female-ventral-spines" stroke="#2D3E6B" stroke-linecap="round" fill="none" opacity="0.5">
+      <line x1="300" y1="465" x2="295" y2="485" stroke-width="1.8"/>
+      <line x1="340" y1="472" x2="338" y2="492" stroke-width="1.6"/>
+      <line x1="380" y1="473" x2="382" y2="493" stroke-width="1.8"/>
+      <line x1="420" y1="468" x2="425" y2="488" stroke-width="1.6"/>
+    </g>
+
+    <!-- ============================================ -->
+    <!-- MOUTH — large toothy grin -->
+    <!-- ============================================ -->
+    <g id="female-mouth">
+      <!-- Jaw outline -->
+      <path id="female-jaw" d="
+        M 185 320
+        Q 175 340, 180 355
+        Q 185 370, 200 378
+        Q 215 385, 235 380
+        Q 250 375, 260 360
+        L 260 330
+        Q 250 310, 225 308
+        Q 200 305, 185 320
+        Z" fill="#0D0D16" opacity="0.95"/>
+
+      <!-- Mouth interior dark -->
+      <path id="mouth-interior" d="
+        M 192 325
+        Q 188 340, 190 355
+        Q 195 370, 210 374
+        Q 225 378, 240 370
+        Q 252 360, 252 340
+        Q 248 320, 232 315
+        Q 210 310, 192 325
+        Z" fill="#1C1E35" opacity="0.9"/>
+
+      <!-- Inner mouth red -->
+      <path id="mouth-flesh" d="
+        M 200 330
+        Q 196 345, 200 358
+        Q 208 368, 222 370
+        Q 236 368, 244 358
+        Q 248 345, 244 330
+        Q 236 320, 222 318
+        Q 208 320, 200 330
+        Z" fill="#CA1E08" opacity="0.35"/>
+
+      <!-- Upper teeth -->
+      <g id="upper-teeth" fill="#D1DCFF" opacity="0.85">
+        <polygon points="195,322 200,340 190,338"/>
+        <polygon points="208,314 210,334 202,330"/>
+        <polygon points="222,311 222,333 215,328"/>
+        <polygon points="236,313 234,335 228,328"/>
+        <polygon points="248,318 244,338 240,332"/>
+        <polygon points="256,328 250,345 246,338"/>
+      </g>
+
+      <!-- Lower teeth -->
+      <g id="lower-teeth" fill="#D1DCFF" opacity="0.8">
+        <polygon points="192,358 198,342 202,356"/>
+        <polygon points="206,368 210,348 214,365"/>
+        <polygon points="220,372 222,350 226,370"/>
+        <polygon points="234,370 234,350 238,367"/>
+        <polygon points="246,362 244,344 250,358"/>
+      </g>
+
+      <!-- Extra fang — prominent -->
+      <polygon id="fang-main" points="215,312 218,345 210,340" fill="#FBFFF6" opacity="0.7"/>
+    </g>
+
+    <!-- ============================================ -->
+    <!-- EYE — large, prominent -->
+    <!-- ============================================ -->
+    <g id="female-eye">
+      <!-- Eye socket -->
+      <ellipse cx="270" cy="278" rx="24" ry="22" fill="#0D0D16" opacity="0.8"/>
+      <!-- Eyeball -->
+      <ellipse cx="270" cy="278" rx="18" ry="17" fill="#1C1E35" opacity="0.9"/>
+      <!-- Iris ring -->
+      <ellipse cx="270" cy="278" rx="13" ry="12" fill="#5B6FA8" opacity="0.5"/>
+      <!-- Pupil -->
+      <ellipse cx="268" cy="276" rx="8" ry="8" fill="#1C1E35"/>
+      <!-- Highlight -->
+      <ellipse cx="264" cy="272" rx="3" ry="2.5" fill="#FBFFF6" opacity="0.85"/>
+      <!-- Secondary highlight -->
+      <ellipse cx="274" cy="282" rx="1.5" ry="1.2" fill="#FBFFF6" opacity="0.3"/>
+    </g>
+
+    <!-- ============================================ -->
+    <!-- PECTORAL FIN -->
+    <!-- ============================================ -->
+    <path id="female-pectoral-fin" d="
+      M 480 370
+      Q 520 380, 550 410
+      Q 565 430, 555 445
+      Q 540 440, 520 420
+      Q 500 400, 480 385
+      Z" fill="#2D3E6B" opacity="0.6" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round" stroke-opacity="0.3"/>
+    <!-- Fin rays -->
+    <g id="pectoral-fin-rays" stroke="#5B6FA8" stroke-linecap="round" opacity="0.25" fill="none" stroke-width="0.8">
+      <line x1="485" y1="375" x2="540" y2="420"/>
+      <line x1="488" y1="380" x2="548" y2="430"/>
+      <line x1="492" y1="385" x2="552" y2="440"/>
+    </g>
+
+    <!-- ============================================ -->
+    <!-- TAIL / CAUDAL FIN -->
+    <!-- ============================================ -->
+    <path id="female-caudal-fin" d="
+      M 555 340
+      Q 590 320, 625 290
+      Q 640 278, 645 285
+      Q 638 310, 620 340
+      Q 610 360, 620 380
+      Q 635 405, 645 420
+      Q 640 428, 625 415
+      Q 590 385, 560 370
+      Z" fill="#2D3E6B" opacity="0.65" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round" stroke-opacity="0.25"/>
+    <!-- Tail fin rays -->
+    <g id="caudal-fin-rays" stroke="#5B6FA8" stroke-linecap="round" opacity="0.2" fill="none" stroke-width="0.8">
+      <line x1="565" y1="340" x2="635" y2="290"/>
+      <line x1="565" y1="348" x2="638" y2="310"/>
+      <line x1="565" y1="355" x2="635" y2="340"/>
+      <line x1="565" y1="362" x2="635" y2="380"/>
+      <line x1="565" y1="370" x2="635" y2="410"/>
+    </g>
+
+    <!-- Body texture — rough skin bumps -->
+    <g id="skin-texture" fill="#5B6FA8" opacity="0.12">
+      <circle cx="300" cy="300" r="2"/>
+      <circle cx="330" cy="280" r="1.5"/>
+      <circle cx="360" cy="310" r="2"/>
+      <circle cx="390" cy="290" r="1.8"/>
+      <circle cx="420" cy="320" r="1.5"/>
+      <circle cx="350" cy="350" r="2"/>
+      <circle cx="380" cy="370" r="1.5"/>
+      <circle cx="410" cy="350" r="1.8"/>
+      <circle cx="440" cy="380" r="1.5"/>
+      <circle cx="300" cy="370" r="1.8"/>
+      <circle cx="330" cy="400" r="1.5"/>
+      <circle cx="460" cy="300" r="2"/>
+      <circle cx="490" cy="330" r="1.5"/>
+      <circle cx="270" cy="340" r="1.8"/>
+      <circle cx="500" cy="360" r="1.2"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FUSED MALE #1 — on belly/flank area -->
+  <!-- ============================================ -->
+  <g id="fused-male-1">
+    <!-- Fusion zone — blurred boundary where male merges -->
+    <ellipse id="fusion-zone-1" cx="420" cy="440" rx="25" ry="18" fill="#2D3E6B" opacity="0.5"/>
+    <ellipse cx="420" cy="438" rx="18" ry="12" fill="#5B6FA8" opacity="0.2"/>
+
+    <!-- Male body — small, vestigial, blob-like -->
+    <path id="male-1-body" d="
+      M 405 442
+      Q 400 455, 405 468
+      Q 410 478, 420 480
+      Q 430 478, 435 468
+      Q 440 455, 435 442
+      Z" fill="#2D3E6B" opacity="0.75"/>
+
+    <!-- Male body highlight -->
+    <path d="M 410 450 Q 412 460, 418 468 Q 422 470, 428 465 Q 432 458, 430 448 Z" fill="#5B6FA8" opacity="0.2"/>
+
+    <!-- Vestigial features — no eyes, no fins, just a lump with slight texture -->
+    <ellipse cx="415" cy="460" rx="3" ry="2" fill="#5B6FA8" opacity="0.15"/>
+    <ellipse cx="425" cy="455" rx="2" ry="1.5" fill="#5B6FA8" opacity="0.1"/>
+
+    <!-- Circulatory connection lines (dashed) -->
+    <path id="circulatory-line-1a" d="M 420 442 Q 415 420, 400 400" 
+          fill="none" stroke="#E85542" stroke-width="1" stroke-dasharray="4,3" stroke-linecap="round" opacity="0.35"/>
+    <path id="circulatory-line-1b" d="M 418 440 Q 425 415, 440 395" 
+          fill="none" stroke="#E85542" stroke-width="0.8" stroke-dasharray="3,4" stroke-linecap="round" opacity="0.25"/>
+    <path id="circulatory-line-1c" d="M 422 445 Q 430 425, 450 410" 
+          fill="none" stroke="#E85542" stroke-width="0.8" stroke-dasharray="5,3" stroke-linecap="round" opacity="0.2"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FUSED MALE #2 — further back on flank -->
+  <!-- ============================================ -->
+  <g id="fused-male-2">
+    <!-- Fusion zone -->
+    <ellipse id="fusion-zone-2" cx="500" cy="410" rx="18" ry="14" fill="#2D3E6B" opacity="0.5"/>
+    <ellipse cx="500" cy="408" rx="12" ry="9" fill="#5B6FA8" opacity="0.2"/>
+
+    <!-- Male body — even smaller, more absorbed -->
+    <path id="male-2-body" d="
+      M 490 412
+      Q 487 422, 490 432
+      Q 495 438, 502 438
+      Q 510 436, 513 428
+      Q 515 418, 510 412
+      Z" fill="#2D3E6B" opacity="0.7"/>
+
+    <!-- Slight highlight -->
+    <path d="M 494 418 Q 496 425, 500 430 Q 505 432, 508 426 Q 510 420, 506 416 Z" fill="#5B6FA8" opacity="0.18"/>
+
+    <!-- Circulatory connections -->
+    <path id="circulatory-line-2a" d="M 500 412 Q 495 395, 485 380" 
+          fill="none" stroke="#E85542" stroke-width="0.8" stroke-dasharray="4,3" stroke-linecap="round" opacity="0.3"/>
+    <path id="circulatory-line-2b" d="M 503 415 Q 510 398, 520 385" 
+          fill="none" stroke="#E85542" stroke-width="0.7" stroke-dasharray="3,4" stroke-linecap="round" opacity="0.2"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ANNOTATIONS -->
+  <!-- ============================================ -->
+
+  <!-- Esca label -->
+  <g id="annotation-esca">
+    <line x1="380" y1="55" x2="460" y2="80" 
+          stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="380" cy="55" r="2" fill="#5B6FA8" opacity="0.6"/>
+    <text x="465" y="78" font-family="Barlow, sans-serif" font-size="12" fill="#D1DCFF" opacity="0.7" font-weight="500">esca (lure)</text>
+  </g>
+
+  <!-- Illicium label -->
+  <g id="annotation-illicium">
+    <line x1="320" y1="140" x2="240" y2="125" 
+          stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="320" cy="140" r="2" fill="#5B6FA8" opacity="0.6"/>
+    <text x="160" y="120" font-family="Barlow, sans-serif" font-size="12" fill="#D1DCFF" opacity="0.7" font-weight="500">illicium</text>
+  </g>
+
+  <!-- Fused male 1 label -->
+  <g id="annotation-fused-male-1">
+    <line x1="420" y1="480" x2="470" y2="530" 
+          stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="420" cy="480" r="2" fill="#5B6FA8" opacity="0.6"/>
+    <text x="475" y="534" font-family="Barlow, sans-serif" font-size="12" fill="#D1DCFF" opacity="0.7" font-weight="500">fused male ♂</text>
+  </g>
+
+  <!-- Fused male 2 label -->
+  <g id="annotation-fused-male-2">
+    <line x1="505" y1="438" x2="570" y2="480" 
+          stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="505" cy="438" r="2" fill="#5B6FA8" opacity="0.6"/>
+    <text x="575" y="484" font-family="Barlow, sans-serif" font-size="12" fill="#D1DCFF" opacity="0.7" font-weight="500">fused male ♂</text>
+  </g>
+
+  <!-- Circulatory system annotation -->
+  <g id="annotation-circulation">
+    <line x1="445" y1="400" x2="520" y2="340" 
+          stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="8,5" stroke-linecap="round" opacity="0.6"/>
+    <circle cx="445" cy="400" r="2" fill="#5B6FA8" opacity="0.6"/>
+    <text x="525" y="338" font-family="Barlow, sans-serif" font-size="11" fill="#E85542" opacity="0.6" font-weight="500">shared circulation</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Additional deep-sea atmosphere -->
+  <!-- ============================================ -->
+
+  <!-- Distant bioluminescent specks -->
+  <g id="distant-bioluminescence">
+    <ellipse cx="680" cy="180" rx="4" ry="4" fill="#FFFF77" opacity="0.06"/>
+    <ellipse cx="680" cy="180" rx="2" ry="2" fill="#FFFF77" opacity="0.15"/>
+    <ellipse cx="680" cy="180" rx="0.8" ry="0.8" fill="#FBFFF6" opacity="0.3"/>
+
+    <ellipse cx="100" cy="450" rx="3" ry="3" fill="#2FBF39" opacity="0.05"/>
+    <ellipse cx="100" cy="450" rx="1.5" ry="1.5" fill="#2FBF39" opacity="0.12"/>
+    <ellipse cx="100" cy="450" rx="0.6" ry="0.6" fill="#FBFFF6" opacity="0.2"/>
+
+    <ellipse cx="720" cy="480" rx="3.5" ry="3.5" fill="#FFFF77" opacity="0.04"/>
+    <ellipse cx="720" cy="480" rx="1.5" ry="1.5" fill="#FFFF77" opacity="0.1"/>
+    <ellipse cx="720" cy="480" rx="0.5" ry="0.5" fill="#FBFFF6" opacity="0.18"/>
+  </g>
+
+  <!-- Title in bottom corner -->
+  <text id="title-label" x="30" y="580" font-family="Barlow, sans-serif" font-size="14" fill="#5B6FA8" opacity="0.4" font-weight="600" letter-spacing="2">D4: ANGLERFISH FUSION</text>
+
+</svg>

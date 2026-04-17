@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>D4: Anglerfish Fusion — Gemini Feedback Experiment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0D0D16;
+      color: #FBFFF6;
+      font-family: 'Inter', system-ui, sans-serif;
+      padding-bottom: 80px;
+    }
+
+    header {
+      padding: 40px 60px 32px;
+      border-bottom: 1px solid #2D3E6B;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .experiment-tag {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #FFFF77;
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 900;
+      font-size: clamp(24px, 3.5vw, 42px);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    header p {
+      font-size: 15px;
+      color: #8BA0D6;
+      max-width: 72ch;
+      line-height: 1.7;
+    }
+    .pipeline {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .pipeline-step {
+      background: #1C1E35;
+      border: 1px solid #2D3E6B;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .pipeline-step.claude { border-color: #2FBF39; color: #2FBF39; }
+    .pipeline-step.gemini { border-color: #E6B800; color: #E6B800; }
+    .pipeline-arrow {
+      color: #3D3D52;
+      font-size: 18px;
+    }
+
+    /* Main comparison layout */
+    .comparison {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px 60px;
+    }
+
+    .images-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: #2D3E6B;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .image-panel {
+      background: #0D0D16;
+      display: flex;
+      flex-direction: column;
+    }
+    .image-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid #2D3E6B;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .round-badge {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .round-badge.r1 { background: #1C1E35; color: #5B6FA8; border: 1px solid #3D3D52; }
+    .round-badge.r2 { background: #1A5C1E; color: #6FD877; border: 1px solid #2FBF39; }
+    .image-header-label {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .image-header-sub {
+      font-size: 12px;
+      color: #6B6B7C;
+      margin-left: auto;
+    }
+    .svg-container {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+    }
+    .svg-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Feedback section */
+    .feedback-section {
+      background: #1C1E35;
+      border: 1px solid #2D3E6B;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+    .feedback-header {
+      padding: 20px 28px;
+      border-bottom: 1px solid #2D3E6B;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .gemini-badge {
+      background: #2A2000;
+      border: 1px solid #E6B800;
+      color: #E6B800;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .feedback-header h2 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #FBFFF6;
+    }
+    .feedback-body {
+      padding: 28px;
+    }
+    .feedback-item {
+      display: flex;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #2D3E6B;
+    }
+    .feedback-item:last-child { border-bottom: none; }
+    .feedback-num {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      color: #E6B800;
+      opacity: 0.4;
+      line-height: 1;
+      min-width: 32px;
+    }
+    .feedback-content {}
+    .feedback-title {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #FBFFF6;
+      margin-bottom: 4px;
+    }
+    .feedback-text {
+      font-size: 13px;
+      color: #8BA0D6;
+      line-height: 1.65;
+    }
+
+    /* Changes applied */
+    .changes-section {
+      background: #0A1A0A;
+      border: 1px solid #1A5C1E;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .changes-header {
+      padding: 20px 28px;
+      border-bottom: 1px solid #1A5C1E;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .claude-badge {
+      background: #0D1F0D;
+      border: 1px solid #2FBF39;
+      color: #2FBF39;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .changes-header h2 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #FBFFF6;
+    }
+    .changes-body {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .change-card {
+      background: #0D1F0D;
+      border: 1px solid #1A5C1E;
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+    .change-card-title {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: #6FD877;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .change-card-text {
+      font-size: 13px;
+      color: #8BA0D6;
+      line-height: 1.6;
+    }
+
+    nav.back {
+      padding: 24px 60px 0;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    nav.back a {
+      font-size: 12px;
+      color: #5B6FA8;
+      text-decoration: none;
+    }
+    nav.back a:hover { color: #D1DCFF; }
+
+    @media (max-width: 900px) {
+      header, .comparison, nav.back { padding-left: 24px; padding-right: 24px; }
+      .images-row { grid-template-columns: 1fr; }
+      .changes-body { grid-template-columns: 1fr; }
+      .pipeline { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="back"><a href="../model-comparison.html">← Model Comparison</a></nav>
+
+<header>
+  <div class="experiment-tag">Experiment — Visual Feedback Loop</div>
+  <h1>Can Gemini's eyes make Claude's art better?</h1>
+  <p>Claude generates an SVG illustration. Gemini Vision analyzes it against the story and gives a structured critique. Claude regenerates with that feedback. Same story, same style rules, two rounds.</p>
+  <div class="pipeline">
+    <div class="pipeline-step claude">Claude Opus</div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step">Round 1 SVG</div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step gemini">Gemini 2.0 Flash Vision</div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step">6-Point Critique</div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step claude">Claude Opus</div>
+    <div class="pipeline-arrow">→</div>
+    <div class="pipeline-step claude" style="border-color:#6FD877;color:#6FD877;">Round 2 SVG</div>
+  </div>
+</header>
+
+<div class="comparison">
+
+  <!-- Story context -->
+  <div style="margin-bottom:32px; padding:20px 24px; background:#1C1E35; border:1px solid #2D3E6B; border-radius:8px; border-left: 3px solid #5B6FA8;">
+    <div style="font-family:'Barlow',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#5B6FA8;margin-bottom:8px;">D4 — ANGLERFISH FUSION</div>
+    <p style="font-size:14px;color:#8BA0D6;line-height:1.7;">Ceratioid deep-sea anglerfish sexual parasitism. The tiny male bites the female, enzymes dissolve both skins, their circulatory systems merge permanently. The male loses his eyes, fins, digestive system, and brain — retaining only his testes. A single female can carry up to 8 fused males simultaneously. These fish have lost adaptive immunity entirely to allow permanent tissue fusion without rejection.</p>
+  </div>
+
+  <!-- Side-by-side images -->
+  <div class="images-row">
+    <div class="image-panel">
+      <div class="image-header">
+        <span class="round-badge r1">Round 1</span>
+        <span class="image-header-label">Claude Opus — Original</span>
+        <span class="image-header-sub">No feedback</span>
+      </div>
+      <div class="svg-container">
+        <img src="D4-round1.png" alt="Round 1: Claude Opus original anglerfish illustration"/>
+      </div>
+    </div>
+    <div class="image-panel">
+      <div class="image-header">
+        <span class="round-badge r2">Round 2</span>
+        <span class="image-header-label">Claude Opus — After Gemini Critique</span>
+        <span class="image-header-sub">6 improvements applied</span>
+      </div>
+      <div class="svg-container">
+        <img src="D4-round2.png" alt="Round 2: Claude Opus improved after Gemini feedback"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gemini feedback -->
+  <div class="feedback-section">
+    <div class="feedback-header">
+      <span class="gemini-badge">Gemini 2.0 Flash Vision</span>
+      <h2>Visual critique of Round 1</h2>
+    </div>
+    <div class="feedback-body">
+      <div class="feedback-item">
+        <div class="feedback-num">1</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Emphasize Female Dominance</div>
+          <div class="feedback-text">Scale up the female anglerfish's body size by 20%. This reinforces her role as the dominant partner and emphasizes the size disparity in sexual parasitism.</div>
+        </div>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-num">2</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Integrate Fused Males Further</div>
+          <div class="feedback-text">Adjust the fused male elements so they appear further absorbed into the female's body. Reduce their visible profiles by half, diminish all details except testis silhouettes, and blend the edges of their merged skin boundaries.</div>
+        </div>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-num">3</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Intensify Lure Glow</div>
+          <div class="feedback-text">Increase the esca lure's bioluminescence by adding a brighter central hotspot with more concentric rings. Overlay a larger bloom effect extending well beyond the esca's edge to illuminate the surrounding darkness.</div>
+        </div>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-num">4</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Enhance Abyssal Depth</div>
+          <div class="feedback-text">Deepen the background color to pure black (#000000). Add more faint scattered particle effects in very low opacity, varying sizes, across the whole canvas to simulate the density of the abyssal ocean.</div>
+        </div>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-num">5</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Refine Illicium Anatomy</div>
+          <div class="feedback-text">Slightly thicken the illicium stalk as it nears the esca — anatomically it's often thicker where it supports the lure. Add a more natural bend or S-curve to the stalk.</div>
+        </div>
+      </div>
+      <div class="feedback-item">
+        <div class="feedback-num">6</div>
+        <div class="feedback-content">
+          <div class="feedback-title">Composition Reposition</div>
+          <div class="feedback-text">Shift the anglerfish slightly upwards and to the left. This gives the esca annotation more visual breathing room and improves overall visual balance.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Changes applied -->
+  <div class="changes-section">
+    <div class="changes-header">
+      <span class="claude-badge">Claude Opus — Round 2</span>
+      <h2>Changes applied</h2>
+    </div>
+    <div class="changes-body">
+      <div class="change-card">
+        <div class="change-card-title">Female body +20%</div>
+        <div class="change-card-text">Body path expanded with wider bounding box (~135–598 x-range vs ~185–575). All internal features repositioned and scaled to match.</div>
+      </div>
+      <div class="change-card">
+        <div class="change-card-title">Fused males absorbed</div>
+        <div class="change-card-text">Completely redesigned as 3–4 concentric translucent ellipses fading into the female's body. No distinct fish shapes — only faint testes-like blobs remain.</div>
+      </div>
+      <div class="change-card">
+        <div class="change-card-title">Lure glow: 12 rings</div>
+        <div class="change-card-text">Expanded from 8 to 12 concentric ellipses, outermost at rx=110 (opacity 0.03), extending ~110px in radius and dominating the upper canvas.</div>
+      </div>
+      <div class="change-card">
+        <div class="change-card-title">Background → #000000</div>
+        <div class="change-card-text">Changed from #0D0D16 to pure black. Added 30 marine snow particles distributed across the entire canvas at r=0.5–2.0, opacity 0.05–0.2.</div>
+      </div>
+      <div class="change-card">
+        <div class="change-card-title">Illicium tapering stalk</div>
+        <div class="change-card-text">Replaced stroke-based stalk with a filled path tapering from ~2px at the head base to ~4px near the esca, following a dramatic S-curve hook shape.</div>
+      </div>
+      <div class="change-card">
+        <div class="change-card-title">Composition shifted</div>
+        <div class="change-card-text">Entire anglerfish moved ~25px up and ~15px left. Esca at y=45 (was y=52), giving more annotation breathing room at the top.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
