@@ -1,175 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <defs>
-    <radialGradient id="bgGradE16" cx="50%" cy="40%" r="65%">
-      <stop offset="0%" stop-color="#2D3E6B"/>
-      <stop offset="100%" stop-color="#1C1E35"/>
-    </radialGradient>
-    <radialGradient id="endoperoxideGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#CA1E08" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#CA1E08" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600" width="800" height="600">
 
-  <!-- bg: dark midnight background -->
-  <g id="bg" data-label="Dark midnight background for scientific focus">
-    <rect width="800" height="600" fill="url(#bgGradE16)"/>
+  <!-- bg -->
+  <g id="bg" data-label="Dark midnight background">
+    <rect width="800" height="600" fill="#1C1E35"/>
   </g>
 
-  <!-- context: Artemisia annua plant silhouette on left -->
-  <g id="context" data-label="Artemisia annua sweet wormwood plant silhouette — botanical context">
-    <!-- Main stem -->
-    <path d="M 140,580 C 138,540 136,500 140,460 C 143,420 148,390 145,350 C 142,310 138,280 142,245"
-          fill="none" stroke="#248A28" stroke-width="3" stroke-linecap="round"/>
-    <!-- Branch left lower -->
-    <path d="M 140,460 C 120,440 100,425 80,418 C 70,414 60,415 55,420"
-          fill="none" stroke="#248A28" stroke-width="2" stroke-linecap="round"/>
-    <!-- Branch right lower -->
-    <path d="M 140,440 C 162,418 182,405 202,400 C 215,397 225,398 230,404"
-          fill="none" stroke="#248A28" stroke-width="2" stroke-linecap="round"/>
-    <!-- Branch left mid -->
-    <path d="M 142,380 C 118,358 98,345 75,340 C 62,337 50,340 46,346"
-          fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Branch right mid -->
-    <path d="M 142,365 C 165,343 185,330 208,325 C 220,322 232,324 238,330"
-          fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Branch left upper -->
-    <path d="M 143,300 C 122,278 105,265 85,260 C 72,256 60,258 55,264"
-          fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Branch right upper -->
-    <path d="M 143,285 C 163,263 182,250 203,247 C 215,244 226,246 230,252"
-          fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
-    <!-- Tiny leaves on branches — feathery pinnate -->
-    <!-- Left lower branch leaves -->
-    <path d="M 80,418 C 75,410 72,402 76,397 C 80,402 82,410 80,418 Z" fill="#2FBF39"/>
-    <path d="M 95,422 C 90,414 88,406 92,401 C 96,406 97,414 95,422 Z" fill="#2FBF39"/>
-    <path d="M 110,424 C 105,416 103,408 107,403 C 111,408 112,416 110,424 Z" fill="#2FBF39"/>
-    <!-- Right lower branch leaves -->
-    <path d="M 200,402 C 205,394 208,386 204,381 C 200,386 199,394 200,402 Z" fill="#2FBF39"/>
-    <path d="M 215,400 C 220,392 223,384 219,379 C 215,384 214,392 215,400 Z" fill="#2FBF39"/>
-    <!-- Left mid branch leaves -->
-    <path d="M 75,342 C 70,334 68,326 72,321 C 76,326 77,334 75,342 Z" fill="#248A28"/>
-    <path d="M 90,344 C 85,336 84,328 88,323 C 92,328 92,336 90,344 Z" fill="#248A28"/>
-    <path d="M 105,344 C 100,336 99,328 103,323 C 107,328 107,336 105,344 Z" fill="#248A28"/>
-    <!-- Right mid branch leaves -->
-    <path d="M 205,326 C 210,318 213,310 209,305 C 205,310 204,318 205,326 Z" fill="#248A28"/>
-    <path d="M 220,323 C 225,315 228,307 224,302 C 220,307 219,315 220,323 Z" fill="#248A28"/>
-    <!-- Left upper leaves -->
-    <path d="M 82,263 C 77,255 75,247 79,242 C 83,247 84,255 82,263 Z" fill="#1A5C1E"/>
-    <path d="M 97,264 C 92,256 91,248 95,243 C 99,248 99,256 97,264 Z" fill="#1A5C1E"/>
-    <!-- Right upper leaves -->
-    <path d="M 200,250 C 205,242 208,234 204,229 C 200,234 199,242 200,250 Z" fill="#1A5C1E"/>
-    <path d="M 215,248 C 220,240 222,232 218,227 C 215,232 214,240 215,248 Z" fill="#1A5C1E"/>
-    <!-- Apical leaves at tip of main stem -->
-    <path d="M 142,245 C 132,228 128,210 133,198 C 140,208 144,226 142,245 Z" fill="#2FBF39"/>
-    <path d="M 142,245 C 152,228 155,210 150,198 C 143,208 140,226 142,245 Z" fill="#2FBF39"/>
-    <path d="M 142,245 C 138,224 136,206 140,195 C 144,206 144,224 142,245 Z" fill="#6FD877"/>
-    <!-- Small flower heads — tiny yellow-green button florets -->
-    <circle cx="142" cy="190" r="5" fill="#E6B800"/>
-    <circle cx="132" cy="194" r="4" fill="#E6B800"/>
-    <circle cx="152" cy="194" r="4" fill="#E6B800"/>
-    <circle cx="126" cy="200" r="3.5" fill="#B8860B"/>
-    <circle cx="158" cy="200" r="3.5" fill="#B8860B"/>
+  <!-- context: Artemisia annua botanical plant left panel -->
+  <g id="context" data-label="Artemisia annua plant silhouette">
+    <line x1="140" y1="580" x2="142" y2="200" stroke="#248A28" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- branches -->
+    <path d="M 141,460 C 118,440 95,428 72,424" fill="none" stroke="#248A28" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 141,440 C 163,420 186,408 208,404" fill="none" stroke="#248A28" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 141,370 C 115,350 92,338 68,335" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 141,355 C 164,335 186,323 208,320" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 142,280 C 118,260 98,248 78,244" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 142,265 C 162,245 182,234 202,230" fill="none" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round"/>
+    <!-- pinnate leaves on branches (small ovals) -->
+    <!-- lower left -->
+    <ellipse cx="72" cy="424" rx="10" ry="5" fill="#2FBF39" transform="rotate(-20 72 424)"/>
+    <ellipse cx="90" cy="427" rx="9" ry="4.5" fill="#2FBF39" transform="rotate(-15 90 427)"/>
+    <ellipse cx="108" cy="428" rx="8" ry="4" fill="#248A28" transform="rotate(-10 108 428)"/>
+    <!-- lower right -->
+    <ellipse cx="208" cy="404" rx="10" ry="5" fill="#2FBF39" transform="rotate(20 208 404)"/>
+    <ellipse cx="192" cy="406" rx="9" ry="4.5" fill="#2FBF39" transform="rotate(15 192 406)"/>
+    <!-- mid left -->
+    <ellipse cx="68" cy="335" rx="10" ry="5" fill="#248A28" transform="rotate(-20 68 335)"/>
+    <ellipse cx="86" cy="338" rx="8" ry="4" fill="#1A5C1E" transform="rotate(-15 86 338)"/>
+    <!-- mid right -->
+    <ellipse cx="208" cy="320" rx="10" ry="5" fill="#248A28" transform="rotate(20 208 320)"/>
+    <!-- upper left -->
+    <ellipse cx="78" cy="244" rx="9" ry="4.5" fill="#1A5C1E" transform="rotate(-20 78 244)"/>
+    <ellipse cx="95" cy="246" rx="8" ry="4" fill="#1A5C1E" transform="rotate(-15 95 246)"/>
+    <!-- upper right -->
+    <ellipse cx="202" cy="230" rx="9" ry="4.5" fill="#1A5C1E" transform="rotate(20 202 230)"/>
+    <!-- apical cluster -->
+    <ellipse cx="130" cy="208" rx="12" ry="6" fill="#2FBF39" transform="rotate(-30 130 208)"/>
+    <ellipse cx="152" cy="206" rx="12" ry="6" fill="#2FBF39" transform="rotate(30 152 206)"/>
+    <circle cx="141" cy="195" r="6" fill="#E6B800"/>
+    <circle cx="130" cy="200" r="4" fill="#B8860B"/>
+    <circle cx="152" cy="200" r="4" fill="#B8860B"/>
   </g>
 
-  <!-- subject: artemisinin molecule — peroxide bridge as central focus -->
-  <g id="subject" data-label="Artemisinin molecular structure with endoperoxide bridge highlighted">
-    <!-- Molecule centered right of plant, large enough to read -->
-    <!-- Artemisinin is a sesquiterpene lactone with an endoperoxide bridge -->
-    <!-- Simplified skeletal structure, highlighting the 1,2,4-trioxane ring -->
-
-    <!-- Background glow on peroxide bridge region -->
-    <ellipse cx="520" cy="295" rx="55" ry="45" fill="url(#endoperoxideGlow)"/>
-
-    <!-- Ring system: outer 6-membered carbocyclic ring (ring D) -->
-    <!-- Center at ~510, 310 -->
-    <polygon points="465,285 500,265 540,270 558,305 540,340 500,345"
-             fill="none" stroke="#8BA0D6" stroke-width="2.5" stroke-linejoin="round"/>
-
-    <!-- Ring A: lactone/cyclohexanone ring, fused at left of ring D -->
-    <polygon points="388,290 420,272 465,285 465,320 430,338 388,325"
-             fill="none" stroke="#8BA0D6" stroke-width="2.5" stroke-linejoin="round"/>
-
-    <!-- Carbonyl (lactone) double bond on ring A -->
-    <line x1="388" y1="290" x2="388" y2="325" stroke="#8BA0D6" stroke-width="2.5"/>
-    <text x="370" y="312" fill="#8BA0D6" font-family="Barlow, sans-serif" font-size="14" font-weight="600">O</text>
-    <!-- Oxygen at lactone -->
-    <line x1="375" y1="308" x2="388" y2="308" stroke="#8BA0D6" stroke-width="1.5"/>
-
-    <!-- The trioxane ring — 6-membered ring with 3 oxygens — CRITICAL feature -->
-    <!-- Positioned fused to ring D at top-right -->
-    <polygon points="540,270 578,252 618,265 622,300 588,318 558,305"
-             fill="none" stroke="#CA1E08" stroke-width="3" stroke-linejoin="round"/>
-
-    <!-- Oxygen atoms on the trioxane ring — the peroxide bridge oxygens -->
-    <!-- O1 -->
-    <circle cx="560" cy="262" r="8" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
-    <text x="560" y="267" text-anchor="middle" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">O</text>
-    <!-- O2 -->
-    <circle cx="598" cy="257" r="8" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
-    <text x="598" y="262" text-anchor="middle" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">O</text>
-    <!-- O3 (peroxide bridge label) -->
-    <circle cx="622" cy="300" r="8" fill="#CA1E08" stroke="#8B1506" stroke-width="1.5"/>
-    <text x="622" y="305" text-anchor="middle" fill="#FBFFF6" font-family="Barlow, sans-serif" font-size="11" font-weight="700">O</text>
-
-    <!-- Peroxide bond: O–O highlighted with emphasis line -->
-    <line x1="568" y1="258" x2="590" y2="257" stroke="#CA1E08" stroke-width="4" stroke-linecap="round"/>
-
-    <!-- Methyl and isopropyl groups — simplified -->
-    <!-- CH₃ at ring junction top -->
-    <line x1="540" y1="270" x2="535" y2="248" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
-    <text x="530" y="244" fill="#5B6FA8" font-family="Barlow, sans-serif" font-size="12">CH₃</text>
-    <!-- Isopropyl group bottom right -->
-    <line x1="558" y1="305" x2="575" y2="330" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
-    <line x1="575" y1="330" x2="595" y2="345" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
-    <line x1="575" y1="330" x2="570" y2="350" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
-
-    <!-- Heme iron target -->
-    <circle cx="680" cy="400" r="28" fill="#3D3D52" stroke="#E6B800" stroke-width="2.5"/>
-    <circle cx="680" cy="400" r="18" fill="none" stroke="#B8860B" stroke-width="2" stroke-dasharray="5 3"/>
-    <text x="680" y="396" text-anchor="middle" fill="#E6B800" font-family="Barlow, sans-serif" font-size="13" font-weight="700">Fe</text>
-    <text x="680" y="412" text-anchor="middle" fill="#B8860B" font-family="Barlow, sans-serif" font-size="10">²⁺</text>
-
-    <!-- Reaction arrow from peroxide bridge to iron -->
-    <path d="M 635,310 C 660,340 668,365 670,380" fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
-    <polygon points="670,380 663,368 677,368" fill="#CA1E08"/>
-
-    <!-- Free radical burst indicator -->
-    <path d="M 695,380 L 708,368" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
-    <path d="M 700,375 L 715,375" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
-    <path d="M 695,370 L 705,360" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <!-- subject: RDKit-generated artemisinin structure (accurate) -->
+  <g id="subject" data-label="Artemisinin molecular structure — RDKit generated, endoperoxide bridge in red">
+    <!-- RDKit SVG embedded as image -->
+    <image x="360" y="130" width="400" height="300"
+           href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0naXNvLTg4NTktMSc/Pgo8c3ZnIHZlcnNpb249JzEuMScgYmFzZVByb2ZpbGU9J2Z1bGwnCiAgICAgICAgICAgICAgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJwogICAgICAgICAgICAgICAgICAgICAgeG1sbnM6cmRraXQ9J2h0dHA6Ly93d3cucmRraXQub3JnL3htbCcKICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJwogICAgICAgICAgICAgICAgICB4bWw6c3BhY2U9J3ByZXNlcnZlJwp3aWR0aD0nNDAwcHgnIGhlaWdodD0nMzAwcHgnIHZpZXdCb3g9JzAgMCA0MDAgMzAwJz4KPCEtLSBFTkQgT0YgSEVBREVSIC0tPgo8cmVjdCBzdHlsZT0nb3BhY2l0eToxLjA7ZmlsbDojMUMxRTM1O3N0cm9rZTpub25lJyB3aWR0aD0nNDAwLjAnIGhlaWdodD0nMzAwLjAnIHg9JzAuMCcgeT0nMC4wJz4gPC9yZWN0Pgo8cGF0aCBjbGFzcz0nYm9uZC0xMSBhdG9tLTExIGF0b20tMTInIGQ9J00gMTIwLjIsMTU4LjUgTCAxNDEuOCwxNzQuOSBMIDEzMi4yLDE4Ny43IEwgMTEwLjUsMTcxLjMgWicgc3R5bGU9J2ZpbGw6I0M5MUUwNztmaWxsLXJ1bGU6ZXZlbm9kZDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6I0M5MUUwNztzdHJva2Utd2lkdGg6MC4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLW9wYWNpdHk6MTsnIC8+CjxlbGxpcHNlIGN4PScxMzcuMCcgY3k9JzE4MS40JyByeD0nMTIuMCcgcnk9JzEyLjQnIGNsYXNzPSdhdG9tLTExJyAgc3R5bGU9J2ZpbGw6I0M5MUUwNztmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0M5MUUwNztzdHJva2Utd2lkdGg6MS4wcHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPGVsbGlwc2UgY3g9JzExNS4zJyBjeT0nMTY1LjAnIHJ4PScxMi4wJyByeT0nMTIuNCcgY2xhc3M9J2F0b20tMTInICBzdHlsZT0nZmlsbDojQzkxRTA3O2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojQzkxRTA3O3N0cm9rZS13aWR0aDoxLjBweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gMTM4LjYsMTM3LjggTCAxMzguNCwxMzcuNicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDEzNS41LDE0MC4wIEwgMTM1LjIsMTM5LjUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSAxMzIuNCwxNDIuMSBMIDEzMi4wLDE0MS40JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gMTI5LjMsMTQ0LjIgTCAxMjguNywxNDMuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDEyNi4zLDE0Ni40IEwgMTI1LjUsMTQ1LjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSAxMjMuMiwxNDguNSBMIDEyMi4zLDE0Ny4xJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gMTIwLjEsMTUwLjYgTCAxMTkuMSwxNDkuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDExNy4wLDE1Mi44IEwgMTE1LjgsMTUwLjknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSAxMTMuOSwxNTQuOSBMIDExMi42LDE1Mi44JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gMTEwLjksMTU3LjEgTCAxMDkuNCwxNTQuNycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDEwNy44LDE1OS4yIEwgMTA2LjEsMTU2LjYnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSAxMDQuNywxNjEuMyBMIDEwMi45LDE1OC41JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gMTAxLjYsMTYzLjUgTCA5OS43LDE2MC41JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gOTguNSwxNjUuNiBMIDk2LjQsMTYyLjQnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSA5NS41LDE2Ny44IEwgOTMuMiwxNjQuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDkyLjQsMTY5LjkgTCA5MC4wLDE2Ni4yJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gODkuMywxNzIuMCBMIDg2LjgsMTY4LjEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSA4Ni4yLDE3NC4yIEwgODMuNSwxNzAuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDgzLjEsMTc2LjMgTCA4MC4zLDE3MS45JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gODAuMSwxNzguNSBMIDc3LjEsMTczLjgnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSA3Ny4wLDE4MC42IEwgNzMuOCwxNzUuNycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDczLjksMTgyLjcgTCA3MC42LDE3Ny42JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gNzAuOCwxODQuOSBMIDY3LjQsMTc5LjUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSA2Ny43LDE4Ny4wIEwgNjQuMSwxODEuNCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDY0LjcsMTg5LjEgTCA2MC45LDE4My4zJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gNjEuNiwxOTEuMyBMIDU3LjcsMTg1LjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTAgYXRvbS0xIGF0b20tMCcgZD0nTSA1OC41LDE5My40IEwgNTQuNSwxODcuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMCBhdG9tLTEgYXRvbS0wJyBkPSdNIDU1LjQsMTk1LjYgTCA1MS4yLDE4OS4wJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoxLjJweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0wIGF0b20tMSBhdG9tLTAnIGQ9J00gNTIuMywxOTcuNyBMIDQ4LjAsMTkwLjknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjEuMnB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEgYXRvbS0xIGF0b20tMicgZD0nTSAxNDEuNywxMzUuNyBMIDE2NS45LDE4MC4yJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0yIGF0b20tMiBhdG9tLTMnIGQ9J00gMTY1LjksMTgwLjIgTCAyMTAuMSwxNzEuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMyBhdG9tLTMgYXRvbS00JyBkPSdNIDIxMC4xLDE3MS4wIEwgMjQ0LjQsMTg4LjUnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTQgYXRvbS00IGF0b20tNScgZD0nTSAyNDQuNCwxODguNSBMIDI4NS42LDE0NC42JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC01IGF0b20tNSBhdG9tLTYnIGQ9J00gMjgyLjQsMTQ4LjAgTCAzMDguMCwxNTMuOScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNSBhdG9tLTUgYXRvbS02JyBkPSdNIDMwOC4wLDE1My45IEwgMzMzLjcsMTU5LjknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNGRjAwMDA7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTUgYXRvbS01IGF0b20tNicgZD0nTSAyODQuMiwxNDAuMiBMIDMwOS45LDE0Ni4xJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC01IGF0b20tNSBhdG9tLTYnIGQ9J00gMzA5LjksMTQ2LjEgTCAzMzUuNSwxNTIuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0ZGMDAwMDtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNiBhdG9tLTUgYXRvbS03JyBkPSdNIDI4NS42LDE0NC42IEwgMjc4LjQsMTIxLjEnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTYgYXRvbS01IGF0b20tNycgZD0nTSAyNzguNCwxMjEuMSBMIDI3MS4zLDk3LjcnIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNGRjAwMDA7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTcgYXRvbS03IGF0b20tOCcgZD0nTSAyNTguNSw4NC44IEwgMjMzLjksNzkuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0ZGMDAwMDtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtNyBhdG9tLTcgYXRvbS04JyBkPSdNIDIzMy45LDc5LjEgTCAyMDkuNCw3My40JyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC04IGF0b20tOCBhdG9tLTknIGQ9J00gMjA5LjQsNzMuNCBMIDE2OC4zLDExNy4zJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC05IGF0b20tOSBhdG9tLTEwJyBkPSdNIDE2OC4zLDExNy4zIEwgMTg1LjgsMTc0LjknIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEwIGF0b20tMTAgYXRvbS0xMScgZD0nTSAxODUuOCwxNzQuOSBMIDE0Ni42LDE4MC4wJyBzdHlsZT0nZmlsbDpub25lO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxJyAvPgo8cGF0aCBjbGFzcz0nYm9uZC0xMSBhdG9tLTExIGF0b20tMTInIGQ9J00gMTI3LjQsMTc0LjAgTCAxMjQuOSwxNzIuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTIgYXRvbS0xMiBhdG9tLTEzJyBkPSdNIDExMy44LDE1NC41IEwgMTA4LjEsMTE2LjInIHN0eWxlPSdmaWxsOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEnIC8+CjxwYXRoIGNsYXNzPSdib25kLTEzIGF0b20tMTMgYXRvbS0xNCcgZD0nTSAxMDguMSwxMTYuMiBMIDcwLjQsNjkuMSBMIDc3LjAsNjQuNSBaJyBzdHlsZT0nZmlsbDojRDFEQ0ZGO2ZpbGwtcnVsZTpldmVub2RkO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDowLjZweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utb3BhY2l0eToxOycgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTQgYXRvbS0xMyBhdG9tLTEnIGQ9J00gMTA4LjEsMTE2LjIgTCAxNDEuNywxMzUuNycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTUgYXRvbS0xMCBhdG9tLTQnIGQ9J00gMTg1LjgsMTc0LjkgTCAyNDQuNCwxODguNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTYgYXRvbS0xMyBhdG9tLTknIGQ9J00gMTA4LjEsMTE2LjIgTCAxNjguMywxMTcuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjQ2LjEsMTkyLjEgTCAyNDUuMCwxOTIuNScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjQ3LjgsMTk1LjcgTCAyNDUuNiwxOTYuNCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjQ5LjUsMTk5LjMgTCAyNDYuMiwyMDAuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjUxLjIsMjAyLjkgTCAyNDYuOCwyMDQuMycgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjUyLjksMjA2LjUgTCAyNDcuNCwyMDguMicgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjU0LjYsMjEwLjEgTCAyNDguMCwyMTIuMScgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTcgYXRvbS00IGF0b20tMTUnIGQ9J00gMjU2LjMsMjEzLjcgTCAyNDguNiwyMTYuMCcgc3R5bGU9J2ZpbGw6bm9uZTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6MS4ycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MScgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTggYXRvbS05IGF0b20tMTYnIGQ9J00gMTY4LjMsMTE3LjMgTCAxNTQuMSw5NC4wIEwgMTYxLjUsOTAuOSBaJyBzdHlsZT0nZmlsbDojRDFEQ0ZGO2ZpbGwtcnVsZTpldmVub2RkO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDowLjZweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utb3BhY2l0eToxOycgLz4KPHBhdGggY2xhc3M9J2JvbmQtMTkgYXRvbS0xMCBhdG9tLTE3JyBkPSdNIDE4NS44LDE3NC45IEwgMTg4LjQsMjAzLjEgTCAxODAuNCwyMDIuNyBaJyBzdHlsZT0nZmlsbDojRDFEQ0ZGO2ZpbGwtcnVsZTpldmVub2RkO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDowLjZweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utb3BhY2l0eToxOycgLz4KPHBhdGggZD0nTSAxNDIuOSwxMzcuOSBMIDE0MS43LDEzNS43IEwgMTQwLjAsMTM0LjcnIHN0eWxlPSdmaWxsOm5vbmU7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1vcGFjaXR5OjE7JyAvPgo8cGF0aCBkPSdNIDE2NC43LDE3OC4wIEwgMTY1LjksMTgwLjIgTCAxNjguMSwxNzkuNycgc3R5bGU9J2ZpbGw6bm9uZTtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLW9wYWNpdHk6MTsnIC8+CjxwYXRoIGQ9J00gMjA3LjksMTcxLjQgTCAyMTAuMSwxNzEuMCBMIDIxMS45LDE3MS44JyBzdHlsZT0nZmlsbDpub25lO3N0cm9rZTojRDFEQ0ZGO3N0cm9rZS13aWR0aDoyLjVweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utb3BhY2l0eToxOycgLz4KPHBhdGggZD0nTSAyODMuNSwxNDYuOCBMIDI4NS42LDE0NC42IEwgMjg1LjIsMTQzLjQnIHN0eWxlPSdmaWxsOm5vbmU7c3Ryb2tlOiNEMURDRkY7c3Ryb2tlLXdpZHRoOjIuNXB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1vcGFjaXR5OjE7JyAvPgo8cGF0aCBkPSdNIDIxMC43LDczLjcgTCAyMDkuNCw3My40IEwgMjA3LjQsNzUuNicgc3R5bGU9J2ZpbGw6bm9uZTtzdHJva2U6I0QxRENGRjtzdHJva2Utd2lkdGg6Mi41cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLW9wYWNpdHk6MTsnIC8+CjxwYXRoIGNsYXNzPSdhdG9tLTYnIGQ9J00gMzM2LjQgMTU4LjMKUSAzMzYuNCAxNTQuMiwgMzM4LjQgMTUxLjkKUSAzNDAuNCAxNDkuNiwgMzQ0LjIgMTQ5LjYKUSAzNDguMCAxNDkuNiwgMzUwLjAgMTUxLjkKUSAzNTIuMCAxNTQuMiwgMzUyLjAgMTU4LjMKUSAzNTIuMCAxNjIuNCwgMzUwLjAgMTY0LjgKUSAzNDcuOSAxNjcuMSwgMzQ0LjIgMTY3LjEKUSAzNDAuNCAxNjcuMSwgMzM4LjQgMTY0LjgKUSAzMzYuNCAxNjIuNCwgMzM2LjQgMTU4LjMKTSAzNDQuMiAxNjUuMgpRIDM0Ni44IDE2NS4yLCAzNDguMiAxNjMuNApRIDM0OS42IDE2MS43LCAzNDkuNiAxNTguMwpRIDM0OS42IDE1NC45LCAzNDguMiAxNTMuMgpRIDM0Ni44IDE1MS41LCAzNDQuMiAxNTEuNQpRIDM0MS42IDE1MS41LCAzNDAuMiAxNTMuMgpRIDMzOC44IDE1NC45LCAzMzguOCAxNTguMwpRIDMzOC44IDE2MS43LCAzNDAuMiAxNjMuNApRIDM0MS42IDE2NS4yLCAzNDQuMiAxNjUuMgonIGZpbGw9JyNGRjAwMDAnLz4KPHBhdGggY2xhc3M9J2F0b20tNycgZD0nTSAyNjAuMiA4Ny4xClEgMjYwLjIgODMuMCwgMjYyLjIgODAuNwpRIDI2NC4zIDc4LjQsIDI2OC4wIDc4LjQKUSAyNzEuOCA3OC40LCAyNzMuOSA4MC43ClEgMjc1LjkgODMuMCwgMjc1LjkgODcuMQpRIDI3NS45IDkxLjIsIDI3My44IDkzLjYKUSAyNzEuOCA5NS45LCAyNjguMCA5NS45ClEgMjY0LjMgOTUuOSwgMjYyLjIgOTMuNgpRIDI2MC4yIDkxLjIsIDI2MC4yIDg3LjEKTSAyNjguMCA5NC4wClEgMjcwLjYgOTQuMCwgMjcyLjAgOTIuMgpRIDI3My41IDkwLjUsIDI3My41IDg3LjEKUSAyNzMuNSA4My43LCAyNzIuMCA4Mi4wClEgMjcwLjYgODAuMywgMjY4LjAgODAuMwpRIDI2NS40IDgwLjMsIDI2NC4wIDgyLjAKUSAyNjIuNiA4My43LCAyNjIuNiA4Ny4xClEgMjYyLjYgOTAuNSwgMjY0LjAgOTIuMgpRIDI2NS40IDk0LjAsIDI2OC4wIDk0LjAKJyBmaWxsPScjRkYwMDAwJy8+CjxwYXRoIGNsYXNzPSdhdG9tLTExJyBkPSdNIDEyOS4yIDE4MS4zClEgMTI5LjIgMTc3LjIsIDEzMS4yIDE3NC45ClEgMTMzLjIgMTcyLjcsIDEzNy4wIDE3Mi43ClEgMTQwLjggMTcyLjcsIDE0Mi44IDE3NC45ClEgMTQ0LjggMTc3LjIsIDE0NC44IDE4MS4zClEgMTQ0LjggMTg1LjUsIDE0Mi44IDE4Ny44ClEgMTQwLjcgMTkwLjIsIDEzNy4wIDE5MC4yClEgMTMzLjMgMTkwLjIsIDEzMS4yIDE4Ny44ClEgMTI5LjIgMTg1LjUsIDEyOS4yIDE4MS4zCk0gMTM3LjAgMTg4LjIKUSAxMzkuNiAxODguMiwgMTQxLjAgMTg2LjUKUSAxNDIuNCAxODQuNywgMTQyLjQgMTgxLjMKUSAxNDIuNCAxNzguMCwgMTQxLjAgMTc2LjMKUSAxMzkuNiAxNzQuNiwgMTM3LjAgMTc0LjYKUSAxMzQuNCAxNzQuNiwgMTMzLjAgMTc2LjMKUSAxMzEuNiAxNzguMCwgMTMxLjYgMTgxLjMKUSAxMzEuNiAxODQuOCwgMTMzLjAgMTg2LjUKUSAxMzQuNCAxODguMiwgMTM3LjAgMTg4LjIKJyBmaWxsPScjMDAwMDAwJy8+CjxwYXRoIGNsYXNzPSdhdG9tLTEyJyBkPSdNIDEwNy41IDE2NC45ClEgMTA3LjUgMTYwLjksIDEwOS41IDE1OC42ClEgMTExLjYgMTU2LjMsIDExNS4zIDE1Ni4zClEgMTE5LjEgMTU2LjMsIDEyMS4xIDE1OC42ClEgMTIzLjIgMTYwLjksIDEyMy4yIDE2NC45ClEgMTIzLjIgMTY5LjEsIDEyMS4xIDE3MS40ClEgMTE5LjEgMTczLjgsIDExNS4zIDE3My44ClEgMTExLjYgMTczLjgsIDEwOS41IDE3MS40ClEgMTA3LjUgMTY5LjEsIDEwNy41IDE2NC45Ck0gMTE1LjMgMTcxLjkKUSAxMTcuOSAxNzEuOSwgMTE5LjMgMTcwLjEKUSAxMjAuOCAxNjguNCwgMTIwLjggMTY0LjkKUSAxMjAuOCAxNjEuNiwgMTE5LjMgMTU5LjkKUSAxMTcuOSAxNTguMiwgMTE1LjMgMTU4LjIKUSAxMTIuNyAxNTguMiwgMTExLjMgMTU5LjkKUSAxMDkuOSAxNjEuNiwgMTA5LjkgMTY0LjkKUSAxMDkuOSAxNjguNCwgMTExLjMgMTcwLjEKUSAxMTIuNyAxNzEuOSwgMTE1LjMgMTcxLjkKJyBmaWxsPScjMDAwMDAwJy8+CjxwYXRoIGNsYXNzPSdhdG9tLTE1JyBkPSdNIDI0OS40IDIxOC40CkwgMjUxLjggMjE4LjQKTCAyNTEuOCAyMjUuNwpMIDI2MC41IDIyNS43CkwgMjYwLjUgMjE4LjQKTCAyNjIuOCAyMTguNApMIDI2Mi44IDIzNS41CkwgMjYwLjUgMjM1LjUKTCAyNjAuNSAyMjcuNgpMIDI1MS44IDIyNy42CkwgMjUxLjggMjM1LjUKTCAyNDkuNCAyMzUuNQpMIDI0OS40IDIxOC40CicgZmlsbD0nIzAwMDAwMCcvPgo8cGF0aCBjbGFzcz0nYXRvbS0xNicgZD0nTSAxNDYuMCA3MS45CkwgMTQ4LjMgNzEuOQpMIDE0OC4zIDc5LjEKTCAxNTcuMSA3OS4xCkwgMTU3LjEgNzEuOQpMIDE1OS40IDcxLjkKTCAxNTkuNCA4OC45CkwgMTU3LjEgODguOQpMIDE1Ny4xIDgxLjAKTCAxNDguMyA4MS4wCkwgMTQ4LjMgODguOQpMIDE0Ni4wIDg4LjkKTCAxNDYuMCA3MS45CicgZmlsbD0nIzAwMDAwMCcvPgo8cGF0aCBjbGFzcz0nYXRvbS0xNycgZD0nTSAxNzcuMiAyMDYuNQpMIDE3OS41IDIwNi41CkwgMTc5LjUgMjEzLjcKTCAxODguMiAyMTMuNwpMIDE4OC4yIDIwNi41CkwgMTkwLjUgMjA2LjUKTCAxOTAuNSAyMjMuNQpMIDE4OC4yIDIyMy41CkwgMTg4LjIgMjE1LjYKTCAxNzkuNSAyMTUuNgpMIDE3OS41IDIyMy41CkwgMTc3LjIgMjIzLjUKTCAxNzcuMiAyMDYuNQonIGZpbGw9JyMwMDAwMDAnLz4KPC9zdmc+Cg=="/>
+    <!-- Endoperoxide label callout -->
+    <text x="595" y="125" text-anchor="middle"
+          font-family="Barlow, system-ui, sans-serif" font-size="16"
+          font-weight="700" fill="#CA1E08">O–O endoperoxide</text>
+    <line x1="595" y1="128" x2="565" y2="155"
+          stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
   </g>
 
-  <!-- label: 2 text elements max -->
-  <g id="label" data-label="Species and molecule name labels">
-    <text x="142" y="560"
+  <!-- detail-heme: Fe²⁺ heme target -->
+  <g id="detail-heme" data-label="Heme iron Fe2+ target in Plasmodium — artemisinin activates here">
+    <circle cx="690" cy="480" r="34" fill="#2D3E6B" stroke="#E6B800" stroke-width="2.5"/>
+    <circle cx="690" cy="480" r="22" fill="none" stroke="#B8860B" stroke-width="2" stroke-dasharray="6 3"/>
+    <text x="690" y="476" text-anchor="middle"
+          font-family="Barlow, system-ui, sans-serif" font-size="16" font-weight="700" fill="#E6B800">Fe</text>
+    <text x="690" y="494" text-anchor="middle"
+          font-family="Barlow, system-ui, sans-serif" font-size="13" fill="#B8860B">²⁺</text>
+    <!-- Reaction arrow from structure to Fe -->
+    <path d="M 655,400 C 668,428 675,450 680,462"
+          fill="none" stroke="#CA1E08" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="680,462 673,450 687,450" fill="#CA1E08"/>
+    <!-- Free radical burst -->
+    <line x1="706" y1="462" x2="720" y2="448" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+    <line x1="710" y1="468" x2="726" y2="466" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+    <line x1="706" y1="474" x2="718" y2="464" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- label -->
+  <g id="label" data-label="Species and molecule labels">
+    <text x="142" y="556"
           text-anchor="middle"
-          font-family="Barlow, sans-serif"
-          font-size="20"
-          font-weight="600"
-          font-style="italic"
+          font-family="Barlow, system-ui, sans-serif"
+          font-size="20" font-weight="600" font-style="italic"
           fill="#8BA0D6">Artemisia annua</text>
-    <text x="520" y="560"
+    <text x="560" y="556"
           text-anchor="middle"
-          font-family="Barlow, sans-serif"
-          font-size="22"
-          font-weight="700"
+          font-family="Barlow, system-ui, sans-serif"
+          font-size="22" font-weight="700"
           fill="#FBFFF6">artemisinin</text>
   </g>
 
-  <!-- overlay: bracket and emphasis on peroxide bridge -->
-  <g id="overlay" data-label="Bracket highlighting endoperoxide bridge — the reactive site">
-    <!-- Bracket around trioxane ring -->
-    <path d="M 548,242 L 538,242 L 538,320 L 548,320" fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 635,242 L 645,242 L 645,320 L 635,320" fill="none" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Label for the peroxide bridge -->
-    <text x="592" y="235" text-anchor="middle" fill="#CA1E08" font-family="Barlow, sans-serif" font-size="14" font-weight="700">O–O</text>
-    <!-- Old Chinese text scroll hint on left side -->
-    <rect x="30" y="455" width="78" height="100" rx="4" fill="#1C1E35" stroke="#B8860B" stroke-width="1.5" opacity="0.8"/>
-    <line x1="44" y1="470" x2="94" y2="470" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
-    <line x1="44" y1="484" x2="94" y2="484" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
-    <line x1="44" y1="498" x2="94" y2="498" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
-    <line x1="44" y1="512" x2="94" y2="512" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
-    <line x1="44" y1="526" x2="80" y2="526" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
-    <text x="69" y="548" text-anchor="middle" fill="#B8860B" font-family="Barlow, sans-serif" font-size="11">340 AD</text>
+  <!-- overlay: ancient scroll -->
+  <g id="overlay" data-label="340 AD scroll reference">
+    <rect x="30" y="460" width="82" height="95" rx="4"
+          fill="#1C1E35" stroke="#B8860B" stroke-width="1.5" opacity="0.85"/>
+    <line x1="44" y1="476" x2="98" y2="476" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+    <line x1="44" y1="490" x2="98" y2="490" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+    <line x1="44" y1="504" x2="98" y2="504" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+    <line x1="44" y1="518" x2="98" y2="518" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+    <line x1="44" y1="532" x2="82" y2="532" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+    <text x="71" y="550"
+          text-anchor="middle"
+          font-family="Barlow, system-ui, sans-serif"
+          font-size="12" font-weight="700"
+          fill="#B8860B">340 AD</text>
   </g>
+
 </svg>

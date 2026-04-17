@@ -69,6 +69,38 @@ This structure allows an animator to:
 - Labels describe what something IS: `"O. unilateralis"` not `"zombie-ant fungus parasitizes carpenter ants"`
 - Text must be in the `label` group
 
+### Chemical Structure Drawing (RDKit)
+
+For any molecule that needs to appear in an illustration, use RDKit to generate an accurate 2D structure SVG rather than drawing it by hand.
+
+**Tool:** `scripts/chem/draw_molecule.py`
+
+```bash
+python3 scripts/chem/draw_molecule.py "<SMILES>" output.svg [options]
+
+Options:
+  --width INT              SVG width (default 400)
+  --height INT             SVG height (default 300)
+  --highlight-smarts STR   SMARTS pattern — matching atoms/bonds drawn in Core Red #CA1E08
+  --light                  Light background (default is dark #1C1E35)
+```
+
+**Output:** AWW-styled SVG with periwinkle bonds (#D1DCFF), coral oxygen labels (#E85542), Core Red highlights, Core Midnight background.
+
+**Embedding in illustration SVG:**
+1. Generate the molecule SVG file
+2. Encode it as a base64 data URI in Python: `base64.b64encode(open(file,'rb').read()).decode()`
+3. Embed using `<image href="data:image/svg+xml;base64,..." x="..." y="..." width="..." height="..."/>` inside the appropriate layer group
+
+**Key molecules and their SMILES:**
+- Artemisinin: `C[C@@H]1CC[C@H]2C(=O)OC[C@@H]3[C@H]2O[O][C@@]13C` (highlight O-O with `--highlight-smarts "[O]-[O]"`)
+- Cyclosporin A: complex — use PubChem CID 5284601 SMILES
+- Rapamycin: complex — use PubChem CID 5284616 SMILES
+
+**Finding SMILES:** Use PubChem (https://pubchem.ncbi.nlm.nih.gov) — search compound name, get Isomeric SMILES from the page.
+
+**Never hand-draw chemical structures in SVG.** The geometry is too complex to get right manually and errors are obvious to scientists. Always use RDKit.
+
 ### Standard DNA Double Helix Construction
 
 Reference file: `illustrations/dna-helix-spec.svg` — three canonical variants (standard, highlighted region, CRISPR cut).
