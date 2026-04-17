@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- No gradients needed for this illustration -->
+  </defs>
+  <!-- Background -->
+  <g id="bg" data-label="background">
+    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
+  </g>
+  <!-- Context: leaf silhouettes and forest floor -->
+  <g id="context" data-label="forest context">
+    <path d="M100,200 Q250,100 400,200 T700,150 L800,300 L800,600 L0,600 L0,300 Z" fill="#1A5C1E" opacity="0.7"/>
+    <ellipse cx="200" cy="250" rx="120" ry="60" fill="#248A28" opacity="0.5"/>
+    <ellipse cx="600" cy="180" rx="100" ry="50" fill="#248A28" opacity="0.5"/>
+  </g>
+  <!-- Subject: carpenter ant -->
+  <g id="subject" data-label="carpenter ant">
+    <!-- Ant body -->
+    <ellipse cx="400" cy="300" rx="60" ry="30" fill="#D4A574" stroke="#A0785A" stroke-width="2"/>
+    <!-- Head -->
+    <ellipse cx="340" cy="290" rx="25" ry="20" fill="#D4A574" stroke="#A0785A" stroke-width="2"/>
+    <!-- Mandibles -->
+    <path d="M315,290 L305,300 L320,295 Z" fill="#6B4423" stroke="#6B4423" stroke-width="1.5"/>
+    <path d="M315,290 L305,280 L320,285 Z" fill="#6B4423" stroke="#6B4423" stroke-width="1.5"/>
+    <!-- Legs -->
+    <path d="M370,310 L390,330" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M370,320 L390,340" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M430,310 L410,330" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M430,320 L410,340" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <g id="eye-left">
+      <ellipse cx="330" cy="280" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="330" cy="280" r="4" fill="#0D0D16"/>
+      <circle cx="328" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+    <g id="eye-right">
+      <ellipse cx="350" cy="280" rx="10" ry="8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+      <circle cx="350" cy="280" r="4" fill="#0D0D16"/>
+      <circle cx="348" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+  </g>
+  <!-- Detail: fungal hyphae network inside ant -->
+  <g id="detail-hyphae" data-label="fungal hyphae network">
+    <path d="M340,290 Q360,280 380,290 T420,280" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="4 2" fill="none"/>
+    <path d="M370,310 Q390,300 410,310" stroke="#8BA0D6" stroke-width="1" fill="none"/>
+    <circle cx="400" cy="300" r="3" fill="#8BA0D6"/>
+    <circle cx="380" cy="290" r="2" fill="#8BA0D6"/>
+  </g>
+  <!-- Detail: fruiting body stalk erupting from head -->
+  <g id="detail-stalk" data-label="fruiting body stalk">
+    <path d="M340,270 L340,200 L360,150 L340,100" stroke="#E85542" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <ellipse cx="340" cy="95" rx="15" ry="30" fill="#E85542"/>
+    <!-- Spore cloud -->
+    <circle cx="340" cy="60" r="25" fill="#FFFF77" opacity="0.3"/>
+  </g>
+  <!-- Detail: spore rain -->
+  <g id="detail-spores" data-label="spore rain">
+    <circle cx="300" cy="400" r="3" fill="#FFFF77"/>
+    <circle cx="350" cy="450" r="3" fill="#FFFF77"/>
+    <circle cx="400" cy="500" r="3" fill="#FFFF77"/>
+    <circle cx="250" cy="480" r="3" fill="#FFFF77"/>
+    <circle cx="500" cy="420" r="3" fill="#FFFF77"/>
+  </g>
+  <!-- Label: species name -->
+  <g id="label" data-label="species label">
+    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="20" fill="#8BA0D6">
+      <tspan font-style="italic">Ophiocordyceps unilateralis</tspan>
+    </text>
+  </g>
+  <!-- Overlay: height indicator arrow -->
+  <g id="overlay" data-label="height indicator">
+    <line x1="500" y1="250" x2="500" y2="450" stroke="#FBFFF6" stroke-width="2" stroke-dasharray="6 4"/>
+    <polygon points="500,250 495,260 505,260" fill="#FBFFF6"/>
+    <text x="520" y="350" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#FBFFF6">25 cm</text>
+  </g>
+</svg>

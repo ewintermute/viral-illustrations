@@ -1,0 +1,63 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Barlow, system-ui, sans-serif">
+  <!--
+    Illustration: Mantis Shrimp Club (Stomatopoda)
+    Story: K8
+    Artist: Gemini 2.5 Pro (Model Test)
+    Color Palette: American Wetware Style Guide v2
+  -->
+  <g id="bg" data-label="background">
+    <rect width="800" height="600" fill="#1C1E35" />
+  </g>
+  <g id="context" data-label="context-target-shell">
+    <path d="M 650 450 C 600 400, 600 500, 650 500 C 700 550, 750 450, 700 420 Z" fill="#6B4423"/>
+    <path d="M 650 450 C 670 430, 690 440, 700 460" stroke="#A0785A" stroke-width="4" fill="none"/>
+  </g>
+  <g id="subject" data-label="subject-mantis-shrimp">
+    <!-- Body -->
+    <path d="M 150 300 C 250 250, 400 280, 500 400 C 550 450, 500 500, 450 500 S 200 450, 150 400 C 100 350, 100 320, 150 300 Z" fill="#2FBF39"/>
+    <path d="M 180 320 C 280 280, 420 310, 510 410" stroke="#248A28" stroke-width="8" fill="none" opacity="0.7"/>
+    <!-- Tail Fin -->
+    <path d="M 150 400 C 80 420, 80 380, 150 400 C 80 380, 80 340, 150 360" fill="#5B6FA8"/>
+    <!-- Eyes -->
+    <g id="shrimp-eyes" data-label="detail-eyes">
+        <line x1="480" y1="380" x2="500" y2="350" stroke="#6FD877" stroke-width="6"/>
+        <line x1="460" y1="370" x2="480" y2="340" stroke="#6FD877" stroke-width="6"/>
+        <ellipse cx="500" cy="350" rx="15" ry="12" fill="#E8EEFF" stroke="#D4A574" stroke-width="1"/>
+        <circle cx="495" cy="348" r="7" fill="#0D0D16" />
+        <circle cx="493" cy="346" r="3" fill="#FBFFF6" opacity="0.85" />
+        <ellipse cx="480" cy="340" rx="15" ry="12" fill="#E8EEFF" stroke="#D4A574" stroke-width="1"/>
+        <circle cx="475" cy="338" r="7" fill="#0D0D16" />
+        <circle cx="473" cy="336" r="3" fill="#FBFFF6" opacity="0.85" />
+    </g>
+  </g>
+  <g id="detail-strike" data-label="detail-strike-action">
+    <!-- Dactyl Club -->
+    <path d="M 500 400 C 550 410, 580 420, 600 430 Q 615 435 605 445Z" fill="#E85542"/>
+    <!-- Motion lines -->
+    <path d="M 520 390 L 590 415 M 540 420 L 610 440" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <!-- Cavitation bubble collapse -->
+    <circle cx="625" cy="440" r="30" fill="none" stroke="#D1DCFF" stroke-width="3" stroke-dasharray="4 4"/>
+    <circle cx="625" cy="440" r="20" fill="#E8EEFF" opacity="0.3"/>
+  </g>
+  <g id="detail-bouligand-structure" data-label="detail-bouligand-structure-callout">
+    <circle cx="200" cy="150" r="70" fill="#0D0D16" stroke="#8BA0D6" stroke-width="2"/>
+    <text x="165" y="240" fill="#D1DCFF" font-size="14">Bouligand Structure</text>
+    <g opacity="0.7" stroke-width="1.5" transform="translate(200, 150)">
+        <line x1="-50" y1="-50" x2="50" y2="50" stroke="#5B6FA8" transform="rotate(0)"/>
+        <line x1="-50" y1="-50" x2="50" y2="50" stroke="#6B6B7C" transform="rotate(20)"/>
+        <line x1="-50" y1="-50" x2="50" y2="50" stroke="#8BA0D6" transform="rotate(40)"/>
+        <line x1="-50" y1="-50" x2="50" y2="50" stroke="#A8A8B5" transform="rotate(60)"/>
+        <path d="M 0,0 A 30,30 0 0,1 26,-15" fill="none" stroke="#FFFF77" stroke-width="2" marker-end="url(#arrow)"/>
+    </g>
+ </g>
+  <g id="label" data-label="label-text" fill="#FBFFF6" font-size="22">
+    <text x="50" y="70" font-weight="bold">The Hammer That Never Breaks</text>
+    <text x="50" y="100" font-size="18" fill="#8BA0D6" font-style="italic">Stomatopoda</text>
+  </g>
+  <g id="overlay" data-label="overlay"></g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FFFF77" />
+    </marker>
+  </defs>
+</svg>

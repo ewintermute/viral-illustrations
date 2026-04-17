@@ -1,0 +1,45 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" font-family="Barlow, system-ui, sans-serif">
+  <!--
+    Illustration: Horseshoe Crab Blood (Limulus polyphemus)
+    Story: A7
+    Artist: Gemini 2.5 Pro (Model Test)
+    Color Palette: American Wetware Style Guide v2
+  -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#D1DCFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5B6FA8;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <g id="bg" data-label="background">
+    <rect width="800" height="600" fill="#1C1E35" />
+    <path d="M 0 500 C 200 480, 400 550, 600 520 S 800 450 800 450 V 600 H 0 Z" fill="#2D3E6B" />
+  </g>
+  <g id="context" data-label="context-lab-equipment">
+    <!-- Beaker -->
+    <path d="M 500 350 L 520 500 L 680 500 L 700 350" stroke="#A8A8B5" stroke-width="4" fill="rgba(239, 239, 243, 0.1)" />
+    <path d="M 520 500 Q 600 520 680 500" stroke="#A8A8B5" stroke-width="4" fill="rgba(239, 239, 243, 0.1)" />
+     <!-- Tube -->
+    <path d="M 380 430 Q 450 400 500 360" stroke="#6B6B7C" stroke-width="10" fill="none"/>
+    <path d="M 380 430 Q 450 400 500 360" stroke="#8BA0D6" stroke-width="6" fill="none"/>
+  </g>
+  <g id="subject" data-label="subject-horseshoe-crab">
+    <!-- Body -->
+    <path d="M 150 450 C 250 350, 450 350, 550 450 C 450 550, 250 550, 150 450 Z" fill="#6B4423" />
+    <!-- Telson (Tail) -->
+    <path d="M 150 450 L 50 450" stroke="#A0785A" stroke-width="8" fill="none" />
+    <!-- Simple compound eyes -->
+    <circle cx="380" cy="410" r="8" fill="#0D0D16" />
+    <circle cx="320" cy="410" r="8" fill="#0D0D16" />
+  </g>
+  <g id="detail-blood" data-label="detail-glowing-blood">
+    <path d="M 525 495 Q 600 515 675 495 V 420 H 525 Z" fill="url(#glow)" />
+    <ellipse cx="600" cy="420" rx="75" ry="15" fill="#5B6FA8"/>
+  </g>
+  <g id="label" data-label="label-text" fill="#FBFFF6" font-size="22">
+    <text x="50" y="70" font-weight="bold">The Blue-Blooded Guardian</text>
+    <text x="50" y="100" font-size="18" fill="#8BA0D6" font-style="italic">Limulus polyphemus</text>
+    <text x="520" y="550" font-size="18" fill="#D1DCFF">$60,000 / Gallon</text>
+  </g>
+  <g id="overlay" data-label="overlay"></g>
+</svg>
