@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g id="bg" data-label="Background">
+    <rect width="800" height="600" fill="#1C1E35" />
+    <circle cx="200" cy="300" r="400" fill="#243354" opacity="0.5" />
+  </g>
+
+  <g id="context" data-label="Blue Blood Pool">
+    <path d="M 400 300 Q 600 200 750 350 Q 800 500 650 550 C 500 600 450 400 400 300 Z" fill="#295D9E" stroke="#1A4A85" stroke-width="3" opacity="0.8" />
+    <path d="M 450 350 Q 550 250 700 380 Q 750 480 600 520 C 500 550 500 400 450 350 Z" fill="#3D82C4" opacity="0.6" />
+    <path d="M 500 380 Q 580 300 650 400 Q 680 450 630 480 C 580 500 530 420 500 380 Z" fill="#5AA6E8" opacity="0.5" />
+  </g>
+
+  <g id="subject" data-label="Horseshoe Crab">
+    <!-- Tail (Telson) -->
+    <path d="M 230 400 L 150 550 L 180 560 Z" fill="#38392F" stroke="#1F201B" stroke-width="2" />
+    
+    <!-- Shell Pattern Background -->
+    <path d="M 200 100 C 350 100 400 250 400 350 C 400 400 350 450 250 450 C 150 450 100 400 100 350 C 100 250 150 100 200 100 Z" fill="#5E5C4A" stroke="#2B2A23" stroke-width="4" />
+    
+    <!-- Opisthosoma (abdomen) -->
+    <path d="M 150 300 L 350 300 L 320 400 L 180 400 Z" fill="#4A4839" stroke="#2B2A23" stroke-width="3" />
+    <path d="M 150 300 L 120 330 L 150 350 Z" fill="#38392F" />
+    <path d="M 350 300 L 380 330 L 350 350 Z" fill="#38392F" />
+    <path d="M 180 400 L 150 420 L 180 440 Z" fill="#38392F" />
+    <path d="M 320 400 L 350 420 L 320 440 Z" fill="#38392F" />
+    
+    <!-- Prosoma (carapace) -->
+    <path d="M 250 100 C 380 100 450 250 420 350 L 80 350 C 50 250 120 100 250 100 Z" fill="#5E5C4A" stroke="#2B2A23" stroke-width="5" />
+    <!-- Carapace ridges -->
+    <path d="M 250 100 L 250 300" stroke="#4A4839" stroke-width="4" />
+    <path d="M 180 150 L 180 300" stroke="#4A4839" stroke-width="3" />
+    <path d="M 320 150 L 320 300" stroke="#4A4839" stroke-width="3" />
+
+    <!-- Details/Spines on Opisthosoma -->
+    <circle cx="250" cy="320" r="3" fill="#2B2A23" />
+    <circle cx="250" cy="350" r="3" fill="#2B2A23" />
+    <circle cx="250" cy="380" r="3" fill="#2B2A23" />
+  </g>
+
+  <g id="detail-eyes" data-label="Crab Eyes">
+    <!-- Compound Eyes -->
+    <ellipse cx="170" cy="220" rx="8" ry="12" fill="#2B2A23" />
+    <ellipse cx="330" cy="220" rx="8" ry="12" fill="#2B2A23" />
+  </g>
+
+  <g id="detail-inset" data-label="Amebocyte Inset">
+    <circle cx="650" cy="180" r="80" fill="#1C1E35" stroke="#8BA0D6" stroke-width="2" />
+    <circle cx="650" cy="180" r="70" fill="#2A3C5A" />
+    
+    <!-- Amebocyte Cell -->
+    <path d="M 640 130 C 670 120 700 140 700 170 C 700 200 680 230 650 230 C 610 230 590 200 600 170 C 610 140 620 140 640 130 Z" fill="#4B88D6" stroke="#2B5EA3" stroke-width="2" />
+    <!-- Nucleus -->
+    <ellipse cx="650" cy="180" rx="20" ry="15" fill="#1E3C66" />
+    <!-- Granules representing LAL extract components -->
+    <circle cx="630" cy="150" r="4" fill="#80B8FF" />
+    <circle cx="670" cy="160" r="5" fill="#80B8FF" />
+    <circle cx="680" cy="190" r="4" fill="#80B8FF" />
+    <circle cx="620" cy="200" r="6" fill="#80B8FF" />
+    <circle cx="640" cy="210" r="3" fill="#80B8FF" />
+  </g>
+
+  <g id="label" data-label="Text Labels">
+    <text x="50" y="50" fill="#8BA0D6" font-size="24" font-weight="bold">Limulus polyphemus</text>
+    <text x="650" y="290" fill="#FBFFF6" font-size="18" text-anchor="middle" font-style="italic">LAL Amebocyte cell</text>
+  </g>
+
+  <g id="overlay" data-label="Lighting and Glows">
+    <path d="M 450 350 Q 550 250 700 380 Q 750 480 600 520 C 500 550 500 400 450 350 Z" fill="#5AA6E8" opacity="0.3" filter="blur(15px)" />
+  </g>
+</svg>

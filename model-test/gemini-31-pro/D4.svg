@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g id="bg" data-label="Background">
+    <rect width="800" height="600" fill="#1C1E35" />
+    <circle cx="200" cy="200" r="300" fill="#10151E" />
+  </g>
+
+  <g id="context" data-label="Deep Sea Environment">
+    <!-- Bioluminescent particles -->
+    <circle cx="100" cy="150" r="1.5" fill="#A8D0E6" opacity="0.6" />
+    <circle cx="250" cy="80" r="2" fill="#A8D0E6" opacity="0.4" />
+    <circle cx="600" cy="500" r="1.5" fill="#A8D0E6" opacity="0.5" />
+    <circle cx="700" cy="200" r="2.5" fill="#A8D0E6" opacity="0.3" />
+    <circle cx="50" cy="450" r="1" fill="#A8D0E6" opacity="0.5" />
+  </g>
+
+  <g id="subject" data-label="Female Anglerfish">
+    <!-- Main Body -->
+    <path d="M 600 300 C 600 200 450 150 350 150 C 200 150 100 250 100 350 C 100 450 250 500 400 500 C 500 500 600 400 600 300 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="3" />
+    <!-- Tail Fin -->
+    <path d="M 600 300 L 750 200 L 730 300 L 770 400 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="2" />
+    <path d="M 600 300 L 730 300" stroke="#1A1C20" stroke-width="2" />
+    <!-- Pectoral Fin -->
+    <path d="M 450 350 C 500 320 550 350 500 420 Z" fill="#3B3F48" stroke="#1A1C20" stroke-width="2" />
+    
+    <!-- Mouth and Teeth -->
+    <path d="M 100 350 C 150 350 200 380 250 420" fill="none" stroke="#1A1C20" stroke-width="4" />
+    <!-- Upper Teeth -->
+    <path d="M 110 350 L 130 380 M 140 350 L 160 385 M 170 355 L 185 390 M 200 365 L 210 400" stroke="#EAEAEA" stroke-width="2" />
+    <!-- Lower Teeth -->
+    <path d="M 120 450 L 140 410 M 150 455 L 165 415 M 180 445 L 190 415 M 220 435 L 230 415" stroke="#EAEAEA" stroke-width="2" />
+  </g>
+
+  <g id="detail-males" data-label="Fused Males">
+    <!-- Fused Male 1 (Bottom) -->
+    <g transform="translate(420, 480) rotate(10)">
+      <!-- Seamless blend with female -->
+      <path d="M -15 0 C 0 -20 20 -20 35 0 C 20 25 0 25 -15 0 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="2" />
+      <path d="M 10 10 C 20 30 40 40 60 20 C 50 10 40 5 35 0 C 15 10 0 10 10 10 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="2" />
+      <circle cx="45" cy="18" r="1.5" fill="#1C1E35" /> <!-- Degenerated eye -->
+    </g>
+    <!-- Fused Male 2 (Side) -->
+    <g transform="translate(520, 420) rotate(45)">
+      <path d="M -10 0 C 5 -15 20 -15 30 0 C 15 20 5 20 -10 0 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="2" />
+      <path d="M 10 10 C 15 25 35 30 50 15 C 40 8 30 4 28 0 C 15 8 5 8 10 10 Z" fill="#2C2F36" stroke="#1A1C20" stroke-width="2" />
+      <circle cx="40" cy="14" r="1" fill="#1C1E35" />
+    </g>
+  </g>
+
+  <g id="detail-illicium" data-label="Lure">
+    <!-- Fishing Rod (Illicium) -->
+    <path d="M 280 155 Q 250 80 150 100" fill="none" stroke="#2C2F36" stroke-width="4" stroke-linecap="round" />
+    <!-- Glowing Esca -->
+    <circle cx="150" cy="100" r="15" fill="#D4F0FF" />
+    <circle cx="150" cy="100" r="8" fill="#FFFFFF" />
+  </g>
+
+  <g id="detail-eyes" data-label="Eyes">
+    <ellipse cx="280" cy="220" rx="8" ry="6.4" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="280" cy="220" r="2" fill="#0D0D16"/>
+    <circle cx="278" cy="218" r="1" fill="#FBFFF6" opacity="0.85"/>
+  </g>
+
+  <g id="label" data-label="Text Labels">
+    <text x="50" y="50" fill="#8BA0D6" font-size="24" font-weight="bold">Ceratioid Anglerfish</text>
+    <text x="50" y="80" fill="#FBFFF6" font-size="18" font-style="italic">Sexual parasitism and immune system loss</text>
+  </g>
+
+  <g id="overlay" data-label="Lighting and Glows">
+    <!-- Lure glow -->
+    <circle cx="150" cy="100" r="60" fill="#A8D0E6" opacity="0.3" filter="blur(20px)" />
+    <!-- Vague rim light from lure -->
+    <path d="M 250 150 C 200 150 150 200 120 280" fill="none" stroke="#A8D0E6" stroke-width="8" opacity="0.1" filter="blur(5px)" stroke-linecap="round" />
+  </g>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g id="bg" data-label="Background">
+    <rect width="800" height="600" fill="#1C1E35" />
+    <circle cx="400" cy="300" r="300" fill="#2A2D4A" opacity="0.4" />
+  </g>
+
+  <g id="context" data-label="Leaf and Environment">
+    <path d="M 100 450 Q 400 350 700 450 Q 800 500 750 550 C 600 500 200 500 50 600 Z" fill="#273C30" stroke="#3A5A4A" stroke-width="4" />
+    <path d="M 100 450 Q 400 380 700 450" fill="none" stroke="#1A2A20" stroke-width="2" />
+  </g>
+
+  <g id="subject" data-label="Carpenter Ant">
+    <path d="M 400 300 C 450 250 550 250 600 300 C 650 350 650 450 600 500 C 500 500 400 450 350 400 Z" fill="#3D2B24" stroke="#523A31" stroke-width="3" />
+    <path d="M 300 250 C 350 220 400 250 420 300 C 400 350 320 360 280 320 Z" fill="#2E1F1A" stroke="#422D25" stroke-width="3" />
+    
+    <!-- Mandibles -->
+    <path d="M 280 280 Q 200 280 230 350 Q 250 380 280 320" fill="#1F1511" />
+    <path d="M 290 270 Q 250 240 200 290 Q 250 340 290 310" fill="#1F1511" />
+
+    <!-- Legs -->
+    <path d="M 350 400 Q 300 500 250 550" fill="none" stroke="#3D2B24" stroke-width="6" stroke-linecap="round" />
+    <path d="M 450 450 Q 400 550 350 600" fill="none" stroke="#2E1F1A" stroke-width="5" stroke-linecap="round" />
+    <path d="M 500 450 Q 550 550 600 580" fill="none" stroke="#3D2B24" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <g id="detail-eyes" data-label="Eyes">
+    <ellipse cx="320" cy="270" rx="15" ry="12" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
+    <circle cx="320" cy="270" r="5" fill="#0D0D16"/>
+    <circle cx="315" cy="265" r="3" fill="#FBFFF6" opacity="0.85"/>
+  </g>
+
+  <g id="detail-fungus" data-label="Ophiocordyceps Stalk">
+    <path d="M 400 280 C 400 200 450 150 420 80 C 390 10 430 40 450 100 C 470 160 420 220 420 280 Z" fill="#E66A2C" stroke="#B84A1A" stroke-width="2" />
+    <circle cx="435" cy="50" r="25" fill="#E66A2C" />
+    
+    <!-- Spores -->
+    <circle cx="435" cy="90" r="3" fill="#F49A6E" />
+    <circle cx="420" cy="110" r="2" fill="#F49A6E" />
+    <circle cx="450" cy="130" r="3" fill="#F49A6E" />
+    <circle cx="410" cy="150" r="2" fill="#F49A6E" />
+    <circle cx="460" cy="170" r="3" fill="#F49A6E" />
+  </g>
+
+  <g id="label" data-label="Text Labels">
+    <text x="50" y="50" fill="#8BA0D6" font-size="24" font-weight="bold">Ophiocordyceps unilateralis</text>
+    <text x="50" y="80" fill="#FBFFF6" font-size="18" font-style="italic">Zombie-ant fungus death grip at 25cm</text>
+  </g>
+
+  <g id="overlay" data-label="Lighting and Glows">
+    <circle cx="435" cy="50" r="40" fill="#E66A2C" opacity="0.2" filter="blur(10px)" />
+  </g>
+</svg>

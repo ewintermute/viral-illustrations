@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g id="bg" data-label="Background">
+    <rect width="800" height="600" fill="#1C1E35" />
+    <circle cx="400" cy="300" r="350" fill="#121F2B" opacity="0.8" />
+  </g>
+
+  <g id="context" data-label="Cold Dark Water">
+    <path d="M 0 100 Q 200 150 400 100 T 800 100" fill="none" stroke="#2B4C63" stroke-width="2" opacity="0.3" />
+    <path d="M 0 200 Q 200 250 400 200 T 800 200" fill="none" stroke="#2B4C63" stroke-width="3" opacity="0.2" />
+    <path d="M 0 500 Q 200 450 400 500 T 800 500" fill="none" stroke="#2B4C63" stroke-width="3" opacity="0.2" />
+    <!-- Cold particles -->
+    <circle cx="150" cy="250" r="2" fill="#8BA0D6" opacity="0.4" />
+    <circle cx="250" cy="150" r="3" fill="#8BA0D6" opacity="0.3" />
+    <circle cx="650" cy="200" r="2" fill="#8BA0D6" opacity="0.5" />
+    <circle cx="700" cy="400" r="3" fill="#8BA0D6" opacity="0.2" />
+  </g>
+
+  <g id="subject" data-label="Octopus bimaculoides">
+    <!-- Tentacles -->
+    <path d="M 400 350 C 300 450 150 400 50 300 C 100 350 200 400 350 350 Z" fill="#6A5C8C" stroke="#483D68" stroke-width="2" />
+    <path d="M 400 350 C 250 500 100 550 50 550 C 150 550 250 450 350 380 Z" fill="#524873" stroke="#373152" stroke-width="2" />
+    <path d="M 400 350 C 350 550 250 600 200 650 C 250 600 350 500 420 380 Z" fill="#6A5C8C" stroke="#483D68" stroke-width="2" />
+    <path d="M 400 350 C 500 550 550 600 600 650 C 550 600 480 500 450 380 Z" fill="#524873" stroke="#373152" stroke-width="2" />
+    <path d="M 400 350 C 550 500 700 550 750 550 C 650 550 550 450 450 380 Z" fill="#6A5C8C" stroke="#483D68" stroke-width="2" />
+    <path d="M 400 350 C 500 450 650 400 750 300 C 700 350 600 400 450 350 Z" fill="#524873" stroke="#373152" stroke-width="2" />
+
+    <!-- Mantle/Head -->
+    <path d="M 400 350 C 300 350 320 150 400 150 C 480 150 500 350 400 350 Z" fill="#6A5C8C" stroke="#483D68" stroke-width="3" />
+    <!-- Skin Texture -->
+    <ellipse cx="400" cy="200" rx="15" ry="10" fill="#483D68" opacity="0.5" />
+    <ellipse cx="370" cy="230" rx="10" ry="15" fill="#483D68" opacity="0.4" />
+    <ellipse cx="430" cy="250" rx="20" ry="12" fill="#483D68" opacity="0.5" />
+    <!-- Two spots (bimaculoides) -->
+    <circle cx="360" cy="280" r="20" fill="#182042" stroke="#483D68" stroke-width="2"/>
+    <circle cx="360" cy="280" r="10" fill="#3D5C9E"/>
+    <circle cx="440" cy="280" r="20" fill="#182042" stroke="#483D68" stroke-width="2"/>
+    <circle cx="440" cy="280" r="10" fill="#3D5C9E"/>
+  </g>
+
+  <g id="detail-eyes" data-label="Octopus Eyes">
+    <!-- Left Eye -->
+    <ellipse cx="355" cy="265" rx="16" ry="12.8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5" transform="rotate(-15 355 265)"/>
+    <path d="M 345 265 L 365 265" stroke="#0D0D16" stroke-width="4" transform="rotate(-15 355 265)"/> <!-- Cephalopod horizontal pupil -->
+    <circle cx="350" cy="261" r="2" fill="#FBFFF6" opacity="0.85" transform="rotate(-15 355 265)"/>
+    
+    <!-- Right Eye -->
+    <ellipse cx="445" cy="265" rx="16" ry="12.8" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5" transform="rotate(15 445 265)"/>
+    <path d="M 435 265 L 455 265" stroke="#0D0D16" stroke-width="4" transform="rotate(15 445 265)"/> <!-- Cephalopod horizontal pupil -->
+    <circle cx="440" cy="261" r="2" fill="#FBFFF6" opacity="0.85" transform="rotate(15 445 265)"/>
+  </g>
+
+  <g id="detail-inset" data-label="ADAR RNA Editing Inset">
+    <rect x="580" y="50" width="180" height="180" rx="15" fill="#1C1E35" stroke="#8BA0D6" stroke-width="2" />
+    
+    <!-- RNA Strand -->
+    <path d="M 600 140 Q 640 100 680 140 T 760 140" fill="none" stroke="#D4A574" stroke-width="4" />
+    <!-- Bases -->
+    <line x1="620" y1="125" x2="620" y2="105" stroke="#6AA84F" stroke-width="4" />
+    <line x1="640" y1="115" x2="640" y2="95" stroke="#C00" stroke-width="4" />
+    <!-- The edited base (A -> I) -->
+    <line x1="680" y1="140" x2="680" y2="120" stroke="#FF9900" stroke-width="4" /> 
+    <line x1="720" y1="115" x2="720" y2="95" stroke="#3C78D8" stroke-width="4" />
+    <line x1="740" y1="125" x2="740" y2="105" stroke="#6AA84F" stroke-width="4" />
+
+    <!-- ADAR Enzyme -->
+    <path d="M 650 170 C 650 140 670 130 680 130 C 690 130 710 140 710 170 Z" fill="#A64D79" opacity="0.8" />
+    <text x="680" y="160" fill="#FBFFF6" font-size="12" text-anchor="middle">ADAR</text>
+    
+    <!-- Edit Arrow -->
+    <path d="M 670 90 L 680 110 L 690 90 Z" fill="#FBFFF6" />
+    <text x="680" y="80" fill="#FBFFF6" font-size="14" text-anchor="middle">A → I</text>
+  </g>
+
+  <g id="label" data-label="Text Labels">
+    <text x="50" y="50" fill="#8BA0D6" font-size="24" font-weight="bold">Octopus bimaculoides</text>
+    <text x="50" y="80" fill="#FBFFF6" font-size="18" font-style="italic">Massive A-to-I RNA editing in cold adaptation</text>
+  </g>
+
+  <g id="overlay" data-label="Lighting and Glows">
+    <path d="M 650 170 C 650 140 670 130 680 130 C 690 130 710 140 710 170 Z" fill="#A64D79" opacity="0.4" filter="blur(5px)" />
+  </g>
+</svg>
