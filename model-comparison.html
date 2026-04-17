@@ -46,7 +46,7 @@
     /* 4-column grid per story */
     .model-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(10, 1fr);
       gap: 1px;
       background: #3D3D52;
     }
@@ -74,16 +74,31 @@
     }
 
     /* Model colour codes */
-    .dot-claude  { background: #2FBF39; }
-    .dot-gpt4o   { background: #8BA0D6; }
-    .dot-gemini  { background: #E6B800; }
-    .dot-deepseek{ background: #E85542; }
+    .dot-claude       { background: #2FBF39; }
+    .dot-gpt4o        { background: #8BA0D6; }
+    .dot-gemini       { background: #E6B800; }
+    .dot-deepseek     { background: #E85542; }
+    .dot-gemini31     { background: #F0A830; }
+    .dot-qwen3        { background: #00C2FF; }
+    .dot-o4mini       { background: #B07AFF; }
+    .dot-gemini20flash{ background: #3DD68C; }
+    .dot-sonnet45     { background: #FF6B9D; }
+    .dot-llama4       { background: #FF9F43; }
 
-    .label-claude  { color: #2FBF39; }
-    .label-gpt4o   { color: #8BA0D6; }
-    .label-gemini  { color: #E6B800; }
-    .label-deepseek{ color: #E85542; }
+    .label-claude       { color: #2FBF39; }
+    .label-gpt4o        { color: #8BA0D6; }
+    .label-gemini       { color: #E6B800; }
+    .label-deepseek     { color: #E85542; }
+    .label-gemini31     { color: #F0A830; }
+    .label-qwen3        { color: #00C2FF; }
+    .label-o4mini       { color: #B07AFF; }
+    .label-gemini20flash{ color: #3DD68C; }
+    .label-sonnet45     { color: #FF6B9D; }
+    .label-llama4       { color: #FF9F43; }
 
+    @media (max-width: 1400px) {
+      .model-grid { grid-template-columns: repeat(5, 1fr); }
+    }
     @media (max-width: 900px) {
       .model-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -96,7 +111,7 @@
 
 <header>
   <h1>Model Comparison — SVG Illustration Quality</h1>
-  <p>Same prompt, same spec, same 5 biology stories. Four frontier models. Identical instructions from SKILL.md. Which draws the best critters?</p>
+  <p>Same prompt, same spec, same 5 biology stories. Ten frontier models. Identical instructions from SKILL.md. Which draws the best critters?</p>
   <nav>
     <a href="index.html">← Illustrations</a>
     <a href="animations.html">Animations</a>
@@ -111,6 +126,11 @@
   <div class="model-tab"><span class="dot dot-gemini"></span><span class="label-gemini">Gemini 2.5 Pro</span></div>
   <div class="model-tab"><span class="dot dot-deepseek"></span><span class="label-deepseek">DeepSeek V3.2</span></div>
   <div class="model-tab"><span class="dot dot-gemini31"></span><span class="label-gemini31">Gemini 3.1 Pro</span></div>
+  <div class="model-tab"><span class="dot dot-qwen3"></span><span class="label-qwen3">Qwen3</span></div>
+  <div class="model-tab"><span class="dot dot-o4mini"></span><span class="label-o4mini">o4-mini</span></div>
+  <div class="model-tab"><span class="dot dot-gemini20flash"></span><span class="label-gemini20flash">Gemini 2.0 Flash</span></div>
+  <div class="model-tab"><span class="dot dot-sonnet45"></span><span class="label-sonnet45">Claude Sonnet 4.5</span></div>
+  <div class="model-tab"><span class="dot dot-llama4"></span><span class="label-llama4">Llama 4 Maverick</span></div>
 </div>
 
 <div id="stories"></div>
@@ -125,11 +145,16 @@ const stories = [
 ];
 
 const models = [
-  { key:'claude-opus', label:'Claude Opus 4.7', cls:'claude' },
-  { key:'gpt4o',       label:'GPT-4o',          cls:'gpt4o'  },
-  { key:'gemini-25-pro',label:'Gemini 2.5 Pro', cls:'gemini' },
-  { key:'deepseek-v3', label:'DeepSeek V3.2',   cls:'deepseek'},
-  { key:'gemini-31-pro', label:'Gemini 3.1 Pro',  cls:'gemini31'},
+  { key:'claude-opus',        label:'Claude Opus 4.7',    cls:'claude'        },
+  { key:'gpt4o',              label:'GPT-4o',             cls:'gpt4o'         },
+  { key:'gemini-25-pro',      label:'Gemini 2.5 Pro',     cls:'gemini'        },
+  { key:'deepseek-v3',        label:'DeepSeek V3.2',      cls:'deepseek'      },
+  { key:'gemini-31-pro',      label:'Gemini 3.1 Pro',     cls:'gemini31'      },
+  { key:'qwen3',              label:'Qwen3',              cls:'qwen3'         },
+  { key:'o4-mini',            label:'o4-mini',            cls:'o4mini'        },
+  { key:'gemini-20-flash',    label:'Gemini 2.0 Flash',   cls:'gemini20flash' },
+  { key:'claude-sonnet-45',   label:'Claude Sonnet 4.5',  cls:'sonnet45'      },
+  { key:'llama4-maverick',    label:'Llama 4 Maverick',   cls:'llama4'        },
 ];
 
 const container = document.getElementById('stories');
