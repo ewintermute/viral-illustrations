@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients or filters can be defined here if required -->
+  </defs>
+  <!-- Background Layer -->
+  <g id="bg" data-label="dark base">
+    <rect width="800" height="600" fill="#1C1E35" />
+  </g>
+  <!-- Context Layer -->
+  <g id="context" data-label="impact sites">
+    <!-- Environment or impact sites elements -->
+    <path d="..." fill="#8BA0D6" stroke-width="2" />
+  </g>
+  <!-- Subject Layer -->
+  <g id="subject" data-label="mantis shrimp club">
+    <!-- Shrimp club illustration (complex path-based representation) -->
+    <ellipse cx="300" cy="300" rx="50" ry="20" fill="#3D3D52" stroke="#FBFFF6" stroke-width="2" />
+  </g>
+  <!-- Detail Club Layer -->
+  <g id="detail-club" data-label="helicoidal fibers">
+    <!-- Fiber orientation schematic -->
+    <path d="..." stroke="#E85542" stroke-width="1.5" stroke-dasharray="4,4" />
+    <!-- Crack propagation paths -->
+    <path d="..." stroke="#FFFF77" stroke-width="1.5" />
+  </g>
+  <!-- Label Layer -->
+  <g id="label" data-label="structural explanation">
+    <text x="70" y="570" fill="#FBFFF6" font-family="Barlow, system-ui, sans-serif" font-size="24">Helicoidal Architecture</text>
+  </g>
+  <!-- Overlay Layer -->
+  <g id="overlay" data-label="stress distribution">
+    <!-- Arrows showing stress distribution and crack deflection -->
+    <line x1="250" y1="300" x2="350" y2="300" stroke="#8BA0D6" stroke-width="1.5" />
+    <text x="360" y="305" fill="#FBFFF6" font-family="Barlow, system-ui, sans-serif" font-size="18">Stress Distribution</text>
+  </g>
+</svg>

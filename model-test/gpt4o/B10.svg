@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients or filters can be defined here if required -->
+  </defs>
+  <!-- Background Layer -->
+  <g id="bg" data-label="dark neural tissue">
+    <rect width="800" height="600" fill="#2D3E6B" />
+  </g>
+  <!-- Context Layer -->
+  <g id="context" data-label="neural pathways">
+    <!-- Neural and synaptic elements -->
+    <path d="..." fill="#5B6FA8" stroke-width="2" />
+  </g>
+  <!-- Subject Layer -->
+  <g id="subject" data-label="octopus neuron">
+    <!-- Neuron illustration (path-based representation) -->
+    <circle cx="250" cy="300" r="40" fill="#FBFFF6" stroke="#8BA0D6" stroke-width="2" />
+    <!-- Axonal branches and synapses -->
+    <path d="..." fill="#E8EEFF" stroke-width="2" />
+  </g>
+  <!-- Detail RNA Layer -->
+  <g id="detail-rna" data-label="RNA editing site">
+    <!-- RNA strand with editing sites marked -->
+    <path d="..." stroke="#CA1E08" stroke-dasharray="5,5" stroke-width="1.5" />
+  </g>
+  <!-- Label Layer -->
+  <g id="label" data-label="editing process">
+    <text x="50" y="570" fill="#FBFFF6" font-family="Barlow, system-ui, sans-serif" font-size="24">A-to-I RNA Editing</text>
+  </g>
+  <!-- Overlay Layer -->
+  <g id="overlay" data-label="temperature annotation">
+    <!-- Annotation lines and details -->
+    <line x1="200" y1="320" x2="400" y2="320" stroke="#8BA0D6" stroke-width="1.5" />
+    <!-- Connection points with text -->
+    <text x="420" y="325" fill="#FBFFF6" font-family="Barlow, system-ui, sans-serif" font-size="18">Cold-induced changes</text>
+  </g>
+</svg>

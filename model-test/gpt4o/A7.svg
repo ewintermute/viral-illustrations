@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients or filters can be defined here if required -->
+  </defs>
+  <!-- Background Layer -->
+  <g id="bg" data-label="dark ocean shelf">
+    <rect width="800" height="600" fill="#1C1E35" />
+  </g>
+  <!-- Context Layer -->
+  <g id="context" data-label="sandy bottom texture">
+    <!-- Ocean shelf horizon line elements -->
+    <path d="..." fill="#2D3E6B" stroke-width="2" />
+  </g>
+  <!-- Subject Layer -->
+  <g id="subject" data-label="horseshoe crab">
+    <!-- Horseshoe crab illustration (ellipse or path-based representation) -->
+    <ellipse cx="250" cy="200" rx="30" ry="40" fill="#A0785A" stroke="#6B4423" stroke-width="2" />
+    <!-- Carapace detail lines -->
+    <path d="..." fill="#D1DCFF" stroke-width="2" />
+  </g>
+  <!-- Detail Blood Layer -->
+  <g id="detail-blood" data-label="blue hemocyanin">
+    <!-- Blue blood pooling -->
+    <circle cx="260" cy="220" r="10" fill="#8BA0D6" />
+  </g>
+  <!-- Detail Cell Layer -->
+  <g id="detail-cell" data-label="amebocyte cell">
+    <!-- Cell inset illustration -->
+    <ellipse cx="600" cy="100" rx="20" ry="25" fill="#FBFFF6" stroke="#CA1E08" stroke-width="1.5" />
+  </g>
+  <!-- Label Layer -->
+  <g id="label" data-label="economic value">
+    <text x="70" y="580" fill="#FFFF77" font-family="Barlow, system-ui, sans-serif" font-size="24" font-weight="bold">$60,000 / gallon</text>
+  </g>
+  <!-- Overlay Layer -->
+  <g id="overlay" data-label="connection indicator">
+    <!-- Connection line from crab to cell inset -->
+    <path d="M 260,220 L 600,100" stroke="#8BA0D6" stroke-width="1.5" />
+    <!-- Inset border box -->
+    <rect x="550" y="50" width="130" height="80" stroke="#CA1E08" fill="none" stroke-width="1.5" />
+  </g>
+</svg>
