@@ -1,0 +1,47 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect x="0" y="0" width="800" height="600" fill="#1C1E35" id="background-rect"/>
+
+  <!-- coral -->
+  <g id="coral-group">
+    <ellipse cx="500" cy="400" rx="100" ry="50" fill="#248A28" id="coral-base"/>
+    <ellipse cx="520" cy="380" rx="80" ry="40" fill="#2FBF39" id="coral-tip"/>
+    <ellipse cx="480" cy="420" rx="60" ry="30" fill="#1A5C1E" id="coral-shadow"/>
+  </g>
+
+  <!-- mantis shrimp -->
+  <g id="mantis-shrimp-group">
+    <ellipse cx="300" cy="300" rx="50" ry="20" fill="#D1DCFF" id="mantis-shrimp-body"/>
+    <rect x="280" y="320" width="40" height="10" fill="#5B6FA8" id="mantis-shrimp-tail"/>
+    <g id="dactyl-club-group">
+      <rect x="350" y="250" width="100" height="20" fill="#E6B800" id="dactyl-club"/>
+      <rect x="360" y="240" width="80" height="15" fill="#A0785A" id="dactyl-club-shadow"/>
+      <rect x="370" y="230" width="60" height="10" fill="#D4A574" id="dactyl-club-tip"/>
+    </g>
+    <ellipse cx="310" cy="290" rx="10" ry="5" fill="#FBFFF6" id="mantis-shrimp-eye"/>
+  </g>
+
+  <!-- crab shell -->
+  <g id="crab-shell-group">
+    <ellipse cx="420" cy="320" rx="80" ry="40" fill="#CA1E08" id="crab-shell"/>
+    <ellipse cx="440" cy="300" rx="60" ry="30" fill="#E85542" id="crab-shell-crack"/>
+    <ellipse cx="400" cy="340" rx="40" ry="20" fill="#0D0D16" id="crab-shell-shadow"/>
+  </g>
+
+  <!-- periwinkle -->
+  <g id="periwinkle-group">
+    <ellipse cx="200" cy="500" rx="50" ry="20" fill="#6FD877" id="periwinkle-base"/>
+    <ellipse cx="220" cy="480" rx="30" ry="15" fill="#2FBF39" id="periwinkle-tip"/>
+    <ellipse cx="180" cy="520" rx="20" ry="10" fill="#1A5C1E" id="periwinkle-shadow"/>
+  </g>
+
+  <!-- glow around dactyl club -->
+  <g id="glow-group">
+    <ellipse cx="370" cy="240" rx="20" ry="10" fill="#FFFF77" id="glow-1"/>
+    <ellipse cx="370" cy="240" rx="30" ry="15" fill="#FFFF77" id="glow-2" opacity="0.5"/>
+    <ellipse cx="370" cy="240" rx="40" ry="20" fill="#FFFF77" id="glow-3" opacity="0.2"/>
+  </g>
+
+  <!-- layered opacity shapes for depth -->
+  <rect x="0" y="400" width="800" height="200" fill="#2D3E6B" id="depth-rect" opacity="0.2"/>
+</svg>

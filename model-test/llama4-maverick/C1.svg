@@ -1,0 +1,59 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect x="0" y="0" width="800" height="600" fill="#1C1E35" />
+  
+  <!-- dark forest floor -->
+  <rect x="0" y="550" width="800" height="50" fill="#0D0D16" />
+  
+  <!-- leaf -->
+  <path id="leaf" d="M 400 300 C 450 250 550 250 600 300 C 650 350 650 450 600 500 C 550 550 450 550 400 500 C 350 450 350 350 400 300 Z" fill="#2FBF39" stroke="#1A5C1E" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- leaf vein -->
+  <path id="leaf-vein" d="M 400 300 L 400 500" stroke="#248A28" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- ant -->
+  <g id="ant">
+    <ellipse cx="400" cy="350" rx="20" ry="15" fill="#D1DCFF" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round" />
+    <path id="ant-mandibles" d="M 380 340 L 360 320 L 380 300 Z M 420 340 L 440 320 L 420 300 Z" fill="#E6B800" stroke="#A0785A" stroke-width="1" stroke-linecap="round" />
+  </g>
+  
+  <!-- fungal stalk -->
+  <path id="fungal-stalk" d="M 400 320 L 400 150" stroke="#6FD877" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- fungal stalk cap -->
+  <ellipse id="fungal-stalk-cap" cx="400" cy="150" rx="30" ry="20" fill="#6FD877" stroke="#248A28" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- spores -->
+  <g id="spores">
+    <circle cx="380" cy="140" r="5" fill="#FFFF77" />
+    <circle cx="420" cy="160" r="5" fill="#FFFF77" />
+    <circle cx="400" cy="170" r="5" fill="#FFFF77" />
+    <circle cx="380" cy="180" r="5" fill="#FFFF77" />
+    <circle cx="420" cy="140" r="5" fill="#FFFF77" />
+  </g>
+  
+  <!-- drifting spores -->
+  <g id="drifting-spores">
+    <circle cx="350" cy="250" r="3" fill="#FFFF77" opacity="0.8" />
+    <circle cx="320" cy="280" r="3" fill="#FFFF77" opacity="0.6" />
+    <circle cx="300" cy="300" r="3" fill="#FFFF77" opacity="0.4" />
+    <circle cx="450" cy="220" r="3" fill="#FFFF77" opacity="0.8" />
+    <circle cx="480" cy="250" r="3" fill="#FFFF77" opacity="0.6" />
+    <circle cx="500" cy="280" r="3" fill="#FFFF77" opacity="0.4" />
+  </g>
+  
+  <!-- glow around fungal stalk -->
+  <g id="glow">
+    <ellipse cx="400" cy="150" rx="40" ry="30" fill="none" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" opacity="0.2" />
+    <ellipse cx="400" cy="150" rx="60" ry="45" fill="none" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" opacity="0.1" />
+    <ellipse cx="400" cy="150" rx="80" ry="60" fill="none" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round" opacity="0.05" />
+  </g>
+  
+  <!-- dark forest environment -->
+  <g id="forest-environment">
+    <path id="branch" d="M 200 500 L 150 450" stroke="#2D3E6B" stroke-width="8" stroke-linecap="round" />
+    <path id="twig" d="M 250 550 L 280 520" stroke="#2D3E6B" stroke-width="4" stroke-linecap="round" />
+    <circle cx="700" cy="500" r="20" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" />
+    <path id="fern" d="M 600 550 C 650 500 700 500 750 550" stroke="#D4A574" stroke-width="4" stroke-linecap="round" fill="none" />
+  </g>
+</svg>

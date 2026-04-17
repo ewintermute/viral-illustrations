@@ -1,0 +1,35 @@
+<svg width="800" height="600" viewBox="0 0 800 600">
+  <!-- background -->
+  <rect id="background-rect" x="0" y="0" width="800" height="600" fill="#1C1E35" />
+  
+  <!-- sandy tidal flat -->
+  <rect id="tidal-flat" x="0" y="400" width="800" height="200" fill="#D4A574" />
+  <path id="sand-ripple-1" d="M 0 450 Q 150 420 300 450 T 600 450" stroke="#A0785A" stroke-width="10" stroke-linecap="round" fill="none" />
+  <path id="sand-ripple-2" d="M 100 480 Q 250 460 400 480 T 700 480" stroke="#A0785A" stroke-width="8" stroke-linecap="round" fill="none" />
+  
+  <!-- Limulus polyphemus -->
+  <ellipse id="carapace" cx="400" cy="250" rx="120" ry="80" fill="#2D3E6B" />
+  <ellipse id="carapace-outline" cx="400" cy="250" rx="125" ry="85" stroke="#5B6FA8" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path id="tail-spine" d="M 400 330 L 400 450" stroke="#2D3E6B" stroke-width="20" stroke-linecap="round" fill="none" />
+  <path id="tail-spine-outline" d="M 400 330 L 400 450" stroke="#5B6FA8" stroke-width="4" stroke-linecap="round" fill="none" />
+  
+  <!-- periwinkle blood -->
+  <ellipse id="blood-glow" cx="400" cy="250" rx="60" ry="40" fill="#D1DCFF" opacity="0.8" />
+  <ellipse id="blood-glow-concentric-1" cx="400" cy="250" rx="80" ry="60" fill="#D1DCFF" opacity="0.4" />
+  <ellipse id="blood-glow-concentric-2" cx="400" cy="250" rx="100" ry="80" fill="#D1DCFF" opacity="0.2" />
+  
+  <!-- bookkeeping for bottom layer -->
+  <g id="bottom-layer">
+    <ellipse id="shadow-carapace" cx="405" cy="255" rx="120" ry="80" fill="#0D0D16" opacity="0.2" />
+  </g>
+  
+  <!-- some water droplets -->
+  <ellipse id="water-droplet-1" cx="350" cy="220" rx="10" ry="10" fill="#FBFFF6" opacity="0.8" />
+  <ellipse id="water-droplet-2" cx="450" cy="230" rx="8" ry="8" fill="#FBFFF6" opacity="0.6" />
+  
+  <!-- some sea vegetation -->
+  <path id="sea-vegetation-1" d="M 300 420 Q 320 400 340 420" stroke="#248A28" stroke-width="6" stroke-linecap="round" fill="none" />
+  <path id="sea-vegetation-2" d="M 500 440 Q 520 420 540 440" stroke="#248A28" stroke-width="4" stroke-linecap="round" fill="none" />
+  <ellipse id="algae-1" cx="550" cy="460" rx="15" ry="10" fill="#6FD877" />
+  
+</svg>

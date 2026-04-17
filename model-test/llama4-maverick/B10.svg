@@ -1,0 +1,46 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect x="0" y="0" width="800" height="600" fill="#1C1E35" />
+  
+  <!-- water -->
+  <rect x="0" y="0" width="800" height="600" fill="#2D3E6B" opacity="0.5" />
+  <ellipse cx="400" cy="300" rx="200" ry="150" fill="#5B6FA8" opacity="0.2" />
+  <ellipse cx="400" cy="300" rx="250" ry="200" fill="#5B6FA8" opacity="0.1" />
+  
+  <!-- octopus -->
+  <g id="octopus-arms">
+    <path d="M 200 300 C 250 250 300 200 350 250" stroke="#FBFFF6" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M 350 250 C 400 300 450 350 500 300" stroke="#FBFFF6" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M 500 300 C 550 250 600 200 650 250" stroke="#FBFFF6" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M 650 250 C 700 300 750 350 700 400" stroke="#FBFFF6" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M 200 300 C 150 350 100 400 150 450" stroke="#FBFFF6" stroke-width="10" stroke-linecap="round" fill="none" />
+  </g>
+  <circle cx="400" cy="300" r="50" fill="#FBFFF6" />
+  
+  <!-- RNA editing annotation diagram -->
+  <g id="rna-editing-diagram">
+    <rect x="450" y="200" width="150" height="100" fill="#D1DCFF" opacity="0.8" />
+    <text x="460" y="220" font-size="16" fill="#0D0D16">A-to-I editing</text>
+    <path d="M 500 250 L 550 250" stroke="#E6B800" stroke-width="5" stroke-linecap="round" fill="none" />
+    <circle cx="525" cy="250" r="10" fill="#E6B800" />
+    <text x="560" y="255" font-size="14" fill="#A0785A">ADAR</text>
+    <path d="M 480 280 L 520 280" stroke="#2FBF39" stroke-width="5" stroke-linecap="round" fill="none" />
+    <text x="530" y="285" font-size="14" fill="#1A5C1E">dsRNA</text>
+  </g>
+  
+  <!-- glow around RNA editing diagram -->
+  <g id="rna-editing-glow">
+    <ellipse cx="525" cy="250" rx="50" ry="30" fill="#FFFF77" opacity="0.5" />
+    <ellipse cx="525" cy="250" rx="70" ry="50" fill="#FFFF77" opacity="0.3" />
+  </g>
+  
+  <!-- highlights -->
+  <circle cx="400" cy="300" r="20" fill="#E85542" opacity="0.8" />
+  <path d="M 520 220 L 540 240" stroke="#CA1E08" stroke-width="5" stroke-linecap="round" fill="none" />
+  
+  <!-- subtle texture -->
+  <g id="texture">
+    <path d="M 0 0 L 800 600" stroke="#6FD877" stroke-width="2" stroke-linecap="round" stroke-opacity="0.1" fill="none" />
+    <path d="M 800 0 L 0 600" stroke="#6FD877" stroke-width="2" stroke-linecap="round" stroke-opacity="0.1" fill="none" />
+  </g>
+</svg>

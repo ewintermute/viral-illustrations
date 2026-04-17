@@ -1,0 +1,36 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- background -->
+  <rect id="background-layer" x="0" y="0" width="800" height="600" fill="#1C1E35" />
+  
+  <!-- deep ocean -->
+  <rect id="deep-ocean-layer" x="0" y="400" width="800" height="200" fill="#0D0D16" />
+  
+  <!-- large female anglerfish -->
+  <ellipse id="anglerfish-body" cx="400" cy="300" rx="100" ry="50" fill="#2D3E6B" />
+  <ellipse id="anglerfish-fin-top" cx="400" cy="250" rx="80" ry="30" fill="#2D3E6B" />
+  <ellipse id="anglerfish-fin-bottom" cx="400" cy="350" rx="80" ry="30" fill="#2D3E6B" />
+  <ellipse id="anglerfish-tail" cx="500" cy="300" rx="50" ry="20" fill="#2D3E6B" />
+  
+  <!-- bioluminescent lure -->
+  <ellipse id="lure-center" cx="320" cy="280" rx="10" ry="10" fill="#FFFF77" />
+  <ellipse id="lure-middle" cx="320" cy="280" rx="20" ry="20" fill="#FFFF77" fill-opacity="0.5" />
+  <ellipse id="lure-outer" cx="320" cy="280" rx="30" ry="30" fill="#FFFF77" fill-opacity="0.2" />
+  
+  <!-- tiny male fused to flank -->
+  <circle id="male-anglerfish" cx="420" cy="320" r="10" fill="#5B6FA8" />
+  <path id="male-anglerfish-fusion" d="M 420,320 L 410,310" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- surrounding environment -->
+  <path id="ocean-plant-1" d="M 200,400 L 250,450 L 150,450 Z" fill="#1A5C1E" />
+  <path id="ocean-plant-2" d="M 600,450 L 650,500 L 550,500 Z" fill="#248A28" />
+  <path id="ocean-plant-3" d="M 300,550 L 350,600 L 250,600 Z" fill="#6FD877" />
+  
+  <!-- additional details -->
+  <circle id="eye" cx="380" cy="280" r="5" fill="#FBFFF6" />
+  <path id="mouth" d="M 340,310 L 360,310" stroke="#E85542" stroke-width="2" stroke-linecap="round" />
+  <path id="gill" d="M 400,330 L 420,330" stroke="#CA1E08" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- anglerfish texture -->
+  <path id="anglerfish-scale-1" d="M 410,290 L 420,300 L 400,300 Z" fill="#A0785A" />
+  <path id="anglerfish-scale-2" d="M 390,310 L 400,320 L 380,320 Z" fill="#D4A574" />
+</svg>
