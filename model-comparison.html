@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWW Model Comparison — SVG Generation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #1C1E35; color: #FBFFF6; font-family: 'Inter', system-ui, sans-serif; padding-bottom: 80px; }
+
+    header { padding: 36px 48px 24px; border-bottom: 1px solid #3D3D52; }
+    header h1 { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: clamp(22px,3vw,36px); }
+    header p  { margin-top: 8px; font-size: 13px; color: #A8A8B5; max-width: 70ch; line-height: 1.6; }
+    header nav { margin-top: 14px; display: flex; gap: 20px; }
+    header nav a { font-size: 12px; color: #8BA0D6; text-decoration: none; }
+    header nav a:hover { color: #D1DCFF; }
+
+    /* Model legend bar */
+    .models-bar {
+      display: flex; gap: 0;
+      border-bottom: 1px solid #3D3D52;
+      overflow-x: auto;
+    }
+    .model-tab {
+      flex: 1; min-width: 120px;
+      padding: 14px 20px;
+      border-right: 1px solid #3D3D52;
+      text-align: center;
+      font-family: 'Barlow', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .model-tab:last-child { border-right: none; }
+    .model-tab .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+    /* Story sections */
+    .story-section { border-bottom: 2px solid #3D3D52; }
+    .story-header {
+      padding: 20px 48px 16px; background: #0D0D16;
+      display: flex; align-items: baseline; gap: 16px;
+    }
+    .story-id    { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #2FBF39; }
+    .story-title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 17px; color: #FBFFF6; }
+
+    /* 4-column grid per story */
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: #3D3D52;
+    }
+    .model-cell { background: #1C1E35; display: flex; flex-direction: column; }
+    .model-label {
+      padding: 8px 12px; font-size: 11px; font-family: 'Barlow', sans-serif;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      border-bottom: 1px solid #3D3D52;
+    }
+    .svg-frame {
+      background: #0D0D16; aspect-ratio: 4/3; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .svg-frame img, .svg-frame object {
+      width: 100%; height: 100%; object-fit: contain;
+    }
+    .svg-frame .loading {
+      font-size: 11px; font-family: 'Space Mono', monospace, 'Inter', sans-serif;
+      color: #6B6B7C; letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .svg-frame .error {
+      font-size: 11px; color: #CA1E08; text-align: center; padding: 16px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Model colour codes */
+    .dot-claude  { background: #2FBF39; }
+    .dot-gpt4o   { background: #8BA0D6; }
+    .dot-gemini  { background: #E6B800; }
+    .dot-deepseek{ background: #E85542; }
+
+    .label-claude  { color: #2FBF39; }
+    .label-gpt4o   { color: #8BA0D6; }
+    .label-gemini  { color: #E6B800; }
+    .label-deepseek{ color: #E85542; }
+
+    @media (max-width: 900px) {
+      .model-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .model-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Model Comparison — SVG Illustration Quality</h1>
+  <p>Same prompt, same spec, same 5 biology stories. Four frontier models. Identical instructions from SKILL.md. Which draws the best critters?</p>
+  <nav>
+    <a href="index.html">← Illustrations</a>
+    <a href="animations.html">Animations</a>
+    <a href="critters.html">Critter animations</a>
+  </nav>
+</header>
+
+<!-- Model legend -->
+<div class="models-bar">
+  <div class="model-tab"><span class="dot dot-claude"></span><span class="label-claude">Claude Opus 4.7</span></div>
+  <div class="model-tab"><span class="dot dot-gpt4o"></span><span class="label-gpt4o">GPT-4o</span></div>
+  <div class="model-tab"><span class="dot dot-gemini"></span><span class="label-gemini">Gemini 2.5 Pro</span></div>
+  <div class="model-tab"><span class="dot dot-deepseek"></span><span class="label-deepseek">DeepSeek V3.2</span></div>
+</div>
+
+<div id="stories"></div>
+
+<script>
+const stories = [
+  { id:'C1', title:'Zombie Ant Fungus',      desc:'Ophiocordyceps unilateralis and its carpenter ant host' },
+  { id:'A7', title:'Horseshoe Crab Blood',   desc:'Limulus polyphemus and the LAL pharmaceutical test' },
+  { id:'B10', title:'Octopus RNA Editing',   desc:'Octopus bimaculoides neural adaptation via ADAR' },
+  { id:'D4', title:'Anglerfish Fusion',      desc:'Ceratioid anglerfish sexual parasitism' },
+  { id:'K8', title:'Mantis Shrimp Club',     desc:'Odontodactylus scyllarus Bouligand impact structure' },
+];
+
+const models = [
+  { key:'claude-opus', label:'Claude Opus 4.7', cls:'claude' },
+  { key:'gpt4o',       label:'GPT-4o',          cls:'gpt4o'  },
+  { key:'gemini-25-pro',label:'Gemini 2.5 Pro', cls:'gemini' },
+  { key:'deepseek-v3', label:'DeepSeek V3.2',   cls:'deepseek'},
+];
+
+const container = document.getElementById('stories');
+
+stories.forEach(story => {
+  const section = document.createElement('div');
+  section.className = 'story-section';
+
+  const header = document.createElement('div');
+  header.className = 'story-header';
+  header.innerHTML = `<span class="story-id">${story.id}</span><span class="story-title">${story.title}</span><span style="font-size:12px;color:#6B6B7C;">${story.desc}</span>`;
+  section.appendChild(header);
+
+  const grid = document.createElement('div');
+  grid.className = 'model-grid';
+
+  models.forEach(model => {
+    const cell = document.createElement('div');
+    cell.className = 'model-cell';
+
+    const label = document.createElement('div');
+    label.className = `model-label label-${model.cls}`;
+    label.textContent = model.label;
+    cell.appendChild(label);
+
+    const frame = document.createElement('div');
+    frame.className = 'svg-frame';
+
+    const svgPath = `model-test/${model.key}/${story.id}.svg`;
+
+    // Load SVG inline for proper rendering
+    fetch(svgPath)
+      .then(r => {
+        if (!r.ok) throw new Error(`${r.status}`);
+        return r.text();
+      })
+      .then(svgText => {
+        const parser = new DOMParser();
+        const doc    = parser.parseFromString(svgText, 'image/svg+xml');
+        const svgEl  = doc.documentElement;
+        svgEl.setAttribute('width',  '100%');
+        svgEl.setAttribute('height', '100%');
+        svgEl.style.display = 'block';
+        frame.innerHTML = '';
+        frame.appendChild(svgEl);
+      })
+      .catch(err => {
+        frame.innerHTML = `<div class="error">Not yet generated<br><small style="color:#6B6B7C;">${svgPath}</small></div>`;
+      });
+
+    frame.innerHTML = '<span class="loading">Loading…</span>';
+    cell.appendChild(frame);
+    grid.appendChild(cell);
+  });
+
+  section.appendChild(grid);
+  container.appendChild(section);
+});
+</script>
+</body>
+</html>
