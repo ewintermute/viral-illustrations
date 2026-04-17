@@ -290,26 +290,28 @@ const animations = {
     }
   },
 
-  // ── E16: Artemisinin (13s) ──────────────────────────────────────────
-  // Beat 1 (0-4s): Plant silhouette
-  // Beat 2 (4.5-9s): Molecular structure appears with highlighted bridge
-  // Beat 3 (9.5-12s): Reaction arrow to Fe target
+  // ── E16: Artemisinin (16s) ──────────────────────────────────────────
+  // Beat 1 (0-4s):   Artemisia annua plant appears
+  // Beat 2 (4.5-8s): Molecular structure fades in (RDKit flat skeletal, O-O in red)
+  // Beat 3 (8.5-11s): Heme Fe2+ target + reaction arrow appear
+  // Beat 4 (11.5-15s): 340 AD scroll overlay + labels
   'E16': {
     title: 'Artemisinin',
     id: 'E16',
     file: 'illustrations/E16-artemisinin-illustration.svg',
     hook: 'A Nobel Prize from a fever recipe written in 340 AD.',
-    duration: 13,
+    duration: 16,
     setup(svg) {
-      ['context','subject','label','overlay'].forEach(id => {
+      ['context','subject','detail-heme','label','overlay'].forEach(id => {
         const g = svg.querySelector(`#${id}`); if(g) g.style.opacity='0';
       });
     },
     play(svg) {
-      anim(svg, 'context', {delay:1,   dur:2,   from:'opacity:0', to:'opacity:1'});
-      anim(svg, 'subject', {delay:4.5, dur:2.5, from:'opacity:0', to:'opacity:1'});
-      anim(svg, 'label',   {delay:5,   dur:1,   from:'opacity:0', to:'opacity:1'});
-      anim(svg, 'overlay', {delay:9.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'context',     {delay:1,    dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'subject',     {delay:4.5,  dur:2.5, from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'detail-heme', {delay:8.5,  dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'overlay',     {delay:11.5, dur:2,   from:'opacity:0', to:'opacity:1'});
+      anim(svg, 'label',       {delay:12,   dur:1,   from:'opacity:0', to:'opacity:1'});
     }
   },
 
