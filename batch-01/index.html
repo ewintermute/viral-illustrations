@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batch 01 — Illustration Picker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0D0D16; color: #FBFFF6; font-family: 'Inter', system-ui, sans-serif; padding-bottom: 100px; }
+
+    header { padding: 36px 48px 28px; border-bottom: 1px solid #2D3E6B; }
+    header h1 { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: clamp(20px,2.8vw,36px); margin-bottom: 8px; }
+    header p { font-size: 13px; color: #8BA0D6; max-width: 70ch; line-height: 1.6; }
+    .progress-bar { margin-top: 20px; display: flex; align-items: center; gap: 14px; }
+    .progress-label { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px; color: #5B6FA8; letter-spacing: 0.1em; text-transform: uppercase; }
+    .progress-track { flex: 1; height: 4px; background: #1C1E35; border-radius: 2px; max-width: 300px; }
+    .progress-fill { height: 100%; background: #2FBF39; border-radius: 2px; transition: width 0.3s; }
+    .progress-count { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 13px; color: #2FBF39; }
+
+    /* Save bar */
+    .save-bar { position: sticky; top: 0; z-index: 100; background: #0D0D16; border-bottom: 1px solid #2D3E6B; padding: 12px 48px; display: flex; align-items: center; gap: 16px; }
+    .save-btn { background: #2FBF39; color: #0D0D16; font-family: 'Barlow', sans-serif; font-weight: 900; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; border: none; padding: 10px 24px; border-radius: 4px; cursor: pointer; }
+    .save-btn:hover { background: #6FD877; }
+    .save-btn:disabled { background: #3D3D52; color: #6B6B7C; cursor: default; }
+    .save-status { font-size: 12px; color: #6B6B7C; }
+    .save-status.saved { color: #2FBF39; }
+
+    /* Story sections */
+    .story { border-bottom: 2px solid #1C1E35; padding: 40px 48px; }
+    .story-meta { display: flex; align-items: baseline; gap: 16px; margin-bottom: 6px; }
+    .story-id { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #2FBF39; }
+    .story-title { font-family: 'Barlow', sans-serif; font-weight: 900; font-size: 20px; }
+    .story-desc { font-size: 13px; color: #6B6B7C; margin-bottom: 28px; }
+
+    /* 3-up grid */
+    .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .option { background: #1C1E35; border: 2px solid #2D3E6B; border-radius: 8px; overflow: hidden; cursor: pointer; transition: border-color 0.15s, transform 0.1s; }
+    .option:hover { border-color: #5B6FA8; transform: translateY(-2px); }
+    .option.selected { border-color: #2FBF39; background: #0A1A0A; }
+    .option.selected .option-label { background: #2FBF39; color: #0D0D16; }
+
+    .option-img { aspect-ratio: 4/3; overflow: hidden; }
+    .option-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .option-label { padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #2D3E6B; }
+    .option-label-text { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8BA0D6; }
+    .option-label .check { font-size: 16px; opacity: 0; }
+    .option.selected .option-label .check { opacity: 1; }
+    .option.selected .option-label-text { color: #0D0D16; }
+
+    .option-desc { padding: 0 14px 12px; font-size: 12px; color: #6B6B7C; line-height: 1.5; }
+    .option.selected .option-desc { color: #248A28; }
+
+    /* Selected indicator above story */
+    .selected-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #2FBF39; font-family: 'Barlow', sans-serif; font-weight: 700; margin-bottom: 16px; opacity: 0; transition: opacity 0.2s; }
+    .selected-indicator.visible { opacity: 1; }
+
+    @media (max-width: 900px) {
+      .story, header, .save-bar { padding-left: 20px; padding-right: 20px; }
+      .options { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Batch 01 — Pick the Best</h1>
+  <p>Three visually distinct versions for each of the first 10 stories. Click to select your preferred illustration. Your choices are saved to <code>selections.json</code> for tracking.</p>
+  <div class="progress-bar">
+    <span class="progress-label">Progress</span>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    <span class="progress-count" id="progress-count">0 / 10</span>
+  </div>
+</header>
+
+<div class="save-bar">
+  <button class="save-btn" id="save-btn" onclick="saveSelections()">Save Selections</button>
+  <span class="save-status" id="save-status">Select one option per story, then save.</span>
+</div>
+
+<div id="stories"></div>
+
+<script>
+const stories = [
+  {
+    id: 'A1', title: 'The Immortal Jellyfish', desc: 'Turritopsis dohrnii — transdifferentiation and biological immortality',
+    versions: [
+      { v: 'v1', label: 'Life Cycle', desc: 'Adult medusa → collapse → polyp reversal sequence' },
+      { v: 'v2', label: 'Organism Portrait', desc: 'Single medusa, bioluminescent glow, deep ocean' },
+      { v: 'v3', label: 'Cellular Concept', desc: 'Transdifferentiation inset: telomerase, Yamanaka factors' },
+    ]
+  },
+  {
+    id: 'A2', title: 'The Methuselah Tree', desc: 'Pinus longaeva — 4,857-year-old bristlecone pine',
+    versions: [
+      { v: 'v1', label: 'Portrait', desc: 'Gnarled twisted silhouette, bleached deadwood, mountain sky' },
+      { v: 'v2', label: 'Cross-Section', desc: 'Dense annual rings, 4,857 counted, resin pockets' },
+      { v: 'v3', label: 'Timeline', desc: 'Tree vs human history — pyramids, Rome, all of it' },
+    ]
+  },
+  {
+    id: 'A3', title: 'The Humongous Fungus', desc: 'Armillaria ostoyae — 2,385-acre single organism in Oregon',
+    versions: [
+      { v: 'v1', label: 'Above & Below', desc: 'Forest floor split: trees above, vast mycelial network underground' },
+      { v: 'v2', label: 'The Mushrooms', desc: 'Close-up honey mushroom cluster, earthy tones, "one organism"' },
+      { v: 'v3', label: 'Scale Map', desc: 'Top-down web view, 2,385 acres, grid scale reference' },
+    ]
+  },
+  {
+    id: 'A4', title: 'The Fastest Thing Alive', desc: 'Nematocyst discharge — 5.41 million g in 700 nanoseconds',
+    versions: [
+      { v: 'v1', label: 'The Discharge', desc: 'Nematocyst mid-fire, exploding tubule, motion lines, stats' },
+      { v: 'v2', label: 'Jellyfish Portrait', desc: 'Full jellyfish with cnidocyte inset showing coiled spring' },
+      { v: 'v3', label: 'Comparison Chart', desc: 'g-force scale: jet → bullet → mantis shrimp → nematocyst' },
+    ]
+  },
+  {
+    id: 'A5', title: 'The Genome That Breaks the Rules', desc: 'Paris japonica — 150 billion base pairs, 50× human genome',
+    versions: [
+      { v: 'v1', label: 'Flower Portrait', desc: 'Delicate star-shaped flower, annotated "50× human genome"' },
+      { v: 'v2', label: 'The Comparison', desc: 'Human 2m vs plant 100m DNA strand — side by side scale' },
+      { v: 'v3', label: 'Inside the Nucleus', desc: '8 chromosome sets, 149Gbp, repetitive DNA highlighted' },
+    ]
+  },
+  {
+    id: 'A6', title: 'The Deadliest Animal', desc: 'Anopheles mosquito — 750,000 deaths/year, Plasmodium transmission',
+    versions: [
+      { v: 'v1', label: 'Portrait', desc: 'Anatomically accurate Anopheles, resting posture, compound eyes' },
+      { v: 'v2', label: 'Blood Meal', desc: 'Proboscis inserted, Plasmodium parasites visible in blood' },
+      { v: 'v3', label: 'Death Toll', desc: 'Editorial: 750,000/year, comparison bars, stark typography' },
+    ]
+  },
+  {
+    id: 'A7', title: 'The Blue Blood', desc: 'Limulus polyphemus — LAL, $60,000/gallon, guards every drug',
+    versions: [
+      { v: 'v1', label: 'Crab Portrait', desc: 'Dorsal view, domed carapace, telson, tidal flat' },
+      { v: 'v2', label: 'The Bleed', desc: 'Bleeding rack, cardiac needle, blue blood, $60k/gallon' },
+      { v: 'v3', label: 'The Guardian', desc: 'Crab + LAL vial + clotting reaction diagram' },
+    ]
+  },
+  {
+    id: 'A8', title: 'Evolution in Real Time', desc: 'HIV quasispecies — one patient = global flu diversity',
+    versions: [
+      { v: 'v1', label: 'Virus Portrait', desc: 'HIV cross-section: capsid, envelope, gp120 spikes, annotated' },
+      { v: 'v2', label: 'Quasispecies Cloud', desc: 'Swarm of variant virions surrounding a T cell' },
+      { v: 'v3', label: 'Mutation Engine', desc: 'RT + APOBEC3 diagram, error rate stats, mutation markers' },
+    ]
+  },
+  {
+    id: 'B1', title: 'Cancer Was Always Going to Happen', desc: 'Cancer as evolutionary cellular defection',
+    versions: [
+      { v: 'v1', label: 'Cooperator vs Defector', desc: 'Orderly cells (left) vs chaotic cancer cells (right)' },
+      { v: 'v2', label: 'The Atavism', desc: 'Cancer cell reverting to unicellular form, evolutionary throwback' },
+      { v: 'v3', label: 'Inevitability Diagram', desc: 'Mutation accumulation graph, threshold, branching lineages' },
+    ]
+  },
+  {
+    id: 'B10', title: 'Rewriting the Code in Real Time', desc: 'Octopus bimaculoides — 13,000+ RNA edits in response to cold',
+    versions: [
+      { v: 'v1', label: 'Neural Map', desc: 'Distributed nervous system, ganglia nodes, 13,000+ edit markers' },
+      { v: 'v2', label: 'Cold Shock', desc: '13°C vs 22°C split, chromatophores shifting, ADAR activating' },
+      { v: 'v3', label: 'Central Dogma Broken', desc: 'DNA→RNA→protein flow, ADAR intercepts, edits the message' },
+    ]
+  },
+];
+
+const selections = {};
+
+function updateProgress() {
+  const n = Object.keys(selections).length;
+  document.getElementById('progress-fill').style.width = (n/10*100)+'%';
+  document.getElementById('progress-count').textContent = n + ' / 10';
+}
+
+function select(storyId, v) {
+  // Deselect previous
+  document.querySelectorAll(`.option[data-story="${storyId}"]`).forEach(el => el.classList.remove('selected'));
+  // Select new
+  document.querySelector(`.option[data-story="${storyId}"][data-v="${v}"]`).classList.add('selected');
+  selections[storyId] = v;
+  // Show indicator
+  const ind = document.getElementById('ind-'+storyId);
+  if (ind) { ind.textContent = '✓ ' + v + ' selected'; ind.classList.add('visible'); }
+  updateProgress();
+  document.getElementById('save-status').textContent = 'Unsaved changes.';
+  document.getElementById('save-status').className = 'save-status';
+}
+
+async function saveSelections() {
+  const btn = document.getElementById('save-btn');
+  const status = document.getElementById('save-status');
+  btn.disabled = true;
+  btn.textContent = 'Saving…';
+
+  // Build output
+  const output = {
+    batch: '01',
+    savedAt: new Date().toISOString(),
+    selections: {},
+    rejected: {}
+  };
+  stories.forEach(s => {
+    if (selections[s.id]) {
+      output.selections[s.id] = selections[s.id];
+      output.rejected[s.id] = s.versions.filter(v => v.v !== selections[s.id]).map(v => v.v);
+    }
+  });
+
+  // Write via fetch to a local endpoint — fallback: show JSON for manual copy
+  try {
+    const resp = await fetch('/save-selections', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(output)
+    });
+    if (resp.ok) {
+      status.textContent = 'Saved!';
+      status.className = 'save-status saved';
+    } else { throw new Error(); }
+  } catch {
+    // Fallback — download as file
+    const blob = new Blob([JSON.stringify(output, null, 2)], {type:'application/json'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'batch-01-selections.json';
+    a.click();
+    status.textContent = 'Downloaded batch-01-selections.json — send to Neobyte to apply.';
+    status.className = 'save-status saved';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Save Selections';
+}
+
+// Build UI
+const container = document.getElementById('stories');
+stories.forEach(story => {
+  const section = document.createElement('div');
+  section.className = 'story';
+  section.innerHTML = `
+    <div class="story-meta">
+      <span class="story-id">${story.id}</span>
+      <span class="story-title">${story.title}</span>
+    </div>
+    <div class="story-desc">${story.desc}</div>
+    <div class="selected-indicator" id="ind-${story.id}"></div>
+    <div class="options">
+      ${story.versions.map(ver => `
+        <div class="option" data-story="${story.id}" data-v="${ver.v}" onclick="select('${story.id}','${ver.v}')">
+          <div class="option-img">
+            <img src="${story.id}/${ver.v}.png" alt="${story.id} ${ver.v}" loading="lazy"/>
+          </div>
+          <div class="option-label">
+            <span class="option-label-text">${ver.label}</span>
+            <span class="check">✓</span>
+          </div>
+          <div class="option-desc">${ver.desc}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  container.appendChild(section);
+});
+
+updateProgress();
+</script>
+</body>
+</html>

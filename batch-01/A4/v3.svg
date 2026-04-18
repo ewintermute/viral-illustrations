@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background:#0D0D16">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .label { font-family: 'Inter', sans-serif; font-size: 13px; fill: #D1DCFF; }
+      .value { font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 15px; fill: #FBFFF6; }
+      .title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 22px; fill: #FBFFF6; }
+      .subtitle { font-family: 'Inter', sans-serif; font-size: 14px; fill: #D1DCFF; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="45" class="title" text-anchor="middle" fill="#2FBF39">ACCELERATION COMPARISON</text>
+  <text x="400" y="68" class="subtitle" text-anchor="middle">Peak g-force during acceleration</text>
+  
+  <!-- Y-axis -->
+  <line x1="100" y1="120" x2="100" y2="520" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Y-axis label -->
+  <text x="50" y="320" class="label" text-anchor="middle" transform="rotate(-90 50 320)" font-size="14" fill="#D1DCFF">Acceleration (g-force)</text>
+  
+  <!-- Scale markers (logarithmic visual) -->
+  <line x1="95" y1="500" x2="105" y2="500" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="505" class="label" text-anchor="end" font-size="12">10</text>
+  
+  <line x1="95" y1="450" x2="105" y2="450" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="455" class="label" text-anchor="end" font-size="12">100</text>
+  
+  <line x1="95" y1="400" x2="105" y2="400" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="405" class="label" text-anchor="end" font-size="12">1,000</text>
+  
+  <line x1="95" y1="350" x2="105" y2="350" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="355" class="label" text-anchor="end" font-size="12">10,000</text>
+  
+  <line x1="95" y1="300" x2="105" y2="300" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="305" class="label" text-anchor="end" font-size="12">100,000</text>
+  
+  <line x1="95" y1="200" x2="105" y2="200" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="205" class="label" text-anchor="end" font-size="12">1 million</text>
+  
+  <line x1="95" y1="130" x2="105" y2="130" stroke="#5B6FA8" stroke-width="2"/>
+  <text x="85" y="135" class="label" text-anchor="end" font-size="12">5 million</text>
+  
+  <!-- Data bars/points -->
+  
+  <!-- Fighter Jet: 9g -->
+  <rect x="160" y="495" width="100" height="5" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1"/>
+  <circle cx="210" cy="497" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="2"/>
+  <text x="210" y="485" class="value" text-anchor="middle" font-size="14">9 g</text>
+  <text x="210" y="525" class="label" text-anchor="middle" fill="#D1DCFF">Fighter Jet</text>
+  <text x="210" y="540" class="label" text-anchor="middle" fill="#5B6FA8" font-size="11">(pilot blackout)</text>
+  
+  <!-- Bullet: 1,000g -->
+  <rect x="310" y="400" width="100" height="100" fill="#A0785A" stroke="#D4A574" stroke-width="2"/>
+  <circle cx="360" cy="450" r="8" fill="#D4A574" stroke="#FBFFF6" stroke-width="2"/>
+  <text x="360" y="435" class="value" text-anchor="middle">1,000 g</text>
+  <text x="360" y="525" class="label" text-anchor="middle" fill="#D1DCFF">Bullet</text>
+  <text x="360" y="540" class="label" text-anchor="middle" fill="#A0785A" font-size="11">(muzzle exit)</text>
+  
+  <!-- Mantis Shrimp: 10,000g -->
+  <rect x="460" y="350" width="100" height="150" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+  <circle cx="510" cy="425" r="9" fill="#CA1E08" stroke="#FBFFF6" stroke-width="2"/>
+  <text x="510" y="405" class="value" text-anchor="middle">10,000 g</text>
+  <text x="510" y="525" class="label" text-anchor="middle" fill="#D1DCFF">Mantis Shrimp</text>
+  <text x="510" y="540" class="label" text-anchor="middle" fill="#E85542" font-size="11">(punch strike)</text>
+  
+  <!-- Nematocyst: 5,410,000g - DRAMATICALLY taller -->
+  <rect x="610" y="130" width="100" height="370" fill="#2FBF39" stroke="#6FD877" stroke-width="3"/>
+  <circle cx="660" cy="315" r="12" fill="#FFFF77" stroke="#FBFFF6" stroke-width="3"/>
+  <text x="660" y="155" class="value" text-anchor="middle" font-size="17" font-weight="700" fill="#FFFF77">5,410,000 g</text>
+  <text x="660" y="525" class="label" text-anchor="middle" fill="#FBFFF6" font-weight="600">NEMATOCYST</text>
+  <text x="660" y="540" class="label" text-anchor="middle" fill="#2FBF39" font-size="11">(jellyfish sting)</text>
+  
+  <!-- Emphasis lines from top of nematocyst bar -->
+  <line x1="660" y1="130" x2="660" y2="110" stroke="#FFFF77" stroke-width="2" stroke-linecap="round"/>
+  <line x1="650" y1="130" x2="640" y2="105" stroke="#FFFF77" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="670" y1="130" x2="680" y2="105" stroke="#FFFF77" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Annotation box -->
+  <rect x="140" y="580" width="520" height="1" fill="#5B6FA8" opacity="0.3"/>
+  <text x="400" y="575" class="label" text-anchor="middle" font-size="11" fill="#5B6FA8">
+    The nematocyst is 540× faster than a mantis shrimp punch
+  </text>
+  
+  <!-- Impact note -->
+  <text x="730" y="200" class="label" font-size="11" fill="#E6B800">7+ GPa</text>
+  <text x="730" y="215" class="label" font-size="10" fill="#D1DCFF">impact</text>
+  <text x="730" y="228" class="label" font-size="10" fill="#D1DCFF">pressure</text>
+  <line x1="710" y1="210" x2="720" y2="210" stroke="#E6B800" stroke-width="1.5" stroke-dasharray="3,2"/>
+</svg>

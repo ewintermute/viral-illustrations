@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .title { font-family: 'Inter', sans-serif; font-weight: 600; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" class="title" font-size="28" fill="#FBFFF6" text-anchor="middle">The Neural Map</text>
+  <text x="400" y="70" font-size="16" fill="#D1DCFF" text-anchor="middle" font-style="italic">Octopus bimaculoides</text>
+  
+  <!-- Octopus body (simplified from top view) -->
+  <ellipse id="octopus-head" cx="400" cy="250" rx="70" ry="80" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Central brain (glowing node) -->
+  <circle id="central-brain" cx="400" cy="240" r="18" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="400" cy="240" r="25" fill="none" stroke="#2FBF39" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  <circle cx="400" cy="240" r="32" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.2" stroke-linecap="round"/>
+  
+  <!-- Arm 1 (top right) -->
+  <path id="arm-1" d="M 430,220 Q 500,180 550,140 Q 580,120 600,110" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 430,220 Q 500,180 550,140 Q 580,120 600,110" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-1a" cx="480" cy="190" r="10" fill="#2FBF39"/>
+  <circle cx="480" cy="190" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-1b" cx="540" cy="150" r="9" fill="#2FBF39"/>
+  <circle cx="540" cy="150" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 2 (right) -->
+  <path id="arm-2" d="M 450,270 Q 540,280 620,290 Q 670,295 710,300" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 450,270 Q 540,280 620,290 Q 670,295 710,300" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-2a" cx="510" cy="275" r="10" fill="#2FBF39"/>
+  <circle cx="510" cy="275" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-2b" cx="590" cy="287" r="9" fill="#2FBF39"/>
+  <circle cx="590" cy="287" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 3 (bottom right) -->
+  <path id="arm-3" d="M 430,310 Q 500,370 550,420 Q 580,450 600,480" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 430,310 Q 500,370 550,420 Q 580,450 600,480" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-3a" cx="480" cy="350" r="10" fill="#2FBF39"/>
+  <circle cx="480" cy="350" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-3b" cx="540" cy="405" r="9" fill="#2FBF39"/>
+  <circle cx="540" cy="405" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 4 (bottom) -->
+  <path id="arm-4" d="M 400,320 Q 400,400 400,480 Q 400,520 400,550" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 400,320 Q 400,400 400,480 Q 400,520 400,550" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-4a" cx="400" cy="380" r="10" fill="#2FBF39"/>
+  <circle cx="400" cy="380" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-4b" cx="400" cy="460" r="9" fill="#2FBF39"/>
+  <circle cx="400" cy="460" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 5 (bottom left) -->
+  <path id="arm-5" d="M 370,310 Q 300,370 250,420 Q 220,450 200,480" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 370,310 Q 300,370 250,420 Q 220,450 200,480" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-5a" cx="320" cy="350" r="10" fill="#2FBF39"/>
+  <circle cx="320" cy="350" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-5b" cx="260" cy="405" r="9" fill="#2FBF39"/>
+  <circle cx="260" cy="405" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 6 (left) -->
+  <path id="arm-6" d="M 350,270 Q 260,280 180,290 Q 130,295 90,300" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 350,270 Q 260,280 180,290 Q 130,295 90,300" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-6a" cx="290" cy="275" r="10" fill="#2FBF39"/>
+  <circle cx="290" cy="275" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-6b" cx="210" cy="287" r="9" fill="#2FBF39"/>
+  <circle cx="210" cy="287" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 7 (top left) -->
+  <path id="arm-7" d="M 370,220 Q 300,180 250,140 Q 220,120 200,110" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 370,220 Q 300,180 250,140 Q 220,120 200,110" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-7a" cx="320" cy="190" r="10" fill="#2FBF39"/>
+  <circle cx="320" cy="190" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-7b" cx="260" cy="150" r="9" fill="#2FBF39"/>
+  <circle cx="260" cy="150" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Arm 8 (top) -->
+  <path id="arm-8" d="M 400,180 Q 400,140 400,100 Q 400,70 400,50" fill="none" stroke="#5B6FA8" stroke-width="24" stroke-linecap="round"/>
+  <path d="M 400,180 Q 400,140 400,100 Q 400,70 400,50" fill="none" stroke="#2D3E6B" stroke-width="12" stroke-linecap="round"/>
+  <circle id="ganglion-8a" cx="400" cy="135" r="10" fill="#2FBF39"/>
+  <circle cx="400" cy="135" r="16" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  <circle id="ganglion-8b" cx="400" cy="90" r="9" fill="#2FBF39"/>
+  <circle cx="400" cy="90" r="15" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- RNA editing data points (small dots scattered along neural paths) -->
+  <circle cx="445" cy="207" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="465" cy="198" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="520" cy="170" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="560" cy="145" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="480" cy="272" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="550" cy="282" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="620" cy="289" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="665" cy="294" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="455" cy="330" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="495" cy="362" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="525" cy="390" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="565" cy="435" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="400" cy="350" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="400" cy="410" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="400" cy="490" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="400" cy="530" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="345" cy="330" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="305" cy="362" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="275" cy="390" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="235" cy="435" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="320" cy="272" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="250" cy="282" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="180" cy="289" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="135" cy="294" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="355" cy="207" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="335" cy="198" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="280" cy="170" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="240" cy="145" r="2" fill="#FFFF77" opacity="0.7"/>
+  
+  <circle cx="400" cy="155" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  <circle cx="400" cy="115" r="2" fill="#FFFF77" opacity="0.7"/>
+  <circle cx="400" cy="75" r="2.5" fill="#FFFF77" opacity="0.8"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="385" cy="235" rx="8" ry="10" fill="#0D0D16"/>
+  <ellipse cx="415" cy="235" rx="8" ry="10" fill="#0D0D16"/>
+  
+  <!-- Edit count annotation -->
+  <rect x="50" y="480" width="220" height="90" fill="#2D3E6B" stroke="#2FBF39" stroke-width="2" stroke-linecap="round"/>
+  <text x="160" y="510" class="title" font-size="32" fill="#2FBF39" text-anchor="middle">13,000+</text>
+  <text x="160" y="535" font-size="14" fill="#D1DCFF" text-anchor="middle">RNA edits distributed</text>
+  <text x="160" y="555" font-size="14" fill="#D1DCFF" text-anchor="middle">across neural network</text>
+  
+  <!-- Legend -->
+  <circle cx="570" cy="500" r="8" fill="#2FBF39"/>
+  <text x="590" y="505" font-size="13" fill="#FBFFF6">Ganglia (neural processing centers)</text>
+  
+  <circle cx="570" cy="530" r="3" fill="#FFFF77"/>
+  <text x="590" y="535" font-size="13" fill="#FBFFF6">RNA editing sites (A→I conversions)</text>
+  
+  <text x="570" y="565" font-size="12" fill="#D1DCFF">Each arm has autonomous processing power</text>
+</svg>

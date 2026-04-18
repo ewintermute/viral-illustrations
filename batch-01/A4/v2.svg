@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background:#0D0D16">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #D1DCFF; }
+      .label-large { font-family: 'Inter', sans-serif; font-size: 14px; fill: #D1DCFF; }
+      .title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 16px; fill: #FBFFF6; }
+    </style>
+  </defs>
+  
+  <!-- Jellyfish bell -->
+  <ellipse cx="280" cy="180" rx="120" ry="95" fill="#2D3E6B" opacity="0.9"/>
+  <ellipse cx="280" cy="180" rx="105" ry="82" fill="#5B6FA8" opacity="0.7"/>
+  <ellipse cx="280" cy="180" rx="85" ry="65" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Bell detail lines -->
+  <path d="M 280 85 Q 240 140 220 180" fill="none" stroke="#D1DCFF" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 280 85 Q 260 140 250 180" fill="none" stroke="#D1DCFF" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 280 85 Q 300 140 310 180" fill="none" stroke="#D1DCFF" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 280 85 Q 320 140 340 180" fill="none" stroke="#D1DCFF" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <!-- Central mouth/manubrium -->
+  <rect x="270" y="275" width="20" height="35" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5"/>
+  <path d="M 265 310 L 255 325 M 295 310 L 305 325" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Tentacles with cnidocytes -->
+  <!-- Left tentacles -->
+  <path d="M 195 250 Q 180 320 170 420 Q 168 480 165 540" 
+        fill="none" stroke="#248A28" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="178" cy="350" r="5" fill="#2FBF39"/>
+  <circle cx="172" cy="410" r="5" fill="#2FBF39"/>
+  <circle cx="167" cy="470" r="5" fill="#2FBF39"/>
+  
+  <path d="M 220 260 Q 210 330 205 430 Q 203 490 200 545" 
+        fill="none" stroke="#248A28" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="208" cy="360" r="5" fill="#2FBF39"/>
+  <circle cx="204" cy="440" r="5" fill="#2FBF39"/>
+  
+  <!-- Center-left tentacles -->
+  <path d="M 250 275 Q 245 340 243 440 Q 242 500 240 550" 
+        fill="none" stroke="#1A5C1E" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="245" cy="370" r="5" fill="#6FD877"/>
+  <circle cx="242" cy="460" r="5" fill="#6FD877"/>
+  
+  <!-- Center-right tentacles -->
+  <path d="M 310 275 Q 315 340 317 440 Q 318 500 320 550" 
+        fill="none" stroke="#1A5C1E" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="315" cy="370" r="5" fill="#6FD877"/>
+  <circle cx="318" cy="460" r="5" fill="#6FD877"/>
+  
+  <!-- Right tentacles -->
+  <path d="M 340 260 Q 350 330 355 430 Q 357 490 360 545" 
+        fill="none" stroke="#248A28" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="352" cy="360" r="5" fill="#2FBF39"/>
+  <circle cx="356" cy="440" r="5" fill="#2FBF39"/>
+  
+  <path d="M 365 250 Q 380 320 390 420 Q 392 480 395 540" 
+        fill="none" stroke="#248A28" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="382" cy="350" r="5" fill="#2FBF39"/>
+  <circle cx="388" cy="410" r="5" fill="#2FBF39"/>
+  <circle cx="393" cy="470" r="5" fill="#2FBF39"/>
+  
+  <!-- Inset panel border -->
+  <rect x="480" y="140" width="280" height="320" fill="#1A1A24" stroke="#5B6FA8" stroke-width="3" rx="4"/>
+  <rect x="488" y="148" width="264" height="304" fill="#0D0D16" stroke="#2D3E6B" stroke-width="1"/>
+  
+  <!-- Inset: Single cnidocyte cell -->
+  <ellipse cx="620" cy="280" rx="85" ry="110" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2.5"/>
+  <text x="620" y="175" class="label-large" text-anchor="middle" fill="#FFFF77">CNIDOCYTE</text>
+  <text x="620" y="192" class="label" text-anchor="middle">(stinging cell)</text>
+  
+  <!-- Cell nucleus -->
+  <ellipse cx="640" cy="340" rx="25" ry="20" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5"/>
+  <circle cx="640" cy="340" r="8" fill="#D1DCFF"/>
+  
+  <!-- Nematocyst capsule (coiled spring) -->
+  <ellipse cx="600" cy="250" rx="35" ry="48" fill="#1A5C1E" stroke="#248A28" stroke-width="2.5"/>
+  <ellipse cx="600" cy="250" rx="28" ry="40" fill="#0D0D16" stroke="#2FBF39" stroke-width="1.5"/>
+  
+  <!-- Coiled tubule inside -->
+  <circle cx="600" cy="235" r="4" fill="#6FD877"/>
+  <path d="M 600 240 Q 590 246 600 252 Q 610 258 600 264 Q 590 270 600 276 Q 610 282 600 286" 
+        fill="none" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Operculum -->
+  <path d="M 600 202 L 588 215 L 612 215 Z" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5"/>
+  
+  <!-- Cnidocil (trigger hair) -->
+  <line x1="600" y1="202" x2="590" y2="175" stroke="#FFFF77" stroke-width="2" stroke-linecap="round"/>
+  <line x1="590" y1="175" x2="585" y2="165" stroke="#FFFF77" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="585" cy="165" r="3" fill="#E6B800"/>
+  
+  <!-- Labels in inset -->
+  <text x="540" y="168" class="label" fill="#FFFF77">← Cnidocil (trigger)</text>
+  <line x1="585" y1="165" x2="565" y2="165" stroke="#5B6FA8" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <text x="650" y="250" class="label">← Nematocyst</text>
+  <line x1="635" y1="250" x2="645" y2="250" stroke="#5B6FA8" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <text x="670" y="345" class="label">← Nucleus</text>
+  <line x1="665" y1="340" x2="670" y2="340" stroke="#5B6FA8" stroke-width="1" stroke-dasharray="3,3"/>
+  
+  <text x="520" y="420" class="label" fill="#D1DCFF">Coiled tubule = compressed</text>
+  <text x="520" y="435" class="label" fill="#D1DCFF">collagen spring; fires once</text>
+  
+  <!-- Connection line from tentacle to inset -->
+  <line x1="315" y1="370" x2="480" y2="300" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" class="title" text-anchor="middle" font-size="22" fill="#2FBF39">CNIDOCYTE ANATOMY</text>
+  <text x="400" y="57" class="label-large" text-anchor="middle">Each tentacle contains thousands of single-use stinging cells</text>
+</svg>

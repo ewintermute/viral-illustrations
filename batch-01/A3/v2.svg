@@ -1,0 +1,127 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Dead tree base - large, weathered -->
+  <path d="M 280 100 Q 270 250, 260 400 L 260 600 L 340 600 L 340 400 Q 330 250, 320 100 Z" fill="#A0785A" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Bark texture on dead tree -->
+  <line x1="290" y1="150" x2="285" y2="350" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="310" y1="180" x2="305" y2="380" stroke="#D4A574" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 275 220 Q 280 240, 275 260" stroke="#D4A574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M 325 200 Q 330 220, 325 240" stroke="#D4A574" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Forest floor - leaf litter and soil -->
+  <ellipse cx="300" cy="480" rx="280" ry="40" fill="#2D3E6B"/>
+  <ellipse cx="300" cy="480" rx="260" ry="35" fill="#1A5C1E"/>
+  
+  <!-- Exposed roots -->
+  <path d="M 260 450 Q 220 460, 180 475 Q 140 490, 100 510" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 260 460 Q 200 475, 150 495" stroke="#A0785A" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 340 455 Q 380 465, 420 480 Q 460 495, 500 515" stroke="#A0785A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 340 465 Q 400 480, 450 500" stroke="#A0785A" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Root details -->
+  <path d="M 180 475 Q 190 485, 200 495" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 420 480 Q 430 490, 440 500" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Leaf litter detail -->
+  <ellipse cx="150" cy="510" rx="20" ry="8" fill="#248A28" opacity="0.6"/>
+  <ellipse cx="180" cy="520" rx="15" ry="6" fill="#1A5C1E" opacity="0.7"/>
+  <ellipse cx="450" cy="515" rx="18" ry="7" fill="#248A28" opacity="0.6"/>
+  <ellipse cx="480" cy="525" rx="16" ry="6" fill="#1A5C1E" opacity="0.7"/>
+  
+  <!-- MUSHROOM CLUSTER - honey-colored Armillaria -->
+  
+  <!-- Back mushrooms (smaller, behind) -->
+  <ellipse cx="240" cy="440" rx="28" ry="12" fill="#E6B800" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 212 440 Q 240 450, 268 440" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="235" y="440" width="10" height="35" fill="#FBFFF6" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <ellipse cx="370" cy="445" rx="26" ry="11" fill="#E6B800" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 344 445 Q 370 455, 396 445" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="365" y="445" width="10" height="32" fill="#FBFFF6" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Middle mushrooms -->
+  <ellipse cx="280" cy="420" rx="35" ry="15" fill="#E6B800" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="280" cy="420" rx="32" ry="13" fill="#FFFF77" opacity="0.3"/>
+  <path d="M 245 420 Q 280 435, 315 420" stroke="#D4A574" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="274" y="420" width="12" height="50" fill="#FBFFF6" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+  <!-- Gills -->
+  <line x1="252" y1="420" x2="258" y2="428" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="260" y1="420" x2="264" y2="430" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="268" y1="420" x2="270" y2="432" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="292" y1="420" x2="290" y2="432" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="300" y1="420" x2="296" y2="430" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="308" y1="420" x2="302" y2="428" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  
+  <ellipse cx="330" cy="425" rx="32" ry="14" fill="#E6B800" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="330" cy="425" rx="29" ry="12" fill="#FFFF77" opacity="0.3"/>
+  <path d="M 298 425 Q 330 438, 362 425" stroke="#D4A574" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <rect x="324" y="425" width="12" height="48" fill="#FBFFF6" stroke="#E6B800" stroke-width="2" stroke-linecap="round"/>
+  <!-- Gills -->
+  <line x1="305" y1="425" x2="310" y2="433" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="313" y1="425" x2="316" y2="435" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="320" y1="425" x2="322" y2="437" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="340" y1="425" x2="338" y2="437" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="347" y1="425" x2="344" y2="435" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  <line x1="355" y1="425" x2="350" y2="433" stroke="#D4A574" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Front/main mushrooms (largest) -->
+  <ellipse cx="300" cy="400" rx="45" ry="18" fill="#E6B800" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="300" cy="400" rx="42" ry="16" fill="#FFFF77" opacity="0.4"/>
+  <path d="M 255 400 Q 300 420, 345 400" stroke="#D4A574" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="292" y="400" width="16" height="70" fill="#FBFFF6" stroke="#E6B800" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Gills (detailed) -->
+  <line x1="262" y1="400" x2="268" y2="412" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="270" y1="400" x2="275" y2="414" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="278" y1="400" x2="282" y2="416" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="286" y1="400" x2="289" y2="418" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="314" y1="400" x2="311" y2="418" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="322" y1="400" x2="318" y2="416" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="330" y1="400" x2="325" y2="414" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="338" y1="400" x2="332" y2="412" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Ring/annulus on stem -->
+  <ellipse cx="300" cy="430" rx="10" ry="3" fill="#E6B800"/>
+  
+  <!-- Small front mushroom -->
+  <ellipse cx="260" cy="455" rx="22" ry="10" fill="#E6B800" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 238 455 Q 260 463, 282 455" stroke="#D4A574" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="256" y="455" width="8" height="25" fill="#FBFFF6" stroke="#E6B800" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Tiny side mushrooms -->
+  <ellipse cx="220" cy="465" rx="15" ry="7" fill="#E6B800" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="217" y="465" width="6" height="18" fill="#FBFFF6" stroke="#E6B800" stroke-width="1" stroke-linecap="round"/>
+  
+  <ellipse cx="385" cy="468" rx="14" ry="6" fill="#E6B800" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="382" y="468" width="6" height="16" fill="#FBFFF6" stroke="#E6B800" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Mycelial threads at base -->
+  <path d="M 250 470 Q 220 475, 190 480" stroke="#FBFFF6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 270 475 Q 240 482, 210 488" stroke="#FBFFF6" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 330 473 Q 360 478, 390 483" stroke="#FBFFF6" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 310 478 Q 340 485, 370 490" stroke="#FBFFF6" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Title and annotation -->
+  <text x="400" y="50" fill="#E6B800" font-size="28" font-weight="700" text-anchor="middle">Armillaria ostoyae</text>
+  <text x="400" y="80" fill="#FFFF77" font-size="16" text-anchor="middle" font-style="italic">Honey Fungus</text>
+  
+  <!-- Annotation box -->
+  <rect x="480" y="120" width="280" height="90" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="620" y="150" fill="#FBFFF6" font-size="14" font-weight="600" text-anchor="middle">ONE ORGANISM</text>
+  <text x="620" y="175" fill="#D1DCFF" font-size="12" text-anchor="middle">This cluster is a tiny fraction of</text>
+  <text x="620" y="195" fill="#FFFF77" font-size="13" font-weight="600" text-anchor="middle">2,385 acres</text>
+  
+  <!-- Scale indicator -->
+  <text x="100" y="570" fill="#D1DCFF" font-size="11" font-style="italic">Close-up view</text>
+  <line x1="100" y1="580" x2="200" y2="580" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round"/>
+  <text x="150" y="595" fill="#D1DCFF" font-size="10" text-anchor="middle">~1 meter</text>
+</svg>

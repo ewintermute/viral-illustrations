@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .title { font-family: 'Inter', sans-serif; font-weight: 600; }
+      .mono { font-family: 'Inter', monospace; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Octopus silhouette (background, faded) -->
+  <g opacity="0.15">
+    <ellipse cx="400" cy="400" rx="70" ry="80" fill="#5B6FA8"/>
+    <path d="M 430,380 Q 500,360 550,340" fill="none" stroke="#5B6FA8" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 445,420 Q 520,460 570,490" fill="none" stroke="#5B6FA8" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 370,380 Q 300,360 250,340" fill="none" stroke="#5B6FA8" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 355,420 Q 280,460 230,490" fill="none" stroke="#5B6FA8" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" class="title" font-size="28" fill="#FBFFF6" text-anchor="middle">The Central Dogma — Broken</text>
+  <text x="400" y="70" font-size="16" fill="#D1DCFF" text-anchor="middle" font-style="italic">Octopus bimaculoides</text>
+  
+  <!-- DNA strand -->
+  <g id="dna">
+    <rect x="80" y="150" width="120" height="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <text x="140" y="175" class="title" font-size="18" fill="#D1DCFF" text-anchor="middle">DNA</text>
+    <text x="140" y="200" class="mono" font-size="13" fill="#FBFFF6" text-anchor="middle">...AAG...</text>
+    <text x="140" y="220" font-size="11" fill="#5B6FA8" text-anchor="middle">template</text>
+  </g>
+  
+  <!-- Arrow DNA → RNA -->
+  <g id="arrow-transcription">
+    <line x1="200" y1="190" x2="260" y2="190" stroke="#D1DCFF" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="260,190 250,185 250,195" fill="#D1DCFF"/>
+    <text x="230" y="180" font-size="12" fill="#D1DCFF" text-anchor="middle">transcription</text>
+  </g>
+  
+  <!-- RNA (original) -->
+  <g id="rna-original">
+    <rect x="280" y="150" width="120" height="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <text x="340" y="175" class="title" font-size="18" fill="#D1DCFF" text-anchor="middle">RNA</text>
+    <text x="340" y="200" class="mono" font-size="13" fill="#FFFF77" text-anchor="middle">...AAG...</text>
+    <text x="340" y="220" font-size="11" fill="#5B6FA8" text-anchor="middle">unedited</text>
+  </g>
+  
+  <!-- ADAR enzyme intercept -->
+  <g id="adar-enzyme">
+    <!-- ADAR box -->
+    <rect x="420" y="120" width="140" height="140" fill="#1A5C1E" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <text x="490" y="150" class="title" font-size="20" fill="#2FBF39" text-anchor="middle">ADAR</text>
+    <text x="490" y="175" font-size="13" fill="#6FD877" text-anchor="middle">enzyme</text>
+    
+    <!-- A → I edit visualization -->
+    <text x="455" y="205" class="mono" font-size="16" fill="#E85542" text-anchor="middle">A</text>
+    <line x1="470" y1="197" x2="510" y2="197" stroke="#2FBF39" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="510,197 500,192 500,202" fill="#2FBF39"/>
+    <text x="525" y="205" class="mono" font-size="16" fill="#2FBF39" text-anchor="middle">I</text>
+    
+    <text x="490" y="230" font-size="11" fill="#D1DCFF" text-anchor="middle">(reads as G)</text>
+    <text x="490" y="250" font-size="10" fill="#6FD877" text-anchor="middle">13,000+ edits in cold</text>
+  </g>
+  
+  <!-- Arrow to edited RNA -->
+  <g id="arrow-editing">
+    <path d="M 400,235 Q 430,310 340,310" fill="none" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="340,310 348,305 345,315" fill="#2FBF39"/>
+    <text x="395" y="280" font-size="11" fill="#2FBF39" text-anchor="middle">editing</text>
+  </g>
+  
+  <!-- RNA (edited) -->
+  <g id="rna-edited">
+    <rect x="280" y="330" width="120" height="80" fill="#2D3E6B" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <text x="340" y="355" class="title" font-size="18" fill="#2FBF39" text-anchor="middle">RNA*</text>
+    <text x="340" y="380" class="mono" font-size="13" fill="#2FBF39" text-anchor="middle">...AIG...</text>
+    <text x="340" y="400" font-size="11" fill="#6FD877" text-anchor="middle">edited</text>
+  </g>
+  
+  <!-- Arrow RNA → Protein (unedited path) -->
+  <g id="arrow-translation-unedited">
+    <path d="M 200,230 Q 200,290 140,330" fill="none" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="5,5" opacity="0.5" stroke-linecap="round"/>
+    <polygon points="140,330 148,328 144,337" fill="#5B6FA8" opacity="0.5"/>
+    <text x="165" y="285" font-size="10" fill="#5B6FA8" text-anchor="middle">translation</text>
+    <text x="165" y="300" font-size="10" fill="#5B6FA8" text-anchor="middle">(unused)</text>
+  </g>
+  
+  <!-- Arrow RNA* → Protein (edited path) -->
+  <g id="arrow-translation-edited">
+    <line x1="280" y1="370" x2="220" y2="370" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="220,370 230,365 230,375" fill="#2FBF39"/>
+    <text x="250" y="360" font-size="12" fill="#2FBF39" text-anchor="middle">translation</text>
+  </g>
+  
+  <!-- Protein (unedited - faded) -->
+  <g id="protein-unedited" opacity="0.3">
+    <rect x="80" y="330" width="120" height="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <text x="140" y="355" class="title" font-size="18" fill="#D1DCFF" text-anchor="middle">Protein</text>
+    <text x="140" y="380" font-size="11" fill="#E85542" text-anchor="middle">coded by DNA</text>
+    <text x="140" y="400" font-size="10" fill="#5B6FA8" text-anchor="middle">(not used)</text>
+  </g>
+  
+  <!-- Protein (edited - bright) -->
+  <g id="protein-edited">
+    <rect x="80" y="450" width="120" height="100" fill="#1A5C1E" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <text x="140" y="478" class="title" font-size="18" fill="#2FBF39" text-anchor="middle">Protein*</text>
+    <text x="140" y="502" font-size="11" fill="#6FD877" text-anchor="middle">DIFFERENT</text>
+    <text x="140" y="520" font-size="11" fill="#6FD877" text-anchor="middle">from genome</text>
+    <text x="140" y="540" font-size="10" fill="#D1DCFF" text-anchor="middle">Adaptive function</text>
+  </g>
+  
+  <!-- Arrow edited RNA → edited protein -->
+  <g>
+    <path d="M 280,410 Q 240,450 140,450" fill="none" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="140,450 150,447 147,456" fill="#2FBF39"/>
+  </g>
+  
+  <!-- Examples box -->
+  <rect x="460" y="320" width="300" height="230" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="610" y="350" class="title" font-size="16" fill="#FBFFF6" text-anchor="middle">Real-world edits:</text>
+  
+  <text x="480" y="380" font-size="13" fill="#2FBF39" font-weight="600">• Kinesin-1</text>
+  <text x="495" y="400" font-size="11" fill="#D1DCFF">Motor protein speed tuned</text>
+  <text x="495" y="415" font-size="11" fill="#D1DCFF">for cold water movement</text>
+  
+  <text x="480" y="445" font-size="13" fill="#2FBF39" font-weight="600">• Synaptotagmin</text>
+  <text x="495" y="465" font-size="11" fill="#D1DCFF">Ca²⁺ sensitivity adjusted</text>
+  <text x="495" y="480" font-size="11" fill="#D1DCFF">maintains neural signaling</text>
+  
+  <text x="610" y="510" font-size="12" fill="#FFFF77" text-anchor="middle">Wild octopuses show</text>
+  <text x="610" y="530" font-size="12" fill="#FFFF77" text-anchor="middle">higher editing in winter</text>
+  
+  <!-- Bottom annotation -->
+  <rect x="50" y="465" width="360" height="90" fill="#2D3E6B" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <text x="230" y="492" class="title" font-size="15" fill="#E85542" text-anchor="middle">The genome is NOT the final word</text>
+  <text x="230" y="515" font-size="13" fill="#FBFFF6" text-anchor="middle">RNA editing rewrites the code AFTER</text>
+  <text x="230" y="535" font-size="13" fill="#FBFFF6" text-anchor="middle">transcription, producing proteins the DNA</text>
+  <text x="230" y="550" font-size="13" fill="#FBFFF6" text-anchor="middle">never encoded — environmental adaptation</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Barlow, sans-serif" font-size="28" font-weight="700" fill="#FBFFF6" text-anchor="middle">Paris japonica</text>
+  <text x="400" y="70" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF" text-anchor="middle" font-style="italic">The plant with the largest known genome</text>
+  
+  <!-- Stem -->
+  <line x1="400" y1="550" x2="400" y2="320" stroke="#1A5C1E" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Leaves - arranged in whorl -->
+  <ellipse cx="340" cy="380" rx="45" ry="18" fill="#2FBF39" opacity="0.9"/>
+  <ellipse cx="340" cy="380" rx="43" ry="16" fill="none" stroke="#248A28" stroke-width="1.5"/>
+  
+  <ellipse cx="460" cy="380" rx="45" ry="18" fill="#2FBF39" opacity="0.9"/>
+  <ellipse cx="460" cy="380" rx="43" ry="16" fill="none" stroke="#248A28" stroke-width="1.5"/>
+  
+  <ellipse cx="400" cy="360" rx="18" ry="48" fill="#2FBF39" opacity="0.9"/>
+  <ellipse cx="400" cy="360" rx="16" ry="46" fill="none" stroke="#248A28" stroke-width="1.5"/>
+  
+  <ellipse cx="400" cy="400" rx="18" ry="48" fill="#2FBF39" opacity="0.9"/>
+  <ellipse cx="400" cy="400" rx="16" ry="46" fill="none" stroke="#248A28" stroke-width="1.5"/>
+  
+  <!-- Flower center -->
+  <circle cx="400" cy="250" r="20" fill="#E6B800"/>
+  <circle cx="394" cy="244" r="3" fill="#A0785A"/>
+  <circle cx="406" cy="244" r="3" fill="#A0785A"/>
+  <circle cx="394" cy="256" r="3" fill="#A0785A"/>
+  <circle cx="406" cy="256" r="3" fill="#A0785A"/>
+  <circle cx="400" cy="250" r="3" fill="#A0785A"/>
+  
+  <!-- Flower petals - 8 pointed star shape (white) -->
+  <!-- Outer petals -->
+  <ellipse cx="400" cy="180" rx="14" ry="60" fill="#FBFFF6" opacity="0.95"/>
+  <ellipse cx="400" cy="320" rx="14" ry="60" fill="#FBFFF6" opacity="0.95"/>
+  <ellipse cx="330" cy="250" rx="60" ry="14" fill="#FBFFF6" opacity="0.95"/>
+  <ellipse cx="470" cy="250" rx="60" ry="14" fill="#FBFFF6" opacity="0.95"/>
+  
+  <!-- Diagonal petals -->
+  <ellipse cx="350" cy="200" rx="14" ry="55" fill="#FBFFF6" opacity="0.95" transform="rotate(-45 350 200)"/>
+  <ellipse cx="450" cy="200" rx="14" ry="55" fill="#FBFFF6" opacity="0.95" transform="rotate(45 450 200)"/>
+  <ellipse cx="350" cy="300" rx="14" ry="55" fill="#FBFFF6" opacity="0.95" transform="rotate(45 350 300)"/>
+  <ellipse cx="450" cy="300" rx="14" ry="55" fill="#FBFFF6" opacity="0.95" transform="rotate(-45 450 300)"/>
+  
+  <!-- Petal veins (subtle) -->
+  <line x1="400" y1="190" x2="400" y2="230" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  <line x1="400" y1="270" x2="400" y2="310" stroke="#D1DCFF" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+  
+  <!-- Annotation box -->
+  <rect x="520" y="180" width="240" height="180" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" rx="4"/>
+  
+  <!-- Annotation text -->
+  <text x="640" y="215" font-family="Barlow, sans-serif" font-size="16" font-weight="600" fill="#FFFF77" text-anchor="middle">GENOMIC SCALE</text>
+  
+  <text x="550" y="250" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF">• 149 billion base pairs</text>
+  <text x="550" y="275" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF">• 50× larger than human</text>
+  <text x="550" y="300" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF">• 100 metres of DNA</text>
+  <text x="560" y="320" font-family="Inter, sans-serif" font-size="13" fill="#6FD877">  per single cell</text>
+  <text x="550" y="345" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF">• Octoploid (8n)</text>
+  
+  <!-- Decorative DNA helix icon -->
+  <g id="dna-icon" transform="translate(565, 155)">
+    <circle cx="0" cy="0" r="4" fill="#E85542"/>
+    <circle cx="10" cy="5" r="4" fill="#2FBF39"/>
+    <circle cx="0" cy="10" r="4" fill="#5B6FA8"/>
+    <line x1="0" y1="0" x2="10" y2="5" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="10" y1="5" x2="0" y2="10" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

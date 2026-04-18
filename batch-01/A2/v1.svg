@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background: dark sky -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Stars scattered across sky -->
+  <circle cx="120" cy="80" r="1.5" fill="#D1DCFF" opacity="0.9"/>
+  <circle cx="250" cy="45" r="1" fill="#D1DCFF" opacity="0.7"/>
+  <circle cx="380" cy="95" r="1.2" fill="#D1DCFF" opacity="0.8"/>
+  <circle cx="520" cy="60" r="1" fill="#D1DCFF" opacity="0.6"/>
+  <circle cx="650" cy="110" r="1.3" fill="#D1DCFF" opacity="0.85"/>
+  <circle cx="720" cy="70" r="1" fill="#D1DCFF" opacity="0.7"/>
+  <circle cx="180" cy="140" r="1.1" fill="#D1DCFF" opacity="0.75"/>
+  <circle cx="450" cy="130" r="1" fill="#D1DCFF" opacity="0.65"/>
+  <circle cx="590" cy="150" r="1.4" fill="#D1DCFF" opacity="0.8"/>
+  
+  <!-- Moon - pale and distant -->
+  <circle cx="680" cy="90" r="28" fill="#D1DCFF" opacity="0.15"/>
+  <circle cx="680" cy="90" r="24" fill="#FBFFF6" opacity="0.25"/>
+  
+  <!-- Mountain silhouettes - distant layers -->
+  <path d="M 0,350 L 200,280 L 350,320 L 500,260 L 650,300 L 800,270 L 800,600 L 0,600 Z" fill="#2D3E6B" opacity="0.4"/>
+  <path d="M 0,380 L 150,330 L 300,360 L 500,310 L 700,340 L 800,320 L 800,600 L 0,600 Z" fill="#2D3E6B" opacity="0.6"/>
+  
+  <!-- Rocky foreground terrain -->
+  <path d="M 0,480 L 100,460 L 200,475 L 300,455 L 400,470 L 500,450 L 600,465 L 700,445 L 800,460 L 800,600 L 0,600 Z" fill="#2D3E6B" opacity="0.8"/>
+  
+  <!-- Scattered rocks -->
+  <ellipse cx="150" cy="490" rx="35" ry="18" fill="#5B6FA8" opacity="0.5"/>
+  <ellipse cx="520" cy="475" rx="28" ry="15" fill="#5B6FA8" opacity="0.45"/>
+  <ellipse cx="680" cy="485" rx="32" ry="17" fill="#5B6FA8" opacity="0.5"/>
+  
+  <!-- Dead wood base - bleached silver trunk -->
+  <path d="M 380,520 Q 370,480 365,440 Q 362,410 368,380 Q 375,350 372,320 Q 368,280 375,250" 
+        fill="none" stroke="#D1DCFF" stroke-width="45" stroke-linecap="round" opacity="0.35"/>
+  
+  <!-- Twisted dead branch left - gnarled and ancient -->
+  <path d="M 375,380 Q 340,370 310,355 Q 280,340 260,315 Q 245,295 235,270" 
+        fill="none" stroke="#D1DCFF" stroke-width="28" stroke-linecap="round" opacity="0.3"/>
+  
+  <path d="M 260,315 Q 250,305 245,290 Q 242,280 240,265" 
+        fill="none" stroke="#D1DCFF" stroke-width="18" stroke-linecap="round" opacity="0.28"/>
+  
+  <!-- Twisted dead branch right - asymmetric -->
+  <path d="M 380,360 Q 420,350 450,330 Q 475,315 490,290 Q 500,270 505,245" 
+        fill="none" stroke="#D1DCFF" stroke-width="32" stroke-linecap="round" opacity="0.32"/>
+  
+  <path d="M 490,290 Q 520,280 540,260 Q 552,248 558,230" 
+        fill="none" stroke="#D1DCFF" stroke-width="20" stroke-linecap="round" opacity="0.27"/>
+  
+  <!-- Upper twisted section -->
+  <path d="M 375,250 Q 365,220 362,190 Q 360,165 368,145" 
+        fill="none" stroke="#D1DCFF" stroke-width="35" stroke-linecap="round" opacity="0.33"/>
+  
+  <path d="M 368,145 Q 355,130 345,115" 
+        fill="none" stroke="#D1DCFF" stroke-width="22" stroke-linecap="round" opacity="0.29"/>
+  
+  <!-- Small dead twigs -->
+  <path d="M 345,200 Q 325,195 310,185" 
+        fill="none" stroke="#D1DCFF" stroke-width="12" stroke-linecap="round" opacity="0.25"/>
+  
+  <path d="M 370,170 Q 390,165 405,155" 
+        fill="none" stroke="#D1DCFF" stroke-width="10" stroke-linecap="round" opacity="0.24"/>
+  
+  <!-- LIVING STRIP - single vertical strip of bark with foliage -->
+  <!-- Living bark strip (dark green-brown) -->
+  <path d="M 395,500 Q 398,460 400,420 Q 401,380 403,340 Q 404,300 406,260 Q 407,220 408,180" 
+        fill="none" stroke="#1A5C1E" stroke-width="22" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Green foliage clusters on living strip -->
+  <ellipse cx="405" cy="190" rx="25" ry="20" fill="#2FBF39" opacity="0.6"/>
+  <ellipse cx="410" cy="200" rx="20" ry="18" fill="#248A28" opacity="0.7"/>
+  <ellipse cx="398" cy="205" rx="22" ry="19" fill="#2FBF39" opacity="0.65"/>
+  
+  <ellipse cx="403" cy="240" rx="18" ry="16" fill="#2FBF39" opacity="0.55"/>
+  <ellipse cx="408" cy="250" rx="16" ry="14" fill="#248A28" opacity="0.6"/>
+  
+  <ellipse cx="406" cy="285" rx="20" ry="17" fill="#2FBF39" opacity="0.6"/>
+  <ellipse cx="400" cy="295" rx="17" ry="15" fill="#1A5C1E" opacity="0.65"/>
+  
+  <ellipse cx="404" cy="330" rx="19" ry="16" fill="#248A28" opacity="0.58"/>
+  <ellipse cx="410" cy="340" rx="15" ry="13" fill="#2FBF39" opacity="0.55"/>
+  
+  <!-- Needle detail highlights -->
+  <ellipse cx="408" cy="195" rx="12" ry="10" fill="#6FD877" opacity="0.4"/>
+  <ellipse cx="405" cy="288" rx="11" ry="9" fill="#6FD877" opacity="0.38"/>
+  
+  <!-- Ground texture -->
+  <ellipse cx="380" cy="530" rx="60" ry="25" fill="#2D3E6B" opacity="0.6"/>
+</svg>

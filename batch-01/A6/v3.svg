@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;900&amp;family=Inter:wght@400;600&amp;display=swap');
+      .title { font-family: 'Barlow', sans-serif; font-weight: 900; }
+      .body { font-family: 'Inter', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Main title -->
+  <text x="400" y="80" text-anchor="middle" class="title" fill="#E85542" font-size="48">THE DEADLIEST</text>
+  <text x="400" y="130" text-anchor="middle" class="title" fill="#FBFFF6" font-size="52">ANIMAL</text>
+  <text x="400" y="175" text-anchor="middle" class="title" fill="#D1DCFF" font-size="38">THAT EVER LIVED</text>
+  
+  <!-- Mosquito silhouette - large, imposing -->
+  <g id="mosquito-silhouette" transform="translate(200, 220)">
+    <!-- Body -->
+    <ellipse cx="180" cy="60" rx="70" ry="20" fill="#2D3E6B" transform="rotate(-25 180 60)"/>
+    <ellipse cx="200" cy="35" rx="60" ry="18" fill="#2D3E6B" transform="rotate(-25 200 35)"/>
+    <ellipse cx="215" cy="15" rx="50" ry="15" fill="#2D3E6B" transform="rotate(-25 215 15)"/>
+    
+    <!-- Thorax -->
+    <circle cx="230" cy="0" r="22" fill="#2D3E6B"/>
+    
+    <!-- Head -->
+    <circle cx="250" cy="-8" r="14" fill="#2D3E6B"/>
+    
+    <!-- Proboscis -->
+    <path d="M 263 -8 L 330 -8" stroke="#2D3E6B" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Wings - dramatic silhouette -->
+    <path d="M 230 -5 Q 180 -60 130 -50 Q 90 -45 75 -20 Q 70 0 90 10 Q 130 25 180 15 Q 220 5 230 0 Z" 
+          fill="#5B6FA8" opacity="0.6"/>
+    <path d="M 232 0 Q 270 -50 310 -40 Q 340 -35 350 -15 Q 355 0 340 10 Q 310 20 270 12 Q 238 5 232 2 Z" 
+          fill="#5B6FA8" opacity="0.4"/>
+    
+    <!-- Legs -->
+    <path d="M 235 5 L 250 -30 L 265 -50" stroke="#2D3E6B" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 220 8 L 210 35 L 200 60" stroke="#2D3E6B" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 210 15 L 180 -15 L 165 -35 L 155 -50" stroke="#2D3E6B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Death toll - massive typography -->
+  <g id="death-toll">
+    <text x="400" y="380" text-anchor="middle" class="title" fill="#E85542" font-size="72">750,000</text>
+    <text x="400" y="420" text-anchor="middle" class="body" fill="#FFFF77" font-size="20" font-weight="600">DEATHS PER YEAR</text>
+    <text x="400" y="445" text-anchor="middle" class="body" fill="#D1DCFF" font-size="14">Current malaria mortality (WHO)</text>
+  </g>
+  
+  <!-- Comparison bars -->
+  <g id="comparison">
+    <text x="100" y="495" class="body" fill="#D1DCFF" font-size="13" font-weight="600">Annual deaths caused by:</text>
+    
+    <!-- Mosquito bar -->
+    <rect x="100" y="505" width="520" height="18" fill="#E85542"/>
+    <text x="110" y="518" class="body" fill="#FBFFF6" font-size="11" font-weight="600">MOSQUITOES (malaria)</text>
+    <text x="625" y="518" class="body" fill="#FBFFF6" font-size="11">~750,000</text>
+    
+    <!-- Humans bar -->
+    <rect x="100" y="528" width="310" height="16" fill="#5B6FA8"/>
+    <text x="110" y="539" class="body" fill="#FBFFF6" font-size="10">Humans (homicide)</text>
+    <text x="415" y="539" class="body" fill="#D1DCFF" font-size="10">~450,000</text>
+    
+    <!-- Snakes bar -->
+    <rect x="100" y="548" width="140" height="16" fill="#5B6FA8"/>
+    <text x="110" y="559" class="body" fill="#FBFFF6" font-size="10">Snakes</text>
+    <text x="245" y="559" class="body" fill="#D1DCFF" font-size="10">~100,000</text>
+    
+    <!-- Dogs bar -->
+    <rect x="100" y="568" width="45" height="16" fill="#5B6FA8"/>
+    <text x="110" y="579" class="body" fill="#FBFFF6" font-size="10">Dogs</text>
+    <text x="150" y="579" class="body" fill="#D1DCFF" font-size="10">~25,000</text>
+  </g>
+  
+  <!-- Historical impact note -->
+  <g id="historical-note">
+    <path d="M 450 480 L 680 420" stroke="#FFFF77" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <rect x="520" y="330" width="240" height="95" fill="#2D3E6B" opacity="0.5" stroke="#E6B800" stroke-width="2"/>
+    <text x="640" y="355" text-anchor="middle" class="body" fill="#E6B800" font-size="13" font-weight="600">HISTORICAL TOLL</text>
+    <text x="640" y="375" text-anchor="middle" class="body" fill="#FFFF77" font-size="11">Estimated to have killed</text>
+    <text x="640" y="393" text-anchor="middle" class="title" fill="#FBFFF6" font-size="22">HALF</text>
+    <text x="640" y="413" text-anchor="middle" class="body" fill="#FFFF77" font-size="11">of all humans who</text>
+    <text x="640" y="428" text-anchor="middle" class="body" fill="#FFFF77" font-size="11">ever lived</text>
+  </g>
+  
+  <!-- Species label -->
+  <text x="50" y="240" class="body" fill="#5B6FA8" font-size="10" font-style="italic">Anopheles gambiae</text>
+  <text x="50" y="253" class="body" fill="#5B6FA8" font-size="9">(primary vector)</text>
+  
+  <!-- Bottom caption -->
+  <rect x="0" y="580" width="800" height="20" fill="#2D3E6B" opacity="0.3"/>
+  <text x="400" y="593" text-anchor="middle" class="body" fill="#D1DCFF" font-size="10">
+    Malaria has shaped human evolution: sickle cell trait, G6PD deficiency, Duffy antigen
+  </text>
+</svg>

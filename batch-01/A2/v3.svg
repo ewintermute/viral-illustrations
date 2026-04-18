@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .label { font-family: 'Inter', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background: dark -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" fill="#D1DCFF" font-size="24" font-weight="600" text-anchor="middle">Older Than Civilization</text>
+  
+  <!-- Vertical timeline line -->
+  <line x1="520" y1="100" x2="520" y2="550" stroke="#5B6FA8" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Timeline markers and labels (bottom to top = old to recent) -->
+  
+  <!-- 2832 BCE - Tree germinates -->
+  <circle cx="520" cy="520" r="6" fill="#2FBF39" opacity="0.8"/>
+  <line x1="520" y1="520" x2="580" y2="520" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="518" fill="#2FBF39" font-size="15" font-weight="600" class="label">2832 BCE</text>
+  <text x="590" y="533" fill="#D1DCFF" font-size="13" opacity="0.8" class="label">Methuselah germinates</text>
+  
+  <!-- 2560 BCE - Great Pyramid -->
+  <circle cx="520" cy="480" r="5" fill="#E6B800" opacity="0.7"/>
+  <line x1="520" y1="480" x2="580" y2="480" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="478" fill="#E6B800" font-size="14" font-weight="600" class="label">2560 BCE</text>
+  <text x="590" y="493" fill="#D1DCFF" font-size="12" opacity="0.75" class="label">Great Pyramid built</text>
+  
+  <!-- Pyramid icon -->
+  <path d="M 560,470 L 570,485 L 550,485 Z" fill="#E6B800" opacity="0.5"/>
+  
+  <!-- 753 BCE - Rome founded -->
+  <circle cx="520" cy="410" r="5" fill="#E85542" opacity="0.7"/>
+  <line x1="520" y1="410" x2="580" y2="410" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="408" fill="#E85542" font-size="14" font-weight="600" class="label">753 BCE</text>
+  <text x="590" y="423" fill="#D1DCFF" font-size="12" opacity="0.75" class="label">Rome founded</text>
+  
+  <!-- Columns icon -->
+  <rect x="555" y="402" width="3" height="12" fill="#E85542" opacity="0.5"/>
+  <rect x="560" y="402" width="3" height="12" fill="#E85542" opacity="0.5"/>
+  <rect x="565" y="402" width="3" height="12" fill="#E85542" opacity="0.5"/>
+  
+  <!-- 0 CE - Birth of Christ -->
+  <circle cx="520" cy="340" r="5" fill="#D1DCFF" opacity="0.7"/>
+  <line x1="520" y1="340" x2="580" y2="340" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="338" fill="#D1DCFF" font-size="14" font-weight="600" class="label">0 CE</text>
+  <text x="590" y="353" fill="#D1DCFF" font-size="12" opacity="0.75" class="label">Common Era begins</text>
+  
+  <!-- 476 CE - Fall of Rome -->
+  <circle cx="520" cy="300" r="4" fill="#E85542" opacity="0.6"/>
+  <line x1="520" y1="300" x2="580" y2="300" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="298" fill="#E85542" font-size="13" font-weight="600" class="label">476 CE</text>
+  <text x="590" y="311" fill="#D1DCFF" font-size="11" opacity="0.7" class="label">Fall of Rome</text>
+  
+  <!-- 1066 CE - Norman Conquest -->
+  <circle cx="520" cy="255" r="4" fill="#A0785A" opacity="0.6"/>
+  <line x1="520" y1="255" x2="580" y2="255" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="253" fill="#A0785A" font-size="13" font-weight="600" class="label">1066 CE</text>
+  <text x="590" y="266" fill="#D1DCFF" font-size="11" opacity="0.7" class="label">Norman Conquest</text>
+  
+  <!-- 1492 CE - Columbus -->
+  <circle cx="520" cy="210" r="4" fill="#5B6FA8" opacity="0.6"/>
+  <line x1="520" y1="210" x2="580" y2="210" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="208" fill="#5B6FA8" font-size="13" font-weight="600" class="label">1492 CE</text>
+  <text x="590" y="221" fill="#D1DCFF" font-size="11" opacity="0.7" class="label">Columbus sails</text>
+  
+  <!-- 1776 CE - American Revolution -->
+  <circle cx="520" cy="165" r="4" fill="#E85542" opacity="0.6"/>
+  <line x1="520" y1="165" x2="580" y2="165" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="163" fill="#E85542" font-size="13" font-weight="600" class="label">1776 CE</text>
+  <text x="590" y="176" fill="#D1DCFF" font-size="11" opacity="0.7" class="label">US independence</text>
+  
+  <!-- 1957 CE - Methuselah discovered -->
+  <circle cx="520" cy="120" r="5" fill="#FFFF77" opacity="0.7"/>
+  <line x1="520" y1="120" x2="580" y2="120" stroke="#5B6FA8" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.5"/>
+  <text x="590" y="118" fill="#FFFF77" font-size="14" font-weight="600" class="label">1957 CE</text>
+  <text x="590" y="133" fill="#D1DCFF" font-size="12" opacity="0.75" class="label">Tree discovered</text>
+  
+  <!-- THE TREE - left side, persistent through all time -->
+  <!-- Ancient twisted trunk -->
+  <path d="M 180,550 Q 175,500 172,450 Q 170,400 175,350 Q 180,300 177,250 Q 174,200 178,150 Q 180,120 182,100" 
+        fill="none" stroke="#D1DCFF" stroke-width="35" stroke-linecap="round" opacity="0.35"/>
+  
+  <!-- Gnarled branches -->
+  <path d="M 177,300 Q 150,290 130,270 Q 115,255 105,235" 
+        fill="none" stroke="#D1DCFF" stroke-width="22" stroke-linecap="round" opacity="0.3"/>
+  
+  <path d="M 180,250 Q 210,240 235,220 Q 252,208 262,190" 
+        fill="none" stroke="#D1DCFF" stroke-width="24" stroke-linecap="round" opacity="0.32"/>
+  
+  <path d="M 178,150 Q 165,135 155,120 Q 148,110 145,100" 
+        fill="none" stroke="#D1DCFF" stroke-width="18" stroke-linecap="round" opacity="0.28"/>
+  
+  <!-- Living strip with foliage -->
+  <path d="M 195,530 Q 198,450 200,370 Q 201,290 202,210 Q 203,150 204,110" 
+        fill="none" stroke="#1A5C1E" stroke-width="18" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Green needle clusters -->
+  <ellipse cx="202" cy="130" rx="22" ry="18" fill="#2FBF39" opacity="0.6"/>
+  <ellipse cx="207" cy="140" rx="18" ry="16" fill="#248A28" opacity="0.65"/>
+  <ellipse cx="197" cy="145" rx="20" ry="17" fill="#2FBF39" opacity="0.6"/>
+  
+  <ellipse cx="201" cy="220" rx="17" ry="15" fill="#2FBF39" opacity="0.55"/>
+  <ellipse cx="206" cy="230" rx="15" ry="13" fill="#248A28" opacity="0.6"/>
+  
+  <ellipse cx="200" cy="310" rx="18" ry="16" fill="#2FBF39" opacity="0.58"/>
+  <ellipse cx="195" cy="320" rx="16" ry="14" fill="#1A5C1E" opacity="0.6"/>
+  
+  <ellipse cx="199" cy="390" rx="17" ry="15" fill="#248A28" opacity="0.55"/>
+  
+  <!-- Highlights -->
+  <ellipse cx="204" cy="135" rx="11" ry="9" fill="#6FD877" opacity="0.4"/>
+  <ellipse cx="201" cy="313" rx="10" ry="8" fill="#6FD877" opacity="0.38"/>
+  
+  <!-- Rocky mountain ground -->
+  <path d="M 0,540 L 100,520 L 200,535 L 300,525 L 400,535 L 500,530 L 520,532 L 520,600 L 0,600 Z" fill="#2D3E6B" opacity="0.5"/>
+  
+  <ellipse cx="180" cy="555" rx="50" ry="20" fill="#5B6FA8" opacity="0.4"/>
+  
+  <!-- Annotation arrow and label -->
+  <line x1="230" y1="300" x2="300" y2="300" stroke="#2FBF39" stroke-width="2" opacity="0.6"/>
+  <path d="M 295,295 L 305,300 L 295,305 Z" fill="#2FBF39" opacity="0.6"/>
+  
+  <text x="310" y="295" fill="#2FBF39" font-size="16" font-weight="600">Still alive</text>
+  <text x="310" y="312" fill="#D1DCFF" font-size="13" opacity="0.8">through all of this</text>
+  
+  <!-- Bottom context text -->
+  <text x="400" y="580" fill="#FFFF77" font-size="15" text-anchor="middle" opacity="0.7" class="label">The tree is older than recorded history</text>
+</svg>

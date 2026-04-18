@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Barlow, sans-serif" font-size="26" font-weight="700" fill="#FBFFF6" text-anchor="middle">DNA QUANTITY COMPARISON</text>
+  
+  <!-- Dividing line -->
+  <line x1="400" y1="80" x2="400" y2="560" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- LEFT SIDE: HUMAN -->
+  <text x="200" y="100" font-family="Barlow, sans-serif" font-size="20" font-weight="600" fill="#5B6FA8" text-anchor="middle">HUMAN</text>
+  <text x="200" y="125" font-family="Inter, sans-serif" font-size="13" fill="#D1DCFF" text-anchor="middle">Homo sapiens</text>
+  
+  <!-- Human figure (simplified) -->
+  <circle cx="200" cy="220" r="22" fill="#D1DCFF"/>
+  <rect x="185" y="245" width="30" height="50" fill="#5B6FA8" rx="6"/>
+  <rect x="175" y="265" width="15" height="50" fill="#5B6FA8" rx="4"/>
+  <rect x="210" y="265" width="15" height="50" fill="#5B6FA8" rx="4"/>
+  <rect x="185" y="295" width="12" height="60" fill="#2D3E6B" rx="4"/>
+  <rect x="203" y="295" width="12" height="60" fill="#2D3E6B" rx="4"/>
+  
+  <!-- Human DNA strand (compact, 2m) -->
+  <path d="M 200 370 Q 180 385 200 400 Q 220 415 200 430 Q 180 445 200 460 Q 220 475 200 490 Q 180 505 200 520" 
+        stroke="#E85542" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Human label -->
+  <rect x="120" y="535" width="160" height="50" fill="#2D3E6B" rx="4"/>
+  <text x="200" y="555" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFF77" text-anchor="middle">3.2 billion bp</text>
+  <text x="200" y="575" font-family="Inter, sans-serif" font-size="12" fill="#D1DCFF" text-anchor="middle">~2 metres DNA/cell</text>
+  
+  <!-- RIGHT SIDE: PARIS JAPONICA -->
+  <text x="600" y="100" font-family="Barlow, sans-serif" font-size="20" font-weight="600" fill="#2FBF39" text-anchor="middle">PARIS JAPONICA</text>
+  <text x="600" y="125" font-family="Inter, sans-serif" font-size="13" fill="#D1DCFF" text-anchor="middle" font-style="italic">Woodland flower</text>
+  
+  <!-- Flower (simplified) -->
+  <circle cx="600" cy="180" r="12" fill="#E6B800"/>
+  <circle cx="600" cy="160" r="8" fill="#FBFFF6"/>
+  <circle cx="585" cy="175" r="8" fill="#FBFFF6"/>
+  <circle cx="615" cy="175" r="8" fill="#FBFFF6"/>
+  <circle cx="590" cy="190" r="8" fill="#FBFFF6"/>
+  <circle cx="610" cy="190" r="8" fill="#FBFFF6"/>
+  <line x1="600" y1="195" x2="600" y2="220" stroke="#1A5C1E" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Paris japonica DNA strand (MASSIVE, coiled everywhere) -->
+  <!-- Main coil 1 -->
+  <path d="M 600 230 Q 550 245 560 270 Q 570 295 530 310 Q 490 325 510 350 Q 530 375 500 390 Q 470 405 490 430 Q 510 455 480 470 Q 450 485 470 510 Q 490 535 470 550" 
+        stroke="#E85542" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Main coil 2 -->
+  <path d="M 600 230 Q 650 245 640 270 Q 630 295 670 310 Q 710 325 690 350 Q 670 375 700 390 Q 730 405 710 430 Q 690 455 720 470 Q 750 485 730 510" 
+        stroke="#CA1E08" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Additional coils (overlapping, dense) -->
+  <path d="M 520 260 Q 500 280 520 300 Q 540 320 520 340 Q 500 360 520 380" 
+        stroke="#E85542" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <path d="M 680 260 Q 700 280 680 300 Q 660 320 680 340 Q 700 360 680 380 Q 660 400 680 420" 
+        stroke="#CA1E08" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <path d="M 590 280 Q 570 300 590 320 Q 610 340 590 360 Q 570 380 590 400 Q 610 420 590 440 Q 570 460 590 480 Q 610 500 590 520" 
+        stroke="#E85542" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  
+  <path d="M 610 285 Q 630 305 610 325 Q 590 345 610 365 Q 630 385 610 405 Q 590 425 610 445 Q 630 465 610 485 Q 590 505 610 525" 
+        stroke="#CA1E08" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- More dense coils -->
+  <circle cx="550" cy="320" r="25" stroke="#E85542" stroke-width="3" fill="none" opacity="0.5"/>
+  <circle cx="650" cy="340" r="28" stroke="#CA1E08" stroke-width="3" fill="none" opacity="0.5"/>
+  <circle cx="580" cy="420" r="22" stroke="#E85542" stroke-width="3" fill="none" opacity="0.5"/>
+  <circle cx="620" cy="450" r="26" stroke="#CA1E08" stroke-width="3" fill="none" opacity="0.5"/>
+  
+  <!-- Paris japonica label -->
+  <rect x="520" y="535" width="160" height="50" fill="#2D3E6B" rx="4"/>
+  <text x="600" y="555" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFF77" text-anchor="middle">149 billion bp</text>
+  <text x="600" y="575" font-family="Inter, sans-serif" font-size="12" fill="#2FBF39" text-anchor="middle">~100 metres DNA/cell</text>
+  
+  <!-- Comparison annotation -->
+  <text x="400" y="50" font-family="Barlow, sans-serif" font-size="16" font-weight="700" fill="#FFFF77" text-anchor="middle">50× LARGER</text>
+  <path d="M 280 520 L 350 520" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-right)"/>
+  <path d="M 520 520 L 450 520" stroke="#FFFF77" stroke-width="2" stroke-linecap="round" marker-end="url(#arrow-left)"/>
+  
+  <defs>
+    <marker id="arrow-right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFFF77"/>
+    </marker>
+    <marker id="arrow-left" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M9,0 L9,6 L0,3 z" fill="#FFFF77"/>
+    </marker>
+  </defs>
+</svg>

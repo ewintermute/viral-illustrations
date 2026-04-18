@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#E85542" font-size="24" font-weight="600">The Blood Meal</text>
+  <text x="400" y="65" text-anchor="middle" fill="#D1DCFF" font-size="14" font-style="italic">Plasmodium transmission moment</text>
+  
+  <!-- Human skin surface -->
+  <ellipse cx="400" cy="380" rx="320" ry="140" fill="#D4A574"/>
+  <ellipse cx="400" cy="370" rx="320" ry="130" fill="#A0785A"/>
+  
+  <!-- Skin texture details -->
+  <path d="M 200 350 Q 250 355 300 350" stroke="#D4A574" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 350 345 Q 400 350 450 345" stroke="#D4A574" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 500 350 Q 550 355 600 350" stroke="#D4A574" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+  
+  <!-- Mosquito feeding -->
+  <g id="mosquito-feeding">
+    <!-- Body angled down -->
+    <ellipse cx="380" cy="220" rx="45" ry="18" fill="#2D3E6B" transform="rotate(25 380 220)"/>
+    <ellipse cx="400" cy="240" rx="40" ry="16" fill="#5B6FA8" transform="rotate(25 400 240)"/>
+    <ellipse cx="418" cy="258" rx="35" ry="14" fill="#2D3E6B" transform="rotate(25 418 258)"/>
+    
+    <!-- Thorax -->
+    <ellipse cx="365" cy="205" rx="22" ry="20" fill="#5B6FA8"/>
+    
+    <!-- Head -->
+    <circle cx="350" cy="195" r="14" fill="#2D3E6B"/>
+    <circle cx="348" cy="190" r="6" fill="#CA1E08"/>
+    <circle cx="348" cy="200" r="6" fill="#CA1E08"/>
+    
+    <!-- Proboscis inserted into skin -->
+    <path d="M 350 195 L 365 240 L 375 305 L 380 350" stroke="#A0785A" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 350 195 L 365 240 L 375 305 L 380 350" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Insertion point -->
+    <circle cx="380" cy="350" r="8" fill="#CA1E08" opacity="0.6"/>
+    <circle cx="380" cy="350" r="12" fill="none" stroke="#E85542" stroke-width="1.5" opacity="0.4"/>
+    
+    <!-- Wings -->
+    <path d="M 365 200 Q 320 160 280 175 Q 250 185 245 205 Q 250 220 280 220 Q 320 215 360 208 Z" 
+          fill="#D1DCFF" opacity="0.35" stroke="#FBFFF6" stroke-width="1.5"/>
+    <path d="M 368 205 Q 400 170 430 180 Q 455 188 460 205 Q 455 218 430 218 Q 400 213 370 208 Z" 
+          fill="#D1DCFF" opacity="0.25" stroke="#FBFFF6" stroke-width="1"/>
+    
+    <!-- Legs -->
+    <path d="M 360 200 L 340 175 L 325 160" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 365 203 L 350 230 L 340 250" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 375 215 L 360 250 L 350 280" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Blood vessel cross-section -->
+  <g id="blood-vessel">
+    <ellipse cx="520" cy="360" rx="140" ry="100" fill="#2D3E6B" opacity="0.3"/>
+    <ellipse cx="520" cy="360" rx="130" ry="90" fill="#CA1E08" opacity="0.5"/>
+    
+    <!-- Blood cells -->
+    <circle cx="480" cy="340" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <circle cx="510" cy="355" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <circle cx="540" cy="345" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <circle cx="500" cy="380" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <circle cx="550" cy="375" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    <circle cx="530" cy="390" r="12" fill="#E85542" stroke="#CA1E08" stroke-width="1.5"/>
+    
+    <!-- Biconcave indent on cells -->
+    <circle cx="480" cy="340" r="5" fill="#CA1E08" opacity="0.5"/>
+    <circle cx="510" cy="355" r="5" fill="#CA1E08" opacity="0.5"/>
+    <circle cx="540" cy="345" r="5" fill="#CA1E08" opacity="0.5"/>
+    
+    <!-- Plasmodium parasites - small shapes in blood -->
+    <g id="plasmodium-parasites">
+      <path d="M 485 342 L 487 338 L 489 342 L 487 345 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      <path d="M 515 358 L 517 354 L 519 358 L 517 361 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      <path d="M 545 348 L 547 344 L 549 348 L 547 351 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      <path d="M 505 383 L 507 379 L 509 383 L 507 386 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      <path d="M 555 378 L 557 374 L 559 378 L 557 381 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      <path d="M 535 393 L 537 389 L 539 393 L 537 396 Z" fill="#2FBF39" stroke="#248A28" stroke-width="0.8"/>
+      
+      <!-- More free-floating parasites -->
+      <ellipse cx="470" cy="365" rx="3" ry="5" fill="#6FD877" stroke="#2FBF39" stroke-width="0.8"/>
+      <ellipse cx="560" cy="360" rx="3" ry="5" fill="#6FD877" stroke="#2FBF39" stroke-width="0.8"/>
+      <ellipse cx="525" cy="335" rx="3" ry="5" fill="#6FD877" stroke="#2FBF39" stroke-width="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Blood being drawn up proboscis -->
+  <g id="blood-stream">
+    <path d="M 380 350 Q 378 320 376 290" stroke="#E85542" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+    <path d="M 380 350 Q 378 320 376 290" stroke="#CA1E08" stroke-width="2" opacity="0.8" stroke-linecap="round"/>
+    
+    <!-- Parasites in proboscis -->
+    <circle cx="378" cy="330" r="2" fill="#2FBF39"/>
+    <circle cx="377" cy="310" r="2" fill="#6FD877"/>
+    <circle cx="376" cy="295" r="2" fill="#2FBF39"/>
+  </g>
+  
+  <!-- Annotations -->
+  <g id="annotations">
+    <!-- Proboscis label -->
+    <line x1="365" y1="270" x2="280" y2="240" stroke="#FFFF77" stroke-width="1" stroke-linecap="round"/>
+    <text x="180" y="235" fill="#FFFF77" font-size="12" font-weight="600">Proboscis pierces skin</text>
+    <text x="180" y="248" fill="#D1DCFF" font-size="10">Reaches blood vessel</text>
+    
+    <!-- Plasmodium label -->
+    <line x1="510" y1="355" x2="580" y2="310" stroke="#2FBF39" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="585" y="305" fill="#2FBF39" font-size="12" font-weight="600">Plasmodium parasites</text>
+    <text x="585" y="318" fill="#6FD877" font-size="10">Gametocytes in blood</text>
+    
+    <!-- Sporozoites label -->
+    <line x1="376" y1="295" x2="320" y2="260" stroke="#2FBF39" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="220" y="255" fill="#2FBF39" font-size="12" font-weight="600">Sporozoites</text>
+    <text x="220" y="268" fill="#6FD877" font-size="10">Injected into human</text>
+    
+    <!-- Red blood cell label -->
+    <line x1="540" y1="345" x2="640" y2="380" stroke="#E85542" stroke-width="1" stroke-linecap="round"/>
+    <text x="645" y="380" fill="#E85542" font-size="11">Red blood cells</text>
+    <text x="645" y="393" fill="#D1DCFF" font-size="9">Parasite host</text>
+  </g>
+  
+  <!-- Info panel -->
+  <g id="info-panel">
+    <rect x="80" y="450" width="640" height="110" fill="#2D3E6B" opacity="0.4" stroke="#5B6FA8" stroke-width="1.5"/>
+    
+    <text x="400" y="475" text-anchor="middle" fill="#FFFF77" font-size="14" font-weight="600">The Transmission Cycle</text>
+    
+    <text x="100" y="500" fill="#D1DCFF" font-size="11">
+      1. Infected mosquito injects <tspan fill="#2FBF39">sporozoites</tspan> into human bloodstream
+    </text>
+    <text x="100" y="517" fill="#D1DCFF" font-size="11">
+      2. Parasites multiply in liver and red blood cells → malaria symptoms
+    </text>
+    <text x="100" y="534" fill="#D1DCFF" font-size="11">
+      3. <tspan fill="#2FBF39">Gametocytes</tspan> develop in blood; mosquito ingests them during feeding
+    </text>
+    <text x="100" y="551" fill="#D1DCFF" font-size="11">
+      4. Parasites mature in mosquito gut → cycle continues
+    </text>
+  </g>
+</svg>

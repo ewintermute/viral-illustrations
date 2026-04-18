@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" id="hiv-quasispecies-cloud">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&amp;family=Inter:wght@400;500&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .label { font-family: 'Inter', sans-serif; font-size: 14px; fill: #D1DCFF; }
+      .label-bold { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 500; fill: #FBFFF6; }
+      .stat { font-family: 'Inter', sans-serif; font-size: 13px; fill: #FFFF77; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="label-bold" font-size="24">HIV Quasispecies</text>
+  <text x="400" y="55" text-anchor="middle" class="label" font-size="13">A cloud of billions of genetic variants</text>
+  
+  <!-- Central human cell (CD4+ T cell) -->
+  <circle cx="400" cy="300" r="85" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="400" cy="300" r="75" fill="#2D3E6B" stroke="none"/>
+  
+  <!-- Cell nucleus -->
+  <circle cx="400" cy="300" r="35" fill="#1A5C1E" stroke="#2FBF39" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Cell label -->
+  <text x="400" y="395" text-anchor="middle" class="label" font-size="12">CD4+ T cell</text>
+  
+  <!-- Quasispecies cloud - many small virions with variations -->
+  <!-- Color variations: reds, oranges, coral tints -->
+  
+  <!-- Ring 1 - Closest to cell -->
+  <g id="ring-1">
+    <circle cx="280" cy="250" r="18" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="270" cy="247" r="3" fill="#FFFF77"/>
+    <circle cx="285" cy="247" r="3" fill="#FFFF77"/>
+    
+    <circle cx="320" cy="200" r="16" fill="#CA1E08" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="315" cy="197" r="3" fill="#E6B800"/>
+    <circle cx="325" cy="197" r="3" fill="#E6B800"/>
+    
+    <circle cx="400" cy="180" r="19" fill="#D4A574" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="395" cy="177" r="3" fill="#FFFF77"/>
+    <circle cx="405" cy="177" r="3" fill="#FFFF77"/>
+    
+    <circle cx="480" cy="200" r="17" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="475" cy="197" r="3" fill="#E6B800"/>
+    <circle cx="485" cy="197" r="3" fill="#E6B800"/>
+    
+    <circle cx="520" cy="250" r="18" fill="#CA1E08" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="515" cy="247" r="3" fill="#FFFF77"/>
+    <circle cx="525" cy="247" r="3" fill="#FFFF77"/>
+    
+    <circle cx="530" cy="320" r="16" fill="#D4A574" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="525" cy="317" r="3" fill="#E6B800"/>
+    <circle cx="535" cy="317" r="3" fill="#E6B800"/>
+    
+    <circle cx="500" cy="380" r="19" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="495" cy="377" r="3" fill="#FFFF77"/>
+    <circle cx="505" cy="377" r="3" fill="#FFFF77"/>
+    
+    <circle cx="400" cy="420" r="17" fill="#CA1E08" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="395" cy="417" r="3" fill="#E6B800"/>
+    <circle cx="405" cy="417" r="3" fill="#E6B800"/>
+    
+    <circle cx="300" cy="380" r="18" fill="#D4A574" stroke="#A0785A" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="295" cy="377" r="3" fill="#FFFF77"/>
+    <circle cx="305" cy="377" r="3" fill="#FFFF77"/>
+    
+    <circle cx="270" cy="320" r="16" fill="#E85542" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="265" cy="317" r="3" fill="#E6B800"/>
+    <circle cx="275" cy="317" r="3" fill="#E6B800"/>
+  </g>
+  
+  <!-- Ring 2 - Middle distance -->
+  <g id="ring-2">
+    <circle cx="230" cy="220" r="14" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="227" cy="218" r="2.5" fill="#FFFF77"/>
+    <circle cx="233" cy="218" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="260" cy="160" r="15" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="257" cy="158" r="2.5" fill="#E6B800"/>
+    <circle cx="263" cy="158" r="2.5" fill="#E6B800"/>
+    
+    <circle cx="340" cy="140" r="13" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="337" cy="138" r="2.5" fill="#FFFF77"/>
+    <circle cx="343" cy="138" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="460" cy="140" r="14" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="457" cy="138" r="2.5" fill="#E6B800"/>
+    <circle cx="463" cy="138" r="2.5" fill="#E6B800"/>
+    
+    <circle cx="540" cy="160" r="15" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="537" cy="158" r="2.5" fill="#FFFF77"/>
+    <circle cx="543" cy="158" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="580" cy="240" r="13" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="577" cy="238" r="2.5" fill="#E6B800"/>
+    <circle cx="583" cy="238" r="2.5" fill="#E6B800"/>
+    
+    <circle cx="590" cy="330" r="14" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="587" cy="328" r="2.5" fill="#FFFF77"/>
+    <circle cx="593" cy="328" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="560" cy="410" r="15" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="557" cy="408" r="2.5" fill="#E6B800"/>
+    <circle cx="563" cy="408" r="2.5" fill="#E6B800"/>
+    
+    <circle cx="460" cy="460" r="13" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="457" cy="458" r="2.5" fill="#FFFF77"/>
+    <circle cx="463" cy="458" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="340" cy="460" r="14" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="337" cy="458" r="2.5" fill="#E6B800"/>
+    <circle cx="343" cy="458" r="2.5" fill="#E6B800"/>
+    
+    <circle cx="240" cy="420" r="15" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="237" cy="418" r="2.5" fill="#FFFF77"/>
+    <circle cx="243" cy="418" r="2.5" fill="#FFFF77"/>
+    
+    <circle cx="210" cy="330" r="13" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="207" cy="328" r="2.5" fill="#E6B800"/>
+    <circle cx="213" cy="328" r="2.5" fill="#E6B800"/>
+  </g>
+  
+  <!-- Ring 3 - Outer edge -->
+  <g id="ring-3">
+    <circle cx="180" cy="180" r="11" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="178" cy="179" r="2" fill="#FFFF77"/>
+    <circle cx="182" cy="179" r="2" fill="#FFFF77"/>
+    
+    <circle cx="220" cy="120" r="10" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="218" cy="119" r="2" fill="#E6B800"/>
+    <circle cx="222" cy="119" r="2" fill="#E6B800"/>
+    
+    <circle cx="300" cy="90" r="11" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="298" cy="89" r="2" fill="#FFFF77"/>
+    <circle cx="302" cy="89" r="2" fill="#FFFF77"/>
+    
+    <circle cx="400" cy="80" r="10" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="398" cy="79" r="2" fill="#E6B800"/>
+    <circle cx="402" cy="79" r="2" fill="#E6B800"/>
+    
+    <circle cx="500" cy="90" r="11" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="498" cy="89" r="2" fill="#FFFF77"/>
+    <circle cx="502" cy="89" r="2" fill="#FFFF77"/>
+    
+    <circle cx="580" cy="120" r="10" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="578" cy="119" r="2" fill="#E6B800"/>
+    <circle cx="582" cy="119" r="2" fill="#E6B800"/>
+    
+    <circle cx="640" cy="200" r="11" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="638" cy="199" r="2" fill="#FFFF77"/>
+    <circle cx="642" cy="199" r="2" fill="#FFFF77"/>
+    
+    <circle cx="660" cy="300" r="10" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="658" cy="299" r="2" fill="#E6B800"/>
+    <circle cx="662" cy="299" r="2" fill="#E6B800"/>
+    
+    <circle cx="640" cy="400" r="11" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="638" cy="399" r="2" fill="#FFFF77"/>
+    <circle cx="642" cy="399" r="2" fill="#FFFF77"/>
+    
+    <circle cx="580" cy="480" r="10" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="578" cy="479" r="2" fill="#E6B800"/>
+    <circle cx="582" cy="479" r="2" fill="#E6B800"/>
+    
+    <circle cx="500" cy="510" r="11" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="498" cy="509" r="2" fill="#FFFF77"/>
+    <circle cx="502" cy="509" r="2" fill="#FFFF77"/>
+    
+    <circle cx="400" cy="520" r="10" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="398" cy="519" r="2" fill="#FFFF77"/>
+    <circle cx="402" cy="519" r="2" fill="#FFFF77"/>
+    
+    <circle cx="300" cy="510" r="11" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="298" cy="509" r="2" fill="#E6B800"/>
+    <circle cx="302" cy="509" r="2" fill="#E6B800"/>
+    
+    <circle cx="220" cy="480" r="10" fill="#CA1E08" stroke="#E85542" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="218" cy="479" r="2" fill="#FFFF77"/>
+    <circle cx="222" cy="479" r="2" fill="#FFFF77"/>
+    
+    <circle cx="160" cy="400" r="11" fill="#D4A574" stroke="#A0785A" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="158" cy="399" r="2" fill="#E6B800"/>
+    <circle cx="162" cy="399" r="2" fill="#E6B800"/>
+    
+    <circle cx="140" cy="300" r="10" fill="#E85542" stroke="#CA1E08" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="138" cy="299" r="2" fill="#FFFF77"/>
+    <circle cx="142" cy="299" r="2" fill="#FFFF77"/>
+  </g>
+  
+  <!-- Info boxes -->
+  <rect x="20" y="500" width="220" height="85" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" rx="5"/>
+  <text x="30" y="525" class="label-bold" font-size="13">10 billion virions/day</text>
+  <text x="30" y="545" class="stat" font-size="11">Each genetically distinct</text>
+  <text x="30" y="560" class="stat" font-size="11">Diversity in 1 patient =</text>
+  <text x="30" y="575" class="stat" font-size="11">annual global flu diversity</text>
+  
+  <rect x="560" y="500" width="220" height="85" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" rx="5"/>
+  <text x="570" y="525" class="label-bold" font-size="13">Why combination therapy?</text>
+  <text x="570" y="545" class="stat" font-size="11">Resistance to single drug</text>
+  <text x="570" y="560" class="stat" font-size="11">emerges instantly in this</text>
+  <text x="570" y="575" class="stat" font-size="11">cloud of variants</text>
+</svg>

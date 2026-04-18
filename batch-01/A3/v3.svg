@@ -1,0 +1,179 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" fill="#FBFFF6" font-size="26" font-weight="700" text-anchor="middle">THE HUMONGOUS FUNGUS</text>
+  <text x="400" y="65" fill="#D1DCFF" font-size="14" text-anchor="middle" font-style="italic">Malheur National Forest, Oregon</text>
+  
+  <!-- Info box -->
+  <rect x="30" y="85" width="330" height="110" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="195" y="115" fill="#FFFF77" font-size="20" font-weight="700" text-anchor="middle">2,385 acres</text>
+  <text x="195" y="140" fill="#FBFFF6" font-size="13" text-anchor="middle">LARGEST ORGANISM ON EARTH</text>
+  <text x="195" y="165" fill="#D1DCFF" font-size="11" text-anchor="middle">Single genetic individual</text>
+  <text x="195" y="183" fill="#6FD877" font-size="11" text-anchor="middle">~8,650 years old</text>
+  
+  <!-- Map legend -->
+  <rect x="440" y="85" width="330" height="90" fill="#2D3E6B" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="465" cy="115" r="6" fill="#1A5C1E"/>
+  <text x="480" y="120" fill="#D1DCFF" font-size="11">Forest (host trees)</text>
+  
+  <circle cx="465" cy="140" r="4" fill="#E85542"/>
+  <circle cx="475" cy="140" r="4" fill="#E85542"/>
+  <circle cx="485" cy="140" r="4" fill="#E85542"/>
+  <text x="500" y="145" fill="#D1DCFF" font-size="11">Dead/infected trees</text>
+  
+  <line x1="465" y1="160" x2="485" y2="160" stroke="#FFFF77" stroke-width="3" stroke-linecap="round"/>
+  <text x="500" y="165" fill="#D1DCFF" font-size="11">Fungal network</text>
+  
+  <!-- Main map area -->
+  <rect x="50" y="220" width="700" height="350" fill="#1A5C1E" stroke="#248A28" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Grid overlay for scale -->
+  <line x1="50" y1="320" x2="750" y2="320" stroke="#2FBF39" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="50" y1="420" x2="750" y2="420" stroke="#2FBF39" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="250" y1="220" x2="250" y2="570" stroke="#2FBF39" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="400" y1="220" x2="400" y2="570" stroke="#2FBF39" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="550" y1="220" x2="550" y2="570" stroke="#2FBF39" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.3"/>
+  
+  <!-- Forest texture - small tree markers -->
+  <circle cx="90" cy="250" r="4" fill="#248A28"/>
+  <circle cx="130" cy="270" r="4" fill="#248A28"/>
+  <circle cx="180" cy="240" r="4" fill="#248A28"/>
+  <circle cx="220" cy="285" r="4" fill="#248A28"/>
+  <circle cx="280" cy="260" r="4" fill="#248A28"/>
+  <circle cx="320" cy="245" r="4" fill="#248A28"/>
+  <circle cx="370" cy="275" r="4" fill="#248A28"/>
+  <circle cx="430" cy="255" r="4" fill="#248A28"/>
+  <circle cx="480" cy="280" r="4" fill="#248A28"/>
+  <circle cx="530" cy="240" r="4" fill="#248A28"/>
+  <circle cx="580" cy="265" r="4" fill="#248A28"/>
+  <circle cx="630" cy="250" r="4" fill="#248A28"/>
+  <circle cx="680" cy="275" r="4" fill="#248A28"/>
+  <circle cx="720" cy="260" r="4" fill="#248A28"/>
+  
+  <circle cx="110" cy="340" r="4" fill="#248A28"/>
+  <circle cx="160" cy="360" r="4" fill="#248A28"/>
+  <circle cx="210" cy="330" r="4" fill="#248A28"/>
+  <circle cx="270" cy="370" r="4" fill="#248A28"/>
+  <circle cx="330" cy="350" r="4" fill="#248A28"/>
+  <circle cx="390" cy="335" r="4" fill="#248A28"/>
+  <circle cx="450" cy="365" r="4" fill="#248A28"/>
+  <circle cx="510" cy="345" r="4" fill="#248A28"/>
+  <circle cx="570" cy="370" r="4" fill="#248A28"/>
+  <circle cx="630" cy="340" r="4" fill="#248A28"/>
+  <circle cx="690" cy="355" r="4" fill="#248A28"/>
+  
+  <circle cx="85" cy="440" r="4" fill="#248A28"/>
+  <circle cx="145" cy="460" r="4" fill="#248A28"/>
+  <circle cx="205" cy="430" r="4" fill="#248A28"/>
+  <circle cx="265" cy="470" r="4" fill="#248A28"/>
+  <circle cx="325" cy="450" r="4" fill="#248A28"/>
+  <circle cx="385" cy="435" r="4" fill="#248A28"/>
+  <circle cx="445" cy="465" r="4" fill="#248A28"/>
+  <circle cx="505" cy="445" r="4" fill="#248A28"/>
+  <circle cx="565" cy="470" r="4" fill="#248A28"/>
+  <circle cx="625" cy="440" r="4" fill="#248A28"/>
+  <circle cx="685" cy="455" r="4" fill="#248A28"/>
+  
+  <circle cx="100" cy="530" r="4" fill="#248A28"/>
+  <circle cx="170" cy="545" r="4" fill="#248A28"/>
+  <circle cx="240" cy="520" r="4" fill="#248A28"/>
+  <circle cx="310" cy="550" r="4" fill="#248A28"/>
+  <circle cx="380" cy="535" r="4" fill="#248A28"/>
+  <circle cx="450" cy="525" r="4" fill="#248A28"/>
+  <circle cx="520" cy="555" r="4" fill="#248A28"/>
+  <circle cx="590" cy="540" r="4" fill="#248A28"/>
+  <circle cx="660" cy="530" r="4" fill="#248A28"/>
+  <circle cx="720" cy="545" r="4" fill="#248A28"/>
+  
+  <!-- Dead/infected trees (red dots) -->
+  <circle cx="150" cy="310" r="4" fill="#E85542"/>
+  <circle cx="280" cy="350" r="4" fill="#E85542"/>
+  <circle cx="420" cy="295" r="4" fill="#E85542"/>
+  <circle cx="550" cy="380" r="4" fill="#E85542"/>
+  <circle cx="650" cy="315" r="4" fill="#E85542"/>
+  <circle cx="200" cy="450" r="4" fill="#E85542"/>
+  <circle cx="380" cy="490" r="4" fill="#E85542"/>
+  <circle cx="600" cy="470" r="4" fill="#E85542"/>
+  <circle cx="480" cy="370" r="4" fill="#E85542"/>
+  <circle cx="340" cy="420" r="4" fill="#E85542"/>
+  
+  <!-- MASSIVE FUNGAL NETWORK - sprawling yellow/cream web -->
+  
+  <!-- Main arteries -->
+  <path d="M 100 280 Q 200 300, 320 290 Q 450 280, 600 310 Q 680 325, 730 340" stroke="#FFFF77" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 80 350 Q 180 370, 300 360 Q 420 350, 550 380 Q 650 400, 720 410" stroke="#FFFF77" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 90 420 Q 200 440, 350 430 Q 500 420, 640 450 Q 710 465, 740 480" stroke="#FFFF77" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 110 490 Q 240 510, 380 500 Q 520 490, 650 520 Q 710 530, 735 545" stroke="#FFFF77" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
+  <!-- Vertical connections -->
+  <path d="M 150 250 Q 160 310, 150 370 Q 145 430, 155 490" stroke="#FFFF77" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 280 260 Q 285 320, 280 380 Q 275 440, 285 500" stroke="#FFFF77" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 420 270 Q 425 330, 420 390 Q 415 450, 425 510" stroke="#FFFF77" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 550 280 Q 555 340, 550 400 Q 545 460, 555 520" stroke="#FFFF77" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 680 290 Q 685 350, 680 410 Q 675 470, 685 530" stroke="#FFFF77" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dense web in center -->
+  <path d="M 300 300 Q 350 320, 400 310 Q 450 300, 500 330" stroke="#FFFF77" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 280 350 Q 340 370, 400 360 Q 460 350, 520 380" stroke="#FFFF77" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 300 400 Q 360 420, 420 410 Q 480 400, 540 430" stroke="#FFFF77" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 290 450 Q 350 470, 410 460 Q 470 450, 530 480" stroke="#FFFF77" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Diagonal connections -->
+  <path d="M 100 280 Q 220 360, 340 420 Q 460 480, 600 540" stroke="#FFFF77" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 730 340 Q 610 390, 490 440 Q 370 490, 250 540" stroke="#FFFF77" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 150 250 Q 280 310, 420 370 Q 560 430, 700 490" stroke="#FFFF77" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Fine web detail -->
+  <path d="M 200 290 Q 250 310, 300 300" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 350 320 Q 400 340, 450 330" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 500 350 Q 550 370, 600 360" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 180 390 Q 240 410, 300 400" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 350 420 Q 410 440, 470 430" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 520 450 Q 580 470, 640 460" stroke="#E6B800" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <!-- Network nodes (connection points) -->
+  <circle cx="150" cy="310" r="3" fill="#FFFF77"/>
+  <circle cx="280" cy="350" r="3" fill="#FFFF77"/>
+  <circle cx="420" cy="370" r="3" fill="#FFFF77"/>
+  <circle cx="550" cy="380" r="3" fill="#FFFF77"/>
+  <circle cx="340" cy="420" r="3" fill="#FFFF77"/>
+  <circle cx="480" cy="440" r="3" fill="#FFFF77"/>
+  <circle cx="380" cy="490" r="3" fill="#FFFF77"/>
+  
+  <!-- Scale reference - human figure -->
+  <g id="human-scale">
+    <!-- Head -->
+    <circle cx="680" cy="235" r="6" fill="#D1DCFF"/>
+    <!-- Body -->
+    <line x1="680" y1="241" x2="680" y2="265" stroke="#D1DCFF" stroke-width="3" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="680" y1="248" x2="670" y2="258" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+    <line x1="680" y1="248" x2="690" y2="258" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="680" y1="265" x2="673" y2="280" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+    <line x1="680" y1="265" x2="687" y2="280" stroke="#D1DCFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Scale label -->
+  <text x="680" y="300" fill="#D1DCFF" font-size="10" text-anchor="middle">Human scale</text>
+  <text x="680" y="313" fill="#5B6FA8" font-size="9" text-anchor="middle">(for reference)</text>
+  
+  <!-- Scale bar -->
+  <line x1="620" y1="585" x2="720" y2="585" stroke="#FBFFF6" stroke-width="3" stroke-linecap="round"/>
+  <line x1="620" y1="580" x2="620" y2="590" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round"/>
+  <line x1="720" y1="580" x2="720" y2="590" stroke="#FBFFF6" stroke-width="2" stroke-linecap="round"/>
+  <text x="670" y="578" fill="#D1DCFF" font-size="11" text-anchor="middle" font-weight="600">1 mile</text>
+  
+  <!-- Directional labels -->
+  <text x="75" y="245" fill="#6FD877" font-size="10" font-weight="600">N</text>
+  <path d="M 75 250 L 75 265 M 70 255 L 75 250 L 80 255" stroke="#6FD877" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

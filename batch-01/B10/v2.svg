@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .title { font-family: 'Inter', sans-serif; font-weight: 600; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" class="title" font-size="28" fill="#FBFFF6" text-anchor="middle">Cold Shock Response</text>
+  <text x="400" y="70" font-size="16" fill="#D1DCFF" text-anchor="middle" font-style="italic">Octopus bimaculoides</text>
+  
+  <!-- Water environment - cold side (left) -->
+  <rect x="0" y="100" width="400" height="500" fill="#2D3E6B"/>
+  <text x="200" y="140" class="title" font-size="22" fill="#D1DCFF" text-anchor="middle">13°C</text>
+  <text x="200" y="165" font-size="14" fill="#5B6FA8" text-anchor="middle">COLD</text>
+  
+  <!-- Water environment - warm side (right) -->
+  <rect x="400" y="100" width="400" height="500" fill="#2D3E6B" opacity="0.6"/>
+  <text x="600" y="140" class="title" font-size="22" fill="#D4A574" text-anchor="middle">22°C</text>
+  <text x="600" y="165" font-size="14" fill="#A0785A" text-anchor="middle">WARM</text>
+  
+  <!-- Vertical dividing line (gradient effect with multiple lines) -->
+  <line x1="400" y1="100" x2="400" y2="600" stroke="#FBFFF6" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <line x1="395" y1="100" x2="395" y2="600" stroke="#D1DCFF" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  <line x1="405" y1="100" x2="405" y2="600" stroke="#D1DCFF" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+  
+  <!-- Octopus body (centered, spanning both zones) -->
+  <!-- Head/mantle -->
+  <ellipse id="octopus-head" cx="400" cy="300" rx="85" ry="95" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="380" cy="290" rx="12" ry="15" fill="#0D0D16" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+  <ellipse cx="420" cy="290" rx="12" ry="15" fill="#0D0D16" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="383" cy="293" r="4" fill="#D1DCFF"/>
+  <circle cx="423" cy="293" r="4" fill="#D1DCFF"/>
+  
+  <!-- Chromatophores - LEFT SIDE (cold, contracted/dark) -->
+  <circle cx="330" cy="270" r="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="350" cy="250" r="4" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="345" cy="290" r="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="335" cy="315" r="4" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="355" cy="330" r="5" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  <circle cx="325" cy="340" r="4" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Chromatophores - RIGHT SIDE (warm, expanded/lighter) -->
+  <circle cx="470" cy="270" r="8" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="450" cy="250" r="7" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="455" cy="290" r="8" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="465" cy="315" r="7" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="445" cy="330" r="8" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="475" cy="340" r="7" fill="#A0785A" stroke="#D4A574" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  
+  <!-- Chromatophores - CENTER (mid-transition) -->
+  <circle cx="395" cy="260" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  <circle cx="405" cy="275" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  <circle cx="400" cy="320" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  <circle cx="395" cy="345" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  
+  <!-- Arms (4 visible, splayed) -->
+  <!-- Arm 1 - top left -->
+  <path d="M 350,260 Q 280,230 220,210 Q 180,200 150,195" fill="none" stroke="#5B6FA8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 350,260 Q 280,230 220,210 Q 180,200 150,195" fill="none" stroke="#2D3E6B" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Arm 2 - bottom left -->
+  <path d="M 340,350 Q 270,400 220,450 Q 190,480 170,500" fill="none" stroke="#5B6FA8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 340,350 Q 270,400 220,450 Q 190,480 170,500" fill="none" stroke="#2D3E6B" stroke-width="14" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Arm 3 - top right -->
+  <path d="M 450,260 Q 520,230 580,210 Q 620,200 650,195" fill="none" stroke="#5B6FA8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 450,260 Q 520,230 580,210 Q 620,200 650,195" fill="none" stroke="#A0785A" stroke-width="14" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Arm 4 - bottom right -->
+  <path d="M 460,350 Q 530,400 580,450 Q 610,480 630,500" fill="none" stroke="#5B6FA8" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 460,350 Q 530,400 580,450 Q 610,480 630,500" fill="none" stroke="#A0785A" stroke-width="14" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- RNA editing activity indicators (glowing dots on cold side) -->
+  <circle cx="365" cy="280" r="4" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="365" cy="280" r="8" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <circle cx="370" cy="310" r="4" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="370" cy="310" r="8" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <circle cx="355" cy="300" r="3.5" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="355" cy="300" r="7" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <circle cx="340" cy="285" r="3.5" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="340" cy="285" r="7" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <circle cx="360" cy="325" r="4" fill="#2FBF39" opacity="0.9"/>
+  <circle cx="360" cy="325" r="8" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  
+  <!-- Minimal RNA editing on warm side -->
+  <circle cx="435" cy="295" r="2.5" fill="#6FD877" opacity="0.5"/>
+  <circle cx="445" cy="310" r="2.5" fill="#6FD877" opacity="0.5"/>
+  
+  <!-- Temperature annotation box -->
+  <rect x="240" y="480" width="320" height="90" fill="#2D3E6B" stroke="#2FBF39" stroke-width="3" stroke-linecap="round"/>
+  <text x="400" y="512" class="title" font-size="20" fill="#D1DCFF" text-anchor="middle">13°C vs 22°C</text>
+  <text x="400" y="538" class="title" font-size="28" fill="#2FBF39" text-anchor="middle">= 13,000 more edits</text>
+  <text x="400" y="562" font-size="13" fill="#FBFFF6" text-anchor="middle">within hours of cold exposure</text>
+  
+  <!-- Cold indicators (small ice-like shapes) -->
+  <path d="M 100,200 L 108,204 L 104,213 L 96,209 Z" fill="#D1DCFF" opacity="0.6"/>
+  <path d="M 140,180 L 148,184 L 144,193 L 136,189 Z" fill="#D1DCFF" opacity="0.6"/>
+  <path d="M 180,240 L 188,244 L 184,253 L 176,249 Z" fill="#D1DCFF" opacity="0.6"/>
+  <path d="M 120,280 L 128,284 L 124,293 L 116,289 Z" fill="#D1DCFF" opacity="0.6"/>
+  <path d="M 90,340 L 98,344 L 94,353 L 86,349 Z" fill="#D1DCFF" opacity="0.6"/>
+  
+  <path d="M 100,420 L 108,424 L 104,433 L 96,429 Z" fill="#D1DCFF" opacity="0.6"/>
+  <path d="M 150,380 L 158,384 L 154,393 L 146,389 Z" fill="#D1DCFF" opacity="0.6"/>
+  
+  <!-- Legend -->
+  <circle cx="50" cy="530" r="5" fill="#2FBF39"/>
+  <circle cx="50" cy="530" r="10" fill="none" stroke="#2FBF39" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+  <text x="70" y="535" font-size="13" fill="#FBFFF6">Active RNA editing (ADAR enzymes)</text>
+  
+  <circle cx="50" cy="555" r="6" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="70" y="560" font-size="13" fill="#FBFFF6">Chromatophores adapting</text>
+</svg>

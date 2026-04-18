@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" style="background:#0D0D16">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: 'Barlow', sans-serif; }
+      .label { font-family: 'Inter', sans-serif; font-size: 14px; fill: #D1DCFF; }
+      .value { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 18px; fill: #FFFF77; }
+      .title { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 16px; fill: #FBFFF6; }
+    </style>
+  </defs>
+  
+  <!-- Main nematocyst capsule -->
+  <ellipse cx="250" cy="300" rx="65" ry="85" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3"/>
+  <ellipse cx="250" cy="300" rx="55" ry="75" fill="#1A5C1E" stroke="#248A28" stroke-width="2"/>
+  
+  <!-- Coiled tubule inside capsule -->
+  <path d="M 250 260 Q 240 270 250 280 Q 260 290 250 300 Q 240 310 250 320 Q 260 330 250 340" 
+        fill="none" stroke="#2FBF39" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="250" cy="260" r="3" fill="#6FD877"/>
+  
+  <!-- Operculum (cap) -->
+  <path d="M 250 215 L 235 230 L 265 230 Z" fill="#5B6FA8" stroke="#D1DCFF" stroke-width="2"/>
+  
+  <!-- Exploding tubule - dramatic uncoiling -->
+  <path d="M 250 215 L 280 180 L 320 150 L 370 120 L 430 90 L 500 65 L 580 45" 
+        fill="none" stroke="#2FBF39" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Barbed stylet at tip -->
+  <polygon points="580,45 595,40 590,50 595,55 580,50" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
+  <line x1="580" y1="45" x2="570" y2="35" stroke="#E85542" stroke-width="3" stroke-linecap="round"/>
+  <line x1="580" y1="45" x2="575" y2="55" stroke="#E85542" stroke-width="3" stroke-linecap="round"/>
+  <line x1="590" y1="48" x2="585" y2="38" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+  <line x1="590" y1="48" x2="585" y2="58" stroke="#CA1E08" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Barbs along tubule -->
+  <line x1="500" y1="65" x2="495" y2="55" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <line x1="500" y1="65" x2="495" y2="75" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <line x1="430" y1="90" x2="425" y2="80" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <line x1="430" y1="90" x2="425" y2="100" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <line x1="370" y1="120" x2="365" y2="110" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  <line x1="370" y1="120" x2="365" y2="130" stroke="#E85542" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Motion lines suggesting speed -->
+  <line x1="600" y1="35" x2="650" y2="25" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="605" y1="45" x2="660" y2="38" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="600" y1="55" x2="655" y2="50" stroke="#5B6FA8" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  
+  <line x1="520" y1="55" x2="555" y2="45" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <line x1="525" y1="68" x2="565" y2="62" stroke="#2D3E6B" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  
+  <line x1="450" y1="80" x2="485" y2="70" stroke="#2D3E6B" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="390" y1="110" x2="420" y2="100" stroke="#2D3E6B" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+  
+  <!-- Impact force indicator -->
+  <circle cx="595" cy="45" r="25" fill="none" stroke="#E6B800" stroke-width="2" opacity="0.6"/>
+  <circle cx="595" cy="45" r="35" fill="none" stroke="#E6B800" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="595" cy="45" r="45" fill="none" stroke="#E6B800" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Annotations -->
+  <g id="annotation-time">
+    <line x1="100" y1="450" x2="220" y2="380" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <text x="50" y="455" class="label">Discharge time:</text>
+    <text x="50" y="478" class="value">700 nanoseconds</text>
+  </g>
+  
+  <g id="annotation-acceleration">
+    <line x1="450" y1="480" x2="280" y2="350" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <text x="460" y="485" class="label">Acceleration:</text>
+    <text x="460" y="508" class="value">5.41 million g</text>
+  </g>
+  
+  <g id="annotation-velocity">
+    <line x1="700" y1="150" x2="620" y2="60" stroke="#5B6FA8" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"/>
+    <text x="630" y="155" class="label">Exit velocity:</text>
+    <text x="630" y="178" class="value">25 m/s</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="560" class="title" text-anchor="middle" font-size="22" fill="#2FBF39">THE DISCHARGE</text>
+  <text x="400" y="582" class="label" text-anchor="middle" font-size="13">Fastest biological process on Earth</text>
+</svg>

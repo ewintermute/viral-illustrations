@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0D0D16"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Barlow, sans-serif" font-size="26" font-weight="700" fill="#FBFFF6" text-anchor="middle">INSIDE THE NUCLEUS</text>
+  <text x="400" y="60" font-family="Inter, sans-serif" font-size="14" fill="#D1DCFF" text-anchor="middle" font-style="italic">Paris japonica — Single Plant Cell</text>
+  
+  <!-- Cell outline (simplified) -->
+  <rect x="50" y="90" width="500" height="480" fill="#2D3E6B" opacity="0.2" stroke="#5B6FA8" stroke-width="2" rx="8"/>
+  <text x="60" y="115" font-family="Inter, sans-serif" font-size="11" fill="#5B6FA8">Cell</text>
+  
+  <!-- Nucleus (main focus) -->
+  <circle cx="300" cy="330" r="180" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="4"/>
+  <text x="300" y="150" font-family="Barlow, sans-serif" font-size="15" font-weight="600" fill="#D1DCFF" text-anchor="middle">Nucleus</text>
+  
+  <!-- 8 chromosome pairs (octoploid = 8 sets) -->
+  <!-- Each pair is a distinct color from palette -->
+  
+  <!-- Pair 1 - Green tones -->
+  <ellipse cx="230" cy="280" rx="8" ry="35" fill="#2FBF39" opacity="0.9" transform="rotate(-20 230 280)"/>
+  <ellipse cx="245" cy="285" rx="8" ry="35" fill="#6FD877" opacity="0.9" transform="rotate(-25 245 285)"/>
+  <text x="215" y="320" font-family="Inter, sans-serif" font-size="9" fill="#2FBF39">1</text>
+  
+  <!-- Pair 2 - Blue tones -->
+  <ellipse cx="280" cy="260" rx="8" ry="40" fill="#5B6FA8" opacity="0.9" transform="rotate(10 280 260)"/>
+  <ellipse cx="295" cy="265" rx="8" ry="40" fill="#D1DCFF" opacity="0.9" transform="rotate(5 295 265)"/>
+  <text x="285" y="230" font-family="Inter, sans-serif" font-size="9" fill="#5B6FA8">2</text>
+  
+  <!-- Pair 3 - Red tones -->
+  <ellipse cx="340" cy="270" rx="8" ry="38" fill="#E85542" opacity="0.9" transform="rotate(-15 340 270)"/>
+  <ellipse cx="355" cy="275" rx="8" ry="38" fill="#CA1E08" opacity="0.9" transform="rotate(-10 355 275)"/>
+  <text x="360" y="245" font-family="Inter, sans-serif" font-size="9" fill="#E85542">3</text>
+  
+  <!-- Pair 4 - Yellow/Brown tones -->
+  <ellipse cx="370" cy="310" rx="8" ry="36" fill="#E6B800" opacity="0.9" transform="rotate(20 370 310)"/>
+  <ellipse cx="380" cy="320" rx="8" ry="36" fill="#FFFF77" opacity="0.9" transform="rotate(25 380 320)"/>
+  <text x="390" y="310" font-family="Inter, sans-serif" font-size="9" fill="#E6B800">4</text>
+  
+  <!-- Pair 5 - Dark green tones -->
+  <ellipse cx="360" cy="360" rx="8" ry="37" fill="#1A5C1E" opacity="0.9" transform="rotate(-30 360 360)"/>
+  <ellipse cx="345" cy="365" rx="8" ry="37" fill="#248A28" opacity="0.9" transform="rotate(-35 345 365)"/>
+  <text x="365" y="400" font-family="Inter, sans-serif" font-size="9" fill="#248A28">5</text>
+  
+  <!-- Pair 6 - Brown tones -->
+  <ellipse cx="300" cy="380" rx="8" ry="39" fill="#A0785A" opacity="0.9" transform="rotate(15 300 380)"/>
+  <ellipse cx="285" cy="385" rx="8" ry="39" fill="#D4A574" opacity="0.9" transform="rotate(10 285 385)"/>
+  <text x="290" y="430" font-family="Inter, sans-serif" font-size="9" fill="#A0785A">6</text>
+  
+  <!-- Pair 7 - Light/medium blue -->
+  <ellipse cx="245" cy="360" rx="8" ry="35" fill="#5B6FA8" opacity="0.9" transform="rotate(-10 245 360)"/>
+  <ellipse cx="230" cy="365" rx="8" ry="35" fill="#2D3E6B" opacity="0.9" transform="rotate(-5 230 365)"/>
+  <text x="215" y="395" font-family="Inter, sans-serif" font-size="9" fill="#5B6FA8">7</text>
+  
+  <!-- Pair 8 - Red/green mix -->
+  <ellipse cx="260" cy="320" rx="8" ry="34" fill="#CA1E08" opacity="0.9" transform="rotate(30 260 320)"/>
+  <ellipse cx="270" cy="330" rx="8" ry="34" fill="#6FD877" opacity="0.9" transform="rotate(35 270 330)"/>
+  <text x="250" y="350" font-family="Inter, sans-serif" font-size="9" fill="#CA1E08">8</text>
+  
+  <!-- Repetitive DNA regions (small scattered dots to indicate high repeat content) -->
+  <circle cx="200" cy="300" r="3" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="210" cy="310" r="2.5" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="205" cy="320" r="3" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="380" cy="380" r="3" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="390" cy="370" r="2.5" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="385" cy="390" r="3" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="320" cy="420" r="3" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="310" cy="410" r="2.5" fill="#FFFF77" opacity="0.6"/>
+  <circle cx="315" cy="430" r="3" fill="#FFFF77" opacity="0.6"/>
+  
+  <!-- Legend callout for repetitive regions -->
+  <line x1="205" y1="310" x2="140" y2="250" stroke="#FFFF77" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="60" y="245" font-family="Inter, sans-serif" font-size="11" fill="#FFFF77">Repetitive DNA</text>
+  <text x="60" y="260" font-family="Inter, sans-serif" font-size="10" fill="#D1DCFF">(most of genome)</text>
+  
+  <!-- Info panel -->
+  <rect x="570" y="120" width="210" height="380" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3" rx="6"/>
+  
+  <text x="675" y="155" font-family="Barlow, sans-serif" font-size="16" font-weight="700" fill="#FFFF77" text-anchor="middle">GENOMIC DATA</text>
+  
+  <!-- Stats -->
+  <text x="585" y="190" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#2FBF39">Octoploid (8n)</text>
+  <text x="585" y="210" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">8 complete sets of</text>
+  <text x="585" y="225" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">chromosomes</text>
+  
+  <line x1="585" y1="240" x2="765" y2="240" stroke="#5B6FA8" stroke-width="1"/>
+  
+  <text x="585" y="265" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#E85542">149 billion base pairs</text>
+  <text x="585" y="285" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">149,000,000,000 bp</text>
+  
+  <line x1="585" y1="300" x2="765" y2="300" stroke="#5B6FA8" stroke-width="1"/>
+  
+  <text x="585" y="325" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#D1DCFF">100+ metres of DNA</text>
+  <text x="585" y="345" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">in this single cell</text>
+  
+  <line x1="585" y1="360" x2="765" y2="360" stroke="#5B6FA8" stroke-width="1"/>
+  
+  <text x="585" y="385" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFF77">Mostly non-coding</text>
+  <text x="585" y="405" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">Repetitive sequences</text>
+  <text x="585" y="420" font-family="Inter, sans-serif" font-size="11" fill="#D1DCFF">dominate the genome</text>
+  
+  <line x1="585" y1="435" x2="765" y2="435" stroke="#5B6FA8" stroke-width="1"/>
+  
+  <text x="585" y="460" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#6FD877">50× human genome</text>
+  <text x="585" y="480" font-family="Inter, sans-serif" font-size="10" fill="#D1DCFF">(3.2 billion bp in humans)</text>
+  
+  <!-- Visual key for chromosome pairs -->
+  <text x="675" y="535" font-family="Inter, sans-serif" font-size="10" fill="#5B6FA8" text-anchor="middle">Each numbered pair = </text>
+  <text x="675" y="550" font-family="Inter, sans-serif" font-size="10" fill="#5B6FA8" text-anchor="middle">1 chromosome set</text>
+</svg>
