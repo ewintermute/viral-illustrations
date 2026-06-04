@@ -1,87 +1,401 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
   <defs>
-    <!-- No gradients -->
+    <!-- Water gradient background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D1A3A"/>
+      <stop offset="60%" stop-color="#1C1E35"/>
+      <stop offset="100%" stop-color="#0A1228"/>
+    </linearGradient>
+    <!-- Cavitation glow -->
+    <radialGradient id="cavitationGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="25%" stop-color="#C8F0FF" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#4EA8DE" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1C1E35" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Shell crack pattern -->
+    <pattern id="shellTexture" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#8B7355"/>
+      <line x1="0" y1="6" x2="12" y2="6" stroke="#6B5335" stroke-width="0.5" opacity="0.5"/>
+      <line x1="6" y1="0" x2="6" y2="12" stroke="#6B5335" stroke-width="0.5" opacity="0.5"/>
+    </pattern>
+    <!-- Helicoidal fiber gradient -->
+    <linearGradient id="fiberLayer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2A4A6B"/>
+      <stop offset="50%" stop-color="#3D6B8E"/>
+      <stop offset="100%" stop-color="#2A4A6B"/>
+    </linearGradient>
+    <linearGradient id="fiberLayer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A5A"/>
+      <stop offset="50%" stop-color="#2E5B7E"/>
+      <stop offset="100%" stop-color="#1E3A5A"/>
+    </linearGradient>
+    <!-- Shrimp body gradient -->
+    <linearGradient id="shrimpBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="30%" stop-color="#E8A020"/>
+      <stop offset="60%" stop-color="#4CAF7D"/>
+      <stop offset="100%" stop-color="#2196C4"/>
+    </linearGradient>
+    <!-- Club gradient -->
+    <linearGradient id="clubGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4860A"/>
+      <stop offset="50%" stop-color="#F0B030"/>
+      <stop offset="100%" stop-color="#C07808"/>
+    </linearGradient>
+    <!-- Impact flash -->
+    <radialGradient id="impactFlash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#FFE066" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#FF8C42" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FF8C42" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Water shimmer -->
+    <filter id="waterBlur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="glowFilter">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <!-- Background: deep sea -->
-  <g id="bg" data-label="deep sea background">
-    <rect x="0" y="0" width="800" height="600" fill="#1C1E35"/>
-  </g>
-  <!-- Context: water with light shafts -->
-  <g id="context" data-label="water context">
-    <ellipse cx="400" cy="600" rx="500" ry="100" fill="#2D3E6B" opacity="0.4"/>
-    <ellipse cx="400" cy="0" rx="300" ry="50" fill="#5B6FA8" opacity="0.3"/>
-  </g>
-  <!-- Subject: mantis shrimp -->
-  <g id="subject" data-label="mantis shrimp">
-    <!-- Body -->
-    <ellipse cx="200" cy="300" rx="80" ry="40" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
-    <!-- Head -->
-    <ellipse cx="140" cy="300" rx="30" ry="25" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
-    <!-- Eyes -->
-    <g id="eye-left">
-      <ellipse cx="120" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-      <circle cx="120" cy="280" r="3" fill="#0D0D16"/>
-      <circle cx="118" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+
+  <!-- === LAYER: bg === -->
+  <g id="bg" data-label="background">
+    <rect width="800" height="600" fill="url(#bgGradient)"/>
+    <!-- Water caustic shimmer lines -->
+    <g opacity="0.08" filter="url(#waterBlur)">
+      <path d="M0,80 Q200,60 400,90 Q600,120 800,70" fill="none" stroke="#4EA8DE" stroke-width="3"/>
+      <path d="M0,130 Q150,110 350,145 Q550,175 800,125" fill="none" stroke="#4EA8DE" stroke-width="2"/>
+      <path d="M0,200 Q250,175 450,210 Q650,240 800,190" fill="none" stroke="#4EA8DE" stroke-width="2"/>
+      <path d="M0,280 Q180,260 380,295 Q580,325 800,275" fill="none" stroke="#5BB8E8" stroke-width="1.5"/>
+      <path d="M0,360 Q200,335 420,370 Q630,400 800,355" fill="none" stroke="#5BB8E8" stroke-width="1.5"/>
+      <path d="M0,450 Q220,430 440,460 Q660,490 800,445" fill="none" stroke="#4EA8DE" stroke-width="2"/>
     </g>
-    <g id="eye-right">
-      <ellipse cx="160" cy="280" rx="8" ry="6" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5"/>
-      <circle cx="160" cy="280" r="3" fill="#0D0D16"/>
-      <circle cx="158" cy="278" r="1.5" fill="#FBFFF6" opacity="0.85"/>
+    <!-- Depth particles -->
+    <g opacity="0.15">
+      <circle cx="60" cy="80" r="1.5" fill="#8BB8D4"/>
+      <circle cx="120" cy="150" r="1" fill="#8BB8D4"/>
+      <circle cx="200" cy="50" r="2" fill="#8BB8D4"/>
+      <circle cx="680" cy="90" r="1.5" fill="#8BB8D4"/>
+      <circle cx="740" cy="180" r="1" fill="#8BB8D4"/>
+      <circle cx="760" cy="520" r="1.5" fill="#8BB8D4"/>
+      <circle cx="50" cy="480" r="1" fill="#8BB8D4"/>
+      <circle cx="350" cy="520" r="2" fill="#8BB8D4"/>
+      <circle cx="650" cy="550" r="1.5" fill="#8BB8D4"/>
     </g>
-    <!-- Antennae -->
-    <path d="M140,270 L130,250" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
-    <path d="M140,270 L150,250" stroke="#D4A574" stroke-width="2" stroke-linecap="round"/>
-    <!-- Tail -->
-    <path d="M280,300 L320,300 L310,320 L290,320 Z" fill="#E85542" stroke="#CA1E08" stroke-width="2"/>
-    <!-- Legs (simplified) -->
-    <path d="M220,340 L240,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-    <path d="M240,340 L260,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
-    <path d="M260,340 L280,360" stroke="#D4A574" stroke-width="3" stroke-linecap="round"/>
   </g>
-  <!-- Detail: dactyl club -->
-  <g id="detail-club" data-label="dactyl club">
-    <!-- Club shape -->
-    <ellipse cx="500" cy="300" rx="100" ry="50" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="3"/>
-    <!-- Impact region (herringbone pattern simplified) -->
-    <path d="M450,280 L550,280 L550,320 L450,320 Z" fill="#8BA0D6" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- Striking surface lines -->
-    <line x1="460" y1="290" x2="540" y2="290" stroke="#FBFFF6" stroke-width="2"/>
-    <line x1="460" y1="310" x2="540" y2="310" stroke="#FBFFF6" stroke-width="2"/>
-    <!-- Club arm -->
-    <path d="M400,300 L450,300" stroke="#5B6FA8" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- === LAYER: context (seafloor / environment) === -->
+  <g id="context" data-label="ocean-floor-context">
+    <!-- Rocky substrate -->
+    <ellipse cx="400" cy="590" rx="420" ry="50" fill="#0E1A2E" opacity="0.8"/>
+    <ellipse cx="250" cy="598" rx="200" ry="35" fill="#0A1428" opacity="0.9"/>
+    <ellipse cx="600" cy="595" rx="180" ry="30" fill="#0A1428" opacity="0.9"/>
+    <!-- Small rocks/pebbles -->
+    <ellipse cx="180" cy="572" rx="22" ry="12" fill="#1E2D42"/>
+    <ellipse cx="520" cy="576" rx="18" ry="9" fill="#1E2D42"/>
+    <ellipse cx="650" cy="570" rx="25" ry="13" fill="#1E2D42"/>
+    <ellipse cx="100" cy="578" rx="14" ry="8" fill="#1A2838"/>
+    <!-- Algae wisps -->
+    <path d="M160,572 Q155,545 162,520 Q168,495 158,470" fill="none" stroke="#2A5A3A" stroke-width="2.5" opacity="0.6"/>
+    <path d="M163,572 Q170,550 165,528 Q160,505 168,482" fill="none" stroke="#2A5A3A" stroke-width="2" opacity="0.4"/>
+    <path d="M700,570 Q695,548 702,525" fill="none" stroke="#2A5A3A" stroke-width="2" opacity="0.5"/>
   </g>
-  <!-- Detail: helicoidal structure cross-section inset -->
-  <g id="detail-structure" data-label="helicoidal Bouligand structure">
-    <!-- Inset border -->
-    <rect x="500" y="100" width="250" height="250" fill="#1C1E35" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- Circular cross-section -->
-    <circle cx="625" cy="225" r="80" fill="#2D3E6B" stroke="#5B6FA8" stroke-width="2"/>
-    <!-- Helicoidal pattern (simplified spiral) -->
-    <path d="M625,145 A80,80 0 0,1 705,225" stroke="#8BA0D6" stroke-width="2" fill="none"/>
-    <path d="M705,225 A80,80 0 0,1 625,305" stroke="#8BA0D6" stroke-width="2" fill="none"/>
-    <path d="M625,305 A80,80 0 0,1 545,225" stroke="#8BA0D6" stroke-width="2" fill="none"/>
-    <path d="M545,225 A80,80 0 0,1 625,145" stroke="#8BA0D6" stroke-width="2" fill="none"/>
-    <!-- Radial lines -->
-    <line x1="625" y1="225" x2="625" y2="145" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
-    <line x1="625" y1="225" x2="705" y2="225" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
-    <line x1="625" y1="225" x2="625" y2="305" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
-    <line x1="625" y1="225" x2="545" y2="225" stroke="#E6B800" stroke-width="1" stroke-dasharray="4 2"/>
-    <!-- Label inside inset -->
-    <text x="625" y="370" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" fill="#8BA0D6">Bouligand structure</text>
+
+  <!-- === LAYER: subject (mantis shrimp body) === -->
+  <g id="subject" data-label="mantis-shrimp-odontodactylus-scyllarus">
+
+    <!-- Tail fan (telson/uropods) -->
+    <g transform="translate(90, 380)">
+      <ellipse cx="0" cy="0" rx="38" ry="14" fill="#2196C4" transform="rotate(-15)"/>
+      <ellipse cx="-30" cy="20" rx="28" ry="10" fill="#1A7AAA" transform="rotate(-30)"/>
+      <ellipse cx="25" cy="18" rx="28" ry="10" fill="#1A7AAA" transform="rotate(-5)"/>
+      <!-- Tail stripes -->
+      <line x1="-20" y1="-8" x2="-35" y2="5" stroke="#4ABFE0" stroke-width="1" opacity="0.6"/>
+      <line x1="-10" y1="-10" x2="-22" y2="5" stroke="#4ABFE0" stroke-width="1" opacity="0.6"/>
+      <line x1="0" y1="-12" x2="-8" y2="3" stroke="#4ABFE0" stroke-width="1" opacity="0.6"/>
+    </g>
+
+    <!-- Abdomen segments - arched body -->
+    <g id="shrimpAbdomen" data-label="shrimp-abdomen-segments">
+      <!-- Main body arc -->
+      <path d="M130,400 Q200,360 280,320 Q360,285 440,270 Q500,262 550,265" 
+            fill="none" stroke="#3A8A6A" stroke-width="28" stroke-linecap="round"/>
+      <!-- Segment lines -->
+      <path d="M130,400 Q200,360 280,320 Q360,285 440,270 Q500,262 550,265" 
+            fill="none" stroke="#2A6A50" stroke-width="26" stroke-linecap="round" stroke-dasharray="38,3"/>
+      <!-- Colorful overlay -->
+      <path d="M130,400 Q200,360 280,320 Q360,285 440,270 Q500,262 550,265" 
+            fill="none" stroke="url(#shrimpBody)" stroke-width="22" stroke-linecap="round" opacity="0.85"/>
+      <!-- Ventral pale stripe -->
+      <path d="M135,396 Q205,357 282,318 Q362,282 440,268 Q500,260 548,263" 
+            fill="none" stroke="#D4F0E0" stroke-width="5" stroke-linecap="round" opacity="0.35"/>
+      <!-- Pleopods (swimming legs) along belly -->
+      <g opacity="0.7">
+        <line x1="180" y1="385" x2="175" y2="420" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="220" y1="368" x2="213" y2="404" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="258" y1="349" x2="250" y2="385" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="296" y1="333" x2="286" y2="368" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="334" y1="320" x2="323" y2="355" stroke="#FF8C42" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- Thorax / cephalothorax -->
+    <ellipse cx="590" cy="268" rx="75" ry="38" fill="#3A8A6A" transform="rotate(-8,590,268)"/>
+    <ellipse cx="590" cy="265" rx="68" ry="32" fill="#4CAF7D" opacity="0.8" transform="rotate(-8,590,268)"/>
+    <!-- Carapace ridge -->
+    <path d="M535,250 Q580,238 640,242" fill="none" stroke="#6DD4A0" stroke-width="3" opacity="0.6"/>
+
+    <!-- Dactyl raptorial appendage (cocked / mid-strike position) -->
+    <g id="raptorialAppendage" data-label="raptorial-appendage-dactyl-club">
+      <!-- Merus segment (upper arm) -->
+      <path d="M570,250 Q610,210 650,185" fill="none" stroke="#D4860A" stroke-width="18" stroke-linecap="round"/>
+      <!-- Carpus/propodus joint -->
+      <circle cx="650" cy="185" r="14" fill="#E8A020"/>
+      <!-- Propodus (forearm) - angled toward impact -->
+      <path d="M650,185 Q690,175 720,168" fill="none" stroke="#C07808" stroke-width="14" stroke-linecap="round"/>
+      <!-- Dactyl CLUB - the business end -->
+      <g id="dactyClub" data-label="dactyl-club-impact-end">
+        <!-- Club shaft -->
+        <path d="M720,168 Q748,162 768,158" fill="none" stroke="url(#clubGrad)" stroke-width="16" stroke-linecap="round"/>
+        <!-- Club bulbous tip (herringbone impact face) -->
+        <ellipse cx="775" cy="155" rx="20" ry="14" fill="#F0B030" transform="rotate(-8,775,155)"/>
+        <!-- Herringbone pattern on impact face -->
+        <g transform="rotate(-8,775,155)">
+          <line x1="762" y1="148" x2="788" y2="162" stroke="#C07808" stroke-width="1.5" opacity="0.7"/>
+          <line x1="762" y1="152" x2="788" y2="158" stroke="#C07808" stroke-width="1.5" opacity="0.7"/>
+          <line x1="762" y1="156" x2="788" y2="154" stroke="#C07808" stroke-width="1.5" opacity="0.5"/>
+          <line x1="768" y1="144" x2="784" y2="167" stroke="#8B6010" stroke-width="1" opacity="0.5"/>
+          <line x1="775" y1="142" x2="778" y2="168" stroke="#8B6010" stroke-width="1" opacity="0.5"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Head and rostrum -->
+    <ellipse cx="640" cy="265" rx="45" ry="30" fill="#2A7060" transform="rotate(-5,640,265)"/>
+    <ellipse cx="650" cy="260" rx="38" ry="24" fill="#3A8A6A" opacity="0.9" transform="rotate(-5,640,265)"/>
+    <!-- Rostral plate -->
+    <path d="M680,250 Q710,240 725,245 Q715,255 680,258 Z" fill="#2A6050"/>
+
+    <!-- COMPOUND EYE (trinocular, stalked) -->
+    <g id="compoundEye" data-label="compound-eye-stalked-trinocular">
+      <!-- Eye stalk -->
+      <path d="M665,248 Q675,230 685,218" fill="none" stroke="#2A6050" stroke-width="10" stroke-linecap="round"/>
+      <!-- Sclera -->
+      <ellipse cx="688" cy="213" rx="18" ry="14" fill="#E8EEFF" stroke="#D4A574" stroke-width="2" transform="rotate(-15,688,213)"/>
+      <!-- Iris bands (mantis shrimp have trinocular vision bands) -->
+      <rect x="672" y="208" width="32" height="5" fill="#8B1A1A" opacity="0.6" rx="2" transform="rotate(-15,688,213)"/>
+      <rect x="672" y="213" width="32" height="5" fill="#1A5A8B" opacity="0.6" rx="2" transform="rotate(-15,688,213)"/>
+      <!-- Pupil -->
+      <circle cx="688" cy="213" r="7" fill="#0D0D16" transform="rotate(-15,688,213)"/>
+      <!-- Specular highlight -->
+      <circle cx="683" cy="208" r="3" fill="#FBFFF6" opacity="0.85" transform="rotate(-15,688,213)"/>
+      <!-- Second stalk/eye (slightly offset) -->
+      <path d="M658,244 Q662,225 668,215" fill="none" stroke="#2A6050" stroke-width="9" stroke-linecap="round"/>
+      <ellipse cx="670" cy="210" rx="16" ry="12" fill="#E8EEFF" stroke="#D4A574" stroke-width="1.5" transform="rotate(-10,670,210)"/>
+      <rect x="656" y="206" width="28" height="4" fill="#8B1A1A" opacity="0.5" rx="2" transform="rotate(-10,670,210)"/>
+      <rect x="656" y="210" width="28" height="4" fill="#1A5A8B" opacity="0.5" rx="2" transform="rotate(-10,670,210)"/>
+      <circle cx="670" cy="210" r="6" fill="#0D0D16"/>
+      <circle cx="666" cy="206" r="2.5" fill="#FBFFF6" opacity="0.85"/>
+    </g>
+
+    <!-- Antennules -->
+    <path d="M695,252 Q720,238 750,228 Q770,222 790,218" fill="none" stroke="#D4A574" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M692,256 Q718,248 748,246 Q775,244 795,240" fill="none" stroke="#D4A574" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
   </g>
-  <!-- Label: species name -->
-  <g id="label" data-label="species label">
-    <text x="400" y="550" text-anchor="middle" font-family="Barlow, system-ui, sans-serif" font-size="22" fill="#8BA0D6">
-      <tspan font-style="italic">Stomatopoda</tspan> (mantis shrimp)
+
+  <!-- === LAYER: detail-club-cross-section (Bouligand inset) === -->
+  <g id="detail-club-cross-section" data-label="bouligand-helicoidal-fiber-cross-section-inset">
+    <!-- Inset box background -->
+    <rect x="28" y="28" width="195" height="200" rx="8" fill="#0D1A2E" stroke="#2A4A6B" stroke-width="1.5" opacity="0.92"/>
+    <rect x="33" y="33" width="185" height="190" rx="6" fill="#111E33" opacity="0.95"/>
+
+    <!-- Title -->
+    <text x="125" y="56" text-anchor="middle" font-family="'Courier New', monospace" font-size="9" fill="#8BA0D6" letter-spacing="1">BOULIGAND STRUCTURE</text>
+    <line x1="40" y1="62" x2="210" y2="62" stroke="#2A4A6B" stroke-width="0.5"/>
+
+    <!-- Helicoidal fiber layers - cross section view -->
+    <!-- Each layer shows fibers at increasing angles (0°, 18°, 36°, 54°, 72°, 90°, 108°, 126°, 144°) -->
+    <g transform="translate(40, 68)">
+      <!-- Layer 1: 0° horizontal -->
+      <rect x="0" y="0" width="175" height="13" fill="url(#fiberLayer1)"/>
+      <g stroke="#4ABFE0" stroke-width="1.2" opacity="0.8">
+        <line x1="5" y1="6.5" x2="170" y2="6.5"/>
+        <line x1="25" y1="6.5" x2="150" y2="6.5"/>
+        <line x1="40" y1="6.5" x2="135" y2="6.5"/>
+      </g>
+
+      <!-- Layer 2: 20° -->
+      <rect x="0" y="14" width="175" height="13" fill="url(#fiberLayer2)"/>
+      <g stroke="#5BC8F0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,20.5) rotate(20) translate(-87.5,-20.5)">
+        <line x1="10" y1="20.5" x2="165" y2="20.5"/>
+        <line x1="30" y1="20.5" x2="145" y2="20.5"/>
+        <line x1="50" y1="20.5" x2="130" y2="20.5"/>
+      </g>
+
+      <!-- Layer 3: 40° -->
+      <rect x="0" y="28" width="175" height="13" fill="url(#fiberLayer1)"/>
+      <g stroke="#4ABFE0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,34.5) rotate(40) translate(-87.5,-34.5)">
+        <line x1="5" y1="34.5" x2="170" y2="34.5"/>
+        <line x1="25" y1="34.5" x2="150" y2="34.5"/>
+        <line x1="45" y1="34.5" x2="135" y2="34.5"/>
+      </g>
+
+      <!-- Layer 4: 60° -->
+      <rect x="0" y="42" width="175" height="13" fill="url(#fiberLayer2)"/>
+      <g stroke="#6ED8FF" stroke-width="1.2" opacity="0.8" transform="translate(87.5,48.5) rotate(60) translate(-87.5,-48.5)">
+        <line x1="5" y1="48.5" x2="170" y2="48.5"/>
+        <line x1="25" y1="48.5" x2="150" y2="48.5"/>
+        <line x1="50" y1="48.5" x2="130" y2="48.5"/>
+      </g>
+
+      <!-- Layer 5: 80° -->
+      <rect x="0" y="56" width="175" height="13" fill="url(#fiberLayer1)"/>
+      <g stroke="#4ABFE0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,62.5) rotate(80) translate(-87.5,-62.5)">
+        <line x1="5" y1="62.5" x2="170" y2="62.5"/>
+        <line x1="25" y1="62.5" x2="150" y2="62.5"/>
+        <line x1="45" y1="62.5" x2="130" y2="62.5"/>
+      </g>
+
+      <!-- Layer 6: 100° -->
+      <rect x="0" y="70" width="175" height="13" fill="url(#fiberLayer2)"/>
+      <g stroke="#5BC8F0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,76.5) rotate(100) translate(-87.5,-76.5)">
+        <line x1="5" y1="76.5" x2="170" y2="76.5"/>
+        <line x1="30" y1="76.5" x2="150" y2="76.5"/>
+        <line x1="50" y1="76.5" x2="130" y2="76.5"/>
+      </g>
+
+      <!-- Layer 7: 120° -->
+      <rect x="0" y="84" width="175" height="13" fill="url(#fiberLayer1)"/>
+      <g stroke="#4ABFE0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,90.5) rotate(120) translate(-87.5,-90.5)">
+        <line x1="5" y1="90.5" x2="170" y2="90.5"/>
+        <line x1="25" y1="90.5" x2="150" y2="90.5"/>
+        <line x1="45" y1="90.5" x2="130" y2="90.5"/>
+      </g>
+
+      <!-- Layer 8: 140° -->
+      <rect x="0" y="98" width="175" height="13" fill="url(#fiberLayer2)"/>
+      <g stroke="#6ED8FF" stroke-width="1.2" opacity="0.8" transform="translate(87.5,104.5) rotate(140) translate(-87.5,-104.5)">
+        <line x1="5" y1="104.5" x2="170" y2="104.5"/>
+        <line x1="25" y1="104.5" x2="150" y2="104.5"/>
+        <line x1="50" y1="104.5" x2="130" y2="104.5"/>
+      </g>
+
+      <!-- Layer 9: 160° (near 180°) -->
+      <rect x="0" y="112" width="175" height="13" fill="url(#fiberLayer1)"/>
+      <g stroke="#4ABFE0" stroke-width="1.2" opacity="0.8" transform="translate(87.5,118.5) rotate(160) translate(-87.5,-118.5)">
+        <line x1="5" y1="118.5" x2="170" y2="118.5"/>
+        <line x1="30" y1="118.5" x2="145" y2="118.5"/>
+        <line x1="50" y1="118.5" x2="130" y2="118.5"/>
+      </g>
+
+      <!-- Rotation arrows on right side showing helix -->
+      <path d="M180,6.5 Q195,6.5 195,20 Q195,62.5 182,125" fill="none" stroke="#8BA0D6" stroke-width="1" stroke-dasharray="3,2" opacity="0.7"/>
+      <polygon points="178,125 182,135 186,125" fill="#8BA0D6" opacity="0.7"/>
+
+      <!-- 180° label -->
+      <text x="182" y="10" font-family="'Courier New', monospace" font-size="7" fill="#8BA0D6" opacity="0.8">0°</text>
+      <text x="178" y="138" font-family="'Courier New', monospace" font-size="7" fill="#8BA0D6" opacity="0.8">180°</text>
+    </g>
+
+    <!-- Inset label -->
+    <text x="125" y="212" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8BA0D6" opacity="0.7">helicoidal fiber plies</text>
+  </g>
+
+  <!-- === LAYER: detail-crack-propagation === -->
+  <g id="detail-crack-propagation" data-label="crack-deflection-path-in-bouligand-structure">
+    <!-- Show crack path in the inset - deflected spiral crack -->
+    <path d="M55,82 Q70,88 62,96 Q75,105 65,116 Q80,126 68,138 Q85,148 72,160 Q88,172 75,183" 
+          fill="none" stroke="#FF4A4A" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.7"/>
+    <!-- Crack tip arrow -->
+    <polygon points="72,183 78,193 68,191" fill="#FF4A4A" opacity="0.6"/>
+    <!-- Small label for crack -->
+    <text x="45" y="195" font-family="'Courier New', monospace" font-size="7" fill="#FF8080" opacity="0.8">crack</text>
+    <text x="38" y="204" font-family="'Courier New', monospace" font-size="7" fill="#FF8080" opacity="0.8">deflects</text>
+  </g>
+
+  <!-- === LAYER: label === -->
+  <g id="label" data-label="annotation-labels">
+    <!-- Main impact point label (near shell/impact) -->
+    <text x="400" y="132" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#FBFFF6" letter-spacing="0.5">
+      10,000g STRIKE
     </text>
   </g>
-  <!-- Overlay: impact arrow -->
-  <g id="overlay" data-label="impact arrow">
-    <path d="M500,300 Q550,250 600,200" stroke="#FBFFF6" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-    <defs>
-      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-        <polygon points="0 0, 10 3.5, 0 7" fill="#FBFFF6"/>
-      </marker>
-    </defs>
+
+  <!-- === LAYER: overlay (shell target + cavitation bubble + impact flash) === -->
+  <g id="overlay" data-label="shell-target-cavitation-bubble-impact-flash">
+
+    <!-- SHELL TARGET (being struck) -->
+    <g id="shellTarget" data-label="prey-shell-target">
+      <!-- Shell body -->
+      <path d="M760,150 Q790,160 795,195 Q800,235 785,265 Q770,290 745,295 Q720,298 708,278 Q695,258 698,225 Q700,195 715,170 Q730,148 760,150 Z" fill="url(#shellTexture)"/>
+      <!-- Shell highlight -->
+      <path d="M748,158 Q768,162 775,185 Q778,205 770,220" fill="none" stroke="#C4A87A" stroke-width="2" opacity="0.5"/>
+      <!-- Shell sheen -->
+      <path d="M755,155 Q780,165 788,195 Q792,225 780,252" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.2"/>
+
+      <!-- CRACKS radiating from impact point -->
+      <g id="shellCracks" data-label="impact-crack-propagation">
+        <!-- Primary crack lines emanating from impact zone -->
+        <line x1="758" y1="163" x2="738" y2="178" stroke="#3A2810" stroke-width="2.5" opacity="0.9"/>
+        <line x1="758" y1="163" x2="765" y2="190" stroke="#3A2810" stroke-width="2" opacity="0.9"/>
+        <line x1="758" y1="163" x2="780" y2="172" stroke="#3A2810" stroke-width="2" opacity="0.8"/>
+        <line x1="758" y1="163" x2="748" y2="195" stroke="#2A1A08" stroke-width="1.5" opacity="0.7"/>
+        <line x1="758" y1="163" x2="770" y2="148" stroke="#3A2810" stroke-width="1.5" opacity="0.7"/>
+        <!-- Secondary micro-cracks -->
+        <line x1="742" y1="182" x2="728" y2="192" stroke="#3A2810" stroke-width="1" opacity="0.5"/>
+        <line x1="768" y1="195" x2="775" y2="215" stroke="#3A2810" stroke-width="1" opacity="0.5"/>
+      </g>
+
+      <!-- Shell fracture glow at impact point -->
+      <circle cx="758" cy="163" r="12" fill="url(#impactFlash)" opacity="0.6"/>
+    </g>
+
+    <!-- CAVITATION BUBBLE -->
+    <g id="cavitationBubble" data-label="cavitation-bubble-secondary-pressure-wave">
+      <!-- Main bubble -->
+      <circle cx="745" cy="130" r="42" fill="url(#cavitationGlow)" opacity="0.85"/>
+      <!-- Inner bright core -->
+      <circle cx="745" cy="130" r="18" fill="white" opacity="0.75"/>
+      <circle cx="745" cy="130" r="10" fill="white" opacity="0.9"/>
+      <!-- Bubble boundary ring -->
+      <circle cx="745" cy="130" r="42" fill="none" stroke="#C8F0FF" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="745" cy="130" r="38" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/>
+      <!-- Collapse shockwave rings -->
+      <circle cx="745" cy="130" r="58" fill="none" stroke="#4EA8DE" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+      <circle cx="745" cy="130" r="72" fill="none" stroke="#4EA8DE" stroke-width="0.8" opacity="0.2" stroke-dasharray="5,4"/>
+      <circle cx="745" cy="130" r="88" fill="none" stroke="#2A88BE" stroke-width="0.6" opacity="0.15" stroke-dasharray="6,5"/>
+      <!-- Secondary pressure wave lines -->
+      <path d="M703,98 Q690,85 685,75" fill="none" stroke="#9DDBF5" stroke-width="1" opacity="0.4"/>
+      <path d="M714,90 Q708,76 706,64" fill="none" stroke="#9DDBF5" stroke-width="1" opacity="0.35"/>
+      <path d="M728,85 Q726,70 726,58" fill="none" stroke="#9DDBF5" stroke-width="1" opacity="0.35"/>
+    </g>
+
+    <!-- Speed lines showing strike velocity -->
+    <g id="speedLines" data-label="strike-velocity-motion-lines" opacity="0.5">
+      <line x1="700" y1="145" x2="650" y2="148" stroke="#FFE066" stroke-width="2" stroke-linecap="round"/>
+      <line x1="702" y1="152" x2="648" y2="154" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="700" y1="159" x2="652" y2="161" stroke="#FFE066" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="701" y1="166" x2="655" y2="165" stroke="#FFE066" stroke-width="1" stroke-linecap="round"/>
+      <line x1="699" y1="138" x2="650" y2="140" stroke="#FFE066" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Secondary label for Bouligand annotation -->
+    <text x="400" y="575" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#8BA0D6" letter-spacing="0.5">
+      Bouligand Structure · Crack Deflection
+    </text>
+
   </g>
+
 </svg>
